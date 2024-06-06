@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            container: {
+              center: true,
+              padding: "90px",
+            },
+            backgroundImage: {
+              Home: "url('assets/Subtract.svg')",
+              WorldMap: "url('assets/Group 2.svg')",
+              Family:
+                'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/fam.svg")',
+              Architucture:
+                'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/arch.svg")',
+              Building:
+                'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/bulid.avif")',
+              Hand: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url("assets/hand.avif")',
+              Tech: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url("assets/vr.webp")',
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="shadow-lg h-20">
+      <div
+        class="container flex flex-wrap items-center justify-between mx-auto h-full"
+      >
+        <div class="relative hidden lg:block h-full">
+          <ul class="flex flex-row gap-8 h-full items-center">
+            <li
+              class="bg-slate-200 py-2 rounded-2xl px-3 font-normal hover:bg-blue-300 text-sm"
+            >
+              <a class="" href="/"
+                ><i class="fa-solid fa-house mr-1"></i>Home</a
+              >
+            </li>
+            <li
+              class="bg-slate-200 py-2 rounded-2xl px-3 hover:bg-blue-300 text-sm"
+            >
+              <a href="" class="flex">
+                <img
+                  src="./assets/Service.svg"
+                  alt=""
+                  class="w-5 mr-2"
+                />Service</a
+              >
+            </li>
+            <li
+              class="bg-slate-200 py-2 rounded-2xl px-3 hover:bg-blue-300 text-sm"
+            >
+              <a href="">About Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex lg:order-2 h-full">
+          <div class="relative hidden lg:block h-full">
+            <ul class="flex flex-row gap-8 h-full items-center">
+              <li
+                class="bg-slate-200 py-2 rounded-2xl px-3 hover:bg-blue-300 text-sm"
+              >
+                <a href=""
+                  ><i class="fa-solid fa-bag-shopping mr-1"></i>Career</a
+                >
+              </li>
+              <li
+                class="bg-slate-200 py-2 rounded-2xl px-3 hover:bg-blue-300 text-sm"
+              >
+                <a href=""><i class="fa-solid fa-newspaper mr-1"></i>News</a>
+              </li>
+              <li
+                class="py-2 rounded-2xl px-3 border border-blue-300 hover:bg-blue-300 text-sm"
+              >
+                <a href="">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex justify-center lg:order-1 h-full items-center">
+          <a href="/home"
+            ><img src="./assets/logo.png" alt="Logo" class="h-10"
+          /></a>
+        </div>
+        <div
+          class="items-center justify-between hidden lg:flex lg:w-auto lg:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 lg:hidden">
+            <ul class="flex flex-col text-center bg-sky-500">
+              <li class="mt-5"><a href="">Home</a></li>
+              <li class="mt-5"><a href="">Service</a></li>
+              <li class="mt-5"><a href="">About Us</a></li>
+              <li class="mt-5"><a href="">Career</a></li>
+              <li class="mt-5"><a href="">News</a></li>
+              <li class="mt-5"><a href="">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container flex my-10 gap-10 relative">
+      <div class="w-1/2 flex justify-center items-center">
+        <div class="w-[530px] h-[530px] bg-Home bg-cover bg-center relative">
+          <div class="absolute flex flex-col justify-center items-center my-16">
+            <img src="./assets/Logoblack.svg" alt="" class="w-56" />
+            <p class="text-3xl w-4/5 mx-auto text-center font-semibold my-10">
+              Navigate Tech Complexity & Grow your Businesses Together
+            </p>
+            <div class="flex">
+              <input
+                type="text"
+                class="w-72 h-8 rounded-3xl bg-blue-300 border-none"
+                placeholder="Enter your email id"
+              />
+              <button
+                class="btn bg-white rounded-2xl font-semibold ml-2 px-3 py-2 text-black text-sm"
+              >
+                Mail Us <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+            <p class="mt-10 font-semibold">300+</p>
+            <p class="w-4/5 mx-auto text-center font-semibold">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic id
+              perspiciatis culpa aspernatur iste.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2 flex justify-center items-center">
+        <div class="w-[530px] h-[530px] bg-WorldMap bg-cover bg-center"></div>
+      </div>
+
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+        <img src="./assets/mouse2.png" alt="Mouse Icon" class="w-10" />
+      </div>
+    </div>
+
+    <div
+      class="container mx-auto my-8 items-center justify-between text-center"
+    >
+      <div class="flex w-full px-8">
+        <h1
+          class="text-xl font-bold whitespace-nowrap grid place-items-center pr-3"
+        >
+          We helped
+        </h1>
+        <marquee class="flex"
+          ><ul class="flex">
+            <li>
+              <img src="./assets/icon-1.svg" alt="" />
+            </li>
+            <li>
+              <img src="./assets/icon-2.svg" alt="" />
+            </li>
+            <li>
+              <img src="./assets/icon-3.svg" alt="" />
+            </li>
+            <li>
+              <img src="./assets/icon-1.svg" alt="" />
+            </li>
+            <li>
+              <img src="./assets/icon-2.svg" alt="" />
+            </li>
+            <li>
+              <img src="./assets/icon-3.svg" alt="" />
+            </li>
+          </ul>
+        </marquee>
+      </div>
+      <div class="my-28">
+        <p class="text-2xl w-1/2 mx-auto">
+          Modern businesses require exprinced technologists and robust
+          technology solution to achieve their goals.
+        </p>
+        <button
+          class="btn rounded-full border-2 border-stone-500 p-2 mt-6 hover:bg-stone-500 hover:text-white transition ease-in-out"
+        >
+          View Our Service <i class="fa-solid fa-arrow-right ml-3"></i>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="flex flex-wrap lg:flex-nowrap gap-10 lg:gap-0">
+        <li
+          class="font-bold text-center text-5xl bg-slate-200 h-28 lg:h-44 w-72 lg:w-64 rounded-full flex justify-center items-center"
+        >
+          we
+        </li>
+        <li>
+          <div
+            class="bg-Hand h-28 lg:h-44 w-72 lg:w-80 rounded-full bg-cover relative flex justify-center items-center"
+          >
+            <p class="absolute text-4xl text-white">Understand</p>
+          </div>
+        </li>
+        <li
+          class="font-bold text-center text-5xl bg-slate-200 h-28 w-96 lg:w-64 lg:h-44 rounded-full flex justify-center items-center"
+        >
+          <i class="fa-solid fa-arrow-right"></i>
+        </li>
+        <li>
+          <div
+            class="bg-Tech h-28 lg:h-44 w-72 lg:w-80 rounded-full bg-cover relative flex justify-center items-center"
+          >
+            <p class="absolute text-4xl text-white">Tech</p>
+          </div>
+        </li>
+      </ul>
+      <h2 class="mt-28 font-semibold text-xl mb-10">
+        Some of our Recent Works
+      </h2>
+      <ul class="flex flex-wrap lg:flex-nowrap gap-10">
+        <li
+          class="group relative transition-all delay-150 duration-200 first:w-96"
+        >
+          <div
+            class="rounded-2xl bg-Architucture h-96 bg-cover group-hover:w-96 transition-all duration-200"
+          ></div>
+          <div
+            class="absolute bottom-0 p-4 text-white flex flex-col justify-end z-20"
+          >
+            <h2 class="font-bold text-xl">Cemex</h2>
+            <p class="my-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button
+              class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+            >
+              EXPLORE CASE STUDY
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </button>
+          </div>
+        </li>
+        <li class="group relative transition-all delay-150 duration-200">
+          <div
+            class="rounded-2xl bg-Building w-80 h-96 bg-cover group-hover:w-96 transition-all duration-200"
+          ></div>
+          <div
+            class="absolute bottom-0 p-4 text-white flex flex-col justify-end z-20"
+          >
+            <h2 class="font-bold text-xl">Marriot</h2>
+            <p class="my-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button
+              class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+            >
+              EXPLORE CASE STUDY
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </button>
+          </div>
+        </li>
+        <li class="group relative transition-all delay-150 duration-200">
+          <div
+            class="rounded-2xl bg-Family w-80 h-96 bg-cover group-hover:w-96 transition-all duration-200"
+          ></div>
+          <div
+            class="absolute bottom-0 p-4 text-white flex flex-col justify-end z-20"
+          >
+            <h2 class="font-bold text-xl">Jacana</h2>
+            <p class="my-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button
+              class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+            >
+              EXPLORE CASE STUDY
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="py-14 flex flex-wrap lg:flex-nowrap">
+        <div class="w-full lg:w-1/2">
+          <ul class="flex flex-col gap-4">
+            <li>
+              <button
+                class="btn border-2 rounded-2xl p-2 text-sm hover:bg-slate-300"
+              >
+                View Our service
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn border-2 rounded-2xl p-2 text-sm hover:bg-slate-300"
+              >
+                Our Office
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn border-2 rounded-2xl p-2 text-sm hover:bg-slate-300"
+              >
+                Our Culture
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w-full lg:w-1/2">
+          <div class="my-10 lg:my-0">
+            <h3 class="text-lg font-bold lg:w-96">
+              Get Touch with Us . Let us help you with any of your tech needs.
+            </h3>
+            <div class="mt-5">
+              <input
+                class="rounded-2xl w-80 h-9 font-semibold text-sm"
+                type="text"
+                name="email"
+                id="eamil"
+                placeholder="Enter your Email id"
+              />
+              <button
+                class="btn bg-blue-600 rounded-2xl font-semibold ml-2 p-2 text-white text-sm"
+              >
+                Mail us <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex container my-2">
+      <div class="w-1/2 flex gap-5 mt-2">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div class="w-1/2 flex justify-end">
+        <p class="border-r-2 pr-2">@ 2024 NearTekPod</p>
+        <p class="pl-2">All right reserved</p>
+      </div>
+    </div>
+  </body>
+</html>

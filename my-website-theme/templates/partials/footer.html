@@ -1,0 +1,46 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+
+<hr class="lg:mt-10" />
+<div class="md:container">
+  <div class="py-14 flex flex-wrap lg:flex-nowrap justify-center">
+    <div class="md:w-1/2">
+      <ul class="flex flex-col gap-4">
+        <li class="">
+          <button class="footer-style">View Our service</button>
+        </li>
+        <li>
+          <button class="footer-style">Our Office</button>
+        </li>
+        <li>
+          <button class="footer-style">Our Culture</button>
+        </li>
+      </ul>
+    </div>
+    <div class="md:w-1/2">
+      <div class="my-10 md:my-0 p-4 md:p-0">
+        <h4 class="text-base font-medium font-Montserrat leading-9 sm:text-sm">
+          Get Touch with Us . Let us help you with any of your tech needs.
+        </h4>
+        <div class="mt-5">
+          {% block Email %} {% global_partial path="../../Components/email.html"
+          %} {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="md:container flex my-2 w-full">
+  <div class="w-1/2 flex gap-5 mt-2">
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-brands fa-instagram"></i>
+  </div>
+  <div class="w-1/2 flex justify-end">
+    <p class="border-r-2 pr-2">@ 2024 NearTekPod</p>
+    <p class="pl-2">All right reserved</p>
+  </div>
+</div>

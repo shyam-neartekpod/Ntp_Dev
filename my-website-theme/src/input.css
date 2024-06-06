@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-style {
+    @apply bg-bluechalk h-9 leading-9  rounded-2xl px-3 font-Montserrat font-medium hover:bg-coralblue text-sm;
+  }
+  body {
+    @apply font-Montserrat;
+  }
+  .footer-style {
+    @apply border-[1px] rounded-2xl w-40 h-9 text-base border-primaryblack hover:bg-bluechalk hover:border-bluechalk;
+  }
+}
