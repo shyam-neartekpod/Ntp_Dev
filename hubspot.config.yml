@@ -1,0 +1,14 @@
+defaultPortal: NTP-2.0-DEV
+portals:
+  - name: NTP-2.0-DEV
+    portalId: 45046299
+    env: prod
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          COvbn4r_MRIOAAUAQAAAAGwAQAJYAgEYm7S9FSD_zIAeKO7pDDIU0i9n9ancAz9N9zG1GL0NCFQDBBE6TAAABEEAAAAAAAAAAAAAAAAAgAAAAAAABAAAAAAAAAAAPGBQAABEAABA_BgGABAgAwAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAABBCFEUWeohuKT_UyZ3JPxRTHMbngALwSgNuYTFSAFoAYAA
+        expiresAt: '2024-06-07T05:59:34.155Z'
+    accountType: STANDARD
+    personalAccessKey: >-
+      CiQzMWQyYTMyNy0xZjc3LTRhM2ItYjUyNy0zNjAzYmUyMWY3OGEQm7S9FRj_zIAeKhkABeaRgnxkHhEwqiWR3nkL71Ali6lstIL5SgNuYTE
