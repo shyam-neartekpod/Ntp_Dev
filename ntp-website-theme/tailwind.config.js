@@ -11,6 +11,19 @@ module.exports = {
 
         padding: "110px",
       },
+      swiper: {
+        width: "100%",
+        height: "100%",
+      },
+
+      // swiperslide: {
+      //   textalign: "center",
+      //   fontsize: "18px",
+      //   background: " #fff",
+      //   display: "flex",
+      //   justifycontent: "center",
+      //   alignitems: "center",
+      // },
       colors: {
         primaryblack: "#1A1A13",
         primarywhite: "#F0F0F5",
@@ -32,8 +45,8 @@ module.exports = {
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/arch.svg")}}")',
         Building:
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/bulid.png")}}")',
-        Hand: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/hand.png")}}") ',
-        Tech: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/vr.png")}}") ',
+        Hand: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ',
+        Tech: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/VR-image.svg")}}") ',
       }),
     },
   },

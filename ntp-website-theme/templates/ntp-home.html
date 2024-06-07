@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: NTP-Home 
+  label: Home-3 
   screenshotPath: ../images/template-previews/home.png
 -->
 <!DOCTYPE html>
@@ -16,10 +16,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
@@ -96,55 +98,90 @@
           Our clients
         </h2>
         <marquee behavior="scroll"
-          ><ul class="flex gap-4">
-            <li class="w-full md:w-96">
+          ><ul class="flex gap-9">
+            <li class="w-full">
               <img
                 src="{{ get_asset_url('../assets/Amazon.svg') }}"
                 alt=""
-                class="scale-150"
+                class="our-client"
               />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/Apple.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/Apple.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/Bestbuy.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/Bestbuy.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/cemexlo.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/cemexlo.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
-            <li class="w-full md:w-96">
+            <li class="w-full">
               <img
                 src="{{ get_asset_url('../assets/Citibanklogo.svg') }}"
                 alt=""
+                class="our-client"
               />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/Citibank.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/Citibank.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/Hp.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/Hp.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
-            <li class="w-full md:w-96">
+            <li class="w-full">
               <img
                 src="{{ get_asset_url('../assets/Nationallogo.svg') }}"
                 alt=""
+                class="our-client"
               />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/National.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/National.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/Samsung.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/Samsung.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
-            <li class="w-full md:w-96">
+            <li class="w-full">
               <img
                 src="{{ get_asset_url('../assets/Unitedairlines.svg') }}"
                 alt=""
+                class="our-client"
               />
             </li>
-            <li class="w-full md:w-96">
-              <img src="{{ get_asset_url('../assets/Verizon.svg') }}" alt="" />
+            <li class="w-full">
+              <img
+                src="{{ get_asset_url('../assets/Verizon.svg') }}"
+                alt=""
+                class="our-client"
+              />
             </li>
           </ul>
         </marquee>
@@ -162,88 +199,54 @@
       </div>
     </div>
     <div class="md:container p-4">
-      <ul class="flex flex-wrap lg:flex-nowrap gap-10 lg:gap-0 justify-center">
+      <ul class="flex flex-wrap lg:flex-nowrap">
         <li
-          class="font-bold text-center text-5xl bg-slate-200 h-28 w-96 lg:w-56 lg:h-36 rounded-full flex justify-center items-center"
+          class="w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center"
         >
           we
         </li>
-        <li>
-          <div
-            class="bg-Hand h-28 lg:h-36 w-72 lg:w-80 rounded-full bg-cover relative flex justify-center items-center"
-          >
-            <p class="absolute text-4xl text-white">Understand</p>
-          </div>
+        <li
+          class="w-4/12 rounded-full h-36 bg-Hand bg-cover relative flex justify-center items-center bg-center"
+        >
+          <p class="absolute text-4xl text-white">Understand</p>
         </li>
         <li
-          class="font-bold text-center text-5xl bg-slate-200 h-28 w-96 lg:w-56 lg:h-36 rounded-full flex justify-center items-center"
+          class="w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center"
         >
           <i class="fa-solid fa-arrow-right"></i>
         </li>
-        <li>
-          <div
-            class="bg-Tech h-28 lg:h-36 w-72 lg:w-80 rounded-full bg-cover relative flex justify-center items-center"
-          >
-            <p class="absolute text-4xl text-white">Tech</p>
-          </div>
+        <li
+          class="w-4/12 rounded-full h-36 bg-Tech l bg-cover relative flex justify-center items-center"
+        >
+          <p class="absolute text-4xl text-white">Tech</p>
         </li>
       </ul>
-
-      <div class="continer my-32 hidden md:flex flex-col">
+      <div class="continer mt-32 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
           <h2 class="font-medium text-3xl mb-20">Some of our Recent Works</h2>
         </div>
         <div
-          class="flex h-80 items-center gap-5 bg-red-100 *:h-96 *:overflow-hidden *:rounded-2xl *:bg-slate-600 group *:duration-300"
+          class="my-6 flex h-80 items-center gap-5 *:h-96 *:overflow-hidden *:rounded-2xl *:bg-slate-600 group *:duration-300"
         >
           <div
-            class="group-hover:w-[340px] hover:!w-[460px] w-[460px] relative h-80"
+            class="group-hover:w-[380px] hover:!w-[500px] w-[500px] relative h-80"
           >
             <img
               class="size-full object-cover"
-              src="{{get_asset_url('../assets/cemex.svg')}}"
+              src="{{get_asset_url('../assets/Cemex-image.svg')}}"
               alt="cemex"
             />
             <div
-              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 group-hover:rotate-90 items-center group-hover:bg-blue-300"
+              class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
+            ></div>
+            <div
+              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
             >
               <i
                 class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
               ></i>
             </div>
-            <div class="absolute bottom-0 text-white p-5">
-              <h2 class="font-bold text-2xl">Cemex</h2>
-              <p class="">
-                True testament to building and delivering in agile in record
-                time with quality
-              </p>
-              <button
-                class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-              >
-                EXPLORE CASE STUDY
-                <i class="fa-solid fa-arrow-right text-sm"></i>
-              </button>
-            </div>
-            <!-- <div class="absolute top-4 right-4 text-white">
-            <i
-              class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
-            ></i>
-          </div> -->
-          </div>
-          <div class="hover:w-[460px] w-[340px] relative h-40">
-            <img
-              class="size-full object-cover"
-              src="{{get_asset_url('../assets/arch.svg')}}"
-              alt="cemex"
-            />
-            <div
-              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 group-hover:rotate-90 items-center group-hover:bg-blue-300"
-            >
-              <i
-                class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
-              ></i>
-            </div>
-            <div class="absolute bottom-0 text-white p-5">
+            <div class="absolute bottom-0 text-white p-5 group">
               <h2 class="font-bold text-2xl">Cemex</h2>
               <p class="">
                 True testament to building and delivering in agile in record
@@ -257,14 +260,24 @@
               </button>
             </div>
           </div>
-          <div class="hover:w-[460px] w-[340px] relative">
+          <div class="hover:w-[500px] w-[380px] relative h-80">
             <img
               class="size-full object-cover"
-              src="{{get_asset_url('../assets/arch.svg')}}"
+              src="{{get_asset_url('../assets/jacana-image.svg')}}"
               alt="cemex"
             />
-            <div class="absolute bottom-0 text-white p-5">
-              <h2 class="font-bold text-2xl">Cemex</h2>
+            <div
+              class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
+            ></div>
+            <div
+              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
+            >
+              <i
+                class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
+              ></i>
+            </div>
+            <div class="absolute bottom-0 text-white p-5 group">
+              <h2 class="font-bold text-2xl">Jacana</h2>
               <p class="">
                 True testament to building and delivering in agile in record
                 time with quality
@@ -275,141 +288,187 @@
                 EXPLORE CASE STUDY
                 <i class="fa-solid fa-arrow-right text-sm"></i>
               </button>
+            </div>
+          </div>
+          <div class="hover:w-[500px] w-[380px] relative h-80">
+            <img
+              class="size-full object-cover"
+              src="{{get_asset_url('../assets/Marriot.svg')}}"
+              alt="cemex"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
+            ></div>
+            <div
+              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
+            >
+              <i
+                class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
+              ></i>
+            </div>
+            <div class="absolute bottom-0 text-white p-5 group">
+              <h2 class="font-bold text-2xl">Marriot</h2>
+              <p class="">
+                True testament to building and delivering in agile in record
+                time with quality
+              </p>
+              <button
+                class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+              >
+                EXPLORE CASE STUDY
+                <i class="fa-solid fa-arrow-right text-sm"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper mySwiper lg:hidden">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Cemex-image.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Cemex</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+                <button
+                  class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+                >
+                  EXPLORE CASE STUDY
+                  <i class="fa-solid fa-arrow-right text-sm"></i>
+                </button>
+              </div>
             </div>
             <div class="absolute top-4 right-4 text-white">
               <i
                 class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
               ></i>
             </div>
+            <div class="absolute top-4 left-4 text-sky-500">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+                Multi-lingual website
+              </button>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+                Completed in 6 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <section class="lg:hidden flex items-center justify-center min-h-screen">
-        <swiper-container
-          class="mySwiper lg:hidden"
-          pagination="true"
-          pagination-dynamic-bullets="true"
-        >
-          <swiper-slide>
-            <div class="swiper-container mySwiper lg:hidden w-full">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide flex justify-center items-center">
-                  <div
-                    class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
-                  >
-                    <img
-                      class="w-full h-full object-cover"
-                      src="{{get_asset_url('Cemex_logo.png')}}"
-                      alt="cemex"
-                    />
-                    <div class="absolute bottom-0 text-white p-5">
-                      <h2 class="font-bold text-2xl">Cemex</h2>
-                      <p class="">
-                        True testament to building and delivering in agile in
-                        record time with quality
-                      </p>
-                      <button
-                        class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-                      >
-                        EXPLORE CASE STUDY
-                        <i class="fa-solid fa-arrow-right text-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="absolute top-4 right-4 text-white">
-                    <i
-                      class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
-                    ></i>
-                  </div>
-                  <div class="absolute top-4 left-4 text-sky-500">
-                    <i class="fa-regular fa-circle-dot text-2xl"></i>
-                    <button
-                      class="border rounded-xl text-sky-500 px-3 border-sky-400"
-                    >
-                      Multi-lingual website
-                    </button>
-                    <button
-                      class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
-                    >
-                      Completed in 6 months
-                    </button>
-                    <i class="fa-regular fa-circle-dot text-2xl"></i>
-                  </div>
-                </div>
-                <div class="swiper-slide flex justify-center items-center">
-                  <div
-                    class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
-                  >
-                    <img
-                      class="w-full h-full object-cover"
-                      src="{{get_asset_url('../asserts/fav.svg')}}"
-                      alt="Marriot"
-                    />
-                    <div class="absolute bottom-0 text-white p-5">
-                      <h2 class="font-bold text-2xl">Marriot</h2>
-                      <p class="">
-                        A global hotel chain integrating into oracle cloud
-                      </p>
-                      <button
-                        class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-                      >
-                        EXPLORE CASE STUDY
-                        <i class="fa-solid fa-arrow-right text-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="absolute top-4 right-4 text-white">
-                    <i
-                      class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
-                    ></i>
-                  </div>
-                </div>
-                <div class="swiper-slide flex justify-center items-center">
-                  <div
-                    class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
-                  >
-                    <img
-                      class="w-full h-full object-cover"
-                      src="{{get_asset_url('../asserts/Cemex_logo.png')}}"
-                      alt="Marriot"
-                    />
-                    <div class="absolute bottom-0 text-white p-5">
-                      <h2 class="font-bold text-2xl">Jacana</h2>
-                      <p class="">
-                        A warranty integration framework to power B2B sales
-                      </p>
-                      <button
-                        class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-                      >
-                        EXPLORE CASE STUDY
-                        <i class="fa-solid fa-arrow-right text-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="absolute top-4 right-4 text-white">
-                    <i
-                      class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
-                    ></i>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
+          <div class="swiper-slide text-center">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Cemex-image.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Cemex</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+                <button
+                  class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+                >
+                  EXPLORE CASE STUDY
+                  <i class="fa-solid fa-arrow-right text-sm"></i>
+                </button>
               </div>
             </div>
-          </swiper-slide>
-        </swiper-container>
-      </section>
+            <div class="absolute top-4 right-4 text-white">
+              <i
+                class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
+              ></i>
+            </div>
+            <div class="absolute top-4 left-4 text-sky-500">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+                Multi-lingual website
+              </button>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+                Completed in 6 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+            </div>
+          </div>
+          <div class="swiper-slide swiperslide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Cemex-image.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Cemex</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+                <button
+                  class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+                >
+                  EXPLORE CASE STUDY
+                  <i class="fa-solid fa-arrow-right text-sm"></i>
+                </button>
+              </div>
+            </div>
+            <div class="absolute top-4 right-4 text-white">
+              <i
+                class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
+              ></i>
+            </div>
+            <div class="absolute top-4 left-4 text-sky-500">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+                Multi-lingual website
+              </button>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+                Completed in 6 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
   </body>
   {{ standard_footer_includes }} {% block footer %} {% global_partial
   path="./partials/footer.html" %} {% endblock footer %} {{
   require_js(get_asset_url("../js/main.js")) }}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
-        dynamicBullets: true,
       },
     });
   </script>
