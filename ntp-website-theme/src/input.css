@@ -14,4 +14,7 @@
   .footer-style {
     @apply border-[1px] rounded-2xl w-40 h-9 text-base border-primaryblack hover:bg-bluechalk hover:border-bluechalk;
   }
+  .our-client {
+    @apply scale-x-100 scale-y-125;
+  }
 }
