@@ -34,9 +34,7 @@
     {% block header %} {% global_partial path="./partials/header.html" %} {%
     endblock header %}
 
-    <div
-      class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"
-    >
+    <div class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"> 
       <div
         class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center gap-y-8"
       >
@@ -97,94 +95,34 @@
         >
           Our clients
         </h2>
-        <marquee behavior="scroll"
-          ><ul class="flex gap-9">
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Amazon.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Apple.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Bestbuy.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/cemexlo.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Citibanklogo.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Citibank.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Hp.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Nationallogo.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/National.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Samsung.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Unitedairlines.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-            <li class="w-full">
-              <img
-                src="{{ get_asset_url('../assets/Verizon.svg') }}"
-                alt=""
-                class="our-client"
-              />
-            </li>
-          </ul>
-        </marquee>
+        <div class="marquee-container lg:block hidden">
+          <marquee class="w-full">
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/Amazonn.svg')}}" alt="Amazon"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/Apple.svg')}}" alt="Apple"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/Best buy logo.svg')}}" alt="best-buy"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/cemex.svg')}}" alt="cemex"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/citibank logo.svg')}}" alt="citibank logo"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/Hp.svg')}}" alt="Hp"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/National logo.svg')}}" alt="iNational logo"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/Samsung.svg')}}" alt="Samsung"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/United airlines.svg')}}" alt="United airlines"/>
+              <img class="h-12 mx-5 inline-block rounded-lg" src="{{get_asset_url('../assets/Verizon.svg')}}" alt="Verizon"/>
+          </marquee>
+  </div>        
+</div>
+</div>
+<div class="lg:hidden flex flex-wrap justify-center items-center">
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/Amazonn.svg')}}" alt="Amazon"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/Apple.svg')}}" alt="Apple"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/Best buy logo.svg')}}" alt="best-buy"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/cemex.svg')}}" alt="cemex"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/citibank logo.svg')}}" alt="citibank logo"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/Hp.svg')}}" alt="Hp"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/National logo.svg')}}" alt="iNational logo"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/Samsung.svg')}}" alt="Samsung"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/United airlines.svg')}}" alt="United airlines"/>
+  <img class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg" src="{{get_asset_url('../assets/Verizon.svg')}}" alt="Verizon"/>
+</div>
       </div>
       <div class="lg:my-24 my-10 px-4">
         <p class="text-4xl max-w-4xl mx-auto font-medium leading-[3rem]">
@@ -199,26 +137,35 @@
       </div>
     </div>
     <div class="md:container p-4">
-      <ul class="flex flex-wrap lg:flex-nowrap">
-        <li
-          class="w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center"
-        >
+     
+      <ul class=" flex-nowrap justify-center hidden lg:flex">
+        <li class="w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center mr-4">
           we
         </li>
-        <li
-          class="w-4/12 rounded-full h-36 bg-Hand bg-cover relative flex justify-center items-center bg-center"
-        >
+        <li class="w-4/12 rounded-full h-36 bg-Hand bg-cover relative flex justify-center items-center bg-center mr-4">
           <p class="absolute text-4xl text-white">Understand</p>
         </li>
-        <li
-          class="w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center"
-        >
+        <li class="w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center mr-4">
           <i class="fa-solid fa-arrow-right"></i>
         </li>
-        <li
-          class="w-4/12 rounded-full h-36 bg-Tech l bg-cover relative flex justify-center items-center"
-        >
+        <li class="w-4/12 rounded-full h-36 bg-Tech bg-cover relative flex justify-center items-center">
           <p class="absolute text-4xl text-white">Tech</p>
+        </li>
+      </ul>
+                                    
+      <ul class="flex flex-wrap justify-center lg:hidden mb-6">
+        <li class="w-1/2 rounded-full h-36 font-bold text-center text-3xl bg-slate-200 flex justify-center items-center mr-4 sm:mr-8">
+          we
+        </li>
+        <li class="w-1/2 rounded-full h-36 bg-Hand bg-cover relative flex justify-center items-center bg-center mr-4">
+          <p class="absolute text-3xl text-white">Understand</p>
+        </li>
+        <div class="w-full sm:hidden"></div>
+        <li class="w-1/2 rounded-full h-36 font-bold text-center text-3xl bg-slate-200 flex justify-center items-center mr-4">
+          <i class="fa-solid fa-arrow-right"></i>
+        </li>
+        <li class="w-1/2 rounded-full h-36 bg-Tech bg-cover relative flex justify-center items-center">
+          <p class="absolute text-3xl text-white">Tech</p>
         </li>
       </ul>
       <div class="continer mt-32 mb-20 hidden lg:flex flex-col">
