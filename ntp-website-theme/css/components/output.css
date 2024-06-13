@@ -693,11 +693,6 @@ body{
   margin-right: 0.5rem;
 }
 
-.mx-5{
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -785,10 +780,6 @@ body{
 
 .inline-flex{
   display: inline-flex;
-}
-
-.table{
-  display: table;
 }
 
 .grid{
@@ -937,6 +928,10 @@ body{
   place-items: center;
 }
 
+.content-center{
+  align-content: center;
+}
+
 .items-start{
   align-items: flex-start;
 }
@@ -979,6 +974,18 @@ body{
 
 .gap-y-8{
   row-gap: 2rem;
+}
+
+.-space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(-1rem * var(--tw-space-x-reverse));
+  margin-left: calc(-1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden{
@@ -1288,11 +1295,6 @@ body{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.grayscale{
-  --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1537,14 +1539,14 @@ body{
     top: 11rem;
   }
 
+  .md\:mx-5{
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
   .md\:my-0{
     margin-top: 0px;
     margin-bottom: 0px;
-  }
-
-  .md\:my-8{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
 
   .md\:mt-0{
@@ -1557,6 +1559,10 @@ body{
 
   .md\:mt-5{
     margin-top: 1.25rem;
+  }
+
+  .md\:h-12{
+    height: 3rem;
   }
 
   .md\:w-1\/2{
@@ -1645,7 +1651,16 @@ body{
   }
 }
 
+.rtl\:space-x-reverse:where([dir="rtl"], [dir="rtl"] *) > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 1;
+}
+
 @media (prefers-color-scheme: dark){
+  .dark\:border-gray-800{
+    --tw-border-opacity: 1;
+    border-color: rgb(31 41 55 / var(--tw-border-opacity));
+  }
+
   .dark\:text-gray-400{
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
