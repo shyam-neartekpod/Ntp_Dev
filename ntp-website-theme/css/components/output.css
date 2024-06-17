@@ -556,6 +556,44 @@ video {
   --tw-contain-style:  ;
 }
 
+.container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 110px;
+  padding-left: 110px;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .nav-style{
   height: 2.25rem;
   border-radius: 1rem;
@@ -608,6 +646,10 @@ body{
   border-width: 0;
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .static{
   position: static;
 }
@@ -632,36 +674,24 @@ body{
   bottom: 0px;
 }
 
-.bottom-12{
-  bottom: 3rem;
-}
-
-.bottom-24{
-  bottom: 6rem;
-}
-
-.bottom-40{
-  bottom: 10rem;
+.bottom-8{
+  bottom: 2rem;
 }
 
 .left-0{
   left: 0px;
 }
 
-.left-14{
-  left: 3.5rem;
+.left-3{
+  left: 0.75rem;
 }
 
 .left-4{
   left: 1rem;
 }
 
-.left-5{
-  left: 1.25rem;
-}
-
-.right-16{
-  right: 4rem;
+.left-60{
+  left: 15rem;
 }
 
 .right-4{
@@ -676,8 +706,8 @@ body{
   top: 0px;
 }
 
-.top-24{
-  top: 6rem;
+.top-3{
+  top: 0.75rem;
 }
 
 .top-4{
@@ -833,6 +863,10 @@ body{
 
 .h-96{
   height: 24rem;
+}
+
+.h-auto{
+  height: auto;
 }
 
 .h-full{
@@ -1052,9 +1086,19 @@ body{
   border-color: rgb(56 189 248 / var(--tw-border-opacity));
 }
 
+.border-black{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-blue-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
 .bg-bluechalk{
@@ -1110,7 +1154,7 @@ body{
 }
 
 .bg-WorldMap{
-  background-image: url("{{get_asset_url("../../assets/Group 2.svg")}}");
+  background-image: url("{{get_asset_url("../../assets/Globe.svg")}}");
 }
 
 .bg-cover{
@@ -1292,6 +1336,12 @@ body{
 .shadow-lg{
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1511,32 +1561,8 @@ body{
 }
 
 @media (min-width: 768px){
-  .md\:bottom-20{
-    bottom: 5rem;
-  }
-
-  .md\:bottom-40{
-    bottom: 10rem;
-  }
-
-  .md\:bottom-64{
-    bottom: 16rem;
-  }
-
-  .md\:left-24{
-    left: 6rem;
-  }
-
-  .md\:left-6{
-    left: 1.5rem;
-  }
-
-  .md\:right-32{
-    right: 8rem;
-  }
-
-  .md\:top-44{
-    top: 11rem;
+  .md\:bottom-10{
+    bottom: 2.5rem;
   }
 
   .md\:mx-5{
@@ -1593,10 +1619,6 @@ body{
 }
 
 @media (min-width: 1024px){
-  .lg\:right-24{
-    right: 6rem;
-  }
-
   .lg\:order-1{
     order: 1;
   }
