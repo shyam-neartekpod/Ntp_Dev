@@ -92,12 +92,14 @@
         </div> -->
         <div class="absolute right-5 bottom-2">
           <div class="flex space-x-3">
-            <a href=""
+            <a href="https://www.facebook.com/" target="_blank"
               ><i
                 class="fa-brands fa-square-facebook border border-blue-300 rounded-3xl p-1 text-blue-300"
               ></i
             ></a>
-            <a href=""
+            <a
+              href="https://www.linkedin.com/company/neartekpod-apac-technologies-pvt-limited/people/"
+              target="_blank"
               ><i
                 class="fa-brands fa-linkedin border border-blue-300 rounded-3xl p-1 text-blue-300"
               ></i
@@ -141,7 +143,7 @@
       {% block Understand %} {% global_partial
       path="./Components/understand.html " %} {% endblock Understand %}
 
-      <div class="continer mt-32 mb-20 hidden lg:flex flex-col">
+      <div class="mt-32 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
           <h2 class="font-medium text-3xl mb-10">Some of our Recent Works</h2>
         </div>
@@ -288,89 +290,131 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-     
-      <section class="container mx-auto px-4">
-        <div class="items-start">
+
+      <div class="lg:container">
+        <div class="mx-auto px-4">
+          <div class="items-start">
             <h2 class="font-medium text-2xl md:text-3xl my-10 mb-10">
-                What our Client Say
+              What our Client Say
             </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden">
-                <div class="col-span-2">
-                    <img class="size-full object-cover" src="{{get_asset_url('../assets/face1.jpg')}}" alt="">
-                </div>
-                <div class="col-span-3 p-4">
-                    <p class="text-gray-700 mb-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, nostrum nihil esse, excepturi inventore consectetur blanditiis ab sequi accusamus reiciendis soluta exercitationem iure tempore vitae ratione, corporis eveniet placeat molestiae!</p>
-                    <h1 class="text-gray-900 mb-2">John Doe</h1>
-                    <p class="text-gray-900">CEO AXTECH</p>
-                </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div
+              class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
+            >
+              <div class="col-span-2">
+                <img
+                  class="size-full object-cover"
+                  src="{{get_asset_url('../assets/Client-person1.svg')}}"
+                  alt=""
+                />
+              </div>
+              <div class="col-span-3 p-4">
+                <p class="text-gray-700 mb-10">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Velit, nostrum nihil esse, excepturi inventore consectetur
+                  blanditiis ab sequi accusamus reiciendis soluta exercitationem
+                  iure tempore vitae ratione, corporis eveniet placeat
+                  molestiae!
+                </p>
+                <h1 class="text-gray-900 mb-2">John Doe</h1>
+                <p class="text-gray-900">CEO AXTECH</p>
+              </div>
             </div>
-            <div class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden">
-                <div class="col-span-2">
-                    <img class="size-full object-cover" src="{{get_asset_url('../assets/face2.jpg')}}" alt="">
-                </div>
-                <div class="col-span-3 p-4">
-                    <p class="text-gray-700 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptates officiis, minima inventore, sunt veniam eveniet at sapiente dolore et nam corporis iste, vitae consequatur? Fugit animi nesciunt aperiam minus.</p>
-                    <h1 class="text-gray-900 mb-1">Lisa Powell</h1>
-                    <p class="text-gray-900">CEO Nuts Pvt. Ltd.</p>
-                </div>
+            <div
+              class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
+            >
+              <div class="col-span-2">
+                <img
+                  class="size-full object-cover"
+                  src="{{get_asset_url('../assets/client-person-2.svg')}}"
+                  alt=""
+                />
+              </div>
+              <div class="col-span-3 p-4">
+                <p class="text-gray-700 mb-10">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus voluptates officiis, minima inventore, sunt veniam
+                  eveniet at sapiente dolore et nam corporis iste, vitae
+                  consequatur? Fugit animi nesciunt aperiam minus.
+                </p>
+                <h1 class="text-gray-900 mb-1">Lisa Powell</h1>
+                <p class="text-gray-900">CEO Nuts Pvt. Ltd.</p>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
- 
+      </div>
+      <div class="swiper mySwiper lg:hidden">
+        <div class="items-start">
+          <h2 class="font-medium text-xl md:text-3xl my-10">our pods</h2>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Trichy.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Trichy,India</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide text-center">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Lisbon.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Lisbon</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiperslide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Chicago.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Chicago,USA</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="container mt-32 mb-20 hidden lg:flex flex-col">
+        <div class="items-start">
+          <h2 class="font-medium text-3xl mb-10">Our Pods</h2>
+        </div>
+        {% block ourpods %} {% global_partial path="./Components/our-pods.html "
+        %} {% endblock ourpods %}
+      </div>
     </div>
-    <section class="container mx-auto px-4">
-      <div class="items-start">
-        <h2 class="font-semibold text-2xl md:text-3xl my-10">
-          What our Client Say
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div
-          class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
-        >
-          <div class="col-span-2">
-            <img
-              class="w-full h-full"
-              src="{{get_asset_url('../assets/face1.jpg')}}"
-              alt=""
-            />
-          </div>
-          <div class="col-span-3 p-4">
-            <p class="text-gray-700 mb-10">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit,
-              nostrum nihil esse, excepturi inventore consectetur blanditiis ab
-              sequi accusamus reiciendis soluta exercitationem iure tempore
-              vitae ratione, corporis eveniet placeat molestiae!
-            </p>
-            <h1 class="text-gray-900 mb-2">John Doe</h1>
-            <p class="text-gray-900">CEO AXTECH</p>
-          </div>
-        </div>
-        <div
-          class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
-        >
-          <div class="col-span-2">
-            <img
-              class="w-full h-full"
-              src="{{get_asset_url('../assets/face2.jpg')}}"
-              alt=""
-            />
-          </div>
-          <div class="col-span-3 p-4">
-            <p class="text-gray-700 mb-10">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus voluptates officiis, minima inventore, sunt veniam
-              eveniet at sapiente dolore et nam corporis iste, vitae
-              consequatur? Fugit animi nesciunt aperiam minus.
-            </p>
-            <h1 class="text-gray-900 mb-1">Lisa Powell</h1>
-            <p class="text-gray-900">CEO Nuts Pvt. Ltd.</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </body>
   {{ standard_footer_includes }} {% block footer %} {% global_partial
   path="./partials/footer.html" %} {% endblock footer %} {{
@@ -382,6 +426,30 @@
       pagination: {
         el: ".swiper-pagination",
       },
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".card");
+      const cemexTags = document.querySelector(".cemex-tags");
+
+      cards.forEach((card) => {
+        const tags = card.querySelector(".tags");
+
+        card.addEventListener("mouseenter", function () {
+          if (this !== document.querySelector(".card:first-child")) {
+            cemexTags.classList.add("hidden");
+            tags.classList.remove("hidden");
+          }
+        });
+
+        card.addEventListener("mouseleave", function () {
+          if (this !== document.querySelector(".card:first-child")) {
+            tags.classList.add("hidden");
+            cemexTags.classList.remove("hidden");
+          }
+        });
+      });
     });
   </script>
 </html>
