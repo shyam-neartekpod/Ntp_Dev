@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: NTP-Home 
+  label: NTP-Home
   screenshotPath: ../images/template-previews/home.png
 -->
 <!DOCTYPE html>
@@ -9,19 +9,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link 
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+ 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
+ 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
@@ -33,7 +33,7 @@
   <body class="">
     {% block header %} {% global_partial path="./partials/header.html" %} {%
     endblock header %}
-
+ 
     <div
       class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"
     >
@@ -45,7 +45,7 @@
             Navigate Tech Complexity & Grow your Businesses Together
           </h5>
         </div>
-
+ 
         <div class="flex flex-wrap justify-center sm:gap-1 gap-4 my-8 my-2">
           {% block Email %} {% global_partial path="./Components/email.html " %}
           {% endblock Email %}
@@ -76,14 +76,14 @@
         </p>
       </div>
       <div class="flex-1 aspect-square bg-WorldMap bg-cover bg-center relative border rounded-3xl ">
-        <img src="{{get_asset_url('../assets/We & our dream team.svg')}}" alt="Card Image" class=" absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md ">
-        <div
+        <img src="{{get_asset_url('../assets/We & our card.svg')}}" alt="Card Image" class=" absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md ">
+        <!-- <div
         class="absolute top-3 left-60 w-8 h-8 rounded-3xl  flex justify-center rotate-45 items-center bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
-      > 
+      >
         <i
           class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
         ></i>
-      </div>
+      </div> -->
       <div class="absolute  right-5 bottom-2">
         <div class="flex space-x-3">
           <a href=""
@@ -98,7 +98,7 @@
           ></a>
           <p class="font-light text-blue-300">Find us on social networks</p>
         </div>
-
+ 
       </div>
      
         </div>
@@ -272,6 +272,20 @@
                 class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
               ></i>
             </div>
+            <div class="absolute top-4 left-4  text-sky-500 group-hover:opacity-100 opacity-0 ">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+                Multi-lingual website
+              </button>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+                Completed in 6 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+            </div>
             <div class="absolute bottom-0 text-white p-5 group">
               <h2 class="font-bold text-2xl">Cemex</h2>
               <p class="">
@@ -296,11 +310,25 @@
               class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
             ></div>
             <div
-              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
+              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-200 group-hover:rotate-90 transition-transform duration-300"
             >
               <i
                 class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
               ></i>
+            </div>
+            <div class="absolute top-4 left-4  text-sky-500 group-hover:opacity-100 opacity-0">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+                Multi-lingual website
+              </button>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+                Completed in 6 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
             </div>
             <div class="absolute bottom-0 text-white p-5 group">
               <h2 class="font-bold text-2xl">Jacana</h2>
@@ -326,11 +354,25 @@
               class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
             ></div>
             <div
-              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
+              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-200 group-hover:rotate-90 transition-transform duration-300"
             >
               <i
                 class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
               ></i>
+            </div>
+            <div class="absolute top-4 left-4  text-sky-500 group-hover:opacity-100 hover:!opacity-0 ">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+                Multi-lingual website
+              </button>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+                Completed in 6 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
             </div>
             <div class="absolute bottom-0 text-white p-5 group">
               <h2 class="font-bold text-2xl">Marriot</h2>
@@ -348,7 +390,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="swiper mySwiper lg:hidden">
         <div class="items-start">
           <h2 class="font-medium text-xl md:text-3xl my-10">
@@ -488,18 +530,49 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
+     
+      <section class="container mx-auto px-4">
+        <div class="items-start">
+            <h2 class="font-semibold text-2xl md:text-3xl my-10">
+                What our Client Say
+            </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden">
+                <div class="col-span-2">
+                    <img class="w-full h-full" src="{{get_asset_url('../assets/face1.jpg')}}" alt="">
+                </div>
+                <div class="col-span-3 p-4">
+                    <p class="text-gray-700 mb-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, nostrum nihil esse, excepturi inventore consectetur blanditiis ab sequi accusamus reiciendis soluta exercitationem iure tempore vitae ratione, corporis eveniet placeat molestiae!</p>
+                    <h1 class="text-gray-900 mb-2">John Doe</h1>
+                    <p class="text-gray-900">CEO AXTECH</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden">
+                <div class="col-span-2">
+                    <img class="w-full h-full" src="{{get_asset_url('../assets/face2.jpg')}}" alt="">
+                </div>
+                <div class="col-span-3 p-4">
+                    <p class="text-gray-700 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptates officiis, minima inventore, sunt veniam eveniet at sapiente dolore et nam corporis iste, vitae consequatur? Fugit animi nesciunt aperiam minus.</p>
+                    <h1 class="text-gray-900 mb-1">Lisa Powell</h1>
+                    <p class="text-gray-900">CEO Nuts Pvt. Ltd.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  
     </div>
   </body>
   {{ standard_footer_includes }} {% block footer %} {% global_partial
   path="./partials/footer.html" %} {% endblock footer %} {{
   require_js(get_asset_url("../js/main.js")) }}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+ 
   <script>
     var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
       },
     });
-  </script> 
+  </script>
 </html>
