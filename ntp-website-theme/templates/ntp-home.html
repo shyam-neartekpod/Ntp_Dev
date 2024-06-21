@@ -38,7 +38,7 @@
       class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"
     >
       <div
-        class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center gap-y-8"
+        class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center gap-y-8 z-40"
       >
         <div class="max-w-md mx-auto mt-7 md:mt-12">
           <h5 class="sm:text-3xl font-medium p-2 text-base">
@@ -113,7 +113,9 @@
     {% block Backgroundcolor %} {% global_partial
     path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     {% block Backgroundyellow %} {% global_partial
-    path="./Components/backyellow.html " %} {% endblock Backgroundyellow %}
+    path="./Components/backyellow.html " %} {% endblock Backgroundyellow %} {%
+    block Backgroundpink %} {% global_partial path="./Components/backpink.html "
+    %} {% endblock Backgroundpink %}
     <div
       class="md:container mx-auto my-8 items-center justify-between text-center mt-12"
     >
