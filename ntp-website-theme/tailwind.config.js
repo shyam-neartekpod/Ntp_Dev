@@ -31,6 +31,8 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
+        backblue: "#00A2FF",
+        backyellow: "#DEF100",
       },
       fontFamily: {
         Montserrat: "Montserrat",
