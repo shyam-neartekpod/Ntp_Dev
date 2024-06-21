@@ -1,4 +1,4 @@
-<svg width="198" height="296" viewBox="0 0 198 296" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ npx tailwindcss -i ./src/input.css -o ./css/components/output.css --watch\my-website-t<svg width="198" height="296" viewBox="0 0 198 296" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect width="198" height="296" fill="url(#pattern0_111_10714)"/>
 <defs>
 <pattern id="pattern0_111_10714" patternContentUnits="objectBoundingBox" width="1" height="1">
