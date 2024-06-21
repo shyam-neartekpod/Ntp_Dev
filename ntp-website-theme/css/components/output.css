@@ -666,6 +666,10 @@ body{
   inset: 0px;
 }
 
+.-left-5{
+  left: -1.25rem;
+}
+
 .bottom-0{
   bottom: 0px;
 }
@@ -688,6 +692,10 @@ body{
 
 .left-60{
   left: 15rem;
+}
+
+.left-\[180px\]{
+  left: 180px;
 }
 
 .right-0{
@@ -722,28 +730,16 @@ body{
   top: 300px;
 }
 
-.-left-0{
-  left: -0px;
+.top-\[70px\]{
+  top: 70px;
 }
 
-.-left-5{
-  left: -1.25rem;
+.z-40{
+  z-index: 40;
 }
 
 .z-50{
   z-index: 50;
-}
-
-.z-0{
-  z-index: 0;
-}
-
-.-z-0{
-  z-index: 0;
-}
-
-.-z-10{
-  z-index: -10;
 }
 
 .col-span-2{
@@ -1145,6 +1141,16 @@ body{
   background-color: rgb(0 162 255 / var(--tw-bg-opacity));
 }
 
+.bg-backpink{
+  --tw-bg-opacity: 1;
+  background-color: rgb(97 0 255 / var(--tw-bg-opacity));
+}
+
+.bg-backyellow{
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 241 0 / var(--tw-bg-opacity));
+}
+
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1200,17 +1206,12 @@ body{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-backyellow{
-  --tw-bg-opacity: 1;
-  background-color: rgb(222 241 0 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
 
-.bg-opacity-20{
-  --tw-bg-opacity: 0.2;
+.bg-opacity-30{
+  --tw-bg-opacity: 0.3;
 }
 
 .bg-Hand{
@@ -1415,16 +1416,8 @@ body{
   opacity: 0.1;
 }
 
-.opacity-30{
-  opacity: 0.3;
-}
-
-.opacity-20{
-  opacity: 0.2;
-}
-
-.opacity-25{
-  opacity: 0.25;
+.opacity-40{
+  opacity: 0.4;
 }
 
 .shadow-lg{
