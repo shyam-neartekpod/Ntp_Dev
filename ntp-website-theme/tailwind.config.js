@@ -11,6 +11,9 @@ module.exports = {
 
         padding: "110px",
       },
+      opacity: {
+        40: "0.4",
+      },
       swiper: {
         width: "100%",
         height: "100%",
@@ -31,13 +34,18 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
+        backblue: "#00A2FF",
+        backyellow: "#DEF100",
+        backpink: "#6100FF",
       },
       fontFamily: {
         Montserrat: "Montserrat",
       },
-
+      backgroundOpacity: {
+        30: "0.3",
+      },
       backgroundImage: (theme) => ({
-        WorldMap: 'url("{{get_asset_url("../../assets/Group 2.svg")}}")',
+        WorldMap: 'url("{{get_asset_url("../../assets/Globe.svg")}}")',
         Easy: 'url("{{get_asset_url("../../assets/Subtract.png")}}")',
         Family:
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/fam.svg")}}")',

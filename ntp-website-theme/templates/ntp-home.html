@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: NTP-Home 
+  label: NTP-Home
   screenshotPath: ../images/template-previews/home.png
 -->
 <!DOCTYPE html>
@@ -38,15 +38,15 @@
       class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"
     >
       <div
-        class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center gap-y-8"
+        class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center gap-y-8 z-40"
       >
         <div class="max-w-md mx-auto mt-7 md:mt-12">
           <h5 class="sm:text-3xl font-medium p-2 text-base">
-            Navigate Tech Complexity & Grow your Businesses Together
+            Navigate Tech Complexity & Grow your Business Together
           </h5>
         </div>
 
-        <div class="flex flex-wrap justify-center sm:gap-1 gap-4 my-8 my-2">
+        <div class="flex flex-wrap justify-center sm:gap-1 gap-4 my-8">
           {% block Email %} {% global_partial path="./Components/email.html " %}
           {% endblock Email %}
         </div>
@@ -75,30 +75,31 @@
           ready to deploy
         </p>
       </div>
-      <div class="flex-1 aspect-square bg-WorldMap bg-cover bg-center relative">
-        <div class="absolute md:bottom-40 md:left-24 bottom-24 left-14">
-          <a href=""
-            ><i class="fa-solid fa-location-dot text-white text-3xl"></i
-          ></a>
-        </div>
-        <div class="absolute md:bottom-64 md:left-6 bottom-40 left-5">
-          <a href=""
-            ><i class="fa-solid fa-location-dot text-white text-3xl"></i
-          ></a>
-        </div>
-        <div class="absolute md:top-44 lg:right-24 md:right-32 top-24 right-16">
-          <a href=""
-            ><i class="fa-solid fa-location-dot text-white text-3xl"></i
-          ></a>
-        </div>
-        <div class="absolute md:bottom-20 bottom-12 right-6">
-          <div class="flex gap-3">
-            <a href=""
+      <div
+        class="flex-1 aspect-square bg-WorldMap bg-cover bg-center relative border rounded-3xl z-40"
+      >
+        <img
+          src="{{get_asset_url('../assets/We & our card.svg')}}"
+          alt="Card Image"
+          class="absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md"
+        />
+        <!-- <div
+          class="absolute top-3 left-60 w-8 h-8 rounded-3xl flex justify-center rotate-45 items-center bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
+        >
+          <i
+            class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
+          ></i>
+        </div> -->
+        <div class="absolute right-5 bottom-2">
+          <div class="flex space-x-3">
+            <a href="https://www.facebook.com/" target="_blank"
               ><i
                 class="fa-brands fa-square-facebook border border-blue-300 rounded-3xl p-1 text-blue-300"
               ></i
             ></a>
-            <a href=""
+            <a
+              href="https://www.linkedin.com/company/neartekpod-apac-technologies-pvt-limited/people/"
+              target="_blank"
               ><i
                 class="fa-brands fa-linkedin border border-blue-300 rounded-3xl p-1 text-blue-300"
               ></i
@@ -108,6 +109,12 @@
         </div>
       </div>
     </div>
+    <!-- </div> -->
+    <div class="absolute top-[220px] right-0">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+
     <div
       class="md:container mx-auto my-8 items-center justify-between text-center mt-12"
     >
@@ -118,102 +125,15 @@
           Our clients
         </h2>
         <div class="marquee-container">
-          <marquee class="w-full">
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/Apple.svg')}}"
-              alt="Apple"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/Best buy logo.svg')}}"
-              alt="best-buy"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/cemex.svg')}}"
-              alt="cemex"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/citibank logo.svg')}}"
-              alt="citibank logo"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/Hp.svg')}}"
-              alt="Hp"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/National logo.svg')}}"
-              alt="iNational logo"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/Samsung.svg')}}"
-              alt="Samsung"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/United airlines.svg')}}"
-              alt="United airlines"
-            />
-            <img
-              class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
-              src="{{get_asset_url('../assets/Verizon.svg')}}"
-              alt="Verizon"
-            />
-          </marquee>
+          {% block Marquee %} {% global_partial path="./Components/marque.html "
+          %} {% endblock Marquee %}
         </div>
       </div>
-      <!-- <div class="lg:hidden flex flex-wrap justify-center items-center">
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/Apple.svg')}}"
-          alt="Apple"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/Best buy logo.svg')}}"
-          alt="best-buy"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/cemex.svg')}}"
-          alt="cemex"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/citibank logo.svg')}}"
-          alt="citibank logo"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/Hp.svg')}}"
-          alt="Hp"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/National logo.svg')}}"
-          alt="iNational logo"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/Samsung.svg')}}"
-          alt="Samsung"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/United airlines.svg')}}"
-          alt="United airlines"
-        />
-        <img
-          class="w-1/3 h-12 my-2 mx-2 inline-block rounded-lg"
-          src="{{get_asset_url('../assets/Verizon.svg')}}"
-          alt="Verizon"
-        />
-      </div> -->
+      <div class="absolute top-[550px] left-30">
+        {% block Backgroundcolor %} {% global_partial
+        path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor
+        %}
+      </div>
       <div class="lg:my-24 my-10 px-4">
         <p
           class="text-xl md:text-4xl max-w-4xl mx-auto font-medium md:leading-[3rem]"
@@ -229,128 +149,15 @@
       </div>
     </div>
     <div class="md:container p-4">
-      <ul class="flex flex-wrap lg:flex-nowrap space-y-2">
-        <li
-          class="w-6/12 lg:w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center"
-        >
-          we
-        </li>
-        <li
-          class="w-6/12 lg:w-4/12 rounded-full h-36 bg-Hand bg-cover relative flex justify-center items-center bg-center"
-        >
-          <p class="absolute md:text-4xl text-lg text-white">Understand</p>
-        </li>
-        <li
-          class="w-6/12 lg:w-2/12 rounded-full h-36 font-bold text-center text-5xl bg-slate-200 flex justify-center items-center"
-        >
-          <i class="fa-solid fa-arrow-right"></i>
-        </li>
-        <li
-          class="w-6/12 lg:w-4/12 rounded-full h-36 bg-Tech l bg-cover relative flex justify-center items-center"
-        >
-          <p class="absolute md:text-4xl text-lg text-white">Tech</p>
-        </li>
-      </ul>
-      <div class="continer mt-32 mb-20 hidden lg:flex flex-col">
+      {% block Understand %} {% global_partial
+      path="./Components/understand.html " %} {% endblock Understand %}
+
+      <div class="mt-32 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
-          <h2 class="font-medium text-3xl mb-20">Some of our Recent Works</h2>
+          <h2 class="font-medium text-3xl mb-10">Some of our Recent Works</h2>
         </div>
-        <div
-          class="my-6 flex h-80 items-center gap-5 *:h-96 *:overflow-hidden *:rounded-2xl *:bg-slate-600 group *:duration-300"
-        >
-          <div
-            class="group-hover:w-[380px] hover:!w-[500px] w-[500px] relative h-80"
-          >
-            <img
-              class="size-full object-cover"
-              src="{{get_asset_url('../assets/Cemex-image.svg')}}"
-              alt="cemex"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
-            ></div>
-            <div
-              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
-            >
-              <i
-                class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
-              ></i>
-            </div>
-            <div class="absolute bottom-0 text-white p-5 group">
-              <h2 class="font-bold text-2xl">Cemex</h2>
-              <p class="">
-                True testament to building and delivering in agile in record
-                time with quality
-              </p>
-              <button
-                class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-              >
-                EXPLORE CASE STUDY
-                <i class="fa-solid fa-arrow-right text-sm"></i>
-              </button>
-            </div>
-          </div>
-          <div class="hover:w-[500px] w-[380px] relative h-80">
-            <img
-              class="size-full object-cover"
-              src="{{get_asset_url('../assets/jacana-image.svg')}}"
-              alt="cemex"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
-            ></div>
-            <div
-              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
-            >
-              <i
-                class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
-              ></i>
-            </div>
-            <div class="absolute bottom-0 text-white p-5 group">
-              <h2 class="font-bold text-2xl">Jacana</h2>
-              <p class="">
-                True testament to building and delivering in agile in record
-                time with quality
-              </p>
-              <button
-                class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-              >
-                EXPLORE CASE STUDY
-                <i class="fa-solid fa-arrow-right text-sm"></i>
-              </button>
-            </div>
-          </div>
-          <div class="hover:w-[500px] w-[380px] relative h-80">
-            <img
-              class="size-full object-cover"
-              src="{{get_asset_url('../assets/Marriot.svg')}}"
-              alt="cemex"
-            />
-            <div
-              class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"
-            ></div>
-            <div
-              class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-white flex justify-center rotate-45 items-center hover:bg-blue-300 group-hover:rotate-90 transition-transform duration-300"
-            >
-              <i
-                class="fa-solid fa-arrow-up up-arrow transition-opacity duration-200"
-              ></i>
-            </div>
-            <div class="absolute bottom-0 text-white p-5 group">
-              <h2 class="font-bold text-2xl">Marriot</h2>
-              <p class="">
-                True testament to building and delivering in agile in record
-                time with quality
-              </p>
-              <button
-                class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-              >
-                EXPLORE CASE STUDY
-                <i class="fa-solid fa-arrow-right text-sm"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+        {% block RecentWork %} {% global_partial path="./Components/work.html "
+        %} {% endblock RecentWork %}
       </div>
 
       <div class="swiper mySwiper lg:hidden">
@@ -413,7 +220,7 @@
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-2xl">Cemex</h2>
+                <h2 class="font-bold text-2xl">Jacana</h2>
                 <p class="">
                   True testament to building and delivering in agile in record
                   time with quality
@@ -456,7 +263,7 @@
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-2xl">Cemex</h2>
+                <h2 class="font-bold text-2xl">Marriot</h2>
                 <p class="">
                   True testament to building and delivering in agile in record
                   time with quality
@@ -492,6 +299,130 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
+
+      <div class="lg:container">
+        <div class="mx-auto px-4">
+          <div class="items-start">
+            <h2 class="font-medium text-2xl md:text-3xl my-10 mb-10">
+              What our Client Say
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div
+              class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
+            >
+              <div class="col-span-2">
+                <img
+                  class="size-full object-cover"
+                  src="{{get_asset_url('../assets/Client-person1.svg')}}"
+                  alt=""
+                />
+              </div>
+              <div class="col-span-3 p-4">
+                <p class="text-gray-700 mb-10">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Velit, nostrum nihil esse, excepturi inventore consectetur
+                  blanditiis ab sequi accusamus reiciendis soluta exercitationem
+                  iure tempore vitae ratione, corporis eveniet placeat
+                  molestiae!
+                </p>
+                <h1 class="text-gray-900 mb-2">John Doe</h1>
+                <p class="text-gray-900">CEO AXTECH</p>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
+            >
+              <div class="col-span-2">
+                <img
+                  class="size-full object-cover"
+                  src="{{get_asset_url('../assets/client-person-2.svg')}}"
+                  alt=""
+                />
+              </div>
+              <div class="col-span-3 p-4">
+                <p class="text-gray-700 mb-10">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus voluptates officiis, minima inventore, sunt veniam
+                  eveniet at sapiente dolore et nam corporis iste, vitae
+                  consequatur? Fugit animi nesciunt aperiam minus.
+                </p>
+                <h1 class="text-gray-900 mb-1">Lisa Powell</h1>
+                <p class="text-gray-900">CEO Nuts Pvt. Ltd.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper mySwiper lg:hidden">
+        <div class="items-start">
+          <h2 class="font-medium text-xl md:text-3xl my-10">our pods</h2>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Trichy.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Trichy,India</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide text-center">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Lisbon.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Lisbon</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiperslide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Chicago.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Chicago,USA</h2>
+                <p class="">
+                  True testament to building and delivering in agile in record
+                  time with quality
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="container mt-32 mb-20 hidden lg:flex flex-col">
+        <div class="items-start">
+          <h2 class="font-medium text-3xl mb-10">Our Pods</h2>
+        </div>
+        {% block ourpods %} {% global_partial path="./Components/our-pods.html "
+        %} {% endblock ourpods %}
+      </div>
     </div>
   </body>
   {{ standard_footer_includes }} {% block footer %} {% global_partial
@@ -504,6 +435,30 @@
       pagination: {
         el: ".swiper-pagination",
       },
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".card");
+      const cemexTags = document.querySelector(".cemex-tags");
+
+      cards.forEach((card) => {
+        const tags = card.querySelector(".tags");
+
+        card.addEventListener("mouseenter", function () {
+          if (this !== document.querySelector(".card:first-child")) {
+            cemexTags.classList.add("hidden");
+            tags.classList.remove("hidden");
+          }
+        });
+
+        card.addEventListener("mouseleave", function () {
+          if (this !== document.querySelector(".card:first-child")) {
+            tags.classList.add("hidden");
+            cemexTags.classList.remove("hidden");
+          }
+        });
+      });
     });
   </script>
 </html>
