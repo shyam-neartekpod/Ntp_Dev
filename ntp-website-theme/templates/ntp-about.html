@@ -1,0 +1,100 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: NTP-About
+  screenshotPath: ../images/template-previews/home.png
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+        standard_header_includes }}
+</head>
+<body>
+    {% block header %} {% global_partial path="./partials/header.html" %} {%
+        endblock header %}
+    <section class="p-10 md:container">
+        <!-- about us  -->
+        <div class="flex content-center justify-center border rounded-2xl mt-32 mb-10">
+          <img class="border-2 border-gray-300 object-cover" src="{{get_asset_url('../assets/About-our-company.svg')}}" alt="img" />
+        </div>
+        <div class="flex content-center mt-32 mb-10">
+          <p class="text-2xl md:text-3xl font-medium  text-center">
+            We are a team of experienced business, design, technology & process leaders
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row items-center w-full  mb-10">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-center items-center w-full">
+            <div class="flex flex-col items-center border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent p-4 md:p-6 rounded-lg shadow-md text-center">
+              <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">100+</div>
+              <div class="text-sm md:text-base text-gray-600">skilled multi disciplinary professionals</div>
+            </div>
+            <div class="flex flex-col items-center border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent p-4 md:p-6 rounded-lg shadow-md text-center mt-4 md:mt-0">
+              <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">300+</div>
+              <div class="text-sm md:text-base text-gray-600">A global network of trusted service providers and technology partners</div>
+            </div>
+            <div class="flex flex-col items-center border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent p-4 md:p-6 rounded-lg shadow-md text-center mt-4 md:mt-0">
+              <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">5</div>
+              <div class="text-sm md:text-base text-gray-600">Operational regions around the world</div>
+            </div>
+          </div>
+        </div>
+        <!-- Heading -->
+        <div class="flex content-start mt-32 mb-10">
+          <h1 class="text-3xl lg:text-5xl font-bold">Meet our team members</h1>
+        </div>
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4  mb-10">
+          <!-- Member 1 -->
+          <div class="flex flex-col items-center text-center border rounded-2xl border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent overflow-hidden">
+           <img src="{{get_asset_url('../assets/face1.jpg')}}" alt="Krishna T." class="size-full object-fill w-full ">
+           <h1 class="font-bold text-xl">Krish s</h1>
+             <p class="text-sm font-medium text-gray-800">CEO & Co-Founder</p>
+             <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita soluta doloremque quibusdam repellat ea odio similique quisquam molestiae magni illo maxime, veniam officia! Molestiae, hic adipisci. Iste, quam quia.</p>
+          </div>
+         <!-- Member 2 -->
+          <div class="flex flex-col items-center text-center border rounded-2xl border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent overflow-hidden">
+           <img src="{{get_asset_url('../assets/face1.jpg')}}" alt="Krishna T." class="size-full object-cover">
+           <h1 class="font-bold text-xl">Sekar</h1>
+             <p class="text-sm font-medium text-gray-800">CEO & Co-Founder</p>
+             <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita soluta doloremque quibusdam repellat ea odio similique quisquam molestiae magni illo maxime, veniam officia! Molestiae, hic adipisci. Iste, quam quia.</p>
+          </div>
+         <!-- Member 3 -->
+         <div class="flex flex-col items-center text-center border rounded-2xl border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent overflow-hidden">
+           <img src="{{get_asset_url('../assets/face1.jpg')}}" alt="Krishna T." class="size-full object-cover">
+           <h1 class="font-bold text-xl">Raji</h1>
+             <p class="text-sm font-medium text-gray-800">CEO & Co-Founder</p>
+             <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita soluta doloremque quibusdam repellat ea odio similique quisquam molestiae magni illo maxime, veniam officia! Molestiae, hic adipisci. Iste, quam quia.</p>
+         </div>
+         <!-- Member 4 -->
+         <div class="flex flex-col items-center text-center border rounded-2xl border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent overflow-hidden">
+           <img src="{{get_asset_url('../assets/face1.jpg')}}" alt="Krishna T." class="size-full object-cover">
+           <h1 class="font-bold text-xl">Clary</h1>
+             <p class="text-sm font-medium text-gray-800">Director</p>
+             <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita soluta doloremque quibusdam repellat ea odio similique quisquam molestiae magni illo maxime, veniam officia! Molestiae, hic adipisci. Iste, quam quia.</p>
+         </div>
+         <!-- Member 5 -->
+         <div class="flex flex-col items-center text-center border rounded-2xl border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent overflow-hidden">
+           <img src="{{get_asset_url('../assets/face1.jpg')}}" alt="Krishna T." class="size-full object-cover">
+           <h1 class="font-bold text-xl">Jason</h1>
+             <p class="text-sm font-medium text-gray-800">Director</p>
+             <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita soluta doloremque quibusdam repellat ea odio similique quisquam molestiae magni illo maxime, veniam officia! Molestiae, hic adipisci. Iste, quam quia.</p>
+         </div>
+         <!-- Member 6-->
+         <div class="flex flex-col items-center text-center border rounded-2xl border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent overflow-hidden">
+           <img src="{{get_asset_url('../assets/face1.jpg')}}" alt="Krishna T." class="size-full object-cover">
+           <h1 class="font-bold text-xl">Sara J</h1>
+             <p class="text-sm font-medium text-gray-800">Tech Lead</p>
+             <p class="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita soluta doloremque quibusdam repellat ea odio similique quisquam molestiae magni illo maxime, veniam officia! Molestiae, hic adipisci. Iste, quam quia.</p>
+         </div>
+     </div>
+    </section>
+</body>
+{{ standard_footer_includes }} {% block footer %} {% global_partial
+  path="./partials/footer.html" %} {% endblock footer %} {{
+  require_js(get_asset_url("../js/main.js")) }}
+</html>
