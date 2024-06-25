@@ -722,36 +722,20 @@ body{
   top: 1rem;
 }
 
-.top-\[260px\]{
-  top: 260px;
+.top-\[220px\]{
+  top: 220px;
 }
 
 .top-\[300px\]{
   top: 300px;
 }
 
-.top-\[70px\]{
-  top: 70px;
-}
-
-.top-\[60px\]{
-  top: 60px;
-}
-
-.top-\[360px\]{
-  top: 360px;
-}
-
 .top-\[550px\]{
   top: 550px;
 }
 
-.top-\[240px\]{
-  top: 240px;
-}
-
-.top-\[220px\]{
-  top: 220px;
+.top-\[70px\]{
+  top: 70px;
 }
 
 .z-40{
@@ -760,10 +744,6 @@ body{
 
 .z-50{
   z-index: 50;
-}
-
-.-z-10{
-  z-index: -10;
 }
 
 .col-span-2{
