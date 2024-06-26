@@ -1,13 +1,33 @@
-<!--
+<!-- 
   templateType: global_partial
   label: Footer
 -->
 
 <hr class="lg:mt-10" />
 <div class="md:container">
-  <div class="py-14 flex flex-wrap lg:flex-nowrap justify-center">
-    <div class="md:w-1/2">
-      <ul class="flex flex-col gap-4">
+  <div class="pt-14 pb-6 flex flex-wrap lg:flex-nowrap justify-center">
+    <div class="md:w-2/6">
+      <div class="">
+        <h2 class="font-medium text-2xl text-center md:text-start">Reach us</h2>
+        <p class="mt-5 flex gap-4">
+          <i class="fa-regular fa-envelope text-xl"></i>
+          <span class="text-base">growth@neartekpod.com</span>
+        </p>
+        <p class="mt-5 flex gap-4">
+          <i class="fa-solid fa-phone text-xl"></i>
+          <span class="text-base">+(847) 450-3728</span>
+        </p>
+        <p class="mt-5 flex gap-4">
+          <i class="fa-solid fa-location-dot text-xl"></i>
+          <span class="text-base">Lorem ipsum dolor sit amet</span>
+        </p>
+      </div>
+    </div>
+    <div class="md:w-2/6">
+      <ul class="flex flex-col gap-4 text-center">
+        <li class="mt-8 mb-6 md:mt-0 md:mb-0">
+          <h2 class="font-medium text-2xl">Quick link</h2>
+        </li>
         <li class="">
           <button class="footer-style">View Our service</button>
         </li>
@@ -19,14 +39,29 @@
         </li>
       </ul>
     </div>
-    <div class="md:w-1/2">
+    <div class="md:w-2/6">
       <div class="my-10 md:my-0 p-4 md:p-0">
         <h4 class="text-2xl font-medium font-Montserrat leading-9">
           Get Touch with Us . Let us help you with any of your tech needs.
         </h4>
         <div class="mt-5">
-          {% block Email %} {% global_partial path="Components/email.html" %} {%
-          endblock Email %}
+          <div class="flex justify-between">
+            <div>
+              <a href=""
+                ><img
+                  src="{{ get_asset_url('../../assets/logo.png') }}"
+                  alt="Logo"
+                  class="h-10"
+              /></a>
+            </div>
+            <div>
+              <button
+                class="border-[2px] rounded-2xl w-40 h-9 text-base border-coralblue py-2 leading-[1px] font-bold"
+              >
+                Contact us
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
