@@ -34,8 +34,8 @@
   </head>
 
   <body class="bg-gray-100">
-    {{ standard_header_includes }} {% block header %} {% global_partial
-    path="./partials/header.html" %} {% endblock header %}
+    {% block header %} {% global_partial path="./partials/header.html" %} {%
+    endblock header %}
 
     <div class="container mx-auto px-8 mt-32">
       <div class="relative h-96 w-full grid place-items-center">
