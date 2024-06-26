@@ -10,10 +10,7 @@ module.exports = {
         // maxWidth:"1180px"
 
         padding: "110px",
-      },
-      opacity: {
-        40: "0.4",
-      },
+      },  
       swiper: {
         width: "100%",
         height: "100%",
@@ -34,16 +31,11 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
-        backblue: "#00A2FF",
-        backyellow: "#DEF100",
-        backpink: "#6100FF",
       },
       fontFamily: {
         Montserrat: "Montserrat",
       },
-      backgroundOpacity: {
-        30: "0.3",
-      },
+
       backgroundImage: (theme) => ({
         WorldMap: 'url("{{get_asset_url("../../assets/Globe.svg")}}")',
         Easy: 'url("{{get_asset_url("../../assets/Subtract.png")}}")',
