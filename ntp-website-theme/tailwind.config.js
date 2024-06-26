@@ -10,10 +10,7 @@ module.exports = {
         // maxWidth:"1180px"
 
         padding: "110px",
-      },
-      opacity: {
-        40: "0.4",
-      },
+      },  
       swiper: {
         width: "100%",
         height: "100%",
@@ -26,6 +23,7 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
+
         backblue: "#00A2FF",
         backyellow: "#DEF100",
         backpink: "#6100FF",
@@ -34,6 +32,7 @@ module.exports = {
           DEFAULT: "#76c7c0",
           dark: "#4b8e8d",
         },
+
       },
       fontFamily: {
         Montserrat: "Montserrat",
@@ -44,6 +43,7 @@ module.exports = {
       borderColor: {
         customcolor: "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
       },
+
       backgroundImage: (theme) => ({
         WorldMap: 'url("{{get_asset_url("../../assets/Globe.svg")}}")',
         Easy: 'url("{{get_asset_url("../../assets/Subtract.png")}}")',
