@@ -18,9 +18,6 @@
     @apply scale-x-100 scale-y-125;
   }
   .contact-border {
-    @apply mt-1 border-0 border-b-[1px]  !ring-0 bg-transparent w-full placeholder-custom;
-  }
-  .placeholder-custom::placeholder {
-    @apply text-black font-medium;
+    @apply mt-1 border-0 border-b-[1px]  !ring-0 bg-transparent w-full;
   }
 }

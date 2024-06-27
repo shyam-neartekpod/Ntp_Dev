@@ -10,7 +10,7 @@ module.exports = {
         // maxWidth:"1180px"
 
         padding: "110px",
-      },  
+      },
       swiper: {
         width: "100%",
         height: "100%",
@@ -32,7 +32,6 @@ module.exports = {
           DEFAULT: "#76c7c0",
           dark: "#4b8e8d",
         },
-
       },
       fontFamily: {
         Montserrat: "Montserrat",
