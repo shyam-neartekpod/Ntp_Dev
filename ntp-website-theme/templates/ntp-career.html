@@ -34,7 +34,14 @@
   <body class="">
     {% block header %} {% global_partial path="./partials/header.html" %} {%
     endblock header %}
-
+    <div class="absolute top-[50px] left-30">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[550px] left-30">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
     <div class="p-8 mt-24">
       <div class="md:container">
         <!-- Dropdowns -->
@@ -75,7 +82,11 @@
             </button>
           </div>
         </div>
-
+        <div class="absolute top-[450px] right-0">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock
+          Backgroundcolor %}
+        </div>
         <!-- Accordion Cards -->
         <div class="space-y-4 mt-20 md:mt-0">
           <!-- Card-1 -->

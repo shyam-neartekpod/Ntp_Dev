@@ -56,6 +56,8 @@ module.exports = {
         Tech: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/VR-image.svg")}}") ',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
+        servicefradient:
+          " linear-gradient(90deg, rgba(220,234,253,1) 11%, rgba(253,254,255,1) 64%)",
       }),
     },
   },
