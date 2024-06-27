@@ -38,7 +38,7 @@
       class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"
     >
       <div
-        class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center gap-y-8 z-40"
+        class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center z-40"
       >
         <div class="max-w-md mx-auto mt-7 md:mt-12">
           <h5 class="sm:text-3xl font-medium p-2 text-base">
@@ -50,7 +50,7 @@
           {% block Email %} {% global_partial path="./Components/email.html " %}
           {% endblock Email %}
         </div>
-        <div class="flex content-center justify-center">
+        <div class="flex content-center justify-center my-14">
           <div class="flex -space-x-4 rtl:space-x-reverse">
             <img
               class="w-10 h-10 border-2 rounded-full dark:border-gray-800"
@@ -69,7 +69,7 @@
             />
           </div>
         </div>
-        <h5 class="md:mt-5 mt-2 font-medium text-base">300+</h5>
+        <h5 class="font-medium text-base">300+</h5>
         <p class="w-4/5 mx-auto text-center font-medium text-base">
           Global networks of trusted service provides and technology partners
           ready to deploy
@@ -139,10 +139,10 @@
           class="text-xl md:text-4xl max-w-4xl mx-auto font-medium md:leading-[3rem]"
         >
           Modern businesses require experienced technologists and robust
-          technology solution to achieve their goals.
+          technology solutions to achieve their goals.
         </p>
         <button
-          class="btn rounded-full border-2 text-base font-medium p-2 mt-6 border-primaryblack hover:bg-bluechalk hover:border-bluechalk transition ease-in-out"
+          class="btn rounded-full border-[1px] text-base font-medium p-3 mt-6 border-primaryblack hover:bg-bluechalk hover:border-bluechalk transition ease-in-out"
         >
           View Our Service <i class="fa-solid fa-arrow-right ml-3"></i>
         </button>
@@ -173,7 +173,7 @@
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Cemex-image.svg')}}"
+                src="{{get_asset_url('../assets/Cemex2.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
@@ -216,7 +216,7 @@
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Marriot.svg')}}"
+                src="{{get_asset_url('../assets/Jacana2.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
@@ -259,7 +259,7 @@
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/jacana-image.svg')}}"
+                src="{{get_asset_url('../assets/Marriot2.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
@@ -309,29 +309,31 @@
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div
-              class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
+              class="grid grid-cols-5 border rounded-2xl bg-customgradient overflow-hidden"
             >
               <div class="col-span-2">
                 <img
                   class="size-full object-cover"
-                  src="{{get_asset_url('../assets/Client-person1.svg')}}"
+                  src="{{get_asset_url('../assets/Client-person-1.svg')}}"
                   alt=""
                 />
               </div>
               <div class="col-span-3 p-4">
-                <p class="text-gray-700 mb-10">
+                <p class="text-gray-700 mb-10 text-base font-medium">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Velit, nostrum nihil esse, excepturi inventore consectetur
                   blanditiis ab sequi accusamus reiciendis soluta exercitationem
                   iure tempore vitae ratione, corporis eveniet placeat
                   molestiae!
                 </p>
-                <h1 class="text-gray-900 mb-2">John Doe</h1>
-                <p class="text-gray-900">CEO AXTECH</p>
+                <h1 class="text-gray-900 mb-2 text-3xl font-semibold">
+                  John Doe
+                </h1>
+                <p class="text-gray-900 text-sm font-medium">CEO AXTECH</p>
               </div>
             </div>
             <div
-              class="grid grid-cols-5 border rounded-2xl bg-blue-100 overflow-hidden"
+              class="grid grid-cols-5 border rounded-2xl bg-customgradient overflow-hidden"
             >
               <div class="col-span-2">
                 <img
@@ -341,14 +343,18 @@
                 />
               </div>
               <div class="col-span-3 p-4">
-                <p class="text-gray-700 mb-10">
+                <p class="text-gray-700 mb-10 text-base font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Repellendus voluptates officiis, minima inventore, sunt veniam
                   eveniet at sapiente dolore et nam corporis iste, vitae
                   consequatur? Fugit animi nesciunt aperiam minus.
                 </p>
-                <h1 class="text-gray-900 mb-1">Lisa Powell</h1>
-                <p class="text-gray-900">CEO Nuts Pvt. Ltd.</p>
+                <h1 class="text-gray-900 mb-1 text-3xl font-semibold">
+                  Lisa Powell
+                </h1>
+                <p class="text-gray-900 text-sm font-medium">
+                  CEO Nuts Pvt. Ltd.
+                </p>
               </div>
             </div>
           </div>
@@ -365,7 +371,7 @@
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Trichy.svg')}}"
+                src="{{get_asset_url('../assets/Trichy3.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
@@ -383,7 +389,7 @@
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Lisbon.svg')}}"
+                src="{{get_asset_url('../assets/Chicago3.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
@@ -401,7 +407,7 @@
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Chicago.svg')}}"
+                src="{{get_asset_url('../assets/Lisbon3.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
