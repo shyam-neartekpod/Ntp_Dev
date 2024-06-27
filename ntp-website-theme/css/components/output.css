@@ -777,6 +777,14 @@ body{
   z-index: 50;
 }
 
+.order-2{
+  order: 2;
+}
+
+.order-1{
+  order: 1;
+}
+
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -813,6 +821,11 @@ body{
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .mb-1{
@@ -913,6 +926,10 @@ body{
 
 .mt-8{
   margin-top: 2rem;
+}
+
+.mt-20{
+  margin-top: 5rem;
 }
 
 .block{
@@ -1936,6 +1953,14 @@ body{
     top: 8rem;
   }
 
+  .md\:order-2{
+    order: 2;
+  }
+
+  .md\:order-1{
+    order: 1;
+  }
+
   .md\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
@@ -1949,6 +1974,11 @@ body{
   .md\:my-0{
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .md\:mx-6{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 
   .md\:mb-0{
@@ -1965,6 +1995,22 @@ body{
 
   .md\:mt-5{
     margin-top: 1.25rem;
+  }
+
+  .md\:mr-2{
+    margin-right: 0.5rem;
+  }
+
+  .md\:ml-2{
+    margin-left: 0.5rem;
+  }
+
+  .md\:mt-1{
+    margin-top: 0.25rem;
+  }
+
+  .md\:mt-20{
+    margin-top: 5rem;
   }
 
   .md\:h-12{
@@ -1997,6 +2043,10 @@ body{
 
   .md\:flex-nowrap{
     flex-wrap: nowrap;
+  }
+
+  .md\:justify-between{
+    justify-content: space-between;
   }
 
   .md\:p-0{
