@@ -1,0 +1,268 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: NTP-service
+    screenshotPath: ../images/template-previews/home.png
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+    standard_header_includes }}
+  </head>
+
+  <body class="bg-gray-100">
+    {% block header %} {% global_partial path="./partials/header.html" %} {%
+    endblock header %}
+
+    <div class="md:container mt-36 p-5">
+      <div>
+        <div class="bg-service">
+          <div class="relative">
+            <img
+              src="{{get_asset_url('../assets/Service-page-card.svg')}}"
+              alt="Card Image"
+              class="h-auto rounded-lg shadow-md"
+            />
+            <div class="absolute md:top-32 top-7">
+              <h1 class="text-sm md:text-4xl text-center font-medium">
+                Your tech partner in driving efficiency and accelerating growth
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-start">
+        <h2 class="font-medium text-2xl md:text-3xl my-10 mb-10">
+          Our Services
+        </h2>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap">
+        <div class="md:w-1/2">
+          <img
+            src="{{get_asset_url('../assets/Business-consulting.svg')}}"
+            alt="Business Consulting"
+            class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+          />
+        </div>
+        <div class="md:w-1/2">
+          <div
+            class="flex flex-col justify-center w-full text-center md:text-left md:p-8"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0">
+              Business Consulting
+            </h3>
+            <p class="text-gray-600 my-8 leading-7">
+              In today's fast-paced digital landscape, businesses must adapt
+              swiftly to remain competitive. Our Business Consulting services
+              are designed to guide your organization through the complexities
+              of transformation, ensuring sustainable growth and innovation.
+            </p>
+            <a
+              class="w-40 h-10 flex text-center items-center justify-center border border-black font-bold text-sm rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap mt-10">
+        <div class="md:w-1/2 order-2 md:order-1">
+          <div
+            class="flex flex-col justify-center w-full text-center md:text-left md:py-8 md:pr-8"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0">
+              Managed Services
+            </h3>
+            <p class="text-gray-600 my-8 leading-7">
+              In an ever-evolving technological landscape, maintaining a robust
+              and efficient IT infrastructure is crucial for business success.
+              Our Managed Services are designed to take the burden of IT
+              management off your shoulders, allowing you to focus on your core
+              business operations.
+            </p>
+            <a
+              class="w-40 h-10 flex text-center items-center justify-center border border-black font-bold text-sm rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 md:order-2 order-1">
+          <img
+            src="{{get_asset_url('../assets/Managed-services.svg')}}"
+            alt="Managed Services"
+            class="object-cover rounded-3xl h-[19rem] w-[31rem]"
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap mt-10">
+        <div class="md:w-1/2">
+          <img
+            src="{{get_asset_url('../assets/Delivery-as-a-service.svg')}}"
+            alt="Business Consulting"
+            class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+          />
+        </div>
+        <div class="md:w-1/2">
+          <div
+            class="flex flex-col justify-center w-full text-center md:text-left md:p-8"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0">
+              Delivery as a Service
+            </h3>
+            <p class="text-gray-600 my-8 leading-7">
+              In today's fast-paced digital landscape, businesses must adapt
+              swiftly to remain competitive. Our Business Consulting services
+              are designed to guide your organization through the complexities
+              of transformation, ensuring sustainable growth and innovation.
+            </p>
+            <a
+              class="w-40 h-10 flex text-center items-center justify-center border border-black font-bold text-sm rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap mt-10">
+        <div class="md:w-1/2 order-2 md:order-1">
+          <div
+            class="flex flex-col justify-center w-full text-center md:text-left md:py-8 md:pr-8"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0">
+              Digital Information
+            </h3>
+            <p class="text-gray-600 my-8 leading-7">
+              In an ever-evolving technological landscape, maintaining a robust
+              and efficient IT infrastructure is crucial for business success.
+              Our Managed Services are designed to take the burden of IT
+              management off your shoulders, allowing you to focus on your core
+              business operations.
+            </p>
+            <a
+              class="w-40 h-10 flex text-center items-center justify-center border border-black font-bold text-sm rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 order-1 md:order-2">
+          <img
+            src="{{get_asset_url('../assets/Digital-Information.svg')}}"
+            alt="Managed Services"
+            class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap mt-10">
+        <div class="md:w-1/2">
+          <img
+            src="{{get_asset_url('../assets/Data-orchestration.svg')}}"
+            alt="Business Consulting"
+            class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+          />
+        </div>
+        <div class="md:w-1/2">
+          <div
+            class="flex flex-col justify-center w-full text-center md:text-left md:p-8"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0">
+              Data Orchestration
+            </h3>
+            <p class="text-gray-600 my-8 leading-7">
+              In today's fast-paced digital landscape, businesses must adapt
+              swiftly to remain competitive. Our Business Consulting services
+              are designed to guide your organization through the complexities
+              of transformation, ensuring sustainable growth and innovation.
+            </p>
+            <a
+              class="w-40 h-10 flex text-center items-center justify-center border border-black font-bold text-sm rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap mt-10">
+        <div class="md:w-1/2 order-2 md:order-1">
+          <div
+            class="flex flex-col justify-center w-full text-center md:text-left md:py-8 md:pr-8"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0">
+              Staff Services
+            </h3>
+            <p class="text-gray-600 my-8 leading-7">
+              In an ever-evolving technological landscape, maintaining a robust
+              and efficient IT infrastructure is crucial for business success.
+              Our Managed Services are designed to take the burden of IT
+              management off your shoulders, allowing you to focus on your core
+              business operations.
+            </p>
+            <a
+              class="w-40 h-10 flex text-center items-center justify-center border border-black font-bold text-sm rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 order-1 md:order-2">
+          <img
+            src="{{get_asset_url('../assets/Staff-services.svg')}}"
+            alt="Managed Services"
+            class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap mt-10">
+        <div class="md:w-1/2">
+          <img
+            src="{{get_asset_url('../assets/Design.svg')}}"
+            alt="Business Consulting"
+            class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+          />
+        </div>
+        <div class="md:w-1/2">
+          <div
+            class="flex flex-col justify-center w-full text-center md:text-left md:p-8"
+          >
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0">
+              Design
+            </h3>
+            <p class="text-gray-600 my-8 leading-7">
+              In today's fast-paced digital landscape, businesses must adapt
+              swiftly to remain competitive. Our Business Consulting services
+              are designed to guide your organization through the complexities
+              of transformation, ensuring sustainable growth and innovation.
+            </p>
+            <a
+              class="w-40 h-10 flex text-center items-center justify-center border border-black font-bold text-sm rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/footer.html" %} {% endblock footer %} {{
+    require_js(get_asset_url("../js/main.js")) }}
+  </body>
+</html>

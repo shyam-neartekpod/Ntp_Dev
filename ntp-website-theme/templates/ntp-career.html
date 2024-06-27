@@ -1,0 +1,516 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: NTP-Career
+  screenshotPath: ../images/template-previews/home.png
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+    standard_header_includes }}
+  </head>
+  <body class="">
+    {% block header %} {% global_partial path="./partials/header.html" %} {%
+    endblock header %}
+
+    <div class="p-8 mt-24">
+      <div class="md:container">
+        <!-- Dropdowns -->
+        <div
+          class="flex flex-wrap md:flex-nowrap justify-center md:justify-between"
+        >
+          <div class="mb-8 w-full md:mr-2">
+            <label for="dropdown1" class="block text-gray-700">Job Title</label>
+            <select
+              id="dropdown1"
+              class="block w-full mt-1 p-2 border border-gray-300 rounded-md"
+            >
+              <option>Select Title</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+
+          <div class="mb-8 w-full md:mx-6">
+            <label for="dropdown2" class="block text-gray-700">Location</label>
+            <select
+              id="dropdown2"
+              class="block w-full md:mt-1 p-2 border border-gray-300 rounded-md"
+            >
+              <option>Select Location</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+
+          <div class="mt-6 w-4/5 h-5">
+            <button
+              class="block w-full mt-1 p-2 border border-gray-400 rounded-3xl"
+            >
+              SEARCH
+            </button>
+          </div>
+        </div>
+
+        <!-- Accordion Cards -->
+        <div class="space-y-4 mt-20 md:mt-0">
+          <!-- Card-1 -->
+          <div
+            class="accordion-card bg-gradient-to-r from-blue-200 to-blue-50 p-4 border border-gray-300 rounded-md shadow-sm"
+          >
+            <button
+              class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
+            >
+              <div class="grid">
+                <span class="font-bold">Senior Software Engineer</span>
+                <span class="text-xs font-semibold"
+                  >Exp-4+ years, Trichy, Full time</span
+                >
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content mt-2 hidden">
+              <div class="flex">
+                <div>
+                  <p class="font-bold">Responsibilities</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Serve as a consultant and technical expert on SalesForce
+                      Marketing Cloud
+                    </li>
+                    <li>
+                      Scope and drive the creation of digital solutions, email
+                      campaigns, and data integration
+                    </li>
+                    <li>
+                      Architect data feeds and platform configuration for
+                      automated email campaigns
+                    </li>
+                    <li>
+                      Build, test, implement, and improve customer journeys and
+                      marketing campaigns
+                    </li>
+                    <li>Create content personalization using AMPscript</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-bold">Requirements</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Bachelor's degree in business or related field, or 5-7
+                      years of experience in SalesForce Marketing Cloud
+                      environment
+                    </li>
+                    <li>
+                      4+ years of experience in Digital Marketing technology and
+                      SalesForce Marketing Cloud
+                    </li>
+                    <li>
+                      Proficiency in Email Studio, Automation Studios, Journey
+                      Builder, SQL, and AMPscript
+                    </li>
+                    <li>
+                      Experience with data architecture/schema, data flows, and
+                      marketing automation projects
+                    </li>
+                    <li>
+                      Salesforce.com Administrator Certification and Marketing
+                      Cloud Consultant Certification preferred
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button
+                class="mt-4 bg-white border border-black text-black py-2 px-4 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-200"
+              >
+                Apply Now
+              </button>
+            </div>
+          </div>
+          <!-- Card-2 -->
+          <div
+            class="accordion-card bg-gradient-to-r from-blue-100 to-white-50 p-4 border border-gray-300 rounded-md shadow-sm"
+          >
+            <button
+              class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
+            >
+              <div class="grid">
+                <span class="font-bold">Senior Software Engineer</span>
+                <span class="text-xs font-semibold"
+                  >Exp-4+ years, Trichy, Full time</span
+                >
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content mt-2 hidden">
+              <div class="flex">
+                <div>
+                  <p class="font-bold">Responsibilities</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Serve as a consultant and technical expert on SalesForce
+                      Marketing Cloud
+                    </li>
+                    <li>
+                      Scope and drive the creation of digital solutions, email
+                      campaigns, and data integration
+                    </li>
+                    <li>
+                      Architect data feeds and platform configuration for
+                      automated email campaigns
+                    </li>
+                    <li>
+                      Build, test, implement, and improve customer journeys and
+                      marketing campaigns
+                    </li>
+                    <li>Create content personalization using AMPscript</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-bold">Requirements</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Bachelor's degree in business or related field, or 5-7
+                      years of experience in SalesForce Marketing Cloud
+                      environment
+                    </li>
+                    <li>
+                      4+ years of experience in Digital Marketing technology and
+                      SalesForce Marketing Cloud
+                    </li>
+                    <li>
+                      Proficiency in Email Studio, Automation Studios, Journey
+                      Builder, SQL, and AMPscript
+                    </li>
+                    <li>
+                      Experience with data architecture/schema, data flows, and
+                      marketing automation projects
+                    </li>
+                    <li>
+                      Salesforce.com Administrator Certification and Marketing
+                      Cloud Consultant Certification preferred
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card-3 -->
+          <div
+            class="accordion-card bg-gradient-to-r from-blue-100 to-white-50 p-4 border border-gray-300 rounded-md shadow-sm"
+          >
+            <button
+              class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
+            >
+              <div class="grid">
+                <span class="font-bold">Senior Software Engineer</span>
+                <span class="text-xs font-semibold"
+                  >Exp-4+ years, Trichy, Full time</span
+                >
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content mt-2 hidden">
+              <div class="flex">
+                <div>
+                  <p class="font-bold">Responsibilities</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Serve as a consultant and technical expert on SalesForce
+                      Marketing Cloud
+                    </li>
+                    <li>
+                      Scope and drive the creation of digital solutions, email
+                      campaigns, and data integration
+                    </li>
+                    <li>
+                      Architect data feeds and platform configuration for
+                      automated email campaigns
+                    </li>
+                    <li>
+                      Build, test, implement, and improve customer journeys and
+                      marketing campaigns
+                    </li>
+                    <li>Create content personalization using AMPscript</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-bold">Requirements</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Bachelor's degree in business or related field, or 5-7
+                      years of experience in SalesForce Marketing Cloud
+                      environment
+                    </li>
+                    <li>
+                      4+ years of experience in Digital Marketing technology and
+                      SalesForce Marketing Cloud
+                    </li>
+                    <li>
+                      Proficiency in Email Studio, Automation Studios, Journey
+                      Builder, SQL, and AMPscript
+                    </li>
+                    <li>
+                      Experience with data architecture/schema, data flows, and
+                      marketing automation projects
+                    </li>
+                    <li>
+                      Salesforce.com Administrator Certification and Marketing
+                      Cloud Consultant Certification preferred
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card-4 -->
+          <div
+            class="accordion-card bg-gradient-to-r from-blue-100 to-white-50 p-4 border border-gray-300 rounded-md shadow-sm"
+          >
+            <button
+              class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
+            >
+              <div class="grid">
+                <span class="font-bold">Senior Software Engineer</span>
+                <span class="text-xs font-semibold"
+                  >Exp-4+ years, Trichy, Full time</span
+                >
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content mt-2 hidden">
+              <div class="flex">
+                <div>
+                  <p class="font-bold">Responsibilities</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Serve as a consultant and technical expert on SalesForce
+                      Marketing Cloud
+                    </li>
+                    <li>
+                      Scope and drive the creation of digital solutions, email
+                      campaigns, and data integration
+                    </li>
+                    <li>
+                      Architect data feeds and platform configuration for
+                      automated email campaigns
+                    </li>
+                    <li>
+                      Build, test, implement, and improve customer journeys and
+                      marketing campaigns
+                    </li>
+                    <li>Create content personalization using AMPscript</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-bold">Requirements</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Bachelor's degree in business or related field, or 5-7
+                      years of experience in SalesForce Marketing Cloud
+                      environment
+                    </li>
+                    <li>
+                      4+ years of experience in Digital Marketing technology and
+                      SalesForce Marketing Cloud
+                    </li>
+                    <li>
+                      Proficiency in Email Studio, Automation Studios, Journey
+                      Builder, SQL, and AMPscript
+                    </li>
+                    <li>
+                      Experience with data architecture/schema, data flows, and
+                      marketing automation projects
+                    </li>
+                    <li>
+                      Salesforce.com Administrator Certification and Marketing
+                      Cloud Consultant Certification preferred
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card-5 -->
+          <div
+            class="accordion-card bg-gradient-to-r from-blue-100 to-white-50 p-4 border border-gray-300 rounded-md shadow-sm"
+          >
+            <button
+              class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
+            >
+              <div class="grid">
+                <span class="font-bold">Senior Software Engineer</span>
+                <span class="text-xs font-semibold"
+                  >Exp-4+ years, Trichy, Full time</span
+                >
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content mt-2 hidden">
+              <div class="flex">
+                <div>
+                  <p class="font-bold">Responsibilities</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Serve as a consultant and technical expert on SalesForce
+                      Marketing Cloud
+                    </li>
+                    <li>
+                      Scope and drive the creation of digital solutions, email
+                      campaigns, and data integration
+                    </li>
+                    <li>
+                      Architect data feeds and platform configuration for
+                      automated email campaigns
+                    </li>
+                    <li>
+                      Build, test, implement, and improve customer journeys and
+                      marketing campaigns
+                    </li>
+                    <li>Create content personalization using AMPscript</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-bold">Requirements</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Bachelor's degree in business or related field, or 5-7
+                      years of experience in SalesForce Marketing Cloud
+                      environment
+                    </li>
+                    <li>
+                      4+ years of experience in Digital Marketing technology and
+                      SalesForce Marketing Cloud
+                    </li>
+                    <li>
+                      Proficiency in Email Studio, Automation Studios, Journey
+                      Builder, SQL, and AMPscript
+                    </li>
+                    <li>
+                      Experience with data architecture/schema, data flows, and
+                      marketing automation projects
+                    </li>
+                    <li>
+                      Salesforce.com Administrator Certification and Marketing
+                      Cloud Consultant Certification preferred
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card-6 -->
+          <div
+            class="accordion-card bg-gradient-to-r from-blue-100 to-white-50 p-4 border border-gray-300 rounded-md shadow-sm"
+          >
+            <button
+              class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
+            >
+              <div class="grid">
+                <span class="font-bold">Senior Software Engineer</span>
+                <span class="text-xs font-semibold"
+                  >Exp-4+ years, Trichy, Full time</span
+                >
+              </div>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content mt-2 hidden">
+              <div class="flex">
+                <div>
+                  <p class="font-bold">Responsibilities</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Serve as a consultant and technical expert on SalesForce
+                      Marketing Cloud
+                    </li>
+                    <li>
+                      Scope and drive the creation of digital solutions, email
+                      campaigns, and data integration
+                    </li>
+                    <li>
+                      Architect data feeds and platform configuration for
+                      automated email campaigns
+                    </li>
+                    <li>
+                      Build, test, implement, and improve customer journeys and
+                      marketing campaigns
+                    </li>
+                    <li>Create content personalization using AMPscript</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-bold">Requirements</p>
+                  <ul class="list-disc ml-4">
+                    <li>
+                      Bachelor's degree in business or related field, or 5-7
+                      years of experience in SalesForce Marketing Cloud
+                      environment
+                    </li>
+                    <li>
+                      4+ years of experience in Digital Marketing technology and
+                      SalesForce Marketing Cloud
+                    </li>
+                    <li>
+                      Proficiency in Email Studio, Automation Studios, Journey
+                      Builder, SQL, and AMPscript
+                    </li>
+                    <li>
+                      Experience with data architecture/schema, data flows, and
+                      marketing automation projects
+                    </li>
+                    <li>
+                      Salesforce.com Administrator Certification and Marketing
+                      Cloud Consultant Certification preferred
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  {{ standard_footer_includes }} {% block footer %} {% global_partial
+  path="./partials/footer.html" %} {% endblock footer %} {{
+  require_js(get_asset_url("../js/main.js")) }}
+  <script>
+    document.querySelectorAll(".accordion-header").forEach((button) => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          button.querySelector(".accordion-icon").textContent = "-";
+        } else {
+          content.classList.add("hidden");
+          button.querySelector(".accordion-icon").textContent = "+";
+        }
+      });
+    });
+  </script>
+</html>
