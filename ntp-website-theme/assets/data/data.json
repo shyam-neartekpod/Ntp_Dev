@@ -1,0 +1,89 @@
+{
+ "topics": ["All","Business",
+"Cloud",
+"Data",
+"Developer experience",
+"Java",
+"Javascript",
+"News",
+"Cloud",
+"Data",
+"Developer experience",
+"Java",
+"Javascript",
+"News",
+"Product",
+"Python",
+"React JS",
+"SQL",
+"UI/UX",
+"Team development"],   
+"cards": [
+  {
+    "date": "OCT 19, 2024",
+    "read_time": "7 min read",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Brand Hubspot marketing vs growth marketing: which is best for your business",
+    "author": "By Siju Sam"
+     
+  },
+  {
+    "date": "July 19, 2024",
+    "read_time": "7 min read",
+    "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Brand marketing vs growth marketing: which is best for your business",
+    "author": "By Nila"
+    
+  },
+  {
+    "date": "June 19, 2024",
+    "read_time": "7 min read",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Brand marketing vs growth marketing: which is best for your business",
+    "author": "By Aravinth"
+     
+  },
+  {
+    "date": "June 19, 2024",
+    "read_time": "7 min read",
+    "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Brand marketing vs growth marketing: which is best for your business",
+    "author": "By Vicky"
+     
+  },
+  {
+    "date": "June 08, 2024",
+    "read_time": "7 min read",
+    "image": "https://plus.unsplash.com/premium_photo-1681426687411-21986b0626a8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Brand marketing vs growth marketing: which is best for your business",
+    "author": "By Kavin"
+     
+  },
+  {
+    "date": "June 19, 2024",
+    "read_time": "7 min read",
+    "image": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Brand marketing vs growth marketing: which is best for your business",
+    "author": "By Sarah White"
+    
+  },
+  {
+    "date": "June 19, 2024",
+    "read_time": "7 min read",
+    "image": "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Brand marketing vs growth marketing: which is best for your business",
+    "author": "By Michael Green"
+     
+  },
+    {
+      "date": "June 19, 2024",
+      "read_time": "7 min read",
+      "image": "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "Brand marketing vs growth marketing: which is best for your business",
+      "author": "By Michael Green"
+       
+    }
+    
+  ]
+}
+  
