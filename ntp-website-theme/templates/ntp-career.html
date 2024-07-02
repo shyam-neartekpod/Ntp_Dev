@@ -51,7 +51,9 @@
           id="dataForm"
         >
           <div class="mb-8 w-full md:mr-2">
-            <label for="dropdown1" class="block text-gray-700">Job Title</label>
+            <label for="dropdown1" class="block text-gray-700 text-sm"
+              >Job Title</label
+            >
             <select
               id="dropdown1"
               name="dropdown1"
@@ -62,7 +64,9 @@
           </div>
 
           <div class="mb-8 w-full md:mx-6">
-            <label for="dropdown2" class="block text-gray-700">Location</label>
+            <label for="dropdown2" class="block text-gray-700 text-sm"
+              >Location</label
+            >
             <select
               id="dropdown2"
               name="dropdown2"
@@ -76,7 +80,7 @@
             <button
               id="submit"
               type="submit"
-              class="block w-full mt-1 p-2 border border-gray-400 rounded-3xl"
+              class="block w-full mt-1 p-2 border border-gray-400 rounded-3xl font-bold"
             >
               SEARCH
             </button>
@@ -101,7 +105,7 @@
                 class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
               >
                 <div class="grid">
-                  <span class="font-bold card-title"></span>
+                  <span class="font-semibold text-2xl card-title"></span>
                   <span class="text-xs font-semibold card-location"></span>
                 </div>
                 <span class="accordion-icon">+</span>
@@ -123,6 +127,11 @@
                   Apply Now
                 </button>
               </div>
+              <button
+                class="mt-4 bg-white border border-black text-black py-2 px-8 font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-200"
+              >
+                Apply Now
+              </button>
             </div>
           </template>
 
@@ -134,8 +143,9 @@
               class="accordion-header w-full text-left text-gray-700 font-medium flex justify-between items-center"
             >
               <div class="grid">
-                <span class="font-bold card-title"></span>
-                <span class="text-xs font-semibold card-location"></span>
+                <span class="font-semibold text-2xl card-title"></span>
+                <span class="text-sm font-semibold card-location"></span>
+
               </div>
               <span class="accordion-icon">+</span>
             </button>
@@ -170,7 +180,8 @@
                 </div>
               </div>
               <button
-                class="mt-4 bg-white border border-black text-black py-2 px-4 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-200"
+                class="mt-4 bg-white border border-black text-black py-2 px-8 font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-200"
+
               >
                 Apply Now
               </button>
