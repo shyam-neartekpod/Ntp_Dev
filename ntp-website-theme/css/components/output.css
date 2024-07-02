@@ -868,6 +868,16 @@ body{
   margin-bottom: 2rem;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.my-52{
+  margin-top: 13rem;
+  margin-bottom: 13rem;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -976,6 +986,18 @@ body{
   margin-top: 2rem;
 }
 
+.mb-24{
+  margin-bottom: 6rem;
+}
+
+.mt-28{
+  margin-top: 7rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .block{
   display: block;
 }
@@ -1063,6 +1085,18 @@ body{
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[25rem\]{
+  height: 25rem;
+}
+
+.h-\[20rem\]{
+  height: 20rem;
+}
+
+.h-\[21rem\]{
+  height: 21rem;
 }
 
 .w-1\/2{
@@ -2201,12 +2235,20 @@ body{
     margin-top: 7rem;
   }
 
+  .md\:inline{
+    display: inline;
+  }
+
   .md\:flex{
     display: flex;
   }
 
   .md\:grid{
     display: grid;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-12{
@@ -2317,6 +2359,11 @@ body{
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:leading-\[3rem\]{
