@@ -76,13 +76,15 @@
         </p>
       </div>
       <div
-        class="flex-1 aspect-square bg-WorldMap bg-cover bg-center relative border rounded-3xl z-40"
+        class="flex-1 aspect-square bg-WorldMap bg-cover bg-center relative rounded-3xl z-40"
       >
-        <img
-          src="{{get_asset_url('../assets/We & our card.svg')}}"
-          alt="Card Image"
-          class="absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md"
-        />
+        <a href="/about-dev">
+          <img
+            src="{{get_asset_url('../assets/We & our card.svg')}}"
+            alt="Card Image"
+            class="absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md"
+          />
+        </a>
 
         <div class="absolute right-5 bottom-2">
           <div class="flex space-x-3">
@@ -182,7 +184,7 @@
     </div>
 
     <div
-      class="md:container mx-auto my-8 items-center justify-between text-center mt-12"
+      class="md:container mx-auto items-center justify-between text-center md:mt-24 mt-10"
     >
       <div class="flex w-full flex-wrap lg:flex-nowrap px-8 justify-center">
         <h2
@@ -218,7 +220,7 @@
       {% block Understand %} {% global_partial
       path="./Components/understand.html " %} {% endblock Understand %}
 
-      <div class="mt-32 mb-20 hidden lg:flex flex-col">
+      <div class="mt-28 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
           <h2 class="font-medium text-3xl mb-10">Some of our Recent Works</h2>
         </div>
@@ -239,7 +241,7 @@
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Cemex-1.svg')}}"
+                src="{{get_asset_url('../assets/Cemex-test.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
@@ -288,8 +290,7 @@
               <div class="absolute bottom-0 text-white p-5">
                 <h2 class="font-bold text-2xl">Jacana</h2>
                 <p class="">
-                  True testament to building and delivering in agile in record
-                  time with quality
+                  A gobal hotel chain integrating into Oracle Cloud
                 </p>
                 <button
                   class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
@@ -331,8 +332,7 @@
               <div class="absolute bottom-0 text-white p-5">
                 <h2 class="font-bold text-2xl">Marriot</h2>
                 <p class="">
-                  True testament to building and delivering in agile in record
-                  time with quality
+                  A warranty integrating framework to power B2B sales
                 </p>
                 <button
                   class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
@@ -369,7 +369,7 @@
       <div class="">
         <div class="mx-auto">
           <div class="items-start">
-            <h2 class="font-medium text-2xl md:text-3xl my-10 mb-10">
+            <h2 class="font-medium text-2xl md:text-3xl mb-10 md:mt-28 mt-14">
               What our Client Say
             </h2>
           </div>
@@ -428,7 +428,7 @@
       </div>
       <div class="swiper mySwiper lg:hidden">
         <div class="items-start">
-          <h2 class="font-medium text-xl md:text-3xl my-10">our pods</h2>
+          <h2 class="font-medium text-xl md:text-3xl my-10">Our Pods</h2>
         </div>
         <div class="swiper-wrapper">
           <div class="swiper-slide text-center">
@@ -443,8 +443,8 @@
               <div class="absolute bottom-0 text-white p-5">
                 <h2 class="font-bold text-2xl">Trichy,India</h2>
                 <p class="">
-                  True testament to building and delivering in agile in record
-                  time with quality
+                  Si Towers,No-15,Second floor, Melapudur main road,Trichy,Tamil
+                  nadu-620001
                 </p>
               </div>
             </div>
@@ -478,10 +478,7 @@
               />
               <div class="absolute bottom-0 text-white p-5">
                 <h2 class="font-bold text-2xl">Chicago,USA</h2>
-                <p class="">
-                  True testament to building and delivering in agile in record
-                  time with quality
-                </p>
+                <p class="">575 W Helen Rd,Palatine ,IL 60067</p>
               </div>
             </div>
           </div>
