@@ -17,7 +17,7 @@
     </div>
     <div class="relative hidden lg:block h-full">
       <ul class="flex flex-row gap-5 h-full items-center">
-        <li class="nav-style cursor-pointer hover:text-blue-400 duration-500">
+        <li class="nav-style cursor-pointer duration-500">
           <a class="flex" href="/home-dev" id="home-link"
             ><img
               src="{{get_asset_url('../../assets/house.svg')}}"
@@ -26,8 +26,8 @@
             />Home</a
           >
         </li>
-        <li class="nav-style cursor-pointer hover:text-blue-400 duration-500">
-          <a href="/service-dev"  id="service-link" class="flex"
+        <li class="nav-style cursor-pointer duration-500">
+          <a href="/service-dev" id="service-link" class="flex"
             ><img
               src="{{get_asset_url('../../assets/gear.svg')}}"
               alt=""
@@ -35,7 +35,7 @@
             />Service</a
           >
         </li>
-        <li class="nav-style cursor-pointer hover:text-blue-400 duration-500">
+        <li class="nav-style cursor-pointer duration-500">
           <a href="/about-dev" id="about-link" class="flex"
             ><img
               src="{{get_asset_url('../../assets/people.svg')}}"
@@ -44,7 +44,7 @@
             />About Us</a
           >
         </li>
-        <li class="nav-style cursor-pointer hover:text-blue-400 duration-500">
+        <li class="nav-style cursor-pointer duration-500">
           <a href="/career-dev" id="career-link" class="flex">
             <img
               src="{{get_asset_url('../../assets/briefcase.svg')}}"
@@ -53,7 +53,7 @@
             />Career</a
           >
         </li>
-        <li class="nav-style cursor-pointer hover:text-blue-400 duration-500">
+        <li class="nav-style cursor-pointer duration-500">
           <a href="/blog-dev" id="blog-link" class="flex">
             <img
               src="{{get_asset_url('../../assets/newspaper.svg')}}"
@@ -64,9 +64,9 @@
           >
         </li>
         <li
-          class="h-9 leading-9 rounded-2xl px-3 border border-royalblue hover:bg-coralblue text-sm font-Montserrat font-bold cursor-pointer hover:text-blue-400 duration-500 "
+          class="h-9 leading-9 rounded-2xl px-3 border border-royalblue hover:bg-coralblue text-sm font-Montserrat font-bold cursor-pointer hover:text-blue-400 duration-500"
         >
-          <a href="/contact-dev" > Contact Us</a>
+          <a href="/contact-dev"> Contact Us</a>
         </li>
       </ul>
     </div>
@@ -132,28 +132,30 @@
   </div>
 </nav>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-      const navLinks = document.querySelectorAll('nav a');
-      const currentPath = window.location.pathname;
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a");
+    const currentPath = window.location.pathname;
 
-      // Set active class based on current URL
-      navLinks.forEach(link => {
-          if (link.getAttribute('href') === currentPath) {
-              link.parentElement.classList.add('active');
-          }
-      });
+    // Set active class based on current URL
+    navLinks.forEach((link) => {
+      if (link.getAttribute("href") === currentPath) {
+        link.parentElement.classList.add("active");
+      }
+    });
 
-      // Add click event to update active class
-      navLinks.forEach(link => {
-          link.addEventListener('click', function (event) {
-              navLinks.forEach(navLink => navLink.parentElement.classList.remove('active'));
-              this.parentElement.classList.add('active');
-          });
+    // Add click event to update active class
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        navLinks.forEach((navLink) =>
+          navLink.parentElement.classList.remove("active")
+        );
+        this.parentElement.classList.add("active");
       });
+    });
   });
 </script>
 <style>
   .active {
-      background-color:skyblue; 
+    background-color: skyblue;
   }
 </style>
