@@ -808,6 +808,10 @@ body{
   top: 70px;
 }
 
+.top-2{
+  top: 0.5rem;
+}
+
 .z-40{
   z-index: 40;
 }
@@ -888,6 +892,10 @@ body{
   margin-bottom: 5rem;
 }
 
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -932,10 +940,6 @@ body{
   margin-top: 2.5rem;
 }
 
-.mt-12{
-  margin-top: 3rem;
-}
-
 .mt-14{
   margin-top: 3.5rem;
 }
@@ -950,6 +954,10 @@ body{
 
 .mt-24{
   margin-top: 6rem;
+}
+
+.mt-28{
+  margin-top: 7rem;
 }
 
 .mt-32{
@@ -1021,6 +1029,10 @@ body{
   height: 2.5rem;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
 .h-20{
   height: 5rem;
 }
@@ -1061,6 +1073,10 @@ body{
   height: 19rem;
 }
 
+.h-\[20rem\]{
+  height: 20rem;
+}
+
 .h-auto{
   height: auto;
 }
@@ -1072,6 +1088,7 @@ body{
 .h-screen{
   height: 100vh;
 }
+
 
 
 .h-\[20rem\]{
@@ -1500,11 +1517,11 @@ body{
 }
 
 .bg-Hand{
-  background-image: linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ;
+  background-image: url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ;
 }
 
 .bg-Tech{
-  background-image: linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/VR-image.svg")}}") ;
+  background-image: url("{{get_asset_url("../../assets/VR-image.svg")}}") ;
 }
 
 .bg-WorldMap{
@@ -1639,10 +1656,6 @@ body{
   padding-bottom: 4rem;
 }
 
-.pb-6{
-  padding-bottom: 1.5rem;
-}
-
 .pl-2{
   padding-left: 0.5rem;
 }
@@ -1746,6 +1759,10 @@ body{
 
 .leading-4{
   line-height: 1rem;
+}
+
+.leading-6{
+  line-height: 1.5rem;
 }
 
 .leading-9{
@@ -2084,6 +2101,10 @@ body{
   --tw-ring-opacity: 0.5;
 }
 
+.group:hover .group-hover\:w-\[380px\]{
+  width: 380px;
+}
+
 .group:hover .group-hover\:rotate-90{
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2161,8 +2182,12 @@ body{
 }
 
 @media (min-width: 768px){
-  .md\:top-32{
-    top: 8rem;
+  .md\:top-40{
+    top: 10rem;
+  }
+
+  .md\:top-36{
+    top: 9rem;
   }
 
   .md\:order-1{
@@ -2217,8 +2242,20 @@ body{
     margin-top: 3rem;
   }
 
+  .md\:mt-24{
+    margin-top: 6rem;
+  }
+
   .md\:mt-28{
     margin-top: 7rem;
+  }
+
+  .md\:mb-3{
+    margin-bottom: 0.75rem;
+  }
+
+  .md\:mt-2{
+    margin-top: 0.5rem;
   }
 
   .md\:block{
@@ -2323,16 +2360,16 @@ body{
     padding-bottom: 2rem;
   }
 
+  .md\:pb-6{
+    padding-bottom: 1.5rem;
+  }
+
   .md\:pr-8{
     padding-right: 2rem;
   }
 
   .md\:pt-6{
     padding-top: 1.5rem;
-  }
-
-  .md\:pb-6{
-    padding-bottom: 1.5rem;
   }
 
   .md\:text-left{
