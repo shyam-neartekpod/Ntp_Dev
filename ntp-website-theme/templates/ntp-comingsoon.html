@@ -1,0 +1,67 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: NTP-Coming Soon
+  screenshotPath: ../images/template-previews/home.png
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+    standard_header_includes }}
+  </head>
+  <body class="">
+    {% block header %} 
+      {% global_partial path="./partials/header.html" %} 
+    {% endblock header %}
+    <div class="absolute top-[50px] left-30">
+      {% block Backgroundcolor %} 
+        {% global_partial path="./Components/backroundcolor.html " %} 
+      {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[550px] left-30">
+      {% block Backgroundcolor %} 
+        {% global_partial path="./Components/backroundcolor.html " %} 
+      {% endblock Backgroundcolor %}
+    </div>
+
+    <div class="container mt-36 p-5 text-center">
+      <h1 class="mt-8 text-7xl font-bold text-sky-300">COMING S<span class="text-gray-300">OON</span></h1>
+      <p class="mt-6 text-xl text-gray-700">All good things come those who wait...</p>
+      <div class="mt-8">
+        <p class="text-gray-600 mb-4">We'll let you know when we are launching</p>
+        <div class="flex flex-wrap justify-center sm:gap-1 gap-4">
+          {% block Email %} 
+            {% global_partial path="./Components/email.html " %} 
+          {% endblock Email %}
+        </div>
+      </div>
+    </div>
+    <div class="absolute top-[220px] right-0">
+      {% block Backgroundcolor %} 
+        {% global_partial path="./Components/backroundcolor.html " %} 
+      {% endblock Backgroundcolor %}
+    </div>
+
+    {{ standard_footer_includes }} 
+    
+  </body>
+</html>
