@@ -984,6 +984,10 @@ body{
   margin-top: 3rem;
 }
 
+.mr-3{
+  margin-right: 0.75rem;
+}
+
 .block{
   display: block;
 }
@@ -2455,6 +2459,11 @@ body{
   .lg\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
