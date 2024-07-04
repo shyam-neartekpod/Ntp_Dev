@@ -688,6 +688,13 @@ body{
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.swiper-pagination-bullet-active{
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(26 26 19 / var(--tw-border-opacity));
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -800,10 +807,6 @@ body{
   top: 70px;
 }
 
-.top-2{
-  top: 0.5rem;
-}
-
 .z-40{
   z-index: 40;
 }
@@ -884,10 +887,6 @@ body{
   margin-bottom: 5rem;
 }
 
-.mb-3{
-  margin-bottom: 0.75rem;
-}
-
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -918,6 +917,10 @@ body{
 
 .mr-2{
   margin-right: 0.5rem;
+}
+
+.mr-3{
+  margin-right: 0.75rem;
 }
 
 .mr-4{
@@ -978,14 +981,6 @@ body{
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
-}
-
-.mr-3{
-  margin-right: 0.75rem;
 }
 
 .block{
@@ -1085,14 +1080,6 @@ body{
   height: 100vh;
 }
 
-.h-\[\]{
-  height: ;
-}
-
-.h-\[400px\]{
-  height: 400px;
-}
-
 .w-1\/2{
   width: 50%;
 }
@@ -1107,6 +1094,10 @@ body{
 
 .w-28{
   width: 7rem;
+}
+
+.w-32{
+  width: 8rem;
 }
 
 .w-4{
@@ -1159,14 +1150,6 @@ body{
 
 .w-full{
   width: 100%;
-}
-
-.w-\[400px\]{
-  width: 400px;
-}
-
-.w-32{
-  width: 8rem;
 }
 
 .max-w-4xl{
@@ -1645,6 +1628,10 @@ body{
   padding-bottom: 4rem;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .pl-2{
   padding-left: 0.5rem;
 }
@@ -1748,10 +1735,6 @@ body{
 
 .leading-4{
   line-height: 1rem;
-}
-
-.leading-6{
-  line-height: 1.5rem;
 }
 
 .leading-9{
@@ -2114,10 +2097,6 @@ body{
     display: none;
   }
 
-  .sm\:h-\[300px\]{
-    height: 300px;
-  }
-
   .sm\:w-full{
     width: 100%;
   }
@@ -2137,10 +2116,6 @@ body{
 }
 
 @media (min-width: 768px){
-  .md\:top-40{
-    top: 10rem;
-  }
-
   .md\:top-36{
     top: 9rem;
   }
@@ -2177,8 +2152,17 @@ body{
     margin-bottom: 0px;
   }
 
+  .md\:my-10{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px;
+  }
+
+  .md\:mb-3{
+    margin-bottom: 0.75rem;
   }
 
   .md\:mr-2{
@@ -2193,8 +2177,16 @@ body{
     margin-top: 0.25rem;
   }
 
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
+
   .md\:mt-12{
     margin-top: 3rem;
+  }
+
+  .md\:mt-2{
+    margin-top: 0.5rem;
   }
 
   .md\:mt-24{
@@ -2203,18 +2195,6 @@ body{
 
   .md\:mt-28{
     margin-top: 7rem;
-  }
-
-  .md\:mb-3{
-    margin-bottom: 0.75rem;
-  }
-
-  .md\:mt-2{
-    margin-top: 0.5rem;
-  }
-
-  .md\:mt-10{
-    margin-top: 2.5rem;
   }
 
   .md\:block{
@@ -2229,20 +2209,12 @@ body{
     display: grid;
   }
 
-  .md\:h-12{
-    height: 3rem;
-  }
-
-  .md\:h-auto{
-    height: auto;
-  }
-
   .md\:h-10{
     height: 2.5rem;
   }
 
-  .md\:h-\[300px\]{
-    height: 300px;
+  .md\:h-12{
+    height: 3rem;
   }
 
   .md\:w-1\/2{
@@ -2253,6 +2225,10 @@ body{
     width: 33.333333%;
   }
 
+  .md\:w-2\/3{
+    width: 66.666667%;
+  }
+
   .md\:w-2\/6{
     width: 33.333333%;
   }
@@ -2261,16 +2237,12 @@ body{
     width: 75%;
   }
 
-  .md\:w-80{
-    width: 20rem;
-  }
-
-  .md\:w-2\/3{
-    width: 66.666667%;
-  }
-
   .md\:w-40{
     width: 10rem;
+  }
+
+  .md\:w-80{
+    width: 20rem;
   }
 
   .md\:grid-cols-2{
@@ -2309,6 +2281,10 @@ body{
     padding: 0px;
   }
 
+  .md\:p-3{
+    padding: 0.75rem;
+  }
+
   .md\:p-5{
     padding: 1.25rem;
   }
@@ -2319,10 +2295,6 @@ body{
 
   .md\:p-8{
     padding: 2rem;
-  }
-
-  .md\:p-3{
-    padding: 0.75rem;
   }
 
   .md\:px-8{
@@ -2374,6 +2346,11 @@ body{
     line-height: 2.5rem;
   }
 
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2382,11 +2359,6 @@ body{
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:leading-\[3rem\]{
@@ -2424,10 +2396,6 @@ body{
     display: none;
   }
 
-  .lg\:h-\[300px\]{
-    height: 300px;
-  }
-
   .lg\:w-2\/12{
     width: 16.666667%;
   }
@@ -2456,20 +2424,9 @@ body{
     padding: 0px;
   }
 
-  .lg\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-}
-
-@media (min-width: 1280px){
-  .xl\:h-\[300px\]{
-    height: 300px;
   }
 }
 
