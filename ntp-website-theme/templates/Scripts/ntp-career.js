@@ -1,15 +1,19 @@
 //DropDown-Location API
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://testing-jmrx.onrender.com/api/getcurrentjobs/job-list") // Replace with your API endpoint
+  // fetch("https://testing-jmrx.onrender.com/api/getcurrentjobs/job-list") // Replace with your API endpoint
+  fetch('{{ get_asset_url("../../assets/data/career-data.json") }}') // Replace with your API endpoint
     .then((response) => {
+      console.log("response", response);
       if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);
       }
       return response.json();
     })
     .then((data) => {
+      console.log("data", data);
+
       const dropdown1 = document.getElementById("dropdown1");
-      data?.data.forEach((item) => {
+      data?.job_data.forEach((item) => {
         const option = document.createElement("option");
         option.value = item.job_title; // Assuming job_title is the field name in the response
         option.textContent = item.job_title;
@@ -17,13 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     })
     .catch((error) => {
+      console.log('error',error)
       console.error("There was a problem with the fetch operation:", error);
     });
 });
 
 //DropDown-Job API
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://testing-jmrx.onrender.com/api/getcurrentjobs/location-list") // Replace with your API endpoint
+  // fetch("https://testing-jmrx.onrender.com/api/getcurrentjobs/location-list") // Replace with your API endpoint
+  fetch('{{ get_asset_url("../../assets/data/career-data.json") }}') // Replace with your API endpoint
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);
@@ -32,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       const dropdown2 = document.getElementById("dropdown2");
-      data?.data.forEach((item) => {
+      data?.location_data.forEach((item) => {
         const option = document.createElement("option");
         option.value = item.job_location; // Assuming job_title is the field name in the response
         option.textContent = item.job_location;
@@ -132,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // Add event listener for accordion toggle on button click
           const button = card.querySelector(".apply-button");
           button.addEventListener("click", (event) => {
+            window.location.href = "/contact-dev";
             // Handle button click action here
             console.log("Apply Now clicked for job:", item.job_title);
             event.stopPropagation(); // Prevent the click event from bubbling to the card header
@@ -164,7 +171,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadAllJobs = async () => {
     try {
       const response = await fetch(
-        "https://testing-jmrx.onrender.com/api/getcurrentopenings"
+        // "https://testing-jmrx.onrender.com/api/getcurrentopenings"
+        '{{ get_asset_url("../../assets/data/career-data.json") }}'
       );
 
       if (!response.ok) {
@@ -176,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Clear existing cards
       resultDiv.innerHTML = "";
 
-      data?.data.forEach((item) => {
+      data?.opening_data.forEach((item) => {
         // Clone the card template
         const card = cardTemplate.cloneNode(true);
 
@@ -223,6 +231,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add event listener for accordion toggle on button click
         const button = card.querySelector(".apply-button");
         button.addEventListener("click", (event) => {
+          window.location.href = "/contact-dev";
+
           // Handle button click action here
           console.log("Apply Now clicked for job:", item.job_title);
           event.stopPropagation(); // Prevent the click event from bubbling to the card header
@@ -239,3 +249,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load all jobs initially
   loadAllJobs();
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const applyButton = document.getElementById("apply-button");
+//   applyButton.addEventListener("click", function () {
+//     window.location.href = "/contact-dev";
+//   });
+// });

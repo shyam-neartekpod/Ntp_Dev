@@ -1,0 +1,77 @@
+{
+    "message": "Successfully fetched current openings",
+    "job_data": [
+        {
+            "_id": "667bc8062ab9a9db7781f222",
+            "job_title": "ScalaProgrammer"
+        },
+        {
+            "_id": "667bc174ee89d917b07e12de",
+            "job_title": "LeadDevOpsEngin"
+        },
+        {
+            "_id": "667bc0aaee89d917b07e12da",
+            "job_title": "SrWordPressArch"
+        }
+    ],
+    "location_data": [
+        {
+            "_id": "667bc8062ab9a9db7781f222",
+            "job_location": "Mexico, USA"
+        },
+        {
+            "_id": "667bc174ee89d917b07e12de",
+            "job_location": "Trichy, India"
+        }
+    ],
+    "opening_data": [
+        {
+            "_id": "667bc8062ab9a9db7781f222",
+            "job_code": "SP001",
+            "job_title": "ScalaProgrammer",
+            "job_requirements": "Degree in Software Development, Computer Science, or similar.\n5 years of experience in Software Development Life Cycle using Agile methodology.\nAnalytical mindset and strong problemsolving skills.",
+            "job_responsibility": "Design and implement JavaScala applications.\nAnalyze user requirements to inform application design.",
+            "experience": "5",
+            "skill_set": "Java,SpringBoot,MVC,RESTAPIs",
+            "job_location": "Mexico, USA",
+            "expire_date": "2024-07-05T18:30:00.000Z",
+            "__v": 0
+        },
+        {
+            "_id": "667bc1c4ee89d917b07e12e2",
+            "job_code": "SP",
+            "job_title": "ScalaProgrammer",
+            "job_requirements": "Degree in Software Development, Computer Science, or similar.\n5 years of experience in Software Development Life Cycle using Agile methodology.\nAnalytical mindset and strong problemsolving skills.\nExcellent written and verbal communication.\nGood organizational skills and ability to work as part of a team.\n2 years of technical experience in Scala.\nProficient with Java 8, Spring BootMVC, and REST APIs.\nExperience with RDBMS schemas and queries.\nFamiliarity with Jenkins, JUnit, Mockito Framework, and version control applications.\nUnderstanding of Design Patterns and best practices in Java.\nExperience in developing server applications through the full product lifecycle.\nKnowledgeable in Application security and performance optimization.",
+            "job_responsibility": "Design and implement JavaScala applications.\nAnalyze user requirements to inform application design.\nDefine application objectives and functionality.\nAlign application design with business goals.\nDevelop and test software, Debug and resolve technical problems.\nProduce detailed design documentation.\nRecommend changes to existing infrastructure.\nDevelop documentation to assist users.",
+            "experience": "5",
+            "skill_set": "Java,SpringBoot,MVC,RESTAPIs",
+            "job_location": "Mexico, USA",
+            "expire_date": "2024-07-05T18:30:00.000Z",
+            "__v": 0
+        },
+        {
+            "_id": "667bc174ee89d917b07e12de",
+            "job_code": "lLDOE",
+            "job_title": "LeadDevOpsEngin",
+            "job_requirements": "5 years of experience as a DevOps Engineer\nProficiency in system automation, deployment, and monitoring tools\nExperience with Linux, Jenkins, and scripting languages like Python and Shell\nKnowledge of CI systems and distributed data systems\nStrong IaC expertise with CDK, CloudFormation, or Terraform\nHandson experience in designing and running largescale cloud networking",
+            "job_responsibility": "Lead and guide DevOps activities to support client projects and development\nDesign and integrate NearTekPod Cloud Platform and core services\nConsult and provide guidance to colleagues on tasks\nDevelop automated CICD processes and ensure adherence to security standards\nArchitect enterprisescale cloud environments and ensure scalability and security\nMaintain up to date architectural templates and operational documentation",
+            "experience": "5",
+            "skill_set": "AWS,GCP,Azure",
+            "job_location": "Trichy, India",
+            "expire_date": "2024-07-04T18:30:00.000Z",
+            "__v": 0
+        },
+        {
+            "_id": "667bc0aaee89d917b07e12da",
+            "job_code": "SWPA",
+            "job_title": "SrWordPressArch",
+            "job_requirements": "Gather requirements and define project scope\nDesign scalable and secure WordPress solutions\nCustomize themes and plugins to meet project needs\nOptimize website performance and ensure responsiveness\nConduct code reviews and troubleshoot technical issues\nStay updated with WordPress trends and technologies",
+            "job_responsibility": "1015 years of WordPress development experience\nProficiency in PHP, HTML, CSS, JavaScript, and MySQL\nStrong understanding of WordPress APIs, hooks, and custom post types\nExperience with frontend frameworks and version control systems\nExcellent communication and collaboration skills\nAbility to manage multiple projects independently",
+            "experience": "10",
+            "skill_set": "PHP,HTML,CSS,JavaScript,MySQL",
+            "job_location": "Trichy, India",
+            "expire_date": "2024-07-04T18:30:00.000Z",
+            "__v": 0
+        }
+    ]
+}
