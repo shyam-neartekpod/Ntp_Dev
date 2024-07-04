@@ -688,6 +688,13 @@ body{
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.swiper-pagination-bullet-active{
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(26 26 19 / var(--tw-border-opacity));
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -926,10 +933,6 @@ body{
 
 .mt-10{
   margin-top: 2.5rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
 }
 
 .mt-14{
@@ -1625,6 +1628,10 @@ body{
   padding-bottom: 4rem;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .pl-2{
   padding-left: 0.5rem;
 }
@@ -2143,6 +2150,11 @@ body{
   .md\:my-0{
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .md\:my-10{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .md\:mb-0{
