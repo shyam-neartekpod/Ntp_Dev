@@ -23,7 +23,7 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
-
+        errorred: "C00F0C",
         backblue: "#00A2FF",
         backyellow: "#DEF100",
         backpink: "#6100FF",
