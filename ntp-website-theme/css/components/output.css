@@ -688,6 +688,13 @@ body{
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.swiper-pagination-bullet-active{
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(26 26 19 / var(--tw-border-opacity));
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -764,16 +771,16 @@ body{
   top: 0px;
 }
 
-.top-2{
-  top: 0.5rem;
-}
-
 .top-3{
   top: 0.75rem;
 }
 
 .top-4{
   top: 1rem;
+}
+
+.top-7{
+  top: 1.75rem;
 }
 
 .top-\[220px\]{
@@ -980,9 +987,11 @@ body{
   margin-top: 2rem;
 }
 
+
 .mt-12{
   margin-top: 3rem;
 }
+
 
 .block{
   display: block;
@@ -1097,6 +1106,10 @@ body{
   width: 7rem;
 }
 
+.w-32{
+  width: 8rem;
+}
+
 .w-4{
   width: 1rem;
 }
@@ -1149,9 +1162,11 @@ body{
   width: 100%;
 }
 
+
 .w-32{
   width: 8rem;
 }
+
 
 .max-w-4xl{
   max-width: 56rem;
@@ -1413,11 +1428,6 @@ body{
   border-color: rgb(56 189 248 / var(--tw-border-opacity));
 }
 
-.border-blue-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity));
-}
-
 .bg-backblue{
   --tw-bg-opacity: 1;
   background-color: rgb(0 162 255 / var(--tw-bg-opacity));
@@ -1630,13 +1640,12 @@ body{
   padding-bottom: 0.75rem;
 }
 
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
 .pb-16{
   padding-bottom: 4rem;
+}
+
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .pl-2{
@@ -1744,10 +1753,6 @@ body{
   line-height: 1rem;
 }
 
-.leading-6{
-  line-height: 1.5rem;
-}
-
 .leading-9{
   line-height: 2.25rem;
 }
@@ -1828,11 +1833,6 @@ body{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-blue-500{
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .opacity-10{
@@ -2059,19 +2059,9 @@ body{
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .hover\:text-blue-400:hover{
   --tw-text-opacity: 1;
   color: rgb(96 165 250 / var(--tw-text-opacity));
-}
-
-.hover\:text-white:hover{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus{
@@ -2178,6 +2168,11 @@ body{
     margin-bottom: 0px;
   }
 
+  .md\:my-10{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px;
   }
@@ -2198,6 +2193,10 @@ body{
     margin-top: 0.25rem;
   }
 
+  .md\:mt-10{
+    margin-top: 2.5rem;
+  }
+
   .md\:mt-12{
     margin-top: 3rem;
   }
@@ -2214,9 +2213,11 @@ body{
     margin-top: 7rem;
   }
 
+
   .md\:mt-10{
     margin-top: 2.5rem;
   }
+
 
   .md\:block{
     display: block;
@@ -2230,13 +2231,21 @@ body{
     display: grid;
   }
 
+
   .md\:h-12{
     height: 3rem;
   }
 
+
   .md\:h-10{
     height: 2.5rem;
   }
+
+
+  .md\:h-12{
+    height: 3rem;
+  }
+
 
   .md\:w-1\/2{
     width: 50%;
@@ -2244,6 +2253,10 @@ body{
 
   .md\:w-1\/3{
     width: 33.333333%;
+  }
+
+  .md\:w-2\/3{
+    width: 66.666667%;
   }
 
   .md\:w-2\/6{
@@ -2254,6 +2267,7 @@ body{
     width: 75%;
   }
 
+
   .md\:w-80{
     width: 20rem;
   }
@@ -2262,8 +2276,13 @@ body{
     width: 66.666667%;
   }
 
+
   .md\:w-40{
     width: 10rem;
+  }
+
+  .md\:w-80{
+    width: 20rem;
   }
 
   .md\:grid-cols-2{
@@ -2302,6 +2321,10 @@ body{
     padding: 0px;
   }
 
+  .md\:p-3{
+    padding: 0.75rem;
+  }
+
   .md\:p-5{
     padding: 1.25rem;
   }
@@ -2312,10 +2335,6 @@ body{
 
   .md\:p-8{
     padding: 2rem;
-  }
-
-  .md\:p-3{
-    padding: 0.75rem;
   }
 
   .md\:px-8{
@@ -2367,6 +2386,11 @@ body{
     line-height: 2.5rem;
   }
 
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2375,11 +2399,6 @@ body{
   .md\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-base{
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .md\:leading-\[3rem\]{
@@ -2443,11 +2462,6 @@ body{
 
   .lg\:p-0{
     padding: 0px;
-  }
-
-  .lg\:px-0{
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:text-4xl{
