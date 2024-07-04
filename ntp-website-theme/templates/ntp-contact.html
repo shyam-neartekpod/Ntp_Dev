@@ -106,7 +106,7 @@
                   required
                 />
                 <span
-                  class="text-red-500 text-sm mt-1"
+                  class="text-errorred text-sm mt-1"
                   id="last-name-error"
                 ></span>
               </div>
@@ -119,7 +119,10 @@
                   required
                   placeholder="Email address"
                 />
-                <span class="text-red-500 text-sm mt-1" id="email-error"></span>
+                <span
+                  class="text-errorred text-sm mt-1"
+                  id="email-error"
+                ></span>
               </div>
               <div class="mb-4">
                 <input
@@ -130,7 +133,7 @@
                   class="contact-border"
                 />
                 <span
-                  class="text-red-500 text-sm mt-1"
+                  class="text-errorred text-sm mt-1"
                   id="company-error"
                 ></span>
               </div>
@@ -144,7 +147,7 @@
                   required
                 />
                 <span
-                  class="text-red-500 text-sm mt-1"
+                  class="text-errorred text-sm mt-1"
                   id="country-error"
                 ></span>
               </div>
@@ -157,7 +160,7 @@
                   required
                 ></textarea>
                 <span
-                  class="text-red-500 text-sm mt-1"
+                  class="text-errorred text-sm mt-1"
                   id="message-error"
                 ></span>
               </div>
@@ -174,7 +177,10 @@
                     >I agree to the terms and conditions</span
                   >
                 </label>
-                <span class="text-red-500 text-sm mt-1" id="agree-error"></span>
+                <span
+                  class="text-errorred text-sm mt-1"
+                  id="agree-error"
+                ></span>
               </div>
 
               <div class="flex justify-center">
@@ -229,7 +235,7 @@
         }
 
         document
-          .querySelectorAll(".text-red-500")
+          .querySelectorAll(".text-errorred")
           .forEach((errorElement) => (errorElement.textContent = ""));
         if (!isValid) {
           for (const [fieldName, errorMessage] of Object.entries(
