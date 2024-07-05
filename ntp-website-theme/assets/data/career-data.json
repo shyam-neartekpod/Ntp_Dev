@@ -26,39 +26,71 @@
     ],
     "opening_data": [
         {
-            "_id": "667bc8062ab9a9db7781f222",
-            "job_code": "SP001",
-            "job_title": "ScalaProgrammer",
-            "job_requirements": "Degree in Software Development, Computer Science, or similar.\n5 years of experience in Software Development Life Cycle using Agile methodology.\nAnalytical mindset and strong problemsolving skills.",
-            "job_responsibility": "Design and implement JavaScala applications.\nAnalyze user requirements to inform application design.",
-            "experience": "5",
-            "skill_set": "Java,SpringBoot,MVC,RESTAPIs",
-            "job_location": "Mexico, USA",
-            "expire_date": "2024-07-05T18:30:00.000Z",
-            "__v": 0
-        },
-        {
-            "_id": "667bc1c4ee89d917b07e12e2",
-            "job_code": "SP",
-            "job_title": "ScalaProgrammer",
-            "job_requirements": "Degree in Software Development, Computer Science, or similar.\n5 years of experience in Software Development Life Cycle using Agile methodology.\nAnalytical mindset and strong problemsolving skills.\nExcellent written and verbal communication.\nGood organizational skills and ability to work as part of a team.\n2 years of technical experience in Scala.\nProficient with Java 8, Spring BootMVC, and REST APIs.\nExperience with RDBMS schemas and queries.\nFamiliarity with Jenkins, JUnit, Mockito Framework, and version control applications.\nUnderstanding of Design Patterns and best practices in Java.\nExperience in developing server applications through the full product lifecycle.\nKnowledgeable in Application security and performance optimization.",
-            "job_responsibility": "Design and implement JavaScala applications.\nAnalyze user requirements to inform application design.\nDefine application objectives and functionality.\nAlign application design with business goals.\nDevelop and test software, Debug and resolve technical problems.\nProduce detailed design documentation.\nRecommend changes to existing infrastructure.\nDevelop documentation to assist users.",
-            "experience": "5",
-            "skill_set": "Java,SpringBoot,MVC,RESTAPIs",
-            "job_location": "Mexico, USA",
-            "expire_date": "2024-07-05T18:30:00.000Z",
-            "__v": 0
+            "_id": "667bc1f4ee89d917b07e12e5",
+            "job_code": "OIC",
+            "job_title": "OIC Lead/Developer",
+            "job_requirements": "4+ years experience in Oracle Integration Cloud (OIC), Oracle Process Cloud Service (PCS), Oracle Integration Cloud Service (ICS).\nOverall technology experience - 6+ years.\nExperience in Web Services (SOAP & REST using XML/JSON Payloads).\nUnderstanding of Inherent tools and technologies of SaaS Applications (FBDI, BIP, ADFDI, Services in OER, Applications Composer, BIP, etc.).\nHands-On Experience of XSLT.\nHands-On Experience in data migration/integration methods i.e., SOAP and Rest Web Services, FBDI, and ADF DI.\nHands-On Experience with reporting tools such as OTBI, and BI Publisher.\nHands-On development of packages and functions using SQL/PLSQL and exposing them as REST using ORDS.\nHands-on with development and unit testing of integration components and web services (SOAP/REST) using OIC.\nHands-on with development and unit testing of VBCS components using OIC.\nStrong knowledge of Oracle development tools, some e-Business application functionality, system administration, database structure, online patching, and knowledge of multi-Org architecture.",
+            "job_responsibility": "Design and develop integrations in OIC to Oracle SaaS Cloud including making REST and SOAP calls, FBDI File Uploads.\nDesign and develop customizations using Visual Builder and Process Builder in OIC to Oracle OPERA Cloud and ERP Cloud.\nSupport various Integration Interfaces in Oracle Cloud linking vital Business Critical Systems – Oracle and other systems – monitoring for issues and resolving them to maintain stability in the customers' business.\nDesign and develop Oracle OPERA, ERP Cloud modules.\nHands-on development support for implemented customizations using Visual Builder and Process Builder in OIC to Oracle OPERA Cloud.\nComplete development tasks based on requirements submitted by business partners and best practices.\nDevelop additional various Integration Interfaces in Oracle Cloud to deliver high availability, rapidly developed, fully automated solutions.\nDesign and develop integrations in OIC to legacy systems.",
+            "experience": "6",
+            "skill_set": "Oracle Integration Cloud, Oracle Process Cloud Service, Oracle Integration Cloud Service, Web Services, SOAP, REST, SaaS Applications",
+            "job_location": "Remote",
+            "expire_date": "2024-07-06T18:30:00.000Z"
         },
         {
             "_id": "667bc174ee89d917b07e12de",
             "job_code": "lLDOE",
-            "job_title": "LeadDevOpsEngin",
-            "job_requirements": "5 years of experience as a DevOps Engineer\nProficiency in system automation, deployment, and monitoring tools\nExperience with Linux, Jenkins, and scripting languages like Python and Shell\nKnowledge of CI systems and distributed data systems\nStrong IaC expertise with CDK, CloudFormation, or Terraform\nHandson experience in designing and running largescale cloud networking",
-            "job_responsibility": "Lead and guide DevOps activities to support client projects and development\nDesign and integrate NearTekPod Cloud Platform and core services\nConsult and provide guidance to colleagues on tasks\nDevelop automated CICD processes and ensure adherence to security standards\nArchitect enterprisescale cloud environments and ensure scalability and security\nMaintain up to date architectural templates and operational documentation",
+            "job_title": "Lead DevOps Engineer",
+            "job_requirements": "5 years of experience as a DevOps Engineer.\nProficiency in system automation, deployment, and monitoring tools.\nExperience with Linux, Jenkins, and scripting languages like Python and Shell.\nKnowledge of CI systems and distributed data systems.\nStrong IaC expertise with CDK, CloudFormation, or Terraform.\nHands-on experience in designing and running large-scale cloud networking.",
+            "job_responsibility": "Lead and guide DevOps activities to support client projects.\nDesign and integrate NearTekPod Cloud Platform and core services.\nDevelop automated CI/CD processes and ensure adherence to security standards.\nArchitect enterprise-scale cloud environments and ensure scalability and security.",
             "experience": "5",
-            "skill_set": "AWS,GCP,Azure",
+            "skill_set": "AWS, GCP, Azure",
             "job_location": "Trichy, India",
+            "expire_date": "2024-07-04T18:30:00.000Z"
+        },
+        {
+            "_id": "667bc2a8ee89d917b07e12f1",
+            "job_code": "LFSD",
+            "job_title": "Lead Full Stack Developer",
+            "job_requirements": "8+ years of development experience in full stack technologies.\nProficient in HTML5, CSS, JavaScript, and Sass.\nExperience with Java, .Net, PHP, Typescript.\nFamiliar with modern JS and CSS frameworks like ES6, Sass, Node, NPM, Webpack, Babel, and Flexbox.\nExperience with JavaScript frameworks such as React, Angular, Vue.\nExperience with server-side technologies like Apache, Nginx, IIS, Node.js, and J2EE.\nStrong knowledge of databases like MySQL, MongoDB, PostgreSQL, DynamoDB, Firestore.\nKnowledge of versioning tools like Git, Mercurial, Bitbucket.\nExcellent communication skills.",
+            "job_responsibility": "Design and develop full stack applications.\nWork with front-end and back-end technologies.\nBuild applications for web, mobile web, and native mobile platforms.\nDesign and develop APIs.\nUtilize cloud messaging APIs and push notifications.",
+            "experience": "8",
+            "skill_set": "Full Stack Technologies, HTML5, CSS, JavaScript, Sass, Java, .Net, PHP, Typescript, React, Angular, Vue, Node.js, MySQL, MongoDB, PostgreSQL, DynamoDB, Firestore, Git, Mercurial, Bitbucket, API Design, Cloud Messaging APIs",
+            "job_location": "Remote",
+            "expire_date": "2024-07-06T18:30:00.000Z"
+        },
+        {
+            "_id": "667bc1f4ee89d917b07e12e4",
+            "job_code": "QATE",
+            "job_title": "QA Test Engineer",
+            "job_requirements": "Strong understanding of mobile and web technologies.\nProficient in using testing tools and frameworks like Selenium, Appium, JIRA.\nAbility to develop comprehensive test plans and execute test cases.\nExcellent problem-solving skills.\nAttention to detail and strong communication skills.",
+            "job_responsibility": "Develop and implement comprehensive test plans for mobile and web applications.\nExecute test cases, analyze results, and report defects.\nPerform regression testing and collaborate with development teams to ensure quality.",
+            "experience": "Not specified",
+            "skill_set": "Mobile and Web Technologies, Testing Tools (Selenium, Appium, JIRA), Test Planning and Execution, Troubleshooting, Attention to Detail, Communication",
+            "job_location": "Not specified",
+            "expire_date": "Not specified"
+        },
+        {
+            "_id": "667bc174ee89d917b07e12df",
+            "job_code": "SMCAL",
+            "job_title": "Salesforce Marketing Cloud Architect/Lead",
+            "job_requirements": "Bachelor's degree in business or related field; or five to seven years related experience in a Salesforce Marketing Cloud environment.\nWell-versed in Salesforce Marketing Cloud – Email Studio, Automation Studios, Journey Builder and hands-on experience in SQL and AMPscript.\nGood understanding and experience on the data architecture/schema and data flows.\nGlobal and large-scale Marketing Automation projects with strong practical development knowledge of Salesforce Marketing Cloud, Marketing Cloud Integrations (MC Connector), Integration Design, Data Modelling, AMPScript, SQL, and Data Mapping.\nProximity to script languages, databases, SQL, interfaces, and web development.\nConceptual knowledge of Marketing automation and Campaign Design, Identify resolution, Customer Intent funnel, Programmatic and Predictive Personalization.\nExperience with Salesforce Marketing Cloud administration.\nExperience in troubleshooting skills with the ability to analyze and resolve difficult problems quickly.\nAbility to gather requirements, design and deliver solutions on the Salesforce Marketing Cloud that meet client business goals and technical requirements.\nExcellent interpersonal skills, with the ability to conceptualize and communicate highly detailed technical concepts to technical and non-technical audiences.",
+            "job_responsibility": "Act as a consultant and technical expert on the Salesforce Marketing Cloud to serve clients' needs.\nDemonstrate technical expertise while scoping and driving the creation of digital solutions, email campaigns, email reporting, and data integration.\nGather business, marketing, and technical requirements in order to craft a comprehensive and scalable solution.\nArchitect data feeds, platform configuration, and components needed to run complex automated email campaigns.\nBuild, test, implement, and improve customer journeys and marketing campaigns.\nWork with the customer data to create segments and data models that meet client requirements.\nCreate content personalization using simple scripting language (AMPscript).\nAutomate processes within the Salesforce Marketing Cloud.\nProactively identify and resolve problems including client data feed issues.\nCreate and deliver training to the wider team on SFMC functionality.\nStay abreast of industry technology innovations, new business practices, and third-party technology solutions.\nManage relationships with stakeholders, conduct workshops, coordinate marketing needs and requirements with project partners.\nHelp us continuously improve by identifying, creating, and enhancing internal systems and processes based on recurring client requests or evolving industry standards.",
+            "experience": "5-7",
+            "skill_set": "Salesforce Marketing Cloud, SQL, AMPscript, Data Modelling, Integration Design",
+            "job_location": "Chennai, India or Trichy, India or Remote",
             "expire_date": "2024-07-04T18:30:00.000Z",
+            "__v": 0
+        },
+        {
+            "_id": "667bc8062ab9a9db7781f223",
+            "job_code": "MLP001",
+            "job_title": "MBA Launch Program",
+            "job_requirements": "University students who graduated or are graduating from May 2023 to May 2024 with an MBA degree in Business, Finance, Accounting, Economics, or related field.\nExceptional written and verbal communication skills, including the ability to create effective presentations for senior management.\nAbility to work both independently and in large, cross-functional team settings.\nMicrosoft Excel proficiency.\n3-5 years minimum corporate work experience a plus.",
+            "job_responsibility": "Contribute hands-on alongside Finance & Accounting teams.\nParticipate in the MBA Finance & Accounting Rotation Program to work in different capacities across various functions before dedicating to one role.\nLearn more about different areas of the organization and rapidly grow professional skills within NearTekPod.\nEngage in the LAUNCH Program for corporate insights and company culture.\nNavigate through starting and launching your career towards long-term aspirations.\nParticipate in training opportunities, professional insights, networking activities, and Equity, Inclusion & Diversity events.",
+            "experience": "0-5",
+            "skill_set": "Business Finance, FP&A, Operations Finance, Treasury, Accounting",
+            "job_location": "Various Locations",
+            "expire_date": "2024-07-05T18:30:00.000Z",
             "__v": 0
         },
         {
@@ -71,6 +103,18 @@
             "skill_set": "PHP,HTML,CSS,JavaScript,MySQL",
             "job_location": "Trichy, India",
             "expire_date": "2024-07-04T18:30:00.000Z",
+            "__v": 0
+        },
+        {
+            "_id": "667bc1c4ee89d917b07e12e2",
+            "job_code": "SP",
+            "job_title": "ScalaProgrammer",
+            "job_requirements": "Degree in Software Development, Computer Science, or similar.\n5 years of experience in Software Development Life Cycle using Agile methodology.\nAnalytical mindset and strong problemsolving skills.\nExcellent written and verbal communication.\nGood organizational skills and ability to work as part of a team.\n2 years of technical experience in Scala.\nProficient with Java 8, Spring BootMVC, and REST APIs.\nExperience with RDBMS schemas and queries.\nFamiliarity with Jenkins, JUnit, Mockito Framework, and version control applications.\nUnderstanding of Design Patterns and best practices in Java.\nExperience in developing server applications through the full product lifecycle.\nKnowledgeable in Application security and performance optimization.",
+            "job_responsibility": "Design and implement JavaScala applications.\nAnalyze user requirements to inform application design.\nDefine application objectives and functionality.\nAlign application design with business goals.\nDevelop and test software, Debug and resolve technical problems.\nProduce detailed design documentation.\nRecommend changes to existing infrastructure.\nDevelop documentation to assist users.",
+            "experience": "5",
+            "skill_set": "Java,SpringBoot,MVC,RESTAPIs",
+            "job_location": "Mexico, USA",
+            "expire_date": "2024-07-05T18:30:00.000Z",
             "__v": 0
         }
     ]
