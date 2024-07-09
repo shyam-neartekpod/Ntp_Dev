@@ -42,6 +42,10 @@ module.exports = {
       borderColor: {
         customcolor: "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
       },
+      lineHeight: {
+        leading2: "1.9rem",
+        leading1: "1.5rem",
+      },
 
       backgroundImage: (theme) => ({
         WorldMap: 'url("{{get_asset_url("../../assets/Globe.svg")}}")',
