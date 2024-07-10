@@ -652,9 +652,6 @@ body{
   border-radius: 0.75rem;
   background-image:  linear-gradient(90deg, rgba(220,234,253,1) 11%, rgba(253,254,255,1) 64%);
   padding: 1rem;
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 768px){
@@ -1749,6 +1746,10 @@ body{
   line-height: 1px;
 }
 
+.leading-leading1{
+  line-height: 1.5rem;
+}
+
 .tracking-tight{
   letter-spacing: -0.025em;
 }
@@ -2354,6 +2355,11 @@ body{
     line-height: 1.5rem;
   }
 
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2366,6 +2372,10 @@ body{
 
   .md\:leading-\[3rem\]{
     line-height: 3rem;
+  }
+
+  .md\:leading-leading2{
+    line-height: 1.9rem;
   }
 }
 
@@ -2425,11 +2435,6 @@ body{
 
   .lg\:p-0{
     padding: 0px;
-  }
-
-  .lg\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 }
 
