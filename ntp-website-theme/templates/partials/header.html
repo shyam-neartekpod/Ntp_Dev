@@ -3,70 +3,72 @@
   label: Website header
 -->
 
+<!-- Navbar Code -->
 <nav class="shadow-lg fixed h-20 top-0 left-0 w-full z-50 bg-white">
   <div
     class="lg:container flex flex-wrap items-center justify-between mx-auto h-full"
   >
     <div class="flex-1 flex p-10 lg:p-0 h-full items-center">
-      <a href="/home-dev"
-        ><img
+      <a href="/home-dev" id="logo-link">
+        <img
           src="{{ get_asset_url('../../assets/logo.png') }}"
           alt="Logo"
-          class="h-10"
-      /></a>
+          class="h-14"
+        />
+      </a>
     </div>
     <div class="relative hidden lg:block h-full">
       <ul class="flex flex-row gap-5 h-full items-center">
-        <li class="nav-style bg-coralblue">
-          <a class="flex" href="/home-dev"
-            ><img
+        <li class="nav-style cursor-pointer duration-500" id="home-link">
+          <a class="flex" href="/home-dev">
+            <img
               src="{{get_asset_url('../../assets/house.svg')}}"
               alt=""
               class="w-4 mr-2"
-            />Home</a
-          >
+            />Home
+          </a>
         </li>
-        <li class="nav-style bg-bluechalk">
-          <a href="/service-dev" class="flex"
-            ><img
+        <li class="nav-style cursor-pointer duration-500" id="service-link">
+          <a href="/service-dev" class="flex">
+            <img
               src="{{get_asset_url('../../assets/gear.svg')}}"
               alt=""
               class="w-4 mr-2"
-            />Service</a
-          >
+            />Service
+          </a>
         </li>
-        <li class="nav-style">
-          <a href="/about-dev" class="flex"
-            ><img
+        <li class="nav-style cursor-pointer duration-500" id="about-link">
+          <a href="/about-dev" class="flex">
+            <img
               src="{{get_asset_url('../../assets/people.svg')}}"
               alt=""
               class="w-4 mr-2"
-            />About Us</a
-          >
+            />About Us
+          </a>
         </li>
-        <li class="nav-style">
+        <li class="nav-style cursor-pointer duration-500" id="career-link">
           <a href="/career-dev" class="flex">
             <img
               src="{{get_asset_url('../../assets/briefcase.svg')}}"
               alt=""
               class="w-4 mr-2"
-            />Career</a
-          >
+            />Career
+          </a>
         </li>
-        <li class="nav-style">
-          <a href="/blog-dev" class="flex">
+        <li class="nav-style cursor-pointer duration-500" id="blog-link">
+          <a href="/comingsoon-dev" class="flex">
             <img
               src="{{get_asset_url('../../assets/newspaper.svg')}}"
               alt=""
               class="w-4 mr-2"
-            />
-            Blog</a
-          >
+            />Blog
+          </a>
         </li>
         <li
-          class="h-9 leading-9 rounded-2xl px-3 border border-coralblue hover:bg-coralblue text-sm font-Montserrat font-bold"
+          class="h-9 leading-9 rounded-2xl px-3 border border-royalblue hover:bg-coralblue text-sm font-Montserrat font-bold cursor-pointer hover:text-blue-400 duration-500"
+          id="contact-link"
         >
-          <a href="/contact-dev"> Contact Us</a>
+          <a href="/contact-dev">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -106,28 +108,79 @@
     >
       <div class="relative lg:hidden h-screen">
         <ul
-          class="w-full flex-col text-center bg-sky-300 *:mt-10 p-4 text-xl font-bold h-screen"
+          class="w-full flex-col text-center bg-coralblue *:mt-10 p-4 text-xl font-bold h-screen"
         >
           <li>
-            <a href="/home-dev">Home</a>
+            <a href="/home-dev" id="home-link-mobile">Home</a>
           </li>
           <li>
-            <a href="/service-dev">Service</a>
+            <a href="/service-dev" id="service-link-mobile">Service</a>
           </li>
           <li>
-            <a href="/about-dev">About Us</a>
+            <a href="/about-dev" id="about-link-mobile">About Us</a>
           </li>
           <li>
-            <a href="/career-dev">Career</a>
+            <a href="/career-dev" id="career-link-mobile">Career</a>
           </li>
           <li>
-            <a href="/blog-dev">Blog</a>
+            <a href="/comingsoon-dev" id="blog-link-mobile">Blog</a>
           </li>
           <li>
-            <a href="/contact-dev">Contact Us</a>
+            <a href="/contact-dev" id="contact-link-mobile">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </nav>
+
+<!-- JavaScript to handle active class -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a");
+    const currentPath = window.location.pathname;
+
+    // Function to extract path from URL
+    function getPath(url) {
+      const path = new URL(url, window.location.origin).pathname;
+      return path;
+    }
+
+    function setActiveLink() {
+      navLinks.forEach((link) => {
+        link.parentElement.classList.remove("active");
+        if (
+          link.id !== "logo-link" &&
+          getPath(link.href) === window.location.pathname
+        ) {
+          link.parentElement.classList.add("active");
+        }
+      });
+    }
+
+    // Set active class based on current URL
+    setActiveLink();
+
+    // Add click event to update active class
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        if (this.id !== "logo-link") {
+          navLinks.forEach((navLink) =>
+            navLink.parentElement.classList.remove("active")
+          );
+          this.parentElement.classList.add("active");
+        }
+      });
+    });
+
+    // Handle back/forward navigation
+    window.addEventListener("popstate", setActiveLink);
+  });
+</script>
+
+<!-- Style for active class -->
+<style>
+  .active {
+    background-color: #a7dfff;
+  }
+</style>

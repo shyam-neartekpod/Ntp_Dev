@@ -23,7 +23,7 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
-
+        errorred: "C00F0C",
         backblue: "#00A2FF",
         backyellow: "#DEF100",
         backpink: "#6100FF",
@@ -42,6 +42,10 @@ module.exports = {
       borderColor: {
         customcolor: "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
       },
+      lineHeight: {
+        leading2: "1.9rem",
+        leading1: "1.5rem",
+      },
 
       backgroundImage: (theme) => ({
         WorldMap: 'url("{{get_asset_url("../../assets/Globe.svg")}}")',
@@ -52,10 +56,12 @@ module.exports = {
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/arch.svg")}}")',
         Building:
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/bulid.png")}}")',
-        Hand: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ',
-        Tech: 'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),url("{{get_asset_url("../../assets/VR-image.svg")}}") ',
+        Hand: 'url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ',
+        Tech: 'url("{{get_asset_url("../../assets/VR-image.svg")}}") ',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
+        servicefradient:
+          " linear-gradient(90deg, rgba(220,234,253,1) 11%, rgba(253,254,255,1) 64%)",
       }),
     },
   },

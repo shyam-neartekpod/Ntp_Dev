@@ -1,0 +1,194 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: NTP-Blogs
+  screenshotPath: ../images/template-previews/home.png
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+        standard_header_includes }}
+</head>
+<body>
+    {% block header %} {% global_partial path="./partials/header.html" %} {%
+        endblock header %}
+    <div class="container  mt-20">
+        <section>
+            <div class="relative rounded-3xl overflow-hidden">
+                <span>
+                  <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Featured Image" class="w-full h-auto object-cover rounded-3xl">
+                    <div class="absolute inset-0 flex flex-col justify-end bg-black bg-opacity-50 p-6 rounded-lg">
+                        <h2 class="text-white text-xl font-bold mb-1">Features</h2>
+                        <h1 class="text-white text-4xl font-bold mb-1">Attention Grabbing Blog Post Title</h1>
+                        <h2 class="text-white text-xl mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore aspernatur quidem ipsum adipisci corporis, earum quae et tempore consequatur esse culpa sunt dignissimos nisi non vitae eos iure facilis sit maxime provident ex reprehenderit ipsam? Sint consequuntur obcaecati consequatur dolore minima? Architecto deleniti nisi amet nam voluptatibus ipsum dignissimos minima?</h2>
+                        <div class="self-start">
+                            <a href="#" class="inline-flex items-center mt-2 px-4 py-2 bg-white text-black text-lg font-semibold rounded-full w-60 transition duration-300">
+                                Read it here
+                                <svg style="margin-left: 70px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </div>
+         
+            <div class="w-full max-w-6xl flex flex-wrap md:flex-nowrap gap-8 mx-auto mt-8">
+                <div class="flex-grow max-w-sm h-auto bg-white overflow-hidden mx-auto my-5 md:mx-0 p-3 flex flex-col flex-container bg-customgradient">
+                    <div>
+                        <div class="flex items-center space-x-4">
+                            <p class="text-sm text-gray-600">June 26, 2023</p>
+                            <span class="text-sm text-gray-600">• .7 min read</span>
+                        </div>
+                        <a href="#">
+                            <img class="rounded-none w-full h-48 object-cover mt-4" src="https://www.retail-insight-network.com/wp-content/uploads/sites/18/2021/06/Depop-1-2.jpg" alt="Business"/>
+                        </a>
+                        <div class="md:p-5 bg-cvcfs">
+                            <div class="mb-8">
+                                <a href="#">
+                                    <h5 class="text-2xl font-bold tracking-tight text-gray-900">image 1 technology acquisitions 2021</h5>
+                                </a>
+                                <p class="font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 mt-4 md:p-5">
+                        <img class="w-10 h-10 rounded-full" src="https://th.bing.com/th/id/OIP.JtTI_NhpEmcZkSCtYSDe9gHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+                        <p class="text-sm font-medium text-gray-900">John Doe</p>
+                    </div>
+                </div>
+         
+                <div class="flex-grow flex flex-col space-y-4 sm:hidden md:flex">
+                    <div class="flex flex-col rounded-lg md:p-5 flex-grow">
+                        <h5 class="text-2xl font-bold tracking-tight text-gray-900 flex items-center space-x-4">Featured Articles</h5>
+                        <div class="flex gap-4 mt-4 flex-grow">
+                            <img class="hidden md:block md:w-1/3 h-32 object-cover rounded-2xl" src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""/>
+                            <div class="w-2/3 flex flex-col justify-between">
+                                <div>
+                                    <a href="#">
+                                        <p class="font-normal text-gray-700">image 2 are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                    </a>
+                                </div>
+                                <div class="flex items-center justify-between mt-4">
+                                    <div class="flex items-center">
+                                        <img class="w-10 h-10 rounded-full mr-4" src="https://th.bing.com/th/id/OIP.JtTI_NhpEmcZkSCtYSDe9gHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+                                        <p class="text-sm font-medium text-gray-900">John Doe</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600">June 26, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         
+                    <div class="flex gap-4 rounded-lg md:p-5 flex-grow">
+                        <img class="hidden md:block md:w-1/3 h-32 object-cover rounded-2xl" src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/b9545dd0-8493-424b-a585-8b701101a8f9.__CR0,0,970,600_PT0_SX970_V1___.jpg" alt=""/>
+                        <div class="w-2/3 flex flex-col justify-between">
+                            <div>
+                                <a href="#">
+                                    <p class="font-normal text-gray-700">image 3 are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                </a>
+                            </div>
+                            <div class="flex items-center justify-between mt-4">
+                                <div class="flex items-center">
+                                    <img class="w-10 h-10 rounded-full mr-4" src="https://th.bing.com/th/id/OIP.JtTI_NhpEmcZkSCtYSDe9gHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+                                    <p class="text-sm font-medium text-gray-900">John Doe</p>
+                                </div>
+                                <p class="text-sm text-gray-600">June 26, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+         
+                    <div class="flex gap-4 rounded-lg md:p-5 flex-grow">
+                        <img class="hidden md:block md:w-1/3 h-32 object-cover rounded-2xl" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYRDtQ0l5yVMx5csX1GmWvBYUnyYs1vIqOMlbHFuWJFZadzKJGGLdPQXuantrAQqU33M&usqp=CAU" alt=""/>
+                        <div class="w-2/3 flex flex-col justify-between">
+                            <div>
+                                <a href="#">
+                                    <p class="font-normal text-gray-700">image 4 are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                </a>
+                            </div>
+                            <div class="flex items-center justify-between mt-4">
+                                <div class="flex items-center">
+                                    <img class="w-10 h-10 rounded-full mr-4" src="https://th.bing.com/th/id/OIP.JtTI_NhpEmcZkSCtYSDe9gHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+                                    <p class="text-sm font-medium text-gray-900">John Doe</p>
+                                </div>
+                                <p class="text-sm text-gray-600">June 26, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+            <div class="bg-white shadow-md rounded-lg w-full max-w-full md:p-8 mt-8 mx-auto bg-customgradient">
+                <div class="text-center">
+                    <h6 class="text-lg md:text-2xl font-bold mb-8">
+                        Subscribe and stay up to date with the latest tech and tips
+                    </h6>
+                    <div class="flex flex-wrap justify-center sm:gap-1 gap-4 my-8">
+                      {% block Email %} {% global_partial path="./Components/email.html " %}
+                      {% endblock Email %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mains -->
+        <div class="sm:grid-cols-1 md:grid grid-cols-3  gap-x-4 ">
+            <!-- Cards -->
+            <div class="col-span md:col-span-3">
+                <div class="place-items-center">
+                    <h2 class="font-medium text-xl md:text-3xl my-8">
+                      Latest Article's
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 rounded-lg gap-4" id="card-container">
+                    <!-- Cards will be dynamically added here -->
+                </div>
+            </div>
+          </div>
+    </div>
+    <script>
+        // Fetch JSON data from file or API endpoint
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('{{ get_asset_url("../assets/data/data.json") }}') 
+          .then(response => response.json())
+          .then(data => {
+            const cardContainer = document.getElementById('card-container');
+    
+            data.cards.forEach(item => {
+              const card = document.createElement('div');
+              card.classList.add( 'rounded-lg', 'overflow-hidden', 'shadow-md', 'bg-customgradient');
+             
+    
+              card.innerHTML = `
+                <div class="flex flex-col">
+                  <div class="flex justify-between text-gray-700 mb-2">
+                    <p class="mr-2">${item.date}</p>
+                    <p>${item.read_time}</p>
+                  </div>
+                  <img src="${item.image}" alt="Article Image" class="size-full object-fill w-full">
+                  <h5 class="text-xl font-bold mb-8">${item.title}</h5>
+                  <div class="flex items-center mb-2">
+                    <img class="w-10 h-10 rounded-full mr-4" src="${item.image}" alt="Profile Picture">
+                    <p class="text-gray-700">${item.author}</p>
+                  </div>
+                </div>
+              `;
+    
+              cardContainer.appendChild(card);
+              console.log('Image element with message successfully displayed');
+            });
+          })
+          .catch(error => {
+            console.error('Error fetching JSON:', error);
+          });
+        });
+    </script>
+</body>
+{{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/footer.html" %} {% endblock footer %} {{
+    require_js(get_asset_url("../js/main.js")) }}
+</html>
