@@ -33,9 +33,10 @@
   <body class="">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
+      <div class="container xl:px-32 px-3">
 
     <div
-      class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"
+      class=" relative md:px-auto  flex lg:flex-row flex-col gap-10 mt-32"
     >
       <div
         class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center z-40"
@@ -184,7 +185,7 @@
     </div>
 
     <div
-      class="md:container mx-auto items-center justify-between text-center md:mt-24 mt-10"
+      class=" mx-auto items-center justify-between text-center md:mt-24 mt-10"
     >
       <div class="flex w-full flex-wrap lg:flex-nowrap px-8">
         <h2
@@ -217,7 +218,7 @@
         </button>
       </div>
     </div>
-    <div class="md:container p-4">
+    <div class="">
       {% block Understand %} {% global_partial
       path="./Components/understand.html " %} {% endblock Understand %}
 
@@ -506,10 +507,14 @@
         %} {% endblock ourpods %}
       </div>
     </div>
+    
+    {{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/footer.html" %} {% endblock footer %} {{
+    require_js(get_asset_url("../js/main.js")) }}
+  </div>
+  
   </body>
-  {{ standard_footer_includes }} {% block footer %} {% global_partial
-  path="./partials/footer.html" %} {% endblock footer %} {{
-  require_js(get_asset_url("../js/main.js")) }}
+  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
