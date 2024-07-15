@@ -44,7 +44,7 @@
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
     <div class="p-8 mt-24">
-      <div class="md:container">
+      <div class="container xl:px-32 px-3">
         <!-- Dropdowns -->
         <form
           class="flex flex-wrap md:flex-nowrap justify-center md:justify-between"
@@ -189,11 +189,12 @@
         <!-- <span id="currentPage">Page 1</span> -->
         <!-- <button id="nextPage">Next</button> -->
         <!-- </div> -->
+        {{ standard_footer_includes }} {% block footer %} {% global_partial
+          path="./partials/footer.html" %} {% endblock footer %}
       </div>
     </div>
   </body>
-  {{ standard_footer_includes }} {% block footer %} {% global_partial
-  path="./partials/footer.html" %} {% endblock footer %} {{
+  {{
   require_js(get_asset_url("../js/main.js")) }}
   <!-- <script>
     document.querySelectorAll(".accordion-header").forEach((button) => {

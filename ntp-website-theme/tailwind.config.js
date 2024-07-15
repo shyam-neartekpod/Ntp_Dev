@@ -7,9 +7,7 @@ module.exports = {
     extend: {
       container: {
         center: true,
-        // maxWidth:"1180px"
-
-        padding: "110px",
+       
       },
       swiper: {
         width: "100%",

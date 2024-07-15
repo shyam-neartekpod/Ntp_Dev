@@ -560,8 +560,6 @@ video {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 110px;
-  padding-left: 110px;
 }
 
 @media (min-width: 640px){
@@ -984,6 +982,18 @@ body{
   margin-top: 2rem;
 }
 
+.mr-10{
+  margin-right: 2.5rem;
+}
+
+.ml-20{
+  margin-left: 5rem;
+}
+
+.ml-80{
+  margin-left: 20rem;
+}
+
 .block{
   display: block;
 }
@@ -1081,6 +1091,14 @@ body{
   height: 100vh;
 }
 
+.h-1\/2{
+  height: 50%;
+}
+
+.h-2\/4{
+  height: 50%;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -1153,6 +1171,22 @@ body{
   width: 100%;
 }
 
+.w-\[100\]{
+  width: 100;
+}
+
+.w-\[80\]{
+  width: 80;
+}
+
+.w-\[200px\]{
+  width: 200px;
+}
+
+.w-\[400px\]{
+  width: 400px;
+}
+
 .max-w-4xl{
   max-width: 56rem;
 }
@@ -1171,6 +1205,10 @@ body{
 
 .max-w-sm{
   max-width: 24rem;
+}
+
+.max-w-\[20\%\]{
+  max-width: 20%;
 }
 
 .flex-1{
@@ -1657,6 +1695,14 @@ body{
   padding-top: 2.25rem;
 }
 
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
+.pr-52{
+  padding-right: 13rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1917,8 +1963,6 @@ body{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 110px;
-    padding-left: 110px;
   }
 
   @media (min-width: 640px){
@@ -1957,8 +2001,6 @@ body{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 110px;
-    padding-left: 110px;
   }
 
   @media (min-width: 640px){
@@ -2444,6 +2486,13 @@ body{
   .lg\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:px-32{
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
 
