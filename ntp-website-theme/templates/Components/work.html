@@ -2,197 +2,242 @@
   templateType: global_partial
   label: RecentWork
 -->
-
-<!-- card class -->
+ 
 <style>
-  .carousel-container {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-  }
- 
-  .carousel-wrapper {
-      display: flex;
-      transition: transform 0.7s ease-in-out;
-  }
- 
-  .carousel-item {
-      flex: 0 0 33.3333%; /* Shows 3 items at a time */
-      max-width: 33.3333%;
-      box-sizing: border-box;
-      padding: 0 10px; /* Add horizontal padding for gap */
-  }
- 
-</style>
- 
-<div class="carousel-container">
-  <div class="carousel-wrapper">
-      <!-- Cemex Card -->
-      <div class="carousel-item">
-          <div class="group relative  card  h-96 ">
-              <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/cem.svg')}}" alt="Cemex">
-              <div class="absolute inset-0 "></div>
-              <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+   
+    .carousel-wrapper {
+        display: flex; 
+        transition: transform 0.7s ease-in-out;
+    }
+   
+    .carousel-item {
+        flex: 0 0 33.3333%; /* Shows 3 items at a time */
+        max-width: 33.3333%;
+        box-sizing: border-box;
+        padding: 0 10px; /* Add horizontal padding for gap */
+    }
+   
+  </style>
+  
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+        <!-- Cemex Card -->
+        <div class="carousel-item">
+            <div class="group relative  card  h-96 ">
+                <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/cem.svg')}}" alt="Cemex">
+                <div class="absolute inset-0 "></div>
+                <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
+                    <i class="fa-solid fa-arrow-up up-arrow transition-all duration-300"></i>
+                </div>
+                <div class="absolute top-4 left-4 text-coralblue tags">
+                    <div>
+                        <i class="fa-regular fa-circle-dot text-2xl"></i>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue">
+                            Multi-lingual website
+                        </button>
+                    </div>
+                    <div>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue mb-1">
+                            Completed in 6 months
+                        </button>
+                        <i class="fa-regular fa-circle-dot text-2xl"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 text-white p-5 group">
+                    <h2 class="font-semibold text-4xl">Cemex</h2>
+                    <p class="text-sm">
+                        True testament to building and delivering in agile in record time with quality
+                    </p>
+                    <a href="/comingsoon-dev" class="block"></a>
+                </div>
+            </div>
+        </div>
+        <!-- Marriott -->
+        <div class="carousel-item">
+            <div class="group relative card h-96 ">
+                <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/ihg-hotels.svg')}}" alt="Jacana">
+                <div class="absolute inset-0 "></div>
+                <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
                   <i class="fa-solid fa-arrow-up up-arrow transition-all duration-300"></i>
               </div>
-              <div class="absolute top-4 left-4 text-coralblue cemex-tags">
-                  <div>
-                      <i class="fa-regular fa-circle-dot text-2xl"></i>
-                      <button class="border rounded-xl text-coralblue px-3 border-coralblue">
-                          Multi-lingual website
-                      </button>
-                  </div>
-                  <div>
+                <div class="absolute top-4 left-4 text-coralblue tags hidden">
+                    <div>
+                        <i class="fa-regular fa-circle-dot text-2xl"></i>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue">
+                          Oracle cloud integration
+                        </button>
+                    </div>
+                    <div>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue mb-1">
+                            Completed in 9 months
+                        </button>
+                        <i class="fa-regular fa-circle-dot text-2xl"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 text-white p-5 group">
+                    <h2 class="font-semibold text-4xl">Marriott</h2>
+                    <p class="text-sm">A global hotel chain integrating into Oracle Cloud</p>
+                </div>
+            </div>
+        </div>
+         <!-- LibertyFund -->
+        <div class="carousel-item">
+            <div class="group relative card  h-96 ">
+                <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/LF.svg')}}" alt="Jacana">
+                <div class="absolute inset-0 "></div>
+                <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
+                  <i class="fa-solid fa-arrow-up up-arrow transition-all duration-300"></i>
+              </div>
+                <div class="absolute top-4 left-4 text-coralblue tags hidden">
+                    <div>
+                        <i class="fa-regular fa-circle-dot text-2xl"></i>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue">
+                          CRM Implementation
+                        </button>
+                    </div>
+                    <div>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue mt-2 mb-1">
+                          Cloud Adoption
+                        </button>
+                    </div>
+                    <div>
                       <button class="border rounded-xl text-coralblue px-3 border-coralblue mb-1">
-                          Completed in 6 months
+                        Completed in 6 months
                       </button>
                       <i class="fa-regular fa-circle-dot text-2xl"></i>
-                  </div>
-              </div>
-              <div class="absolute bottom-0 text-white p-5 group">
-                  <h2 class="font-semibold text-4xl">Cemex</h2>
-                  <p class="text-sm">
-                      True testament to building and delivering in agile in record time with quality
-                  </p>
-                  <a href="/comingsoon-dev" class="block"></a>
-              </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 text-white p-5 group">
+                    <h2 class="font-semibold text-4xl">LibertyFund</h2>
+                    <p class="text-sm">A customer engagement solution for conference management and marketing</p>
+                </div>
+            </div>
           </div>
-      </div>
+        <!-- Jacana Card -->
+        <div class="carousel-item">
+            <div class="group relative card  h-96">
+                <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/jac-Final.svg')}}" alt="Jacana">
+                <div class="absolute inset-0 "></div>
+                <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
+                  <i class="fa-solid fa-arrow-up up-arrow transition-all duration-300"></i>
+              </div>
+                <div class="absolute top-4 left-4 text-coralblue tags hidden">
+                    <div>
+                        <i class="fa-regular fa-circle-dot text-2xl"></i>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue">
+                            B2B Sales website
+                        </button>
+                    </div>
+                    <div>
+                        <button class="border rounded-xl text-coralblue px-3 border-coralblue mb-1">
+                            Completed in 4 months
+                        </button>
+                        <i class="fa-regular fa-circle-dot text-2xl"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 text-white p-5 group">
+                    <h2 class="font-semibold text-4xl">Jacana</h2>
+                    <p class="text-sm">A warranty integration framework to power B2B sales</p>
+                </div>
+            </div>
+        </div>
+       
+       
      
       
-      <!-- IHG -->
-      <div class="carousel-item">
-        <div class="group relative card h-96 ">
-            <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/ihg-hotels.svg')}}" alt="Jacana">
-            <div class="absolute inset-0 "></div>
-            <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
-              <i class="fa-solid fa-arrow-up up-arrow transition-all duration-300"></i>
-          </div>
-            <div class="absolute top-4 left-4 text-coralblue tags hidden">
-                <div>
-                    <i class="fa-regular fa-circle-dot text-2xl"></i>
-                    <button class="border rounded-xl text-coralblue px-3 border-coralblue">
-                      Oracle cloud integration
-                    </button>
-                </div>
-                <div>
-                    <button class="border rounded-xl text-coralblue px-3 border-coralblue mb-1">
-                        Completed in 9 months
-                    </button>
-                    <i class="fa-regular fa-circle-dot text-2xl"></i>
-                </div>
-            </div>
-            <div class="absolute bottom-0 text-white p-5 group">
-                <h2 class="font-semibold text-4xl">Mariott</h2>
-                <p class="text-sm">A global hotel chain integrating into Oracle Cloud</p>
-            </div>
-        </div>
     </div>
-    <!-- LibertyFund -->
-    <div class="carousel-item">
-      <div class="group relative card  h-96 ">
-          <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/LF.svg')}}" alt="Jacana">
-          <div class="absolute inset-0 "></div>
-          <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
-            <i class="fa-solid fa-arrow-up up-arrow transition-all duration-300"></i>
-        </div>
-          <div class="absolute top-4 left-4 text-coralblue tags hidden">
-              <div>
-                  <i class="fa-regular fa-circle-dot text-2xl"></i>
-                  <button class="border rounded-xl text-coralblue px-3 border-coralblue">
-                    CRM Implementation
-                  </button>
-              </div>
-              <div>
-                  <button class="border rounded-xl text-coralblue px-3 border-coralblue mt-2 mb-1">
-                    Cloud Adoption
-                  </button>
-              </div>
-              <div>
-                <button class="border rounded-xl text-coralblue px-3 border-coralblue mb-1">
-                  Completed in 6 months
-                </button>
-                <i class="fa-regular fa-circle-dot text-2xl"></i>
-              </div>
-          </div>
-          <div class="absolute bottom-0 text-white p-5 group">
-              <h2 class="font-semibold text-4xl">LibertyFund</h2>
-              <p class="text-sm">A customer engagement solution for conference management and marketing</p>
-          </div>
-      </div>
-    </div>
-    <!-- Jacana Card -->
-    <div class="carousel-item">
-        <div class="group relative card  h-96">
-            <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/jac-Final.svg')}}" alt="Jacana">
-            <div class="absolute inset-0 "></div>
-            <div class="absolute top-4 right-4 w-8 h-8 rounded-3xl bg-primarywhite flex justify-center rotate-45 items-center group-hover:rotate-90 group-hover:bg-coralblue transition-transform duration-300">
-              <i class="fa-solid fa-arrow-up up-arrow transition-all duration-300"></i>
-          </div>
-            <div class="absolute top-4 left-4 text-coralblue tags hidden">
-                <div>
-                    <i class="fa-regular fa-circle-dot text-2xl"></i>
-                    <button class="border rounded-xl text-coralblue px-3 border-coralblue">
-                        B2B Sales website
-                    </button>
-                </div>
-                <div>
-                    <button class="border rounded-xl text-coralblue px-3 border-coralblue mb-1">
-                        Completed in 4 months
-                    </button>
-                    <i class="fa-regular fa-circle-dot text-2xl"></i>
-                </div>
-            </div>
-            <div class="absolute bottom-0 text-white p-5 group">
-                <h2 class="font-semibold text-4xl">Jacana</h2>
-                <p class="text-sm">A warranty integration framework to power B2B sales</p>
-            </div>
-        </div>
-    </div>
-     
+    <div class="carousel-controls absolute top-1/2 w-full flex justify-between transform -translate-y-1/2 gap-1.5">
+      <button class="carousel-button prev bg-SoftBlue border-none p-[34px_14px] cursor-pointer rounded-[25px] w-12 h-20 flex ml-8 items-center text-black"><img src="{{get_asset_url('../../assets/chevron-left 1.svg')}}" alt=""></button>
+      <button class="carousel-button next bg-SoftBlue border-none p-[34px_14px] cursor-pointer rounded-[25px] w-12 h-20 flex mr-8 items-center text-black"><img src="{{get_asset_url('../../assets/chevron-right 1.svg')}}" alt=""></button>
   </div>
-  <div class="carousel-controls absolute top-1/2 w-full flex justify-between transform -translate-y-1/2 gap-2.5">
-    <button class="carousel-button bg-[rgba(167,223,255,0.75)] border-none p-[34px_14px] cursor-pointer rounded-[25px] w-12 h-20 flex items-center text-black" id="prev"><img src="{{get_asset_url('../../assets/chevron-left 1.svg')}}" alt=""></button>
-    <button class="carousel-button bg-[rgba(167,223,255,0.75)] border-none p-[34px_14px] cursor-pointer rounded-[25px] w-12 h-20 flex items-center text-black" id="next"><img src="{{get_asset_url('../../assets/chevron-right 1.svg')}}" alt=""></button>
   </div>
- 
-</div>
-<script>
-  const prevButton = document.getElementById('prev');
-  const nextButton = document.getElementById('next');
-  const carouselWrapper = document.querySelector('.carousel-wrapper');
-  let currentIndex = 0;
- 
-  prevButton.addEventListener('click', () => {
-      if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-      }
-  });
- 
-  nextButton.addEventListener('click', () => {
-      if (currentIndex < carouselWrapper.children.length - 3) {
-          currentIndex++;
-          updateCarousel();
-      }
-  });
- 
-  function updateCarousel() {
-      const offset = -currentIndex * 100 / 3;
-      carouselWrapper.style.transform = `translateX(${offset}%)`;
- 
-       // Update button visibility
-    if (currentIndex === 0) {
-        prevButton.style.visibility = 'hidden';
-    } else {
-        prevButton.style.visibility = 'visible';
+   
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    // Select all cards
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+        const tags = card.querySelector(".tags");
+
+        // Show tags for the hovered card and hide tags for all other cards
+        card.addEventListener("mouseenter", function () {
+            console.log(`Mouse entered card: ${card.querySelector('h2').textContent}`);
+            tags.classList.remove("hidden");
+
+            cards.forEach((otherCard) => {
+                if (otherCard !== card) {
+                    const otherTags = otherCard.querySelector(".tags");
+                    if (otherTags) {
+                        otherTags.classList.add("hidden");
+                    }
+                }
+            });
+        });
+
+        // Hide tags for the hovered card and show tags for the first card
+        card.addEventListener("mouseleave", function () {
+            console.log(`Mouse left card: ${card.querySelector('h2').textContent}`);
+            tags.classList.add("hidden");
+
+            const firstCard = document.querySelector('.carousel-item:first-child .tags');
+            if (firstCard) {
+                firstCard.classList.remove("hidden");
+                console.log('First card tags are shown');
+            } else {
+                console.log('First card tags not found');
+            }
+        });
+    });
+
+    // Carousel Navigation Logic
+    const prevButtons = document.querySelectorAll('.carousel-button.prev');
+    const nextButtons = document.querySelectorAll('.carousel-button.next');
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100 / 3;
+        carouselWrapper.style.transform = `translateX(${offset}%)`;
+
+        // Update button visibility
+        prevButtons.forEach(button => button.style.visibility = currentIndex === 0 ? 'hidden' : 'visible');
+        nextButtons.forEach(button => button.style.visibility = currentIndex >= carouselItems.length - 3 ? 'hidden' : 'visible');
+
+        // Show tags for the first visible card
+        const firstVisibleCard = carouselWrapper.children[currentIndex];
+        const firstVisibleTags = firstVisibleCard.querySelector(".tags");
+
+        cards.forEach((card) => {
+            const tags = card.querySelector(".tags");
+            if (tags) tags.classList.add("hidden");
+        });
+
+        if (firstVisibleTags) {
+            firstVisibleTags.classList.remove("hidden");
+            console.log(`First visible card tags are shown: ${firstVisibleCard.querySelector('h2').textContent}`);
+        }
     }
- 
-    if (currentIndex >= carouselWrapper.children.length - 3) {
-        nextButton.style.visibility = 'hidden';
-    } else {
-        nextButton.style.visibility = 'visible';
-    }
-  }
-  updateCarousel();
+    prevButtons.forEach(button => button.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    }));
+
+    nextButtons.forEach(button => button.addEventListener('click', () => {
+        if (currentIndex < carouselItems.length - 3) {
+            currentIndex++;
+            updateCarousel();
+        }
+    }));
+
+    updateCarousel();
+});
 </script>
+  
