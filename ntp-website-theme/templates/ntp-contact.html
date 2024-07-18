@@ -94,11 +94,10 @@
                   class="contact-border border-customgradient"
                   placeholder="First Name"
                   required
+                  oninput="validateAlphabetic(this, 'first-name-error')"
+                  onkeypress="return blockNumbers(event)"
                 />
-                <span
-                  class="text-red-300 text-sm mt-1"
-                  id="first-name-error"
-                ></span>
+                <span class="text-red-300 text-sm mt-1" id="first-name-error"></span>
               </div>
               <div class="mb-4">
                 <input
@@ -108,11 +107,10 @@
                   class="contact-border border-customgradient"
                   placeholder="Last Name"
                   required
+                  oninput="validateAlphabetic(this, 'last-name-error')"
+                  onkeypress="return blockNumbers(event)"
                 />
-                <span
-                  class="text-errorred text-sm mt-1"
-                  id="last-name-error"
-                ></span>
+                <span class="text-errorred text-sm mt-1" id="last-name-error"></span>
               </div>
               <div class="mb-4">
                 <input
@@ -123,10 +121,7 @@
                   required
                   placeholder="Email address"
                 />
-                <span
-                  class="text-errorred text-sm mt-1"
-                  id="email-error"
-                ></span>
+                <span class="text-errorred text-sm mt-1" id="email-error"></span>
               </div>
               <div class="mb-4">
                 <input
@@ -135,11 +130,10 @@
                   name="company"
                   placeholder="Company Name"
                   class="contact-border"
+                  oninput="validateAlphabetic(this, 'company-error')"
+                  onkeypress="return blockNumbers(event)"
                 />
-                <span
-                  class="text-errorred text-sm mt-1"
-                  id="company-error"
-                ></span>
+                <span class="text-errorred text-sm mt-1" id="company-error"></span>
               </div>
               <div class="mb-4">
                 <input
@@ -149,11 +143,10 @@
                   placeholder="Country"
                   class="contact-border"
                   required
+                  oninput="validateAlphabetic(this, 'country-error')"
+                  onkeypress="return blockNumbers(event)"
                 />
-                <span
-                  class="text-errorred text-sm mt-1"
-                  id="country-error"
-                ></span>
+                <span class="text-errorred text-sm mt-1" id="country-error"></span>
               </div>
               <div class="mb-4">
                 <textarea
@@ -162,11 +155,9 @@
                   class="mt-1 border-1 border-customgradient w-full p-2 !ring-0 bg-transparent placeholder-custom"
                   placeholder="Message"
                   required
+                  oninput="validateAlphanumeric(this, 'message-error')"
                 ></textarea>
-                <span
-                  class="text-errorred text-sm mt-1"
-                  id="message-error"
-                ></span>
+                <span class="text-errorred text-sm mt-1" id="message-error"></span>
               </div>
               <div class="mb-4">
                 <label class="inline-flex items-center">
@@ -177,16 +168,11 @@
                     class="form-checkbox bg-transparent"
                     required
                   />
-                  <span class="ml-2 font-medium text-xs"
-                    >I agree to the terms and conditions</span
-                  >
+                  <span class="ml-2 font-medium text-xs">I agree to the terms and conditions</span>
                 </label>
-                <span
-                  class="text-errorred text-sm mt-1"
-                  id="agree-error"
-                ></span>
+                <span class="text-errorred text-sm mt-1" id="agree-error"></span>
               </div>
-
+          
               <div class="flex justify-center">
                 <button
                   type="submit"
@@ -197,6 +183,8 @@
               </div>
             </form>
           </div>
+          
+          
         </div>
         {{ standard_footer_includes }} {% block footer %} {% global_partial
         path="./partials/footer.html" %} {% endblock footer %}
@@ -210,6 +198,111 @@
   {{ require_js(get_asset_url("../js/main.js")) }}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+   
+   
+  function blockNumbers(event) {
+    const keyCode = event.keyCode ? event.keyCode : event.which;
+    if (keyCode >= 48 && keyCode <= 57) {
+      event.preventDefault();
+      return false;
+    }
+    return true;
+  }
+
+  function validateAlphabetic(input, errorId) {
+    const value = input.value;
+    if (!/^[a-zA-Z]*$/.test(value)) {
+      document.getElementById(errorId).textContent = 'Only alphabetic characters are allowed.';
+    } else {
+      document.getElementById(errorId).textContent = '';
+    }
+  }
+
+  function validateAlphanumeric(input, errorId) {
+    const value = input.value;
+    if (!/^[a-zA-Z0-9\s]*$/.test(value)) {
+      document.getElementById(errorId).textContent = 'Only alphanumeric characters are allowed.';
+    } else {
+      document.getElementById(errorId).textContent = '';
+    }
+  }
+
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    let isValid = true;
+
+    // Helper function to set error message
+    function setError(id, message) {
+      document.getElementById(id).textContent = message;
+      isValid = false;
+    }
+
+    // Helper function to clear error message
+    function clearError(id) {
+      document.getElementById(id).textContent = '';
+    }
+
+    // Validate First Name
+    const firstName = document.getElementById('first-name').value;
+    if (!/^[a-zA-Z]+$/.test(firstName)) {
+      setError('first-name-error', 'First name must be alphabetic.');
+    } else {
+      clearError('first-name-error');
+    }
+
+    // Validate Last Name
+    const lastName = document.getElementById('last-name').value;
+    if (!/^[a-zA-Z]+$/.test(lastName)) {
+      setError('last-name-error', 'Last name must be alphabetic.');
+    } else {
+      clearError('last-name-error');
+    }
+
+ 
+ // Validate Email
+ const email = document.getElementById('email').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      setError('email-error', 'Please enter a valid email address.');
+      isValid = false;
+    } else {
+      clearError('email-error');
+    }
+
+
+
+    // Validate Company Name
+    const company = document.getElementById('company').value;
+    if (company && !/^[a-zA-Z\s]+$/.test(company)) {
+      setError('company-error', 'Company name must be alphabetic.');
+    } else {
+      clearError('company-error');
+    }
+
+    // Validate Country
+    const country = document.getElementById('country').value;
+    if (!/^[a-zA-Z]+$/.test(country)) {
+      setError('country-error', 'Country must be alphabetic.');
+    } else {
+      clearError('country-error');
+    }
+
+    // Validate Message
+    const message = document.getElementById('message').value;
+    if (!/^[a-zA-Z0-9\s]+$/.test(message)) {
+      setError('message-error', 'Message must be alphanumeric.');
+    } else {
+      clearError('message-error');
+    }
+
+    // Prevent form submission if validation fails
+    if (!isValid) {
+      e.preventDefault();
+    }
+  });
+
+
+
+
     document
       .getElementById("contact-form")
       .addEventListener("submit", async function (event) {
