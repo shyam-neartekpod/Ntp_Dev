@@ -3,48 +3,61 @@
   label: ourpods
 -->
 
-  <!-- card class -->
+<!-- card class -->
+<div
+  class="my-6 flex h-80 cards-container items-center gap-5 *:h-96 *:overflow-hidden *:rounded-2xl *:bg-slate-600 *:duration-300"
+>
+  <!-- cemex card  -->
   <div
-    class="my-6 flex h-80 cards-container items-center gap-5 *:h-96 *:overflow-hidden *:rounded-2xl *:bg-slate-600  *:duration-300">
-    <!-- cemex card  -->
-    <div class="group card relative  w-[500px] h-80 hover:w-![500px] transition-all duration-300">
-      <img class="size-full object-cover" src="{{get_asset_url('../../assets/Trichy.svg')}}" alt="Trichy" />
-      <div class="absolute inset-0  bg-opacity-25 blur-overlay"></div>
-     
-    
-      <!-- Company info -->
-      <div class="absolute bottom-0 text-white p-5 group">
-        <h2 class="font-bold text-2xl">Trichy,India</h2>
-        <p class=""> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo voluptas fugiat magni eaque</p>
-      
-      </div>
-    </div>
-    <!-- Jacana Card -->
-    <div class="group relative card w-[380px] h-80 hover:w-[500px] transition-all duration-300">
-      <img class="size-full object-cover" src="{{get_asset_url('../../assets/Lisbon.svg')}}" alt="Lisbon" />
-      <div class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"></div>
-      
-      
-      <!-- Company info -->
-      <div class="absolute bottom-0 text-white p-5 group">
-        <h2 class="font-bold text-2xl">Lisbon,Portugal</h2>
-        <p class=""> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-        
-      </div>
-    </div>
+    class="group card relative w-[500px] h-80 hover:w-![500px] transition-all duration-300"
+  >
+    <img
+      class="size-full object-cover"
+      src="{{get_asset_url('../../assets/Trichy-1.svg')}}"
+      alt="Trichy"
+    />
+    <div class="absolute inset-0 bg-opacity-25 blur-overlay"></div>
 
-    <!-- Marriot -->
-    <div class="group relative card h-80 hover:w-[500px] w-[380px]">
-      <img class="size-full object-cover" src="{{get_asset_url('../../assets/Chicago.svg')}}" alt="Marriot" />
-      <div class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"></div>
-      
-      
-      <!-- Company info -->
-      <div class="absolute bottom-0 text-white p-5 group">
-        <h2 class="font-bold text-2xl">Chicago,USA</h2>
-        <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, officiis repellendus atque excepturi est </p>
-        
-      </div>
+    <!-- Company info -->
+    <div class="absolute bottom-0 text-white p-5 group">
+      <h2 class="font-semibold text-4xl">Trichy India</h2>
+      <!-- <p class="text-sm">
+        Si Towers,No-15,Second floor, Melapudur main road,Trichy,Tamil
+        nadu-620001
+      </p> -->
+    </div>
+  </div>
+  <!-- Jacana Card -->
+  <div
+    class="group relative card w-[380px] h-80 hover:w-[500px] transition-all duration-300"
+  >
+    <img
+      class="size-full object-cover"
+      src="{{get_asset_url('../../assets/Lisbon-1.svg')}}"
+      alt="Lisbon"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"></div>
+
+    <!-- Company info -->
+    <div class="absolute bottom-0 text-white p-5 group">
+      <h2 class="font-semibold text-4xl">Lisbon Portugal</h2>
+      <p class="text-sm"></p>
+    </div>
+  </div>
+
+  <!-- Marriot -->
+  <div class="group relative card h-80 hover:w-[500px] w-[380px]">
+    <img
+      class="size-full object-cover"
+      src="{{get_asset_url('../../assets/Chicago-1.svg')}}"
+      alt="Marriot"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"></div>
+
+    <!-- Company info -->
+    <div class="absolute bottom-0 text-white p-5 group">
+      <h2 class="font-semibold text-4xl">Leon Mexico</h2>
+      <!-- <p class="text-sm">575 W Helen Rd,Palatine ,IL 60067</p> -->
     </div>
   </div>
 </div>
