@@ -35,12 +35,12 @@
   <body>
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
-    <section class="p-10 md:container">
+    <section class="container xl:px-32 px-3">
       <!-- about us  -->
       <div class="flex content-center justify-center mt-32 mb-10">
         <img
           class="rounded-3xl object-cover w-full"
-          src="{{get_asset_url('../assets/Aboutus-hero-image.svg')}}"
+          src="{{get_asset_url('../assets/About-us-hero-section.svg')}}"
           alt="img"
         />
       </div>
@@ -60,7 +60,7 @@
             class="flex flex-col items-center border-gray-300 bg-gradient-to-tr from-blue-100 to-transparent p-4 md:p-6 rounded-lg shadow-md text-center"
           >
             <div class="text-3xl md:text-4xl font-bold text-primaryblack mb-2">
-              100+
+              150+
             </div>
             <div class="text-sm md:text-sm text-gray-600">
               skilled multi disciplinary professionals
@@ -91,32 +91,89 @@
       </div>
       <!-- Heading -->
       <div class="flex content-start mt-32 mb-10">
-        <h1 class="text-lg lg:text-4xl font-medium">Meet our team members</h1>
+        <h1 class="text-lg lg:text-4xl font-medium">Know our founder</h1>
       </div>
-      <!-- Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        <!-- Member 1 -->
-        <div
-          class="flex flex-col items-center md:items-start text-center md:text-justify border rounded-2xl border-gray-300 bg-servicefradient overflow-hidden"
-        >
-          <img
-            src="{{get_asset_url('../assets/Person-1.svg')}}"
-            alt="Krishna T."
-            class="size-full object-fill w-full"
-          />
-          <div class="p-3">
-            <h1 class="font-bold text-xl">Gopal Kris Santhana</h1>
-            <p class="text-sm font-medium text-gray-800">
+      <!-- Single - Card -->
+      <!-- <div class="service-contant mt-24 mb-20">
+        <div class="md:w-1/2 order-2 md:order-1">
+          <div
+            class="flex flex-col justify-center md:justify-start w-full text-center mt-6 md:text-start md:t ext-left md:py-8 md:pr-8"
+          >
+            <h3 class="service-title md:text-3xl text-xl">
+              Gopal "Kris" Santhana
+            </h3>
+            <h6 class="service-title md:text-xl text-xl">
               Founder, Managing Partner
-            </p>
-            <p class="text-gray-600 mt-2">
-              Seasoned technology leader passionate about helping customers to
-              leverage technology to grow their business.
+            </h6>
+            <p
+              class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+            >
+              Gopal "Kris" Santhana is the founder and managing partner of a
+              high growth company providing digital experiences and technology
+              services. As a trusted technology advisor, he guides and advises
+              CTOs on their digital strategy. He has previously held technology
+              leadership roles at Fortune 100 companies including Amazon,
+              Discover Financial Services, Walgreens and HSBC. Prior to that he
+              was providing technology consultancy for major brands lncluding
+              Allstate, KPMG and JPMorgan Chase. Gopal "Kris" Santhana is an
+              alumnus of Oklahoma State University and has a Bachelor of
+              Engineering from Guindy Engineering College, Anna University.
             </p>
           </div>
         </div>
-        <!-- Member 2 -->
-        <div
+        <div class="md:w-1/2 md:order-2 order-1 mt-6">
+          <img
+            src="{{get_asset_url('../assets/Gopalv3.jpeg')}}"
+            alt="Managed Services"
+            class="rounded-3xl h-full w-[80]"
+          />
+        </div>
+      </div> -->
+
+
+      <div class="flex flex-wrap md:flex-nowrap mt-10">
+        <div class="md:w-1/2 mt-6">
+          <img
+            src="{{get_asset_url('../assets/Gopalv3.jpeg')}}"
+            alt="Business Consulting"
+            class="object-cover rounded-2xl  w-[400px]"
+          />
+        </div>
+        <div class="md:w-1/2">
+          <div
+            class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
+          >
+          <h3 class="service-title md:text-3xl text-xl">Gopal "Kris" Santhana</h3>
+          <h6 class="service-title md:text-xl text-xl"> Founder, Managing Partner</h6>
+            <p
+              class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+            >
+            Gopal "Kris" Santhana is the founder and managing partner of a
+            high growth company providing digital experiences and technology
+            services. As a trusted technology advisor, he guides and advises
+            CTOs on their digital strategy. He has previously held technology
+            leadership roles at Fortune 100 companies including Amazon,
+            Discover Financial Services, Walgreens and HSBC. Prior to that he
+            was providing technology consultancy for major brands lncluding
+            Allstate, KPMG and JPMorgan Chase. Gopal "Kris" Santhana is an
+            alumnus of Oklahoma State University and has a Bachelor of
+            Engineering from Guindy Engineering College, Anna University.
+            </p>
+            <!-- <a
+              href="/comingsoon-dev"
+              class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            > -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10"> -->
+      <!-- Member 1 -->
+
+      <!-- Member 2 -->
+      <!-- <div
           class="flex flex-col items-center md:items-start text-center md:text-start border rounded-2xl border-gray-300 bg-servicefradient overflow-hidden"
         >
           <img
@@ -133,9 +190,9 @@
               laoreet.
             </p>
           </div>
-        </div>
-        <!-- Member 3 -->
-        <div
+        </div> -->
+      <!-- Member 3 -->
+      <!-- <div
           class="flex flex-col items-center md:items-start text-center md:text-justify border rounded-2xl border-gray-300 bg-servicefradient overflow-hidden"
         >
           <img
@@ -152,11 +209,11 @@
               laoreet.
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
+      {{ standard_footer_includes }} {% block footer %} {% global_partial
+      path="./partials/footer.html" %} {% endblock footer %}
     </section>
   </body>
-  {{ standard_footer_includes }} {% block footer %} {% global_partial
-  path="./partials/footer.html" %} {% endblock footer %} {{
-  require_js(get_asset_url("../js/main.js")) }}
+  {{ require_js(get_asset_url("../js/main.js")) }}
 </html>

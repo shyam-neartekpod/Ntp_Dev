@@ -7,9 +7,7 @@ module.exports = {
     extend: {
       container: {
         center: true,
-        // maxWidth:"1180px"
-
-        padding: "110px",
+       
       },
       swiper: {
         width: "100%",
@@ -23,6 +21,8 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
+        SoftBlue:'rgba(167, 223, 255, 0.75)',
+        
         errorred: "C00F0C",
         backblue: "#00A2FF",
         backyellow: "#DEF100",

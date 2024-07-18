@@ -33,9 +33,10 @@
   <body class="">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
+      <div class="container xl:px-32 px-3">
 
     <div
-      class="md:container relative md:px-auto px-3 flex lg:flex-row flex-col gap-10 mt-32"
+      class=" relative md:px-auto  flex lg:flex-row flex-col gap-10 mt-32"
     >
       <div
         class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center z-40"
@@ -88,11 +89,11 @@
 
         <div class="absolute right-5 bottom-2">
           <div class="flex space-x-3">
-            <a href="https://www.facebook.com/" target="_blank"
+            <!-- <a href="https://www.facebook.com/" target="_blank"
               ><i
                 class="fa-brands fa-square-facebook border border-blue-300 rounded-3xl p-1 text-blue-300"
               ></i
-            ></a>
+            ></a> -->
             <a
               href="https://www.linkedin.com/company/neartekpod-apac-technologies-pvt-limited/people/"
               target="_blank"
@@ -184,11 +185,11 @@
     </div>
 
     <div
-      class="md:container mx-auto items-center justify-between text-center md:mt-24 mt-10"
+      class=" mx-auto items-center justify-between text-center md:mt-24 mt-10"
     >
       <div class="flex w-full flex-wrap lg:flex-nowrap px-8">
         <h2
-          class="md:text-4xl text-3xl font-medium whitespace-nowrap grid place-items-center pr-3"
+          class="md:text-4xl text-3xl font-medium whitespace-nowrap grid place-items-center pr-16"
         >
           Our clients
         </h2>
@@ -217,7 +218,7 @@
         </button>
       </div>
     </div>
-    <div class="md:container p-4">
+    <div class="">
       {% block Understand %} {% global_partial
       path="./Components/understand.html " %} {% endblock Understand %}
 
@@ -281,6 +282,96 @@
               <i class="fa-regular fa-circle-dot text-2xl"></i>
             </div>
           </div>
+          
+          <div class="swiper-slide swiperslide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Marriott-IHG.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">Marriott</h2>
+                <p class="text-xs pb-3">
+                  A global hotel chain integrating into Oracle Cloud
+                </p>
+                <!-- <button
+                  class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+                >
+                <a href="/comingsoon-dev">EXPLORE CASE STUDY</a>
+                  <i class="fa-solid fa-arrow-right text-sm"></i>
+                </button> -->
+              </div>
+            </div>
+            <div class="absolute top-4 right-4 text-white">
+              <i
+                class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
+              ></i>
+            </div>
+            <div class="absolute top-4 left-4 text-sky-500">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+                Oracle cloud integration
+              </button>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+                Completed in 9 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+            </div>
+          </div>
+          <div class="swiper-slide swiperslide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/LF.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-2xl">LibertyFund</h2>
+                <p class="text-xs pb-3">
+                  A customer engagement solution for conference management and marketing
+                </p>
+                <!-- <button
+                  class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
+                >
+                <a href="/comingsoon-dev">EXPLORE CASE STUDY</a>
+                  <i class="fa-solid fa-arrow-right text-sm"></i>
+                </button> -->
+              </div>
+            </div>
+            <div class="absolute top-4 right-4 text-white">
+              <i
+                class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
+              ></i>
+            </div>
+            <div class="absolute top-4 left-4 text-sky-500">
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400"
+              >
+              CRM Implementation
+              </button>
+              <div>
+                <button class="border rounded-xl text-coralblue px-3 border-coralblue mt-2 mb-1">
+                  Cloud Adoption
+                </button>
+            </div>
+              <button
+                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
+              >
+              Completed in 6 months
+              </button>
+              <i class="fa-regular fa-circle-dot text-2xl"></i>
+            </div>
+          </div>
           <div class="swiper-slide">
             <div
               class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
@@ -313,54 +404,12 @@
               <button
                 class="border rounded-xl text-sky-500 px-3 border-sky-400"
               >
-                B2B Sales website
+              B2B Sales website
               </button>
               <button
                 class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
               >
-                Completed in 4 months
-              </button>
-              <i class="fa-regular fa-circle-dot text-2xl"></i>
-            </div>
-          </div>
-          <div class="swiper-slide swiperslide">
-            <div
-              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
-            >
-              <img
-                class="size-full object-cover"
-                src="{{get_asset_url('../assets/IHG-G.svg')}}"
-                alt="cemex"
-              />
-              <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-2xl">IHG</h2>
-                <p class="text-xs pb-3">
-                  A global hotel chain integrating into Oracle Cloud
-                </p>
-                <!-- <button
-                  class="bg-white w-full rounded-2xl text-xs font-bold text-black flex justify-between p-2 items-center"
-                >
-                <a href="/comingsoon-dev">EXPLORE CASE STUDY</a>
-                  <i class="fa-solid fa-arrow-right text-sm"></i>
-                </button> -->
-              </div>
-            </div>
-            <div class="absolute top-4 right-4 text-white">
-              <i
-                class="fa-solid fa-circle-arrow-up text-2xl group-hover:rotate-90 rotate-45 group-hover:text-blue-400"
-              ></i>
-            </div>
-            <div class="absolute top-4 left-4 text-sky-500">
-              <i class="fa-regular fa-circle-dot text-2xl"></i>
-              <button
-                class="border rounded-xl text-sky-500 px-3 border-sky-400"
-              >
-                Oracle cloud integration
-              </button>
-              <button
-                class="border rounded-xl text-sky-500 px-3 border-sky-400 mb-1"
-              >
-                Completed in 9 months
+              Completed in 4 months
               </button>
               <i class="fa-regular fa-circle-dot text-2xl"></i>
             </div>
@@ -444,17 +493,34 @@
           </h2>
         </div>
         <div class="swiper-wrapper">
+          <!-- Chicago -->
+          <div class="swiper-slide swiperslide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Chicago-final-updated1.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-3xl">Chicago USA</h2>
+                <!-- <p class="text-xs pb-3">575 W Helen Rd,Palatine ,IL 60067</p> -->
+              </div>
+            </div>
+          </div>
+          <!-- Trichy -->
           <div class="swiper-slide">
             <div
               class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Trichy-1.svg')}}"
+                src="{{get_asset_url('../assets/Trichy-final-updated.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-3xl">Trichy,India</h2>
+                <h2 class="font-bold text-3xl">Trichy India</h2>
                 <!-- <p class="text-xs pb-3">
                   Si Towers,No-15,Second floor, Melapudur main road,Trichy,Tamil
                   nadu-620001
@@ -462,33 +528,35 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div
-              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
-            >
-              <img
-                class="size-full object-cover"
-                src="{{get_asset_url('../assets/Chicago-1.svg')}}"
-                alt="cemex"
-              />
-              <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-3xl">Lisbon</h2>
-                <!-- <p class="text-xs pb-3"></p> -->
-              </div>
-            </div>
-          </div>
+          <!-- Leon -->
           <div class="swiper-slide swiperslide">
             <div
               class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Lisbon-1.svg')}}"
+                src="{{get_asset_url('../assets/Leon-updated-final1.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-3xl">Chicago,USA</h2>
+                <h2 class="font-bold text-3xl">Leon Mexico</h2>
                 <!-- <p class="text-xs pb-3">575 W Helen Rd,Palatine ,IL 60067</p> -->
+              </div>
+            </div>
+          </div>
+          <!-- Lisbon -->
+          <div class="swiper-slide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/New.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-3xl">Lisbon Portugal</h2>
+                <!-- <p class="text-xs pb-3"></p> -->
               </div>
             </div>
           </div>
@@ -498,7 +566,7 @@
         </div>
       </div>
 
-      <div class="mt-32 mb-20 hidden lg:flex flex-col">
+      <div class="mt-20 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
           <h2 class="font-medium text-3xl mb-10">Our Pods</h2>
         </div>
@@ -506,10 +574,14 @@
         %} {% endblock ourpods %}
       </div>
     </div>
+    
+    {{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/footer.html" %} {% endblock footer %} {{
+    require_js(get_asset_url("../js/main.js")) }}
+  </div>
+  
   </body>
-  {{ standard_footer_includes }} {% block footer %} {% global_partial
-  path="./partials/footer.html" %} {% endblock footer %} {{
-  require_js(get_asset_url("../js/main.js")) }}
+  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
@@ -521,28 +593,5 @@
       },
     });
   </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const cards = document.querySelectorAll(".card");
-      const cemexTags = document.querySelector(".cemex-tags");
-
-      cards.forEach((card) => {
-        const tags = card.querySelector(".tags");
-
-        card.addEventListener("mouseenter", function () {
-          if (this !== document.querySelector(".card:first-child")) {
-            cemexTags.classList.add("hidden");
-            tags.classList.remove("hidden");
-          }
-        });
-
-        card.addEventListener("mouseleave", function () {
-          if (this !== document.querySelector(".card:first-child")) {
-            tags.classList.add("hidden");
-            cemexTags.classList.remove("hidden");
-          }
-        });
-      });
-    });
-  </script>
+ 
 </html>
