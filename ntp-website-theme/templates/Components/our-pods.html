@@ -4,60 +4,98 @@
 -->
 
 <!-- card class -->
-<div
-  class="my-6 flex h-80 cards-container items-center gap-5 *:h-96 *:overflow-hidden *:rounded-2xl *:bg-slate-600 *:duration-300"
->
-  <!-- cemex card  -->
-  <div
-    class="group card relative w-[500px] h-80 hover:w-![500px] transition-all duration-300"
-  >
-    <img
-      class="size-full object-cover"
-      src="{{get_asset_url('../../assets/Trichy-1.svg')}}"
-      alt="Trichy"
-    />
-    <div class="absolute inset-0 bg-opacity-25 blur-overlay"></div>
-
-    <!-- Company info -->
-    <div class="absolute bottom-0 text-white p-5 group">
-      <h2 class="font-semibold text-4xl">Trichy India</h2>
-      <!-- <p class="text-sm">
-        Si Towers,No-15,Second floor, Melapudur main road,Trichy,Tamil
-        nadu-620001
-      </p> -->
+<div class="swiper-container swiper1 relative w-full overflow-hidden">
+  <div class="swiper-wrapper flex transition-transform duration-700 ease-in-out">
+    <!-- Chicago Card -->
+    <div class="swiper-slide flex-[0_0_33.3333%] max-w-[33.3333%] box-border px-2.5">
+      <div class="group card relative h-96">
+        <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/Chicago-final-updated1.svg')}}" alt="Chicago">
+        <div class="absolute inset-0"></div>
+        <div class="absolute bottom-0 text-white p-5">
+          <h2 class="font-semibold text-4xl">Chicago USA</h2>
+        </div>
+      </div>
+    </div>
+     <!-- Trichy Card -->
+     <div class="swiper-slide flex-[0_0_33.3333%] max-w-[33.3333%] box-border px-2.5">
+      <div class="group card relative h-96">
+        <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/Trichy-final-updated.svg')}}" alt="Trichy">
+        <div class="absolute inset-0"></div>
+        <div class="absolute bottom-0 text-white p-5">
+          <h2 class="font-semibold text-4xl">Trichy India</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Mexico Card -->
+    <div class="swiper-slide flex-[0_0_33.3333%] max-w-[33.3333%] box-border px-2.5">
+      <div class="group card relative h-96">
+        <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/Leon-updated-final1.svg')}}" alt="Chicago">
+        <div class="absolute inset-0"></div>
+        <div class="absolute bottom-0 text-white p-5">
+          <h2 class="font-semibold text-4xl">Leon Mexico</h2>
+        </div>
+      </div>
+    </div>
+    <!-- Lisbon Card -->
+    <div class="swiper-slide flex-[0_0_33.3333%] max-w-[33.3333%] box-border px-2.5">
+      <div class="group card relative h-96">
+        <img class="size-full object-cover rounded-3xl" src="{{get_asset_url('../../assets/New.svg')}}" alt="Lisbon">
+        <div class="absolute inset-0"></div>
+        <div class="absolute bottom-0 text-white p-5">
+          <h2 class="font-semibold text-4xl">Lisbon Portugal</h2>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- Jacana Card -->
-  <div
-    class="group relative card w-[380px] h-80 hover:w-[500px] transition-all duration-300"
-  >
-    <img
-      class="size-full object-cover"
-      src="{{get_asset_url('../../assets/Lisbon-1.svg')}}"
-      alt="Lisbon"
-    />
-    <div class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"></div>
-
-    <!-- Company info -->
-    <div class="absolute bottom-0 text-white p-5 group">
-      <h2 class="font-semibold text-4xl">Lisbon Portugal</h2>
-      <p class="text-sm"></p>
+  <!-- Navigation buttons -->
+  <div class="absolute top-1/2 w-full flex justify-between transform -translate-y-1/2 gap-2.5 z-10">
+    <div class="swiper-button-prev1 bg-SoftBlue border-none p-[34px_14px] cursor-pointer rounded-[25px] w-12 h-20 ml-8 flex items-center text-black">
+      <img src="{{get_asset_url('../../assets/chevron-left 1.svg')}}" alt="Previous">
     </div>
-  </div>
-
-  <!-- Marriot -->
-  <div class="group relative card h-80 hover:w-[500px] w-[380px]">
-    <img
-      class="size-full object-cover"
-      src="{{get_asset_url('../../assets/Chicago-1.svg')}}"
-      alt="Marriot"
-    />
-    <div class="absolute inset-0 bg-black bg-opacity-25 blur-overlay"></div>
-
-    <!-- Company info -->
-    <div class="absolute bottom-0 text-white p-5 group">
-      <h2 class="font-semibold text-4xl">Leon Mexico</h2>
-      <!-- <p class="text-sm">575 W Helen Rd,Palatine ,IL 60067</p> -->
+    <div class="swiper-button-next1 bg-SoftBlue border-none p-[34px_14px] cursor-pointer rounded-[25px] w-12 h-20 mr-8 flex items-center text-black">
+      <img src="{{get_asset_url('../../assets/chevron-right 1.svg')}}" alt="Next">
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    var swiper1 = new Swiper('.swiper1', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next1',
+        prevEl: '.swiper-button-prev1',
+      },
+    });
+
+    // Custom navigation logic for swiper1
+    const swiper1PrevButtons = document.querySelectorAll('.swiper-button-prev1');
+    const swiper1NextButtons = document.querySelectorAll('.swiper-button-next1');
+    const swiper1Wrapper = document.querySelector('.swiper1 .swiper-wrapper');
+    const swiper1Items = document.querySelectorAll('.swiper1 .swiper-slide');
+    let swiper1Index = 0;
+
+    function updateSwiper1() {
+      const offset = -swiper1Index * 100 / 3;
+      swiper1Wrapper.style.transform = `translateX(${offset}%)`;
+      swiper1PrevButtons.forEach(button => button.style.visibility = swiper1Index === 0 ? 'hidden' : 'visible');
+      swiper1NextButtons.forEach(button => button.style.visibility = swiper1Index >= swiper1Items.length - 3 ? 'hidden' : 'visible');
+    }
+
+    swiper1PrevButtons.forEach(button => button.addEventListener('click', () => {
+      if (swiper1Index > 0) {
+        swiper1Index--;
+        updateSwiper1();
+      }
+    }));
+
+    swiper1NextButtons.forEach(button => button.addEventListener('click', () => {
+      if (swiper1Index < swiper1Items.length - 3) {
+        swiper1Index++;
+        updateSwiper1();
+      }
+    }));
+
+    updateSwiper1();
+  });
+</script>

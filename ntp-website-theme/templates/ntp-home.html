@@ -293,7 +293,7 @@
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-2xl">Mariott</h2>
+                <h2 class="font-bold text-2xl">Marriott</h2>
                 <p class="text-xs pb-3">
                   A global hotel chain integrating into Oracle Cloud
                 </p>
@@ -493,6 +493,23 @@
           </h2>
         </div>
         <div class="swiper-wrapper">
+          <!-- Chicago -->
+          <div class="swiper-slide swiperslide">
+            <div
+              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
+            >
+              <img
+                class="size-full object-cover"
+                src="{{get_asset_url('../assets/Lisbon-1.svg')}}"
+                alt="cemex"
+              />
+              <div class="absolute bottom-0 text-white p-5">
+                <h2 class="font-bold text-3xl">Chicago USA</h2>
+                <!-- <p class="text-xs pb-3">575 W Helen Rd,Palatine ,IL 60067</p> -->
+              </div>
+            </div>
+          </div>
+          <!-- Trichy -->
           <div class="swiper-slide">
             <div
               class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
@@ -511,21 +528,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div
-              class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
-            >
-              <img
-                class="size-full object-cover"
-                src="{{get_asset_url('../assets/Chicago-1.svg')}}"
-                alt="cemex"
-              />
-              <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-3xl">Lisbon Portugal</h2>
-                <!-- <p class="text-xs pb-3"></p> -->
-              </div>
-            </div>
-          </div>
+          <!-- Leon -->
           <div class="swiper-slide swiperslide">
             <div
               class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
@@ -541,18 +544,19 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide swiperslide">
+          <!-- Lisbon -->
+          <div class="swiper-slide">
             <div
               class="relative h-96 w-98 sm:w-full overflow-hidden rounded-2xl bg-slate-600"
             >
               <img
                 class="size-full object-cover"
-                src="{{get_asset_url('../assets/Lisbon-1.svg')}}"
+                src="{{get_asset_url('../assets/Chicago-1.svg')}}"
                 alt="cemex"
               />
               <div class="absolute bottom-0 text-white p-5">
-                <h2 class="font-bold text-3xl">Chicago USA</h2>
-                <!-- <p class="text-xs pb-3">575 W Helen Rd,Palatine ,IL 60067</p> -->
+                <h2 class="font-bold text-3xl">Lisbon Portugal</h2>
+                <!-- <p class="text-xs pb-3"></p> -->
               </div>
             </div>
           </div>
@@ -589,28 +593,5 @@
       },
     });
   </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const cards = document.querySelectorAll(".card");
-      const cemexTags = document.querySelector(".cemex-tags");
-
-      cards.forEach((card) => {
-        const tags = card.querySelector(".tags");
-
-        card.addEventListener("mouseenter", function () {
-          if (this !== document.querySelector(".card:first-child")) {
-            cemexTags.classList.add("hidden");
-            tags.classList.remove("hidden");
-          }
-        });
-
-        card.addEventListener("mouseleave", function () {
-          if (this !== document.querySelector(".card:first-child")) {
-            tags.classList.add("hidden");
-            cemexTags.classList.remove("hidden");
-          }
-        });
-      });
-    });
-  </script>
+ 
 </html>
