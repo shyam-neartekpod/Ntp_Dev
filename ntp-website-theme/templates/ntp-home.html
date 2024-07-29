@@ -33,94 +33,78 @@
   <body class="">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
-      <div class="container xl:px-32 px-3">
+    <section class="mt-32 container xl:px-32 px-3">
 
-    <div
-      class=" relative md:px-auto  flex lg:flex-row flex-col gap-10 mt-32"
-    >
-      <div
-        class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center z-40"
-      >
-        <div class="max-w-md mx-auto mt-7 md:mt-12">
-          <h5 class="md:text-4xl font-medium p-2 text-3xl">
-            Navigate Technology Complexity & Grow your Business Together
-          </h5>
-        </div>
-
-        <div class="flex flex-wrap justify-center sm:gap-1 gap-4 my-8">
-          {% block Email %} {% global_partial path="./Components/email.html " %}
-          {% endblock Email %}
-        </div>
-        <div class="flex content-center justify-center my-14">
-          <div class="flex -space-x-4 rtl:space-x-reverse">
-            <img
-              class="w-10 h-10 border-2 rounded-full dark:border-gray-800"
-              src="{{get_asset_url('../assets/face1.jpg')}}"
-              alt="img"
-            />
-            <img
-              class="w-10 h-10 border-2 rounded-full dark:border-gray-800"
-              src="{{get_asset_url('../assets/face2.jpg')}}"
-              alt="img"
-            />
-            <img
-              class="w-10 h-10 border-2 rounded-full dark:border-gray-800"
-              src="{{get_asset_url('../assets/face-3.jpg')}}"
-              alt="img"
-            />
+      <div class="grid sm:grid-cols-2  gap-10" >
+        <div class="col-span-1 bg-coralblue rounded-3xl h-full" >
+          <div class="text-center mt-7">
+            <h5 class="md:text-4xl font-medium p-2 text-2xl ">
+              Navigate Technology Complexity & Grow your Business Together
+            </h5>
           </div>
-        </div>
-        <h5 class="font-medium md:text-base text-xs">150+</h5>
-        <p class="w-4/5 mx-auto text-center font-medium md:text-base text-xs">
-          Skilled business, design and technology professionals ready to drive
-          real outcomes that enhance your business
-        </p>
-      </div>
-      <div
-        class="flex-1 aspect-square bg-WorldMap bg-cover bg-center relative rounded-3xl z-40"
-      >
-        <a href="/about-dev">
-          <img
-            src="{{get_asset_url('../assets/We & our card.svg')}}"
-            alt="Card Image"
-            class="absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md"
-          />
-        </a>
+          <!-- mail -->
+          <div class="flex items-center  justify-center mt-7">
+            {% block Email %} {% global_partial path="./Components/email.html " %}
+            {% endblock Email %}
+          </div>
+          <!-- profile -->
+          <div class="flex content-center justify-center my-14">
+            <div class="flex -space-x-4 rtl:space-x-reverse">
+              <img
+                class="w-10 h-10 border-2 rounded-full dark:border-gray-800"
+                src="{{get_asset_url('../assets/face1.jpg')}}"
+                alt="img"
+              />
+              <img
+                class="w-10 h-10 border-2 rounded-full dark:border-gray-800"
+                src="{{get_asset_url('../assets/face2.jpg')}}"
+                alt="img"
+              />
+              <img
+                class="w-10 h-10 border-2 rounded-full dark:border-gray-800"
+                src="{{get_asset_url('../assets/face-3.jpg')}}"
+                alt="img"
+              />
+            </div>
+          </div>
+          <!-- text -->
+          <h5 class="font-medium md:text-base text-center text-xs mt-3">150+</h5>
+          <p class="w-4/5 mx-auto text-center font-medium md:text-base text-xs mb-10">
+            Skilled business, design and technology professionals ready to drive
+            real outcomes that enhance your business
+          </p>
 
-        <div class="absolute right-5 bottom-2">
-          <div class="flex space-x-3">
-            <!-- <a href="https://www.facebook.com/" target="_blank"
-              ><i
-                class="fa-brands fa-square-facebook border border-blue-300 rounded-3xl p-1 text-blue-300"
-              ></i
-            ></a> -->
-            <a
-              href="https://www.linkedin.com/company/neartekpod-apac-technologies-pvt-limited/people/"
-              target="_blank"
-              ><i
-                class="fa-brands fa-linkedin border border-blue-300 rounded-3xl p-1 text-blue-300"
-              ></i
-            ></a>
-            <p class="font-light text-blue-300">Find us on social networks</p>
+        </div>
+        <div class="col-span-1 bg-slate-400  h-full relative " >
+          <a href="/about-dev">
+            <img src="{{get_asset_url('../assets/We & our card.svg')}}" alt="Card Image" class="absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md" />
+          </a>
+          <img  src="{{get_asset_url('../assets/Globe.svg')}}" class="size-full" alt="">
+          <div class="absolute right-5 bottom-1">
+            <div class="flex space-x-3">
+              <!-- <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook border border-blue-300 rounded-3xl p-1 text-blue-300"></i></a> -->
+              <a href="https://www.linkedin.com/company/neartekpod/mycompany/" target="_blank">
+                <i class="fa-brands fa-linkedin border border-blue-300 rounded-3xl p-1 text-blue-300"></i>
+              </a>
+              <p class="font-light text-blue-300">Find us on social networks</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- <div class="md:container flex flex-wrap md:flex-nowrap gap-5 mt-32">
-      <div class="md:w-1/2">
+      <!-- card section -->
+      <!-- <div class=" relative md:px-auto  flex lg:flex-row flex-col gap-10 mt-32">
         <div
-          class="bg-coralblue rounded-3xl aspect-square bg-cover bg-center p-14"
+          class="flex-1 pt-9 pb-16 bg-coralblue rounded-3xl aspect-square bg-cover bg-center flex flex-col items-center text-center z-40"
         >
-          <div class="max-w-md mx-auto text-center">
-            <h5 class="sm:text-3xl font-medium p-2 text-base">
-              Navigate Tech Complexity & Grow your Business Together
+          <div class="max-w-md mx-auto mt-7 md:mt-12">
+            <h5 class="md:text-4xl font-medium p-2 text-3xl">
+              Navigate Technology Complexity & Grow your Business Together
             </h5>
           </div>
 
           <div class="flex flex-wrap justify-center sm:gap-1 gap-4 my-8">
-            {% block Email %} {% global_partial path="./Components/email.html "
-            %} {% endblock Email %}
+            {% block Email %} {% global_partial path="./Components/email.html " %}
+            {% endblock Email %}
           </div>
           <div class="flex content-center justify-center my-14">
             <div class="flex -space-x-4 rtl:space-x-reverse">
@@ -141,30 +125,26 @@
               />
             </div>
           </div>
-          <h5 class="font-medium text-base text-center">300+</h5>
-          <p class="w-4/5 mx-auto text-center font-medium text-base">
-            Global networks of trusted service provides and technology partners
-            ready to deploy
+          <h5 class="font-medium md:text-base text-xs">150+</h5>
+          <p class="w-4/5 mx-auto text-center font-medium md:text-base text-xs">
+            Skilled business, design and technology professionals ready to drive
+            real outcomes that enhance your business
           </p>
         </div>
-      </div>
-      <div class="md:w-1/2">
         <div
-          class="bg-WorldMap rounded-3xl aspect-square bg-cover bg-center relative"
+          class="flex-1 aspect-square bg-WorldMap bg-cover bg-center relative rounded-3xl z-40"
         >
-          <img
-            src="{{get_asset_url('../assets/We & our card.svg')}}"
-            alt="Card Image"
-            class="absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md"
-          />
+          <a href="/about-dev">
+            <img
+              src="{{get_asset_url('../assets/We & our card.svg')}}"
+              alt="Card Image"
+              class="absolute top-3 left-3 w-1/2 h-auto rounded-lg shadow-md"
+            />
+          </a>
 
           <div class="absolute right-5 bottom-2">
             <div class="flex space-x-3">
-              <a href="https://www.facebook.com/" target="_blank"
-                ><i
-                  class="fa-brands fa-square-facebook border border-blue-300 rounded-3xl p-1 text-blue-300"
-                ></i
-              ></a>
+             
               <a
                 href="https://www.linkedin.com/company/neartekpod-apac-technologies-pvt-limited/people/"
                 target="_blank"
@@ -176,18 +156,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </div> -->
-    <!-- </div> -->
-    <div class="absolute top-[220px] right-0">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-
-    <div
-      class=" mx-auto items-center justify-between text-center md:mt-24 mt-10"
-    >
-      <div class="flex w-full flex-wrap lg:flex-nowrap px-8">
+      </div> -->
+      <!-- our client-marquee -->
+      <div class="flex w-full flex-wrap lg:flex-nowrap px-8 mt-10">
         <h2
           class="md:text-4xl text-3xl font-medium whitespace-nowrap grid place-items-center pr-16"
         >
@@ -198,12 +169,8 @@
           %} {% endblock Marquee %}
         </div>
       </div>
-      <div class="absolute top-[550px] left-30">
-        {% block Backgroundcolor %} {% global_partial
-        path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor
-        %}
-      </div>
-      <div class="lg:my-24 my-10 px-4">
+      <!-- modern business -->
+      <div class="lg:my-24 my-10 px-4 text-center">
         <p
           class="text-2xl md:text-4xl max-w-4xl mx-auto font-medium md:leading-[3rem]"
         >
@@ -217,11 +184,12 @@
           <i class="fa-solid fa-arrow-right ml-3"></i>
         </button>
       </div>
-    </div>
-    <div class="">
-      {% block Understand %} {% global_partial
-      path="./Components/understand.html " %} {% endblock Understand %}
-
+      <!-- understand tech -->
+      <div class="">
+        {% block Understand %} {% global_partial
+        path="./Components/understand.html " %} {% endblock Understand %}
+      </div>
+      <!-- recent works-lg -->
       <div class="mt-28 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
           <h2 class="font-medium md:text-4xl text-3xl mb-10">
@@ -231,7 +199,7 @@
         {% block RecentWork %} {% global_partial path="./Components/work.html "
         %} {% endblock RecentWork %}
       </div>
-
+      <!-- recent works-sm -->
       <div class="swiper mySwiper lg:hidden">
         <div class="items-start">
           <h2 class="font-medium text-2xl mb-10 md:mt-10 mt-20">
@@ -420,6 +388,7 @@
         </div>
       </div>
 
+      <!-- what our client says -->
       <!-- <div class="">
         <div class="mx-auto">
           <div class="items-start">
@@ -486,6 +455,8 @@
           </div>
         </div>
       </div> -->
+
+      <!-- ourpods-sm -->
       <div class="swiper mySwiper lg:hidden">
         <div class="items-start">
           <h2 class="font-medium text-3xl md:text-4xl md:my-10 mt-20 mb-10">
@@ -565,7 +536,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-
+      <!-- ourpods-lg -->
       <div class="mt-20 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
           <h2 class="font-medium text-3xl mb-10">Our Pods</h2>
@@ -574,11 +545,12 @@
         %} {% endblock ourpods %}
       </div>
     </div>
+
+    </section>
     
-    {{ standard_footer_includes }} {% block footer %} {% global_partial
-    path="./partials/footer.html" %} {% endblock footer %} {{
-    require_js(get_asset_url("../js/main.js")) }}
-  </div>
+  {{ standard_footer_includes }} {% block footer %}
+  {% global_partial path="./partials/footer.html" %}
+  {% endblock footer %}
   
   </body>
   
