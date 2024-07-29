@@ -544,13 +544,14 @@
         {% block ourpods %} {% global_partial path="./Components/our-pods.html "
         %} {% endblock ourpods %}
       </div>
+      {{ standard_footer_includes }} {% block footer %}
+      {% global_partial path="./partials/footer.html" %}
+      {% endblock footer %}
     </div>
 
     </section>
     
-  {{ standard_footer_includes }} {% block footer %}
-  {% global_partial path="./partials/footer.html" %}
-  {% endblock footer %}
+
   
   </body>
   
