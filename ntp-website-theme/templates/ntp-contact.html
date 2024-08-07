@@ -29,6 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     standard_header_includes }}
+    <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
   </head>
   <body class="">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
@@ -73,7 +74,7 @@
                 <p class="text-base md:text-xl">Follow us:</p>
                 <!-- <i class="fa-brands fa-facebook md:mt-1"></i> -->
                 <div class="z-10" ><a
-                  href="https://www.linkedin.com/company/neartekpod-apac-technologies-pvt-limited/people/"
+                  href="https://www.linkedin.com/company/neartekpod/mycompany/"
                   target="_blank"
                   ><i
                     class="fa-brands fa-linkedin border md:mt-1"
@@ -84,7 +85,7 @@
               </div>
             </div>
           </div>
-          <div class="md:w-1/2">
+          <div class="md:w-1/2 z-10">
             <form id="contact-form" class="p-8 rounded-3xl w-full max-w-md">
               <div class="mb-4">
                 <input

@@ -31,23 +31,24 @@
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     require_js(get_asset_url('./Scripts/ntp-career.js')) }} {{
     standard_header_includes }}
+    <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
   </head>
   <body class="">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
-    <div class="absolute top-[50px] left-30">
+    <div class="hidden lg:block absolute top-[50px] left-30">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="absolute top-[550px] left-30">
+    <div class="hidden lg:block absolute top-[550px] left-30">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="p-8 mt-24">
-      <div class="container xl:px-32 px-3">
+    <div class="md:p-8 mt-24">
+      <div class="md:container xl:px-32 px-3">
         <!-- Dropdowns -->
         <form
-          class="flex flex-wrap md:flex-nowrap justify-center md:justify-between"
+          class="hidden md:flex flex-wrap md:flex-nowrap justify-center md:justify-between"
           id="dataForm"
         >
           <div class="mb-8 w-full md:mr-2">
@@ -87,13 +88,13 @@
           </div> -->
         </form>
 
-        <div class="absolute top-[450px] right-0">
+        <div class=" hidden lg:block absolute top-[450px] right-0">
           {% block Backgroundcolor %} {% global_partial
           path="./Components/backroundcolor.html " %} {% endblock
           Backgroundcolor %}
         </div>
         <!-- Accordion Cards -->
-        <div class="space-y-4 mt-20 md:mt-0" id="result">
+        <div class="space-y-4 z-10 mt-20 md:mt-0" id="result">
           <!-- Card-1 -->
           <div id="result"></div>
 
