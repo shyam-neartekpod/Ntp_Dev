@@ -1,0 +1,101 @@
+<!--
+    templateType: blog_listing
+    isAvailableForNewContent: true
+    label: Blog listing
+    screenshotPath: ../images/template-previews/home.png
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog Listing</title>
+    {{ require_css(get_asset_url("./blog.css")) }} {{
+    require_css(get_asset_url("../css/components/output.css")) }} {{
+    standard_header_includes }}
+  </head>
+  <body>
+    {% block header %} {% global_partial path="./partials/header.html" %} {%
+    endblock header %}
+
+    <div class="md:container mt-20 mx-auto px-4">
+      <main>
+        <div>
+          {% if contents|length > 0 %}
+          <!-- Featured Article: Latest Blog Post -->
+          {% set featured_article = contents[0] %}
+          <!-- <article
+            class="mb-10 p-6 text-white bg-cover bg-center w-fit h-fit"
+            style="background-image: url('{{ featured_article.featured_image }}');"
+          >
+            <h1 class="text-4xl font-bold mb-4">{{ featured_article.name }}</h1>
+            <a
+              href="{{ featured_article.absolute_url }}"
+              class="inline-block mt-4 py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-900"
+            >
+              Read More
+            </a>
+          </article> -->
+          <article class="border p-4 rounded-lg shadow-lg">
+            <img
+              src="{{ featured_article.featured_image }}"
+              alt="{{ featured_article.name }}"
+              class="mb-4 w-full h-96 object-cover rounded-t-lg"
+            />
+            <h2 class="text-xl font-bold mb-2">
+              <a
+                href="{{ featured_article.absolute_url }}"
+                class="hover:underline"
+                >{{ featured_article.name }}</a
+              >
+            </h2>
+            <p class="text-gray-700 mb-4">
+              {{ featured_article.post_summary|truncate(100, end='...') }}
+            </p>
+            <a
+              href="{{ featured_article.absolute_url }}"
+              class="inline-block mt-4 py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-900"
+            >
+              Read More...
+            </a>
+          </article>
+
+          <!-- Remaining Articles in 3x3 Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for content in contents[1:] %}
+            <article class="border p-4 rounded-lg shadow-lg">
+              {% if content.featured_image %}
+              <img
+                src="{{ content.featured_image }}"
+                alt="{{ content.name }}"
+                class="mb-4 w-full h-48 object-cover rounded-t-lg"
+              />
+              {% endif %}
+              <h2 class="text-xl font-bold mb-2">
+                <a href="{{ content.absolute_url }}" class="hover:underline"
+                  >{{ content.name }}</a
+                >
+              </h2>
+              <p class="text-gray-700 mb-4">
+                {{ content.post_summary|truncate(100, end='...') }}
+              </p>
+              <a
+                href="{{ content.absolute_url }}"
+                class="inline-block mt-4 py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-900"
+              >
+                Read More...
+              </a>
+            </article>
+            {% endfor %}
+          </div>
+          {% else %}
+          <p class="text-gray-700">No blog posts available.</p>
+          {% endif %}
+        </div>
+      </main>
+    </div>
+
+    {{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/footer.html" %} {% endblock footer %} {{
+    require_js(get_asset_url("../js/main.js")) }}
+  </body>
+</html>
