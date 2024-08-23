@@ -1,0 +1,105 @@
+<!--
+    templateType: blog_post
+    isAvailableForNewContent: true
+    label: Blog posting
+    screenshotPath: ../images/template-previews/home.png
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    {{ require_css(get_asset_url("../css/components/output.css")) }}
+    {{ require_js(get_asset_url('./Scripts/ntp-career.js')) }}
+    {{ standard_header_includes }}
+  </head>
+  <body>
+    {% block header %}
+      {% global_partial path="./partials/header.html" %}
+    {% endblock header %}
+    
+    <main class="container mx-auto p-4">
+      <article class="prose lg:prose-xl">
+        <h1 class="text-4xl font-bold">{{ content.name }}</h1>
+        
+        <div class="flex items-center space-x-4 mb-4">
+          <a
+            href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}"
+            rel="author"
+            class="text-blue-600 hover:underline"
+          >
+            {{ content.blog_post_author.display_name }}
+          </a>
+          <time class="text-gray-600">{{ content.publish_date_localized }}</time>
+        </div>
+        
+        <div class="relative mb-6">
+          <img
+            src="{{ content.featured_image }}"
+            alt="featured image will shown here.."
+            class="w-full h-48 rounded-lg"
+          />
+          <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full rounded-b-lg">
+            <h2 class="text-2xl font-bold">{{ content.name }}</h2>
+          </div>
+        </div>
+        
+        <div class="content-paragraph">
+          <h2 class="text-2xl font-bold mb-2">{{ content.name }}</h2>
+          <p>{{ content.post_body  }}</p>
+        </div>
+
+        <!-- {% block Email %}
+          <div class="my-8">
+            {% global_partial path="./Components/email.html" %}
+          </div>
+        {% endblock Email %}
+
+        <div class="content-paragraph">
+          <p>{{ content.post_body|truncate(40)  }}</p>
+        </div> -->
+
+        {% if content.tag_list %}
+        <div class="mt-6">
+          <span class="font-bold">Tags: </span>
+          {% for tag in content.tag_list %}
+          <a
+            href="{{ blog_tag_url(group.id, tag.slug) }}"
+            rel="tag"
+            class="text-blue-600 hover:underline"
+          >
+            {{ tag.name }}
+          </a>
+          {% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+    </main>
+
+    {{ standard_footer_includes }}
+    {% block footer %}
+      {% global_partial path="./partials/footer.html" %}
+    {% endblock footer %}
+    {{ require_js(get_asset_url("../js/main.js")) }}
+  </body>
+</html>
