@@ -1,0 +1,31 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Output
+  screenshotPath: ../images/template-previews/home.png
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {{ require_css(get_asset_url("../../css/custom.css")) }}
+  {{standard_header_includes }}
+</head>
+
+<body>
+  {% block Navbar %} {% global_partial path="./partials/header.html" %} {%
+    endblock Navbar %}
+  {% block Service_lg %} {% global_partial path="./Components/Service_lg.html " %}
+   {% endblock Service_lg %}
+   {% block Service_sm %} {% global_partial path="./Components/Service_sm.html " %}
+   {% endblock Service_sm %}
+
+   {{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/footer.html" %}{% endblock footer %}
+</body>
+
+</html>
