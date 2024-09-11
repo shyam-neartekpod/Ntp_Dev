@@ -1,0 +1,60 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+    label: tailwind_Hubl
+    screenshotPath: ../images/template-previews/home.png
+    -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+    
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+          rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+        standard_header_includes }}
+        <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
+      </head>
+    
+      <body>
+         {% block Navbar %} {% global_partial path="./partials/header.html" %} {%
+        endblock Navbar %} 
+        <div class="absolute top-[50px] left-30">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[550px] left-30">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div style="margin-top: 8rem;">
+          {% block Service_lg %} {% global_partial path="./Components/Service_lg.html " %}
+            {% endblock Service_lg %}
+            {% block Service_sm %} {% global_partial path="./Components/Service_sm.html " %}
+            {% endblock Service_sm %}
+        </div>
+        
+        {{ standard_footer_includes }}
+        
+         
+      </body>
+    </html>
+    
