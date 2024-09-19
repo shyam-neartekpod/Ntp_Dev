@@ -212,4 +212,35 @@
       });
     });
   </script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  // Get references to the button and link
+  const applyButton = document.querySelector('#apply-button');
+  const applyLink = document.querySelector('#apply-link');
+
+  // Define the job title you want to pass
+  const jobTitle = 'Senior Developer'; // Replace with your dynamic job title
+
+  // Add a click event listener to the button
+  applyButton.addEventListener('click', () => {
+    // Create a new URLSearchParams object to handle query parameters
+    const url = new URL(applyLink.href);
+    const params = new URLSearchParams(url.search);
+
+    // Append the job title to the URL parameters
+    params.set('job_title', jobTitle);
+
+    // Update the href attribute of the link
+    applyLink.href = `${url.pathname}?${params.toString()}`;
+
+    // Store a variable in localStorage
+    const myVariable = 'HelloWorld';
+    localStorage.setItem('myVariable', myVariable);
+
+    // Redirect to the apply page
+    window.location.href = 'applynow.html';
+  });
+});
+
+  </script>
 </html>
