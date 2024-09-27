@@ -151,11 +151,17 @@
 
     function setActiveLink() {
       navLinks.forEach((link) => {
+        console.log("getPath(link.href)", getPath(link.href));
+        console.log(" window.location.pathname", window.location.pathname);
+
         link.parentElement.classList.remove("active");
-        if (
-          link.id !== "logo-link" &&
-          getPath(link.href) === window.location.pathname
-        ) {
+        
+        if (link.id !== "logo-link" && getPath(link.href) === window.location.pathname) {
+          link.parentElement.classList.add("active");
+        }
+
+        // Handle the "blog" special case
+        if (currentPath.includes("blog") && getPath(link.href).includes("blog")) {
           link.parentElement.classList.add("active");
         }
       });
@@ -179,6 +185,7 @@
     // Handle back/forward navigation
     window.addEventListener("popstate", setActiveLink);
   });
+
 </script>
 
 <!-- Style for active class -->
