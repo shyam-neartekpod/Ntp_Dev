@@ -151,9 +151,6 @@
 
     function setActiveLink() {
       navLinks.forEach((link) => {
-        console.log("getPath(link.href)", getPath(link.href));
-        console.log(" window.location.pathname", window.location.pathname);
-
         link.parentElement.classList.remove("active");
         
         if (link.id !== "logo-link" && getPath(link.href) === window.location.pathname) {
