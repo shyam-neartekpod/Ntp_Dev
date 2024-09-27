@@ -168,10 +168,10 @@
       </div>
     </main>
   </div>
-
-  {{ standard_footer_includes }} {% block footer %} {% global_partial
-  path="./partials/footer.html" %} {% endblock footer %} {{
-  require_js(get_asset_url("../js/main.js")) }}
+  {{ standard_footer_includes }}
+  {% block footer %}
+    {% global_partial path="./partials/footer.html" %}
+  {% endblock footer %}
 </body>
 
 </html>

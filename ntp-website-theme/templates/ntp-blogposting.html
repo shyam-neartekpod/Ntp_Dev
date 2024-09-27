@@ -79,11 +79,21 @@
             {{ content.post_body }}
           </div>
         </div>
-      
+        <div class="p-6">
+          <div class="text-gray-700 mt-10  leading-relaxed font-Montserrat">
+            {{ content.post_body }}
+          </div>
+        </div>
+
+        <div class="bg-coralblue p-6 mt-10 rounded-lg shadow-lg">
+          <h3 class="text-center font-medium text-2xl mb-4">Subscribe and stay up to date with latest tech and tips</h3>
+          <div class="flex items-center  justify-center mt-7">
+            {% block Email %} {% global_partial path="./Components/email.html " %}
+            {% endblock Email %}
+          </div>
+        </div>
       </article>
     </main>
-    
-
     {{ standard_footer_includes }}
     {% block footer %}
       {% global_partial path="./partials/footer.html" %}
