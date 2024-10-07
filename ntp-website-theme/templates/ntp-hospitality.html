@@ -1,0 +1,84 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: NTP-Hospitality
+  screenshotPath: ../images/template-previews/home.png
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+    standard_header_includes }}
+    <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
+  </head>
+  <section class="mt-32 container xl:px-32 px-3">
+  <body class="bg-gray-100">
+    <!-- Container -->
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <h2 class="text-4xl font-bold text-center text-black mb-10">
+          We are the trusted Oracle hospitality partner for leading global brands.
+    </h2>
+     
+        <!-- Testimonial Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <!-- First Card -->
+    <div class="bg-coralblue shadow-lg rounded-3xl p-6 ">
+    <div class="flex items-center mb-4">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Marriott_logo.svg/512px-Marriott_logo.svg.png" alt="Marriott Logo" class="h-12 w-12 object-contain rounded-full bg-gray-100 p-2">
+    <div class="ml-4">
+    <h3 class="text-lg font-semibold text-gray-800">Highly Recommend!</h3>
+    <p class="text-sm text-gray-500">Director, Marriott</p>
+    </div>
+    </div>
+    <p class="text-gray-700">
+              Global team of hospitality specialists made the real difference in bringing PMS & Loyalty platforms together.
+    </p>
+    </div>
+     
+          <!-- Second Card -->
+    <div class="bg-coralblue shadow-lg rounded-3xl p-6">
+    <div class="flex items-center mb-4">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Oracle_logo.svg/512px-Oracle_logo.svg.png" alt="Oracle Logo" class="h-12 w-12 object-contain rounded-full bg-gray-100 p-2">
+    <div class="ml-4">
+    <h3 class="text-lg font-semibold text-gray-800">A Proven Choice</h3>
+    <p class="text-sm text-gray-500">Senior Director, Oracle Hospitality</p>
+    </div>
+    </div>
+    <p class="text-gray-700">
+              They’re an Oracle partner that delivers where even Diamond partners fall short.
+    </p>
+    </div>
+    </div>
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <h2 class="text-4xl font-bold text-center text-black mb-10">
+        We leverage our expertise to deliver successful Opera Cloud PMS solutions. Here's what we bring!
+       
+    </h2>
+    </div>
+    </body>
+    </section>
+  {{ standard_footer_includes }}
+  </html>
+  
