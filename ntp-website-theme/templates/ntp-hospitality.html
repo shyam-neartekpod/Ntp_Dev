@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -11,83 +13,926 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <!-- Flowbite CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <!-- HubSpot CSS -->
+
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     standard_header_includes }}
-    <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
-  </head>
-  <body class="bg-gray-100 overflow-hidden md:container md:px-24 px-3">
-    <section class="mt-24 relative">
-      <div class="flex items-center bg-Hospitality rounded-xl bg-cover h-auto w-full  gap-x-4 justify-end p-10">
-        <div class="absolute bottom-5 left-5 pt-80 pl-11 lg:w-1/2">
-          <h1 class="text-white text-3xl md:text-4xl font-bold leading-tight">
-            Elevate Your Hospitality Experience with our <br> 
-            <span class="text-blue-400">Oracle Opera Cloud Solutions</span>
-          </h1>
-          <button class="bg-[#1264D1] hover:bg-[#0f4ca8] text-white px-6 py-3 rounded-full font-semibold flex items-center space-x-2">
-            <span>Contact us</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-        </button>
-        </div>
-        <!-- Card 1 -->
-        <div class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3">
-          <div class="flex justify-end">
-              <img
-                src="{{get_asset_url('../assets/card1.svg')}}" 
-                alt="Card Image"
-                class="rounded-lg shadow-md w-10"
-              />
-            </div>
-          <div class="flex items-center space-x-4 gap-2">
-            <h3 class=" text-white text-2xl font-semibold ">Connected Guest Experiences</h3>
-          </div>
-          <p class="text-white text-base font-medium">Deliver seamless, personalized interactions that keep your guests coming back.</p>
-        </div>
 
-        <div class="space-y-5">
-          <!-- Card 2 -->
-          <div class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3">
-            <div class="flex justify-end">
-                <img
-                  src="{{get_asset_url('../assets/Card2.svg')}}" 
-                  alt="Card Image"
-                  class="rounded-lg shadow-md w-10"
-                />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"
+    />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"
+    />
+  </head>
+
+  <body>
+    {% block Hospitality-header %} {% global_partial
+    path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
+    %}
+    <section class="container xl:px-24 px-3">
+      <!-- Container -->
+      <div class="mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <h2
+          class="text-xl md:text-3xl font-semibold text-center text-black mb-10"
+        >
+
+
+  
+          We are the trusted Oracle hospitality partner for leading global
+          brands.
+        </h2>
+        <!-- Testimonial Cards -->
+        <div class="grid grid-rows-1 md:grid-cols-2 gap-8 mb-10">
+          <!-- First Card -->
+
+          <div
+            class="bg-customgradient shadow-lg rounded-3xl p-4 md:p-10 border border-gray-300 h-full"
+          >
+
+            <div class="flex items-center md:mb-4">
+              <img
+                src="{{get_asset_url('../assets/image 52.svg')}}"
+                alt="Marriott Logo"
+                class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2"
+              />
+              <div class="ml-4">
+                <h3 class="text-sm md:text-lg font-semibold text-gray-800">
+                  Highly Recommend!
+                </h3>
+                <p class="text-sm md:text-lg text-gray-700">
+       
+
+                  Global team of hospitality specialists made the real difference
+                  in bringing PMS & Loyalty platforms together.
+                </p>
+                <p class="text-sm md:text-lg  text-gray-500 mt-3">
+                  <span>Director</span><br />
+                  <span class="text-sm md:text-lg font-semibold text-gray-800">Marriott</span>
+
+                </p>
               </div>
-            <div class="flex items-center space-x-4 gap-2">
-              <h3 class=" text-white text-2xl font-semibold ">Streamlined Operations</h3>
             </div>
-            <p class="text-white text-base font-medium">Optimize your hotel's operations, from bookings to housekeeping.</p>
           </div>
-          <!-- Card 3 -->
-          <div class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3">
-            <div class="flex justify-end">
-                <img
-                  src="{{get_asset_url('../assets/Card3.svg')}}" 
-                  alt="Card Image"
-                  class="rounded-lg shadow-md w-10"
-                />
+
+          <!-- Second Card -->
+
+          <div
+            class="bg-customgradient shadow-lg rounded-3xl p-6 border border-gray-300 h-full"
+          >
+
+            <div class="flex items-center md:mb-4">
+              <img
+                src="{{get_asset_url('../assets/image 1480.svg')}}"
+                alt="Oracle Logo"
+                class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2"
+              />
+              <div class="ml-4">
+
+                <h3 class="text-sm md:text-lg font-semibold text-gray-800">
+
+                  A Proven Choice
+                </h3>
+                <p class="text-sm md:text-lg text-gray-700">
+                  They’re an Oracle partner that delivers where even Diamond
+                  partners fall short.
+                </p>
+
+                <p class="text-sm md:text-lg text-gray-500 mt-3">
+
+                  <span>Senior Director</span><br />
+                  <span class="text-sm md:text-lg font-semibold text-gray-800">
+                    Oracle Hospitality
+                  </span>
+                </p>
               </div>
-            <div class="flex items-center space-x-4 gap-2">
-              <h3 class=" text-white text-2xl font-semibold ">Speed to Market</h3>
             </div>
-            <p class="text-white text-base font-medium">Accelerate your time to market with efficient onboarding and integration processes.</p>
           </div>
         </div>
       </div>
+
+      <!-- Marquee -->
+
+      <marquee
+        class="absolute left-0 right-0 w-full mx-0 px-0"
+        scrollamount="10"
+      >
+
+        <img
+          class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
+          src="{{get_asset_url('../assets/tbc.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
+          src="{{get_asset_url('../assets/mgm.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
+          src="{{get_asset_url('../assets/marriott.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
+          src="{{get_asset_url('../assets/IHG.svg')}}"
+          alt="TCH"
+        />
+
+      </marquee>
+      <!-- Why Choose Us Section -->
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-20">
+        <p class="text-start text-sky-500 font-semibold text-sm mb-5">
+          WHY CHOOSE US
+        </p>
+        <h2
+          class="text-xl md:text-3xl font-semibold text-start text-black mb-10"
+        >
+
+          We leverage our expertise to deliver successful Opera Cloud PMS
+          solutions. Here's what we bring!
+        </h2>
+      </div>
+      <!-- image -->
+
+      <div>
+
+        <img
+          src="{{get_asset_url('../assets/Illustration.svg')}}"
+          alt="Card Image"
+          class=""
+        />
+
+      </div>
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-10">
+        <h2
+          class="text-lg md:text-3xl font-semibold text-center text-black mb-10 p-4"
+        >
+          Transform your hotel operations with our specialized services. Let's
+          discuss how we can help
+        </h2>
+      </div>
+      <!-- three cards -->
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <p class="text-start text-sky-500 font-semibold text-sm mb-5">
+          WHAT WE OFFER
+        </p>
+        <h2 class="text-3xl font-semibold text-start text-black mb-10">
+          Tailored Solutions for Your Hotel Operations
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+          <!-- First Card -->
+          <div class="text-center">
+            <div class="flex justify-center items-center">
+              <img
+                src="{{get_asset_url('../assets/Group.svg')}}"
+                alt="Card Image"
+                class="mx-auto"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mt-4">Development services</h3>
+            <p class="mt-2 text-gray-600">
+              Experience seamless Opera Cloud integration and speedy development
+              with our cloud-native, low-code solutions designed just for you.
+            </p>
+          </div>
+          <!-- Second Card -->
+          <div class="text-center">
+            <div class="flex justify-center">
+              <img
+                src="{{get_asset_url('../assets/integration.svg')}}"
+                alt="Card Image"
+                class="ml-10"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mt-4">Integration expertise</h3>
+            <p class="mt-2 text-gray-600">
+              Our team specializes in crafting custom integrations, add-ons, and
+              workflows tailored to meet your unique business needs.
+            </p>
+          </div>
+
+          <!-- Third Card -->
+          <div class="text-center">
+            <div class="flex justify-center">
+              <img
+                src="{{get_asset_url('../assets/Cloud migratrion.svg')}}"
+                alt="Card Image"
+                class="ml-10"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mt-4">Cloud migratrion</h3>
+            <p class="mt-2 text-gray-600">
+              Let us help you make the most of your new cloud environment! We
+              focus on scalability, flexibility, and smooth transitions for your
+              operational success.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-8 mb-24">
+        <!-- Card 1 -->
+
+        <div
+          class="relative bg-gray-100 rounded-lg shadow-lg text-center w-full"
+          id="card-1"
+        >
+          <!-- Circle Icon -->
+          <div class="absolute -top-2 left-1/2 transform -translate-x-1/2">
+            <div class="bg-white p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Wrap.svg') }}"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+            </div>
+          </div>
+          <!-- Heading -->
+          <h2 class="mt-8 text-lg font-semibold p-10" id="heading-1">
+            Tailored Migrations and Integrations
+          </h2>
+          <!-- Paragraph (hidden initially, shown on hover) -->
+          <p
+            class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-700"
+            id="paragraph-1"
+          >
+            <span class="text-lg font-semibold"
+              >Tailored Migrations and Integrations</span
+            ><br />
+            We effectively integrate hospitality ecosystem components, speeding
+            up processes and reducing risk for harmony.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="relative bg-gray-100 rounded-lg shadow-lg text-center w-full"
+          id="card-2"
+        >
+          <!-- Circle Icon -->
+          <div class="absolute -top-2 left-1/2 transform -translate-x-1/2">
+            <div class="bg-white p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Color-Modify.svg') }}"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+            </div>
+          </div>
+          <!-- Heading -->
+          <h2 class="mt-8 text-lg font-semibold p-10" id="heading-2">
+            Automated Property Onboarding
+          </h2>
+          <!-- Paragraph (hidden initially, shown on hover) -->
+          <p
+            class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-700"
+            id="paragraph-2"
+          >
+            <span class="text-lg font-semibold">
+              Automated Property Onboarding</span
+            ><br />
+            Our automated solutions ensure rapid, low-risk onboarding,
+            minimizing operational impact and getting properties up and running
+            fast.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="relative bg-gray-100 rounded-lg shadow-lg text-center w-full"
+          id="card-3"
+        >
+          <!-- Circle Icon -->
+          <div class="absolute -top-2 left-1/2 transform -translate-x-1/2">
+            <div class="bg-white p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Color-Layer.svg') }}"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+            </div>
+          </div>
+          <!-- Heading -->
+          <h2 class="mt-8 text-lg font-semibold p-10" id="heading-3">
+            Hospitality AI Solutions
+          </h2>
+          <!-- Paragraph (hidden initially, shown on hover) -->
+          <p
+            class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-700"
+            id="paragraph-3"
+          >
+            <span class="text-lg font-semibold">Hospitality AI Solutions</span
+            ><br />
+            Our advanced AI tools enhance decision-making, optimize operations,
+            and boost efficiency, allowing your team to focus on strategic
+            growth.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="relative bg-gray-100 rounded-lg shadow-lg text-center w-full"
+          id="card-4"
+        >
+          <!-- Circle Icon -->
+          <div class="absolute -top-2 left-1/2 transform -translate-x-1/2">
+            <div class="bg-white p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Wraps.svg') }}"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+            </div>
+          </div>
+          <!-- Heading -->
+          <h2 class="mt-10 text-lg font-semibold p-10" id="heading-4">
+            Comprehensive Playbook
+          </h2>
+          <!-- Paragraph (hidden initially, shown on hover) -->
+          <p
+            class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-700"
+            id="paragraph-4"
+          >
+            <span class="text-lg font-semibold mt-14">
+              Comprehensive Playbook</span
+            ><br />
+            We’ve developed a playbook based on real-world experience. This
+            means a smooth and quick transition for you, without any disruptions
+            to your guest experience.
+          </p>
+        </div>
+      </div>
     </section>
+    <div class="bg-customgradient">
+      <div class="container xl:px-24 px-3 mt-10 mb-10">
+        <div class="">
+          <h3 class="text-3xl font-semibold h-28 flex items-center">
+            How Can We Help? Find Your Answers Here
+          </h3>
+          <div class="w-full mb-10">
+            <!-- Accordion Item 1 -->
+            <div class="mb-4">
+              <button
+                onclick="toggleAccordion(1)"
+                class="w-full p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-lg"
+              >
+                <span class="font-semibold"
+                  >How long does the migration to Opera Cloud PMS take?</span
+                >
+
+                <div class="bg-backblue text-white rounded-full p-1">
+                  <svg
+                    id="arrow1"
+                    class="w-6 h-6 transform transition-transform duration-300"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  id="accordion1"
+                  class="hidden transition-all duration-300 mt-4"
+                >
+                  <div class="text-gray-700 rounded-lg shadow-inner">
+                    The timeframe depends on the complexity of your current
+                    system, but with our automated processes, we can fast-track
+                    your migration with minimal disruption, typically within
+                    6-12 weeks.
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="mb-4">
+              <button
+                onclick="toggleAccordion(2)"
+                class="w-full p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-lg"
+              >
+                <span class="font-semibold"
+                  >Can you integrate Opera Cloud with our existing
+                  systems?</span
+                >
+
+                <div class="bg-backblue text-white rounded-full p-1">
+                  <svg
+                    id="arrow2"
+                    class="w-6 h-6 transform transition-transform duration-300"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  id="accordion2"
+                  class="hidden transition-all duration-300 mt-4"
+                >
+                  <div class="text-gray-700 rounded-lg shadow-inner">
+                    Yes! We specialize in custom integrations using Oracle
+                    Hospitality Integration Platform (OHIP) to ensure seamless
+                    compatibility with your current ecosystem.
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="mb-4">
+              <button
+                onclick="toggleAccordion(3)"
+                class="w-full p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-lg"
+              >
+                <span class="font-semibold"
+                  >What makes NearTekPod different from other Oracle integration
+                  partners??</span
+                >
+
+                <div class="bg-backblue text-white rounded-full p-1">
+                  <svg
+                    id="arrow3"
+                    class="w-6 h-6 transform transition-transform duration-300"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+
+                <div
+                  id="accordion3"
+                  class="hidden transition-all duration-300 mt-4"
+                >
+                  <div class="text-gray-700 rounded-lg shadow-inner">
+                    Our team combines deep domain expertise with certified
+                    Oracle professionals. We focus on crafting tailor-made
+                    solutions and leverage automation to ensure smooth and
+                    cost-effective integrations.
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <div class="container xl:px-24 px-3">
+        <div>
+          <p class="text-sm text-sky-500 font-bold">CONTACT US</p>
+          <h3 class="text-3xl font-semibold mt-3 mb-10">
+            Lets grow your business together
+          </h3>
+        </div>
+        <div
+          class="flex flex-wrap md:flex-nowrap bg-gray-50 gap-2 rounded-3xl justify-center"
+        >
+          <div class="md:w-1/2">
+            <div
+              class="bg-backblue shadow-md flex flex-col justify-between h-full p-7 rounded-3xl text-white"
+            >
+              <div class="">
+                <h2 class="font-medium text-2xl md:text-4xl">
+                  Contact Details
+                </h2>
+                <ul>
+                  <ul class="mt-10 flex gap-2">
+                    <i class="fa-regular fa-envelope text-xl"></i>
+                    <span class="text-base font-medium"
+                      >growwith@neartekpod.com</span
+                    >
+                  </ul>
+                  <!-- <ul class="mt-10 flex gap-2">
+                    <i class="fa-solid fa-phone text-xl"></i>
+                    <span class="text-base font-medium">+1 312 702 0036</span>
+                  </ul> -->
+                  <ul class="mt-10 flex flex-row gap-2">
+                    <i class="fa-solid fa-phone text-xl"></i>
+                    <p class="text-base font-medium">9876543210</p>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 z-10">
+            <form id="contact-form" class="p-8 rounded-3xl w-full max-w-md">
+              <div class="mb-4">
+                <div class="flex flex-col">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="rounded-lg mt-2 border-coralblue"
+                    required
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <span
+                  class="text-errorred text-sm mt-1"
+                  id="email-error"
+                ></span>
+              </div>
+              <div class="mb-4">
+                <div class="flex flex-col">
+                  <label for="schedule">Schedule</label>
+                  <input
+                    type="date"
+                    id="schedule"
+                    name="schedule"
+                    class="rounded-lg mt-2 border-coralblue"
+                    required
+                    placeholder="Select a date"
+                  />
+                </div>
+                <span
+                  class="text-errorred text-sm mt-1"
+                  id="schedule-error"
+                ></span>
+              </div>
+
+              <div class="mb-4">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="rounded-lg mt-2 border-coralblue w-full p-3"
+                  placeholder="Message"
+                  required
+                  oninput="validateAlphanumeric(this, 'message-error')"
+                ></textarea>
+                <span
+                  class="text-errorred text-sm mt-1"
+                  id="message-error"
+                ></span>
+              </div>
+              <div class="mb-4">
+                <label class="inline-flex items-center">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    name="agree"
+                    class="form-checkbox bg-transparent"
+                    required
+                  />
+                  <span class="ml-2 font-medium text-xs">
+                    I agree to the
+                    <a
+                      href="https://www.neartekpod.com/privacy-policy"
+                      target="_blank"
+                      class="text-blue-500 underline hover:text-blue-600"
+                    >
+                      Terms and Conditions
+                    </a>
+                  </span>
+                </label>
+                <span
+                  class="text-errorred text-sm mt-1"
+                  id="agree-error"
+                ></span>
+              </div>
+
+              <div class="flex justify-center">
+                <button
+                  type="submit"
+                  class="py-3 px-10 border rounded-3xl bg-backblue text-white font-bold text-xs items-center"
+                >
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/hospitalty-footer.html" %} {% endblock footer %}
   </body>
- 
-  {{ standard_footer_includes }}
-  </html>
+  {{ require_js(get_asset_url("../js/main.js")) }}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    function blockNumbers(event) {
+      const keyCode = event.keyCode ? event.keyCode : event.which;
+      if (keyCode >= 48 && keyCode <= 57) {
+        event.preventDefault();
+        return false;
+      }
+      return true;
+    }
+
+    function validateAlphabetic(input, errorId) {
+      const value = input.value;
+      if (!/^[a-zA-Z]*$/.test(value)) {
+        document.getElementById(errorId).textContent =
+          "Only alphabetic characters are allowed.";
+      } else {
+        document.getElementById(errorId).textContent = "";
+      }
+    }
+
+    function validateAlphanumeric(input, errorId) {
+      const value = input.value;
+      if (!/^[a-zA-Z0-9\s]*$/.test(value)) {
+        document.getElementById(errorId).textContent =
+          "Only alphanumeric characters are allowed.";
+      } else {
+        document.getElementById(errorId).textContent = "";
+      }
+    }
+
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (e) {
+        let isValid = true;
+
+        // Helper function to set error message
+        function setError(id, message) {
+          document.getElementById(id).textContent = message;
+          isValid = false;
+        }
+
+        // Helper function to clear error message
+        function clearError(id) {
+          document.getElementById(id).textContent = "";
+        }
+
+        // Validate Email
+        const email = document.getElementById("email").value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          setError("email-error", "Please enter a valid email address.");
+          isValid = false;
+        } else {
+          clearError("email-error");
+        }
+
+        // validate the date picker
+        const schedule = document.getElementById("schedule").value;
+        if (!schedule) {
+          setError("schedule-error", "Please select a date.");
+          isValid = false;
+        } else {
+          clearError("schedule-error");
+          // Optional: Check if the selected date is in the past
+          const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+          if (schedule < today) {
+            setError("schedule-error", "Selected date cannot be in the past.");
+            isValid = false;
+          } else {
+            clearError("schedule-error");
+          }
+        }
+
+        // Validate Message
+        const message = document.getElementById("message").value;
+        if (!/^[a-zA-Z0-9\s]+$/.test(message)) {
+          setError("message-error", "Message must be alphanumeric.");
+        } else {
+          clearError("message-error");
+        }
+
+        // Prevent form submission if validation fails
+        if (!isValid) {
+          e.preventDefault();
+        }
+      });
+
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        let isValid = true;
+        const formElements = event.target.elements;
+        const validationErrors = {};
+
+        // Validate required fields
+        for (const element of formElements) {
+          if (
+            element.type !== "submit" &&
+            element.hasAttribute("required") &&
+            !element.value
+          ) {
+            isValid = false;
+            validationErrors[element.name] = "This field is required";
+          }
+        }
+
+        // Validate "I agree" checkbox
+        if (!formElements["agree"].checked) {
+          isValid = false;
+          validationErrors["agree"] =
+            "You must agree to the terms and conditions";
+        }
+
+        document
+          .querySelectorAll(".text-errorred")
+          .forEach((errorElement) => (errorElement.textContent = ""));
+        if (!isValid) {
+          for (const [fieldName, errorMessage] of Object.entries(
+            validationErrors
+          )) {
+            document.getElementById(`${fieldName}-error`).textContent =
+              errorMessage;
+          }
+          return;
+        }
+
+        const formData = {
+          fields: [
+            { name: "email", value: formElements["email"].value },
+            { name: "schedule_call", value: formElements["schedule"].value },
+            { name: "message", value: formElements["message"].value },
+          ],
+        };
+
+        try {
+          const response = await fetch(
+            "https://api.hsforms.com/submissions/v3/integration/submit/46156581/a6406cef-b435-4298-8003-9805c825d985",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          alert("We received your valuable message!");
+          event.target.reset();
+        } catch (error) {
+          alert("There was a problem submitting the form: " + error.message);
+        }
+      });
+
+    // Accordion
+    let currentOpenAccordion = null;
+
+    function toggleAccordion(id) {
+      const currentAccordion = document.getElementById("accordion" + id);
+      const currentArrow = document.getElementById("arrow" + id);
+
+      if (currentOpenAccordion && currentOpenAccordion !== currentAccordion) {
+        // Close the previously opened accordion
+        currentOpenAccordion.classList.add("hidden");
+        const previousArrow = document.querySelector(
+          `svg[id^='arrow']:not(#arrow${id})`
+        );
+        previousArrow.classList.remove("rotate-180");
+      }
+
+      // Toggle the current accordion
+      currentAccordion.classList.toggle("hidden");
+      currentArrow.classList.toggle("rotate-180");
+
+      // Update the currently open accordion
+      currentOpenAccordion = currentAccordion.classList.contains("hidden")
+        ? null
+        : currentAccordion;
+    }
+
+    const cards = [
+      { card: "card-1", heading: "heading-1", paragraph: "paragraph-1" },
+      { card: "card-2", heading: "heading-2", paragraph: "paragraph-2" },
+      { card: "card-3", heading: "heading-3", paragraph: "paragraph-3" },
+      { card: "card-4", heading: "heading-4", paragraph: "paragraph-4" },
+    ];
+
+    // Add hover effect for each card
+    cards.forEach((item) => {
+      const cardElement = document.getElementById(item.card);
+      const headingElement = document.getElementById(item.heading);
+      const paragraphElement = document.getElementById(item.paragraph);
+
+      // Add hover event
+      cardElement.addEventListener("mouseenter", () => {
+        headingElement.classList.add("hidden"); // Hide heading
+        paragraphElement.classList.remove("hidden"); // Show paragraph
+      });
+
+      cardElement.addEventListener("mouseleave", () => {
+        headingElement.classList.remove("hidden"); // Show heading
+        paragraphElement.classList.add("hidden"); // Hide paragraph
+      });
+    });
+  </script>
+
+        </div>
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-10">
+            <h2 class="text-lg md:text-3xl font-semibold text-center text-black mb-10 p-4">
+                Transform your hotel operations with our specialized services. Let's discuss how we can help
+            </h2>
+          </div>
+          <!-- three cards -->
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <p class="text-start text-sky-500 font-bold text-sm">WHAT WE OFFER</p>
+            <h2 class="text-4xl font-semibold text-start text-black mb-10">
+              Tailored Solutions for Your Hotel Operations
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+              <!-- First Card -->
+              <div class="text-center">
+                <div class="flex justify-center">
+                    <img
+                    src="{{get_asset_url('../assets/Group.svg')}}"
+                    alt="Card Image"
+                    class="ml-15"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold mt-4">Development services</h3>
+                <p class="mt-2 text-gray-600">
+                  Experience seamless Opera Cloud integration and speedy development with our cloud-native, low-code solutions designed just for you.
+                </p>
+              </div>
+              <!-- Second Card -->
+              <div class="text-center">
+                <div class="flex justify-center">
+                    <img
+                    src="{{get_asset_url('../assets/integration.svg')}}"
+                    alt="Card Image"
+                    class="ml-10"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold mt-4">Integration expertise</h3>
+                <p class="mt-2 text-gray-600">
+                  Our team specializes in crafting custom integrations, add-ons, and workflows tailored to meet your unique business needs.
+                </p>
+              </div>
+          
+              <!-- Third Card -->
+              <div class="text-center">
+                <div class="flex justify-center">
+                    <img
+                    src="{{get_asset_url('../assets/Cloud migratrion.svg')}}"
+                    alt="Card Image"
+                    class="ml-10"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold mt-4">Cloud migratrion</h3>
+                <p class="mt-2 text-gray-600">
+                  Let us help you make the most of your new cloud environment! We focus on scalability, flexibility, and smooth transitions for your operational success.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+
+    </section>
+
+    {{ standard_footer_includes }}
+  </body>
+
+</html>
