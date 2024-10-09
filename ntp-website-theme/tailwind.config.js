@@ -32,6 +32,7 @@ module.exports = {
           DEFAULT: "#76c7c0",
           dark: "#4b8e8d",
         },
+        customBlue: "#00A2FF",
       },
       fontFamily: {
         Montserrat: "Montserrat",

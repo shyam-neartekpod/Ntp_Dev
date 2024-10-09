@@ -33,8 +33,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
     <!-- HubSpot CSS -->
+
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     standard_header_includes }}
+
 
     <!-- Favicon -->
     <link
@@ -48,6 +50,7 @@
       href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"
     />
   </head>
+
   <body>
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
@@ -59,15 +62,20 @@
         <h2
           class="text-xl md:text-3xl font-semibold text-center text-black mb-10"
         >
+
+
+  
           We are the trusted Oracle hospitality partner for leading global
           brands.
         </h2>
         <!-- Testimonial Cards -->
         <div class="grid grid-rows-1 md:grid-cols-2 gap-8 mb-10">
           <!-- First Card -->
+
           <div
             class="bg-customgradient shadow-lg rounded-3xl p-4 md:p-10 border border-gray-300 h-full"
           >
+
             <div class="flex items-center md:mb-4">
               <img
                 src="{{get_asset_url('../assets/image 52.svg')}}"
@@ -79,23 +87,26 @@
                   Highly Recommend!
                 </h3>
                 <p class="text-sm md:text-lg text-gray-700">
-                  Global team of hospitality specialists made the real
-                  difference in bringing PMS & Loyalty platforms together.
+       
+
+                  Global team of hospitality specialists made the real difference
+                  in bringing PMS & Loyalty platforms together.
                 </p>
-                <p class="text-sm md:text-lg text-gray-500 mt-3">
+                <p class="text-sm md:text-lg  text-gray-500 mt-3">
                   <span>Director</span><br />
-                  <span class="text-sm md:text-lg font-semibold text-gray-800"
-                    >Marriott</span
-                  >
+                  <span class="text-sm md:text-lg font-semibold text-gray-800">Marriott</span>
+
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Second Card -->
+
           <div
             class="bg-customgradient shadow-lg rounded-3xl p-6 border border-gray-300 h-full"
           >
+
             <div class="flex items-center md:mb-4">
               <img
                 src="{{get_asset_url('../assets/image 1480.svg')}}"
@@ -103,14 +114,18 @@
                 class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2"
               />
               <div class="ml-4">
+
                 <h3 class="text-sm md:text-lg font-semibold text-gray-800">
+
                   A Proven Choice
                 </h3>
                 <p class="text-sm md:text-lg text-gray-700">
                   They’re an Oracle partner that delivers where even Diamond
                   partners fall short.
                 </p>
+
                 <p class="text-sm md:text-lg text-gray-500 mt-3">
+
                   <span>Senior Director</span><br />
                   <span class="text-sm md:text-lg font-semibold text-gray-800">
                     Oracle Hospitality
@@ -123,10 +138,12 @@
       </div>
 
       <!-- Marquee -->
+
       <marquee
         class="absolute left-0 right-0 w-full mx-0 px-0"
         scrollamount="10"
       >
+
         <img
           class="h-8 mx-2 md:h-12 md:mx-5 inline-block rounded-lg"
           src="{{get_asset_url('../assets/tbc.svg')}}"
@@ -147,6 +164,7 @@
           src="{{get_asset_url('../assets/IHG.svg')}}"
           alt="TCH"
         />
+
       </marquee>
       <!-- Why Choose Us Section -->
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-20">
@@ -156,17 +174,21 @@
         <h2
           class="text-xl md:text-3xl font-semibold text-start text-black mb-10"
         >
+
           We leverage our expertise to deliver successful Opera Cloud PMS
           solutions. Here's what we bring!
         </h2>
       </div>
       <!-- image -->
+
       <div>
+
         <img
           src="{{get_asset_url('../assets/Illustration.svg')}}"
           alt="Card Image"
           class=""
         />
+
       </div>
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-10">
         <h2
@@ -852,4 +874,71 @@
       });
     });
   </script>
+
+        </div>
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-10">
+            <h2 class="text-lg md:text-3xl font-semibold text-center text-black mb-10 p-4">
+                Transform your hotel operations with our specialized services. Let's discuss how we can help
+            </h2>
+          </div>
+          <!-- three cards -->
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <p class="text-start text-sky-500 font-bold text-sm">WHAT WE OFFER</p>
+            <h2 class="text-4xl font-semibold text-start text-black mb-10">
+              Tailored Solutions for Your Hotel Operations
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+              <!-- First Card -->
+              <div class="text-center">
+                <div class="flex justify-center">
+                    <img
+                    src="{{get_asset_url('../assets/Group.svg')}}"
+                    alt="Card Image"
+                    class="ml-15"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold mt-4">Development services</h3>
+                <p class="mt-2 text-gray-600">
+                  Experience seamless Opera Cloud integration and speedy development with our cloud-native, low-code solutions designed just for you.
+                </p>
+              </div>
+              <!-- Second Card -->
+              <div class="text-center">
+                <div class="flex justify-center">
+                    <img
+                    src="{{get_asset_url('../assets/integration.svg')}}"
+                    alt="Card Image"
+                    class="ml-10"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold mt-4">Integration expertise</h3>
+                <p class="mt-2 text-gray-600">
+                  Our team specializes in crafting custom integrations, add-ons, and workflows tailored to meet your unique business needs.
+                </p>
+              </div>
+          
+              <!-- Third Card -->
+              <div class="text-center">
+                <div class="flex justify-center">
+                    <img
+                    src="{{get_asset_url('../assets/Cloud migratrion.svg')}}"
+                    alt="Card Image"
+                    class="ml-10"
+                  />
+                </div>
+                <h3 class="text-xl font-semibold mt-4">Cloud migratrion</h3>
+                <p class="mt-2 text-gray-600">
+                  Let us help you make the most of your new cloud environment! We focus on scalability, flexibility, and smooth transitions for your operational success.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+
+    </section>
+
+    {{ standard_footer_includes }}
+  </body>
+
 </html>
