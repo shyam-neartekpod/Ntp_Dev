@@ -73,9 +73,30 @@
         <div class="bg-customgradient p-6 md:w-3/4 mt-10 rounded-lg shadow-lg">
           <h3 class="text-center font-medium text-2xl mb-4">Subscribe and stay up to date with latest tech and tips</h3>
           <div class="flex items-center  justify-center mt-7">
-            {% block Email %} {% global_partial path="./Components/email.html " %}
-            {% endblock Email %}
+            <form
+          id="emailForm"
+          class="flex flex-wrap lg:flex-nowrap gap-3 justify-center items-center"
+        >
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter Your email id"
+            name="email"
+            class="rounded-2xl bg-hawkesblue md:w-80 w-3/4 h-9 font-medium text-sm border-none focus:outline-none p-4"
+          />
+
+          <button
+            type="submit"
+            class="btn bg-primarywhite rounded-2xl ml-2 w-32 h-9 text-primaryblack text-base  md:mt-0 px-3 font-medium" 
+          >
+            Subscribe<i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+          </button>
+        </form>
+        <p id="emailError" class="text-errorred text-xs font-bold hidden">
+          Please enter a valid email address.
+        </p>
           </div>
+          
         </div>
       </div>
     </article>
@@ -88,3 +109,72 @@
 </body>
 
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var emailInput = document.getElementById("email");
+    var emailError = document.getElementById("emailError");
+
+    // Email validation regex
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Real-time email validation
+    emailInput.addEventListener("input", function () {
+      if (!emailRegex.test(emailInput.value)) {
+        emailError.classList.remove("hidden");
+      } else {
+        emailError.classList.add("hidden");
+      }
+    });
+
+    document
+      .getElementById("emailForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var email = emailInput.value;
+
+        if (!emailRegex.test(email)) {
+          emailError.classList.remove("hidden");
+          return;
+        } else {
+          emailError.classList.add("hidden");
+        }
+
+        // Send email to HubSpot using the Forms API
+        var xhr = new XMLHttpRequest();
+
+        var url =
+          "https://api.hsforms.com/submissions/v3/integration/submit/45046299/0b5321c5-864f-4c86-abe7-9769f76dfbc2";
+
+        var data = {
+          fields: [{ name: "email", value: email }],
+          context: {
+            hutk: getCookie("hubspotutk"),
+            pageUri: window.location.href,
+            pageName: document.title,
+          },
+        };
+
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              alert("We received your Email Id successfully!");
+              document.getElementById("emailForm").reset();
+            } else {
+              console.log("Error: " + xhr.responseText);
+            }
+          }
+        };
+        xhr.send(JSON.stringify(data));
+      });
+
+    // Function to get HubSpot user token cookie (optional but recommended)
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
+    }
+  });
+</script>
