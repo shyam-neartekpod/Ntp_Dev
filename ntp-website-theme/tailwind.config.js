@@ -32,7 +32,6 @@ module.exports = {
           DEFAULT: "#76c7c0",
           dark: "#4b8e8d",
         },
-        customBlue: "#00A2FF",
       },
       fontFamily: {
         Montserrat: "Montserrat",
@@ -59,6 +58,7 @@ module.exports = {
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/bulid.png")}}")',
         Hand: 'url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ',
         Tech: 'url("{{get_asset_url("../../assets/VR-image.svg")}}") ',
+        Hospitality:'url("{{get_asset_url("../../assets/Hero_Section.svg")}}")',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
         servicefradient:
