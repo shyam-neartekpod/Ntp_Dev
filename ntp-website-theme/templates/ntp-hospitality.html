@@ -26,11 +26,6 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
-    <!-- HubSpot CSS -->
-
-    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
-    standard_header_includes }}
-
     <!-- Favicon -->
     <link
       rel="icon"
@@ -42,28 +37,33 @@
       type="image/jpg"
       href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"
     />
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+    standard_header_includes }}
   </head>
 
   <body>
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
     %}
-    <section class="container xl:px-24 px-3">
+    <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section -->
+
       <div class="mt-2 mb-10 relative mx-10">
         <div
-          class="flex items-center bg-Hospitality rounded-xl bg-cover h-[600px] w-full gap-x-4 justify-end px-10"
+          class="flex items-center bg-Hospitality rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-6"
         >
-          <div class="absolute bottom-10 left-5 pt-60 pl-11 lg:w-1/2">
-            <h1 class="text-white text-3xl md:text-4xl font-bold leading-tight">
+          <div class="absolute bottom-10 left-5 pt-60 lg:w-1/2">
+            <h1 class="text-white text-4xl font-bold leading-tight">
               Elevate Your Hospitality Experience with our <br />
               <span class="text-blue-400">Oracle Opera Cloud Solutions</span>
             </h1>
             <button
-              class="bg-backblue text-white px-5 py-2 rounded-full font-semibold flex items-center space-x-2 mt-4"
+              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-8"
             >
               <span>Contact us</span>
-              <i class="fa-solid fa-arrow-right ml-2"></i>
+              <i
+                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center"
+              ></i>
             </button>
           </div>
           <!-- Card 1 -->
@@ -74,20 +74,20 @@
               <img
                 src="{{get_asset_url('../assets/card1.svg')}}"
                 alt="Card Image"
-                class="rounded-lg shadow-md w-10"
+                class="rounded-lg w-10"
               />
             </div>
             <div class="flex items-center space-x-4 gap-2">
-              <h3 class="text-white text-2xl font-semibold">
+              <h3 class="text-white text-sm md:text-xl font-semibold">
                 Connected Guest Experiences
               </h3>
             </div>
-            <p class="text-white text-base font-medium">
+            <p class="text-white text-sm font-medium hidden md:block">
               Deliver seamless, personalized interactions that keep your guests
               coming back.
             </p>
           </div>
-          <div class="space-y-5">
+          <div class="space-y-4">
             <!-- Card 2 -->
             <div
               class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3"
@@ -96,15 +96,15 @@
                 <img
                   src="{{get_asset_url('../assets/Card2.svg')}}"
                   alt="Card Image"
-                  class="rounded-lg shadow-md w-10"
+                  class="rounded-lg w-10"
                 />
               </div>
               <div class="flex items-center space-x-4 gap-2">
-                <h3 class="text-white text-2xl font-semibold">
+                <h3 class="text-white text-sm md:text-xl font-semibold">
                   Streamlined Operations
                 </h3>
               </div>
-              <p class="text-white text-base font-medium">
+              <p class="text-white text-sm font-medium hidden md:block">
                 Optimize your hotel's operations, from bookings to housekeeping.
               </p>
             </div>
@@ -116,15 +116,15 @@
                 <img
                   src="{{get_asset_url('../assets/Card3.svg')}}"
                   alt="Card Image"
-                  class="rounded-lg shadow-md w-10"
+                  class="rounded-lg w-10"
                 />
               </div>
               <div class="flex items-center space-x-4 gap-2">
-                <h3 class="text-white text-2xl font-semibold">
+                <h3 class="text-white text-sm md:text-xl font-semibold">
                   Speed to Market
                 </h3>
               </div>
-              <p class="text-white text-base font-medium">
+              <p class="text-white text-sm font-medium hidden md:block">
                 Accelerate your time to market with efficient onboarding and
                 integration processes.
               </p>
@@ -133,16 +133,16 @@
         </div>
       </div>
       <!-- Container -->
-      <div class="mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto">
         <!-- Header -->
         <h2
-          class="text-xl md:text-3xl font-semibold text-center text-black mb-10"
+          class="text-base md:text-3xl font-semibold text-center text-black mt-12 mb-10 md:w-3/5 mx-auto"
         >
           We are the trusted Oracle hospitality partner for leading global
           brands.
         </h2>
         <!-- Testimonial Cards -->
-        <div class="grid grid-rows-1 md:grid-cols-2 gap-8 mb-10">
+        <div class="grid grid-rows-1 md:grid-cols-2 gap-8 mb-10 pt-10">
           <!-- First Card -->
 
           <div
@@ -207,7 +207,7 @@
       <!-- Marquee -->
 
       <marquee
-        class="absolute left-0 right-0 w-full mx-0 px-0"
+        class="left-0 right-0 w-full mx-0 px-0 md:my-10"
         scrollamount="10"
       >
         <img
@@ -272,154 +272,158 @@
         />
       </marquee>
       <!-- Why Choose Us Section -->
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-20">
-        <p class="text-start text-sky-500 font-semibold text-sm mb-5">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <p class="text-start text-sky-500 font-semibold text-sm mb-2 md:mb-5">
           WHY CHOOSE US
         </p>
         <h2
-          class="text-xl md:text-3xl font-semibold text-start text-black mb-10"
+          class="text-base md:text-3xl font-semibold text-start text-black mb-20 leading-8"
         >
-          We effectively integrate seamless hospitality ecosystem components,
-          speeding up processes and reducing risk for harmony.
+          We leverage our expertise to deliver successful Opera Cloud PMS
+          solutions. Here's what we bring!
         </h2>
-        <div class="mt-16 grid md:grid-cols-2 gap-16 mb-24">
-          <!-- Card 1 -->
+      </div>
 
+      <div class="grid md:grid-cols-2 gap-10 mb-20">
+        <div
+          class="bg-gray-50 relative w-full h-64 rounded-3xl shadow-lg"
+          id="card-1"
+        >
           <div
-            class="relative bg-gray-100 rounded-lg shadow-lg text-center"
-            id="card-1"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
-            <!-- Circle Icon -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            >
-              <div class="bg-white p-4 rounded-full shadow-md">
-                <img
-                  src="{{get_asset_url('../assets/Bars.svg') }}"
-                  alt="Icon"
-                  class="h-12 w-12"
-                />
-              </div>
+            <div class="bg-white p-1 md:p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Wrap-1.svg') }}"
+                alt="Icon"
+                class="p-8 md:p-0 h-32 w-32"
+              />
             </div>
-            <!-- Heading -->
-            <h2 class="mt-8 text-3xl font-semibold p-10" id="heading-1">
+          </div>
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-24"
+          >
+            Tailored Migrations and Integrations
+          </h1>
+
+          <!-- Hidden content -->
+          <div
+            class="text-white w-full h-64 bg-blue-700 hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
+            id="paragraph-1"
+          >
+            <h1 class="mt-14 text-xl font-semibold">
               Tailored Migrations and Integrations
-            </h2>
-            <!-- Paragraph (hidden initially, shown on hover) -->
-            <p
-              class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-700 mt-1"
-              id="paragraph-1"
-            >
-              <span class="text-lg font-semibold"
-                >Tailored Migrations and Integrations</span
-              ><br />
-              We effectively integrate innovative hospitality ecosystem
-              components, accelerating processes and reducing risk for
-              operational harmony.
+            </h1>
+            <p>
+              We effectively integrate hospitality ecosystem components,
+              speeding up processes and reducing risk for harmony.
             </p>
           </div>
-          <!-- Card 2 -->
+        </div>
+        <div
+          class="bg-gray-50 relative w-full h-64 rounded-3xl shadow-lg mt-20 md:mt-0"
+          id="card-2"
+        >
           <div
-            class="relative bg-gray-100 rounded-lg shadow-lg text-center"
-            id="card-2"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
-            <!-- Circle Icon -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            >
-              <div class="bg-white p-4 rounded-full shadow-md">
-                <img
-                  src="{{get_asset_url('../assets/Arrows.svg') }}"
-                  alt="Icon"
-                  class="h-12 w-12"
-                />
-              </div>
+            <div class="bg-white p-1 md:p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Arrow-1.svg') }}"
+                alt="Icon"
+                class="p-8 md:p-0 h-32 w-32"
+              />
             </div>
-            <!-- Heading -->
-            <h2 class="mt-8 text-3xl font-semibold p-10" id="heading-2">
+          </div>
+          <h1
+            id="heading-2"
+            class="font-semibold text-2xl md:text-3xl text-center mt-24"
+          >
+            Automated Property Onboarding
+          </h1>
+
+          <!-- Hidden content -->
+          <div
+            class="text-white w-full h-64 bg-blue-700 hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
+            id="paragraph-2"
+          >
+            <h1 class="mt-10 md:mt-14 text-xl font-semibold">
               Automated Property Onboarding
-            </h2>
-            <!-- Paragraph (hidden initially, shown on hover) -->
-            <p
-              class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-700 mt-1"
-              id="paragraph-2"
-            >
-              <span class="text-lg font-semibold"
-                >Automated Property Onboarding</span
-              ><br />
+            </h1>
+            <p>
               Our automated solutions ensure rapid, low-risk onboarding,
               minimizing operational impact and getting properties up and
               running fast.
             </p>
           </div>
-          <!-- Card-3-->
+        </div>
+        <div
+          class="bg-gray-50 relative w-full h-64 rounded-3xl shadow-lg mt-20"
+          id="card-3"
+        >
           <div
-            class="relative bg-gray-100 rounded-lg shadow-lg text-center mt-10"
-            id="card-3"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
-            <!-- Circle Icon -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            >
-              <div class="bg-white p-4 rounded-full shadow-md">
-                <img
-                  src="{{get_asset_url('../assets/rockets.svg') }}"
-                  alt="Icon"
-                  class="h-12 w-12"
-                />
-              </div>
+            <div class="bg-white p-1 md:p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                alt="Icon"
+                class="p-8 md:p-0 h-32 w-32"
+              />
             </div>
-            <!-- Heading -->
-            <h2
-              class="mt-8 text-3xl font-semibold p-10 w-80 mx-auto text-center"
-              id="heading-3"
-            >
+          </div>
+          <h1
+            id="heading-3"
+            class="font-semibold text-2xl md:text-3xl text-center mt-24 w-52 mx-auto"
+          >
+            Hospitality AI Solutions
+          </h1>
+
+          <!-- Hidden content -->
+          <div
+            class="text-white w-full h-64 bg-blue-700 hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
+            id="paragraph-3"
+          >
+            <h1 class="mt-14 text-xl font-semibold">
               Hospitality AI Solutions
-            </h2>
-            <!-- Paragraph (hidden initially, shown on hover) -->
-            <p
-              class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-1000"
-              id="paragraph-3"
-            >
-              <span class="text-lg font-semibold">Hospitality AI Solutions</span
-              ><br />
+            </h1>
+            <p>
               Our advanced AI tools enhance decision-making, optimize
               operations, and boost efficiency, allowing your team to focus on
               strategic growth.
             </p>
           </div>
-
-          <!--Card-4-->
+        </div>
+        <div
+          class="bg-gray-50 relative w-full h-64 rounded-3xl shadow-lg mt-20"
+          id="card-4"
+        >
           <div
-            class="relative bg-gray-100 rounded-lg shadow-lg text-center mt-10"
-            id="card-4"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
-            <!-- Circle Icon -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-            >
-              <div class="bg-white p-4 rounded-full shadow-md">
-                <img
-                  src="{{get_asset_url('../assets/playbooks.svg') }}"
-                  alt="Icon"
-                  class="h-12 w-12"
-                />
-              </div>
+            <div class="bg-white p-1 md:p-4 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/playbook-2.svg') }}"
+                alt="Icon"
+                class="p-8 md:p-0 h-32 w-32"
+              />
             </div>
-            <!-- Heading -->
-            <h2
-              class="mt-8 text-3xl font-semibold p-10 w-80 mx-auto"
-              id="heading-4"
-            >
-              Comprehensive Playbook
-            </h2>
-            <!-- Paragraph (hidden initially, shown on hover) -->
-            <p
-              class="text-white bg-backblue hidden p-10 rounded-lg transition-opacity duration-700 mt-1"
-              id="paragraph-4"
-            >
-              <span class="text-lg font-semibold">Comprehensive Playbook </span
-              ><br />
+          </div>
+          <h1
+            id="heading-4"
+            class="font-semibold text-2xl md:text-3xl text-center mt-28 w-64 mx-auto"
+          >
+            Comprehensive Playbook
+          </h1>
+
+          <!-- Hidden content -->
+          <div
+            class="text-white w-full h-64 bg-blue-700 hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
+            id="paragraph-4"
+          >
+            <h1 class="mt-14 text-xl font-semibold">Comprehensive Playbook</h1>
+            <p>
               We’ve developed a playbook based on real-world experience. This
               means a smooth and quick transition for you, without any
               disruptions to your guest experience.
@@ -427,50 +431,51 @@
           </div>
         </div>
       </div>
+
       <!-- image -->
 
       <div>
         <img
-          src="{{get_asset_url('../assets/Illustration.svg')}}"
+          src="{{get_asset_url('../assets/illustration-1.svg')}}"
           alt="Card Image"
           class=""
         />
       </div>
-      <div
-        class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 mt-10 text-center"
-      >
+      <div class="max-w-7xl mx-auto md:py-12 px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          class="text-lg md:text-3xl font-semibold text-center text-black mb-10 p-4"
+          class="text-lg md:text-3xl font-semibold text-center text-black mb-3 md:mb-10 p-4"
         >
           Transform your hotel operations with our specialized services. Let's
           discuss how we can help
         </h2>
         <a
-          class="bg-backblue rounded-full w-28 text-center p-3 text-white font-semibold"
-          >Contact Us <i class="fa-solid fa-arrow-right ml-2"></i
-        ></a>
+          class="bg-backblue rounded-full w-28 text-center p-3 text-white font-semibold text-xs md:text-base"
+          >Contact Us</a
+        >
       </div>
       <!-- three cards -->
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <p class="text-start text-sky-500 font-semibold text-sm mb-5">
+        <p class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-5">
           WHAT WE OFFER
         </p>
-        <h2 class="text-3xl font-semibold text-start text-black mb-10">
+        <h2 class="text-lg md:text-3xl font-semibold text-start text-black">
           Tailored Solutions for Your Hotel Operations
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-7 mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 md:pt-20">
           <!-- First Card -->
           <div class="text-center">
             <div class="flex justify-center items-center">
               <img
                 src="{{get_asset_url('../assets/Dev.svg')}}"
                 alt="Card Image"
-                class="mx-auto"
+                class="p-6 md:p-0 w-52 h-52"
               />
             </div>
-            <h3 class="text-xl font-semibold mt-4">Development services</h3>
-            <p class="mt-2 text-gray-600">
+            <h3 class="text-lg md:text-xl font-semibold mt-4">
+              Development services
+            </h3>
+            <p class="mt-2 text-gray-600 text-sm md:text-lg">
               Experience seamless Opera Cloud integration and speedy development
               with our cloud-native, low-code solutions designed just for you.
             </p>
@@ -482,11 +487,13 @@
               <img
                 src="{{get_asset_url('../assets/Integrations.svg')}}"
                 alt="Card Image"
-                class="mx-auto"
+                class="p-6 md:p-0 w-52 h-52"
               />
             </div>
-            <h3 class="text-xl font-semibold mt-4">Integration expertise</h3>
-            <p class="mt-2 text-gray-600">
+            <h3 class="text-lg md:text-xl font-semibold mt-4">
+              Integration expertise
+            </h3>
+            <p class="mt-2 text-gray-600 text-sm md:text-lg">
               Our team specializes in crafting custom integrations, add-ons, and
               workflows tailored to meet your unique business needs.
             </p>
@@ -498,11 +505,13 @@
               <img
                 src="{{get_asset_url('../assets/Migration.svg')}}"
                 alt="Card Image"
-                class="mx-auto"
+                class="p-6 md:p-0 w-52 h-52"
               />
             </div>
-            <h3 class="text-xl font-semibold mt-4">Cloud migratrion</h3>
-            <p class="mt-2 text-gray-600">
+            <h3 class="text-lg md:text-xl font-semibold mt-4">
+              Cloud migratrion
+            </h3>
+            <p class="mt-2 text-gray-600 text-sm md:text-lg">
               Let us help you make the most of your new cloud environment! We
               focus on scalability, flexibility, and smooth transitions for your
               operational success.
@@ -511,10 +520,10 @@
         </div>
       </div>
     </section>
-    <div class="bg-customgradient">
-      <div class="container xl:px-24 px-3 mt-10 mb-10">
+    <div class="bg-customgradient py-4 md:p-10">
+      <div class="container xl:px-32 px-6 mb-10">
         <div class="">
-          <h3 class="text-3xl font-semibold h-28 flex items-center">
+          <h3 class="text-lg md:text-3xl font-semibold h-28 flex items-center">
             How Can We Help? Find Your Answers Here
           </h3>
           <div class="w-full mb-10">
@@ -522,13 +531,13 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(1)"
-                class="w-full p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-lg"
+                class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold"
+                <span class="font-semibold text-xs md:text-lg"
                   >How long does the migration to Opera Cloud PMS take?</span
                 >
 
-                <div class="bg-backblue text-white rounded-full p-1">
+                <div class="bg-backblue text-white rounded-full md:p-1">
                   <svg
                     id="arrow1"
                     class="w-6 h-6 transform transition-transform duration-300"
@@ -550,7 +559,9 @@
                   id="accordion1"
                   class="hidden transition-all duration-300 mt-4"
                 >
-                  <div class="text-gray-700 rounded-lg shadow-inner">
+                  <div
+                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-lg"
+                  >
                     The timeframe depends on the complexity of your current
                     system, but with our automated processes, we can fast-track
                     your migration with minimal disruption, typically within
@@ -564,14 +575,14 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(2)"
-                class="w-full p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-lg"
+                class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold"
+                <span class="font-semibold text-xs md:text-lg"
                   >Can you integrate Opera Cloud with our existing
                   systems?</span
                 >
 
-                <div class="bg-backblue text-white rounded-full p-1">
+                <div class="bg-backblue text-white rounded-full md:p-1">
                   <svg
                     id="arrow2"
                     class="w-6 h-6 transform transition-transform duration-300"
@@ -593,7 +604,9 @@
                   id="accordion2"
                   class="hidden transition-all duration-300 mt-4"
                 >
-                  <div class="text-gray-700 rounded-lg shadow-inner">
+                  <div
+                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-lg"
+                  >
                     Yes! We specialize in custom integrations using Oracle
                     Hospitality Integration Platform (OHIP) to ensure seamless
                     compatibility with your current ecosystem.
@@ -606,14 +619,14 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(3)"
-                class="w-full p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-lg"
+                class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold"
+                <span class="font-semibold text-xs md:text-lg"
                   >What makes NearTekPod different from other Oracle integration
                   partners??</span
                 >
 
-                <div class="bg-backblue text-white rounded-full p-1">
+                <div class="bg-backblue text-white rounded-full md:p-1">
                   <svg
                     id="arrow3"
                     class="w-6 h-6 transform transition-transform duration-300"
@@ -635,7 +648,9 @@
                   id="accordion3"
                   class="hidden transition-all duration-300 mt-4"
                 >
-                  <div class="text-gray-700 rounded-lg shadow-inner">
+                  <div
+                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-lg"
+                  >
                     Our team combines deep domain expertise with certified
                     Oracle professionals. We focus on crafting tailor-made
                     solutions and leverage automation to ensure smooth and
@@ -649,46 +664,40 @@
       </div>
     </div>
 
-    <div class="mt-20">
-      <div class="container xl:px-24 px-3">
+    <div class="mt-4 md:mt-20">
+      <div class="container xl:px-32 px-6">
         <div>
           <p class="text-sm text-sky-500 font-bold">CONTACT US</p>
-          <h3 class="text-3xl font-semibold mt-3 mb-10">
+          <h3 class="text-lg md:text-3xl font-semibold mt-3 mb-10">
             Lets grow your business together
           </h3>
         </div>
         <div
-          class="flex flex-wrap md:flex-nowrap bg-gray-50 gap-2 rounded-3xl justify-center"
+          class="md:flex flex-wrap md:flex-nowrap bg-gray-50 gap-2 rounded-3xl justify-center"
         >
           <div class="md:w-1/2">
             <div
               class="bg-backblue shadow-md flex flex-col justify-between h-full p-7 rounded-3xl text-white"
             >
               <div class="">
-                <h2 class="font-medium text-2xl md:text-4xl">
-                  Contact Details
-                </h2>
+                <h2 class="font-medium text-xl md:text-4xl">Contact Details</h2>
                 <ul>
-                  <ul class="mt-10 flex gap-2">
-                    <i class="fa-regular fa-envelope text-xl"></i>
-                    <span class="text-base font-medium"
+                  <ul class="mt-5 md:mt-10 flex gap-2">
+                    <i class="fa-regular fa-envelope text-base md:text-xl"></i>
+                    <span class="text-sm md:text-base font-medium"
                       >growwith@neartekpod.com</span
                     >
                   </ul>
-                  <!-- <ul class="mt-10 flex gap-2">
-                    <i class="fa-solid fa-phone text-xl"></i>
-                    <span class="text-base font-medium">+1 312 702 0036</span>
-                  </ul> -->
-                  <ul class="mt-10 flex flex-row gap-2">
-                    <i class="fa-solid fa-phone text-xl"></i>
-                    <p class="text-base font-medium">9876543210</p>
+                  <ul class="mt-2 md:mt-10 flex flex-row gap-2">
+                    <i class="fa-solid fa-phone text-base md:text-xl"></i>
+                    <p class="text-sm md:text-base font-medium">9876543210</p>
                   </ul>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="md:w-1/2 z-10">
-            <form id="contact-form" class="p-8 rounded-3xl w-full max-w-md">
+          <div class="md:w-1/2 mt-8 md:mt-0">
+            <form id="contact-form" class="md:p-8 rounded-3xl w-full max-w-md">
               <div class="mb-4">
                 <div class="flex flex-col">
                   <label for="email">Email *</label>
