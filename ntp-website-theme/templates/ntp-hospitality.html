@@ -41,10 +41,11 @@
     standard_header_includes }}
   </head>
 
-  <body>
+  <body class="">
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
     %}
+
     <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section -->
 
@@ -52,8 +53,8 @@
         <div
           class="flex items-center bg-Hospitality rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-6"
         >
-          <div class="absolute bottom-10 left-5 pt-60 lg:w-1/2">
-            <h1 class="text-white text-3xl font-bold leading-tight">
+          <div class="absolute bottom-10 left-5 pt-60 md:w-1/2">
+            <h1 class="text-white text-3xl font-bold leading-tight w-3/4">
               Elevate Your Hospitality Experience with our <br />
               <span class="text-blue-400">Oracle Opera Cloud Solutions</span>
             </h1>
@@ -541,7 +542,7 @@
                 onclick="toggleAccordion(1)"
                 class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold text-xs md:text-lg"
+                <span class="font-semibold text-xs md:text-xl"
                   >How long does the migration to Opera Cloud PMS take?</span
                 >
 
@@ -568,7 +569,7 @@
                   class="hidden transition-all duration-300 mt-4"
                 >
                   <div
-                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-lg"
+                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-base font-normal"
                   >
                     The timeframe depends on the complexity of your current
                     system, but with our automated processes, we can fast-track
@@ -585,7 +586,7 @@
                 onclick="toggleAccordion(2)"
                 class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold text-xs md:text-lg"
+                <span class="font-semibold text-xs md:text-xl"
                   >Can you integrate Opera Cloud with our existing
                   systems?</span
                 >
@@ -613,7 +614,7 @@
                   class="hidden transition-all duration-300 mt-4"
                 >
                   <div
-                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-lg"
+                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-base"
                   >
                     Yes! We specialize in custom integrations using Oracle
                     Hospitality Integration Platform (OHIP) to ensure seamless
@@ -629,7 +630,7 @@
                 onclick="toggleAccordion(3)"
                 class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold text-xs md:text-lg"
+                <span class="font-semibold text-xs md:text-xl"
                   >What makes NearTekPod different from other Oracle integration
                   partners??</span
                 >
@@ -657,7 +658,7 @@
                   class="hidden transition-all duration-300 mt-4"
                 >
                   <div
-                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-lg"
+                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-base"
                   >
                     Our team combines deep domain expertise with certified
                     Oracle professionals. We focus on crafting tailor-made
@@ -956,10 +957,11 @@
             throw new Error("Network response was not ok");
           }
 
-          alert("We received your valuable message!");
           event.target.reset();
         } catch (error) {
-          alert("There was a problem submitting the form: " + error.message);
+          console.log(
+            "There was a problem submitting the form: " + error.message
+          );
         }
       });
 
