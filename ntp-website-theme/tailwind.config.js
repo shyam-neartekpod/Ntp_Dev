@@ -7,7 +7,6 @@ module.exports = {
     extend: {
       container: {
         center: true,
-       
       },
       swiper: {
         width: "100%",
@@ -21,8 +20,7 @@ module.exports = {
         bluechalk: "#E7EAEE",
         hawkesblue: "#CAECFF",
         royalblue: "#1264D1",
-        SoftBlue:'rgba(167, 223, 255, 0.75)',
-        
+        SoftBlue: "rgba(167, 223, 255, 0.75)",
         errorred: "C00F0C",
         backblue: "#00A2FF",
         backyellow: "#DEF100",
@@ -58,6 +56,8 @@ module.exports = {
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/bulid.png")}}")',
         Hand: 'url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ',
         Tech: 'url("{{get_asset_url("../../assets/VR-image.svg")}}") ',
+        Hospitality:
+          'url("{{get_asset_url("../../assets/Hero_Section.svg")}}")',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
         servicefradient:
