@@ -8,7 +8,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -395,28 +396,33 @@
         We have our certified professionals in
     </p>
     <div class="flex items-center justify-center relative p-6">
-        <!-- Shopify Partner Card -->
-        <div class="bg-green-500/50 rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-10 -mr-16 opacity-100">
-            <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame 198.svg') }}" alt="Shopify Partner">
-        </div>
+      <!-- Shopify Partner Card -->
+      <div class="rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-10">
+          <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame 198.svg') }}" alt="Shopify Partner">
+      </div>
+  
+      <!-- Oracle Card (Overlapping the Shopify Partner Card) -->
+      <div class="rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-20 -mr-16">
+          <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame 199.svg') }}" alt="Oracle">
+      </div>
+  
+      <!-- AWS Card -->
+      <div class="rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-30">
+          <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame 200.svg') }}" alt="AWS">
+      </div>
+  
+      <!-- Azure Card -->
+      <div class="rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-40">
+          <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame.svg') }}" alt="Azure">
+      </div>
+  </div>
+  
+    <!-- Paragraph under the cards -->
+    <p class="text-[20px] font-medium leading-[31px] text-center max-w-4xl mx-auto mt-4">
+      Our professionals are certified to deliver expert-level services on AWS cloud platforms, Oracle integrations, and Shopify development.
+  </p>
+</div>
 
-        <!-- Oracle Card -->
-        <div class="bg-red-500/50 rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-20 -mr-16 opacity-100">
-            <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame 199.svg') }}" alt="Oracle">
-        </div>
-
-        <!-- AWS Card -->
-        <div class="bg-yellow-500/50 rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-30 -mr-16 opacity-100">
-            <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame 200.svg') }}" alt="AWS">
-        </div>
-
-        <!-- Azure Card -->
-        <div class="bg-blue-500/50 rounded-[34.34px] w-[500px] h-[122px] p-[39.81px] flex items-center justify-center relative z-40">
-            <img class="size-full object-cover w-16 h-16 mx-auto mb-2" src="{{ get_asset_url('../assets/Frame.svg') }}" alt="Azure">
-        </div>
-    </div>
-   </div>
-   
       <!-- what our client says -->
       <!-- <div class="">
         <div class="mx-auto">
