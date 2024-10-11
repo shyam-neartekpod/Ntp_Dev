@@ -18,7 +18,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Flowbite CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
@@ -49,7 +49,7 @@
     <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section -->
 
-      <div class="mt-2 mb-10 relative mx-10">
+      <div class="mt-2 mb-10 relative">
         <div
           class="flex items-center bg-Hospitality rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-6"
         >
@@ -138,13 +138,13 @@
       <div class="mx-auto">
         <!-- Header -->
         <h2
-          class="text-base md:text-3xl font-semibold text-center text-black mt-12 mb-10 md:w-3/5 mx-auto"
+          class="text-base md:text-3xl font-semibold text-center text-black my-8 md:my-16 md:w-4/5 mx-auto"
         >
           We are the trusted Oracle hospitality partner for leading global
           brands.
         </h2>
         <!-- Testimonial Cards -->
-        <div class="grid grid-rows-1 md:grid-cols-2 gap-8 mb-10 pt-10">
+        <div class="grid grid-rows-1 md:grid-cols-2 gap-8">
           <!-- First Card -->
 
           <div
@@ -209,7 +209,7 @@
       <!-- Marquee -->
 
       <marquee
-        class="left-0 right-0 w-full mx-0 px-0 md:my-10"
+        class="left-0 right-0 w-full mx-0 px-0 my-10 md:my-14"
         scrollamount="10"
       >
         <img
@@ -274,12 +274,12 @@
         />
       </marquee>
       <!-- Why Choose Us Section -->
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28">
         <p class="text-start text-sky-500 font-semibold text-sm mb-2 md:mb-5">
           WHY CHOOSE US
         </p>
         <h2
-          class="text-base md:text-3xl font-semibold text-start text-black mb-20 leading-8"
+          class="text-base md:text-3xl font-semibold text-start text-black mb-20"
         >
           We leverage our expertise to deliver successful Opera Cloud PMS
           solutions. Here's what we bring!
@@ -288,7 +288,7 @@
 
       <div class="grid md:grid-cols-2 gap-10 mb-20">
         <div
-          class="bg-gray-50 relative w-full h-64 md:h-80 rounded-3xl shadow-lg"
+          class="bg-gray-50 relative w-full h-64 rounded-3xl shadow-lg"
           id="card-1"
         >
           <div
@@ -304,20 +304,20 @@
           </div>
           <h1
             id="heading-1"
-            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-28"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24"
           >
             Tailored Migrations and Integrations
           </h1>
 
           <!-- Hidden content -->
           <div
-            class="text-white w-full h-64 md:h-80 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
+            class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
             id="paragraph-1"
           >
-            <h1 class="mt-8 md:mt-16 text-xl md:text-2xl font-semibold">
+            <h1 class="mt-8 md:mt-14 text-xl md:text-2xl font-semibold">
               Tailored Migrations and Integrations
             </h1>
-            <p>
+            <p class="text-sm md:text-base">
               We effectively integrate hospitality ecosystem components,
               speeding up processes and reducing risk for harmony.
             </p>
@@ -341,20 +341,20 @@
           </div>
           <h1
             id="heading-2"
-            class="font-semibold text-2xl md:text-3xl text-center mt-24"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24"
           >
             Automated Property Onboarding
           </h1>
 
           <!-- Hidden content -->
           <div
-            class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
+            class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-8 md:p-10 text-center"
             id="paragraph-2"
           >
-            <h1 class="mt-8 md:mt-14 text-xl font-semibold">
+            <h1 class="mt-8 md:mt-14 text-lg md:text-2xl font-semibold">
               Automated Property Onboarding
             </h1>
-            <p>
+            <p class="text-sm md:text-base">
               Our automated solutions ensure rapid, low-risk onboarding,
               minimizing operational impact and getting properties up and
               running fast.
@@ -378,7 +378,7 @@
           </div>
           <h1
             id="heading-3"
-            class="font-semibold text-2xl md:text-3xl text-center mt-24 w-52 mx-auto"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-28 w-52 mx-auto"
           >
             Hospitality AI Solutions
           </h1>
@@ -388,10 +388,10 @@
             class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
             id="paragraph-3"
           >
-            <h1 class="mt-14 text-xl font-semibold">
+            <h1 class="mt-8 md:mt-14 text-lg md:text-2xl font-semibold">
               Hospitality AI Solutions
             </h1>
-            <p>
+            <p class="text-sm md:text-base">
               Our advanced AI tools enhance decision-making, optimize
               operations, and boost efficiency, allowing your team to focus on
               strategic growth.
@@ -399,7 +399,7 @@
           </div>
         </div>
         <div
-          class="bg-gray-50 relative w-full h-64 md:h-80 rounded-3xl shadow-lg mt-20"
+          class="bg-gray-50 relative w-full h-64 rounded-3xl shadow-lg mt-20"
           id="card-4"
         >
           <div
@@ -415,17 +415,17 @@
           </div>
           <h1
             id="heading-4"
-            class="font-semibold text-2xl md:text-3xl text-center mt-28 md:mt-32 w-64 mx-auto"
+            class="font-semibold text-2xl md:text-3xl text-center mt-28 md:mt-28 w-64 mx-auto"
           >
             Comprehensive Playbook
           </h1>
 
           <!-- Hidden content -->
           <div
-            class="text-white w-full h-64 md:h-80 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-4 md:p-10 text-center"
+            class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
             id="paragraph-4"
           >
-            <h1 class="mt-14 text-lg md:text-2xl font-semibold">
+            <h1 class="mt-8 md:mt-14 text-lg md:text-2xl font-semibold">
               Comprehensive Playbook
             </h1>
             <p class="text-sm md:text-base">
@@ -453,7 +453,7 @@
           Transform your hotel operations with our specialized services. Let's
           discuss how we can help
         </h2>
-        <div class="flex items-center justify-center min-h-screen">
+        <div class="flex items-center justify-center">
           <button
             class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2"
             onclick="location.href='#contact'"
@@ -543,28 +543,32 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(1)"
-                class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
+                class="w-full p-4 md:p-6 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold text-xs md:text-xl"
-                  >How long does the migration to Opera Cloud PMS take?</span
-                >
-
-                <div class="bg-backblue text-white rounded-full md:p-1">
-                  <svg
-                    id="arrow1"
-                    class="w-6 h-6 transform transition-transform duration-300"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <div class="flex justify-between w-full">
+                  <span class="font-semibold text-xs md:text-xl"
+                    >How long does the migration to Opera Cloud PMS take?</span
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+
+                  <div
+                    class="bg-backblue text-white rounded-full p-0 h-6 md:h-8 md:p-1"
+                  >
+                    <svg
+                      id="arrow1"
+                      class="w-6 h-6 transform transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 <div
@@ -572,7 +576,7 @@
                   class="hidden transition-all duration-300 mt-4"
                 >
                   <div
-                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-base font-normal"
+                    class="text-gray-700 rounded-lg text-xs md:text-base font-normal"
                   >
                     The timeframe depends on the complexity of your current
                     system, but with our automated processes, we can fast-track
@@ -587,38 +591,40 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(2)"
-                class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
+                class="w-full p-4 md:p-6 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold text-xs md:text-xl"
-                  >Can you integrate Opera Cloud with our existing
-                  systems?</span
-                >
-
-                <div class="bg-backblue text-white rounded-full md:p-1">
-                  <svg
-                    id="arrow2"
-                    class="w-6 h-6 transform transition-transform duration-300"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <div class="flex justify-between w-full">
+                  <span class="font-semibold text-xs md:text-xl"
+                    >Can you integrate Opera Cloud with our existing
+                    systems?</span
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+
+                  <div
+                    class="bg-backblue text-white rounded-full p-0 h-6 md:h-8 md:p-1"
+                  >
+                    <svg
+                      id="arrow2"
+                      class="w-6 h-6 transform transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 <div
                   id="accordion2"
                   class="hidden transition-all duration-300 mt-4"
                 >
-                  <div
-                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-base"
-                  >
+                  <div class="text-gray-700 rounded-lg text-xs md:text-base">
                     Yes! We specialize in custom integrations using Oracle
                     Hospitality Integration Platform (OHIP) to ensure seamless
                     compatibility with your current ecosystem.
@@ -631,38 +637,40 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(3)"
-                class="w-full p-4 md:p-6 flex flex-wrap justify-between items-center text-left bg-white text-gray-700 shadow rounded-2xl"
+                class="w-full p-4 md:p-6 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
               >
-                <span class="font-semibold text-xs md:text-xl"
-                  >What makes NearTekPod different from other Oracle integration
-                  partners??</span
-                >
-
-                <div class="bg-backblue text-white rounded-full md:p-1">
-                  <svg
-                    id="arrow3"
-                    class="w-6 h-6 transform transition-transform duration-300"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                <div class="flex justify-between w-full">
+                  <span class="font-semibold text-xs md:text-xl"
+                    >What makes NearTekPod different from other Oracle
+                    integration partners??</span
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+
+                  <div
+                    class="bg-backblue text-white rounded-full p-0 h-6 md:h-8 md:p-1"
+                  >
+                    <svg
+                      id="arrow3"
+                      class="w-6 h-6 transform transition-transform duration-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
                 </div>
 
                 <div
                   id="accordion3"
                   class="hidden transition-all duration-300 mt-4"
                 >
-                  <div
-                    class="text-gray-700 rounded-lg shadow-inner text-xs md:text-base"
-                  >
+                  <div class="text-gray-700 rounded-lg text-xs md:text-base">
                     Our team combines deep domain expertise with certified
                     Oracle professionals. We focus on crafting tailor-made
                     solutions and leverage automation to ensure smooth and
@@ -685,7 +693,7 @@
           </h3>
         </div>
         <div
-          class="md:flex flex-wrap md:flex-nowrap bg-gray-50 gap-2 rounded-3xl justify-center"
+          class="md:flex flex-wrap md:flex-nowrap bg-none md:bg-gray-50 gap-2 rounded-3xl justify-center"
         >
           <div class="md:w-1/2">
             <div
@@ -965,7 +973,7 @@
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }
-          submitButton.disabled = true;
+
           event.target.reset();
         } catch (error) {
           console.log(
