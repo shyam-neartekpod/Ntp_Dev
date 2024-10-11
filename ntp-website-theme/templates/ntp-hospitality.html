@@ -47,9 +47,9 @@
     %}
 
     <section class="container xl:px-32 px-6 pt-24">
-      <!-- Hero Section -->
+      <!-- Hero Section Md -->
 
-      <div class="mt-2 mb-10 relative">
+      <div class="mt-2 mb-10 relative hidden md:block">
         <div
           class="flex items-center bg-Hospitality rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-6"
         >
@@ -68,7 +68,7 @@
               ></i>
             </button>
           </div>
-          <!-- Card 1 -->
+
           <div
             class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3"
           >
@@ -90,7 +90,6 @@
             </p>
           </div>
           <div class="space-y-4">
-            <!-- Card 2 -->
             <div
               class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3"
             >
@@ -110,7 +109,7 @@
                 Optimize your hotel's operations, from bookings to housekeeping.
               </p>
             </div>
-            <!-- Card 3 -->
+
             <div
               class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3"
             >
@@ -130,6 +129,81 @@
                 Accelerate your time to market with efficient onboarding and
                 integration processes.
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hero Section sm -->
+      <div class="block md:hidden mt-2 mb-10 relative md:mx-10">
+        <div
+          class="flex flex-col gap-y-4 justify-start items-center bg-Hospitality rounded-xl bg-cover h-[400px] w-full gap-4 px-6"
+        >
+          <div class="absolute bottom-0 left-0 pt-60 w-full p-5">
+            <h1 class="text-white text-lg font-bold leading-tight">
+              Elevate Your Hospitality Experience with our <br />
+              <span class="text-blue-400">Oracle Opera Cloud Solution</span>
+            </h1>
+            <button
+              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-2"
+              onclick="location.href='#contact'"
+            >
+              <span>Contact us</span>
+              <i
+                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center"
+              ></i>
+            </button>
+          </div>
+          <!-- Card 1 -->
+          <div
+            class="w-32 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2 mt-6 ml-8"
+          >
+            <div class="flex justify-end">
+              <img
+                src="{{get_asset_url('../assets/card1.svg')}}"
+                alt="Card Image"
+                class="rounded-lg w-7"
+              />
+            </div>
+            <div class="flex items-center space-x-4 gap-2">
+              <h3 class="text-white text-sm font-semibold">
+                Connected Guest Experiences
+              </h3>
+            </div>
+          </div>
+          <div class="flex gap-x-5 ml-8">
+            <!-- Card 2 -->
+            <div
+              class="w-32 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2"
+            >
+              <div class="flex justify-end">
+                <img
+                  src="{{get_asset_url('../assets/Card2.svg')}}"
+                  alt="Card Image"
+                  class="rounded-lg w-7"
+                />
+              </div>
+              <div class="flex items-center space-x-4 gap-2">
+                <h3 class="text-white text-sm font-semibold">
+                  Streamlined Operations
+                </h3>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="w-32 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2"
+            >
+              <div class="flex justify-end">
+                <img
+                  src="{{get_asset_url('../assets/Card3.svg')}}"
+                  alt="Card Image"
+                  class="rounded-lg w-7"
+                />
+              </div>
+              <div class="flex items-center space-x-4 gap-2">
+                <h3 class="text-white text-sm font-semibold">
+                  Speed to Market
+                </h3>
+              </div>
             </div>
           </div>
         </div>
@@ -286,7 +360,7 @@
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10 mb-20">
+      <!-- <div class="grid md:grid-cols-2 gap-10 mb-20">
         <div
           class="bg-gray-50 relative w-full h-64 rounded-3xl shadow-lg"
           id="card-1"
@@ -309,7 +383,7 @@
             Tailored Migrations and Integrations
           </h1>
 
-          <!-- Hidden content -->
+        
           <div
             class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
             id="paragraph-1"
@@ -346,7 +420,7 @@
             Automated Property Onboarding
           </h1>
 
-          <!-- Hidden content -->
+         
           <div
             class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-8 md:p-10 text-center"
             id="paragraph-2"
@@ -383,7 +457,7 @@
             Hospitality AI Solutions
           </h1>
 
-          <!-- Hidden content -->
+         
           <div
             class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
             id="paragraph-3"
@@ -420,7 +494,7 @@
             Comprehensive Playbook
           </h1>
 
-          <!-- Hidden content -->
+          
           <div
             class="text-white w-full h-64 bg-backblue hidden rounded-3xl transition-opacity duration-1000 p-10 text-center"
             id="paragraph-4"
@@ -429,6 +503,167 @@
               Comprehensive Playbook
             </h1>
             <p class="text-sm md:text-base">
+              We’ve developed a playbook based on real-world experience. This
+              means a smooth and quick transition for you, without any
+              disruptions to your guest experience.
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="grid md:grid-cols-2 gap-10 mb-20">
+        <!-- First Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Wrap-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden"
+          >
+            Tailored Migrations and Integrations
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Tailored Migrations and Integrations
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              We effectively integrate hospitality ecosystem components,
+              speeding up processes and reducing risk for harmony.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-10 md:mt-0"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Arrow-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden"
+          >
+            Automated Property Onboarding
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Automated Property Onboarding
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Our automated solutions ensure rapid, low-risk onboarding,
+              minimizing operational impact and getting properties up and
+              running fast.
+            </p>
+          </div>
+        </div>
+
+        <!--Third card-->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden w-2/4 mx-auto"
+          >
+            Hospitality AI Solutions
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Hospitality AI Solutions
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Our advanced AI tools enhance decision-making, optimize
+              operations, and boost efficiency, allowing your team to focus on
+              strategic growth.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/playbook-2.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden w-3/4 mx-auto"
+          >
+            Comprehensive Playbook
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Comprehensive Playbook
+            </h1>
+            <p class="text-sm md:text-base mt-2">
               We’ve developed a playbook based on real-world experience. This
               means a smooth and quick transition for you, without any
               disruptions to your guest experience.
@@ -1012,29 +1247,27 @@
       }
     }
 
-    const cards = [
-      { card: "card-1", heading: "heading-1", paragraph: "paragraph-1" },
-      { card: "card-2", heading: "heading-2", paragraph: "paragraph-2" },
-      { card: "card-3", heading: "heading-3", paragraph: "paragraph-3" },
-      { card: "card-4", heading: "heading-4", paragraph: "paragraph-4" },
-    ];
+    // const cards = [
+    //   { card: "card-1", heading: "heading-1", paragraph: "paragraph-1" },
+    //   { card: "card-2", heading: "heading-2", paragraph: "paragraph-2" },
+    //   { card: "card-3", heading: "heading-3", paragraph: "paragraph-3" },
+    //   { card: "card-4", heading: "heading-4", paragraph: "paragraph-4" },
+    // ];
 
-    // Add hover effect for each card
-    cards.forEach((item) => {
-      const cardElement = document.getElementById(item.card);
-      const headingElement = document.getElementById(item.heading);
-      const paragraphElement = document.getElementById(item.paragraph);
+    // cards.forEach((item) => {
+    //   const cardElement = document.getElementById(item.card);
+    //   const headingElement = document.getElementById(item.heading);
+    //   const paragraphElement = document.getElementById(item.paragraph);
 
-      // Add hover event
-      cardElement.addEventListener("mouseenter", () => {
-        headingElement.classList.add("hidden"); // Hide heading
-        paragraphElement.classList.remove("hidden"); // Show paragraph
-      });
+    //   cardElement.addEventListener("mouseenter", () => {
+    //     headingElement.classList.add("hidden"); // Hide heading
+    //     paragraphElement.classList.remove("hidden"); // Show paragraph
+    //   });
 
-      cardElement.addEventListener("mouseleave", () => {
-        headingElement.classList.remove("hidden"); // Show heading
-        paragraphElement.classList.add("hidden"); // Hide paragraph
-      });
-    });
+    //   cardElement.addEventListener("mouseleave", () => {
+    //     headingElement.classList.remove("hidden"); // Show heading
+    //     paragraphElement.classList.add("hidden"); // Hide paragraph
+    //   });
+    // });
   </script>
 </html>
