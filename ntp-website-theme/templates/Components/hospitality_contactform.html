@@ -21,16 +21,25 @@
           <ul>
             <ul class="mt-5 md:mt-10 flex gap-2">
               <i class="fa-regular fa-envelope text-base md:text-xl"></i>
-              <span class="text-sm md:text-base font-medium"
-                >growwith@neartekpod.com</span
+              <a
+                href="mailto: growwith@neartekpod.com "
+                class="text-sm md:text-base font-medium"
+                >growwith@neartekpod.com</a
               >
             </ul>
             <ul class="mt-2 md:mt-10 flex flex-row gap-2">
               <i class="fa-solid fa-phone text-base md:text-xl"></i>
-              <p class="text-sm md:text-base font-medium">
+              <p class="text-sm md:text-base font-medium hidden md:block">
                 + 1 847 450 3728
                 <span class="text-sm">[8 am – 4 pm eastern]</span>
               </p>
+              <a
+                href="tel:+18474503728"
+                class="text-sm md:text-base font-medium md:hidden"
+              >
+                + 1 847 450 3728
+                <span class="text-sm">[8 am – 4 pm eastern]</span>
+              </a>
             </ul>
           </ul>
         </div>
@@ -40,7 +49,7 @@
       <form id="contact-form" class="md:p-8 rounded-3xl w-full max-w-md">
         <div class="mb-4">
           <div class="flex flex-col">
-            <label for="email" class="text-sm md:text-base">Email *</label>
+            <label for="email" class="text-sm md:text-base">Email </label>
             <input
               type="email"
               id="email"
@@ -48,6 +57,7 @@
               class="rounded-lg mt-2 border-coralblue"
               required
               placeholder="Enter your email"
+              oninput="validateEmail(this, 'message-error')"
             />
           </div>
           <span class="text-errorred text-sm mt-1" id="email-error"></span>
@@ -120,6 +130,19 @@
       document.getElementById(errorId).textContent = "";
     }
   }
+  function validateEmail(input, errorId) {
+    const value = input.value;
+    if (
+      !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        value
+      )
+    ) {
+      document.getElementById(errorId).textContent =
+        "Enter correct email formate";
+    } else {
+      document.getElementById(errorId).textContent = "";
+    }
+  }
 
   document
     .getElementById("contact-form")
@@ -139,7 +162,8 @@
 
       // Validate Email
       const email = document.getElementById("email").value;
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailPattern =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (!emailPattern.test(email)) {
         setError("email-error", "Please enter a valid email address.");
         isValid = false;
