@@ -41,10 +41,18 @@
     standard_header_includes }}
   </head>
 
-  <body class="">
+  <body class="relative">
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
     %}
+    <div class="absolute top-20 left-0">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-80 right-0">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
 
     <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section Md -->
@@ -219,7 +227,7 @@
       <div class="mx-auto">
         <!-- Header -->
         <h2
-          class="text-base md:text-3xl font-semibold text-center text-black my-8 md:my-16 md:w-4/5 mx-auto"
+          class="text-xl md:text-3xl font-semibold text-center text-black my-8 md:my-16 md:w-4/5 mx-auto"
         >
           We are the trusted Oracle hospitality partner for leading global
           brands.
@@ -360,7 +368,7 @@
           WHY CHOOSE US
         </p>
         <h2
-          class="text-base md:text-3xl font-semibold text-start text-black mb-20"
+          class="text-xl md:text-3xl font-semibold text-start text-black mb-20"
         >
           We leverage our expertise to deliver successful OPERA Cloud PMS
           solutions. Here's what we bring!
@@ -539,7 +547,7 @@
       </div>
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          class="text-lg md:text-3xl font-medium text-center text-black mb-3 md:mb-10 p-4"
+          class="text-lg md:text-3xl font-medium text-center text-black mb-3 md:mb-4 p-4"
         >
           Transform your hotel operations with our specialized services. Let's
           discuss how we can help
@@ -635,7 +643,7 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(1)"
-                class="w-full p-4 md:p-6 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
+                class="w-full p-4 md:p-8 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
               >
                 <div class="flex justify-between w-full">
                   <span class="font-semibold text-xs md:text-xl"
@@ -683,7 +691,7 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(2)"
-                class="w-full p-4 md:p-6 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
+                class="w-full p-4 md:p-8 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
               >
                 <div class="flex justify-between w-full">
                   <span class="font-semibold text-xs md:text-xl"
@@ -729,7 +737,7 @@
             <div class="mb-4">
               <button
                 onclick="toggleAccordion(3)"
-                class="w-full p-4 md:p-6 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
+                class="w-full p-4 md:p-8 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
               >
                 <div class="flex justify-between w-full">
                   <span class="font-semibold text-xs md:text-xl"
