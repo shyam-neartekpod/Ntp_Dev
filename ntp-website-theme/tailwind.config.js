@@ -25,6 +25,7 @@ module.exports = {
         backblue: "#00A2FF",
         backyellow: "#DEF100",
         backpink: "#6100FF",
+        backwhite: "FFFFF",
         grassmarpisam: {
           light: "#a8e4a0",
           DEFAULT: "#76c7c0",
@@ -44,10 +45,25 @@ module.exports = {
         leading2: "1.9rem",
         leading1: "1.5rem",
       },
+      keyframes: {
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        slideInRight: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        slideInLeft: "slideInLeft 1s ease-out",
+        slideInRight: "slideInRight 1s ease-out",
+      },
 
       backgroundImage: (theme) => ({
         WorldMap: 'url("{{get_asset_url("../../assets/Globe.svg")}}")',
         Easy: 'url("{{get_asset_url("../../assets/Subtract.png")}}")',
+        accordbg: 'url("{{get_asset_url("../../assets/BG_rectangle.svg")}}")',
         Family:
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/fam.svg")}}")',
         Architucture:

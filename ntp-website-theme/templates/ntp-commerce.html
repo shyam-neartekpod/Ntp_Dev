@@ -1,0 +1,822 @@
+
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: NTP-Commerce
+  screenshotPath: ../images/template-previews/home.png
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"
+    />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"
+    />
+    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+    standard_header_includes }}
+  </head>
+
+  <body class="">
+    {% block Hospitality-header %} {% global_partial
+    path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
+    %}
+
+    <section class="container xl:px-32 px-6 pt-24">
+      <!-- Hero Section -->
+      <div class="mt-2 mb-10 relative hidden md:block">
+        <div
+          class="flex items-start bg-Commerce rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-6"
+        >
+          <div class="absolute bottom-0 left-0 md:bottom-10 md:left-5 pt-60 md:w-1/2 ">
+            <h1 class="text-white text-lg md:text-3xl font-bold leading-tight ">
+              Supercharge your E-Commerce 
+              with  
+              <span class="text-blue-400">AI-Driven cloud solutions</span>
+              <!-- <p class="text-white text-xl font-medium mt-3">Migrate faster, scale globally, and save costs with our expert 
+                Shopify and BigCommerce solutions</p>             -->
+            </h1>
+            <button
+              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-2 md:mt-8"
+              onclick="location.href='#contact'"
+            >
+              <span>Contact us</span>
+              <i
+                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center"
+              ></i>
+            </button>
+          </div>
+
+          <div
+            class="w-32 md:w-60 h-auto md:h-52 mt-5 md:mt-10 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-5 "
+          >
+            <div class="flex justify-end">
+              <img
+              src="{{get_asset_url('../assets/driven.svg')}}"
+              alt="Card Image"
+              class="rounded-lg w-7 md:w-10"
+            />
+            </div>
+            <div class="flex items-center space-x-4 gap-2">
+              <h3 class="text-white text-sm md:text-xl font-semibold">
+                AI-Enabled development
+              </h3>
+            </div>
+            <p class="text-white text-sm font-medium hidden md:block">
+              Our AI solutions help you Go-Live in weeks with zero downtime--faster than competitors     
+            </p>
+          </div>
+          <div class="space-y-4 mt-5 md:mt-10">
+            <div
+              class="w-60 h-52 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-5"
+            >
+              <div class="flex justify-end">
+                <img
+                src="{{get_asset_url('../assets/Ecosystem.svg')}}"
+                alt="Card Image"
+                class="rounded-lg w-7 md:w-10"
+              />
+              </div>
+              <div class="flex items-center space-x-4 gap-2">
+                <h3 class="text-white text-sm md:text-xl font-semibold">
+                  Digital eco system integration
+                </h3>
+              </div>
+              <p class="text-white text-sm font-medium hidden md:block">
+                Simplify the ecosystem integrations by leveraging our time tested playbook              
+              </p>
+            </div>
+
+            <div
+              class="w-60 h-52 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2"
+            >
+              <div class="flex justify-end">
+                <img
+                src="{{get_asset_url('../assets/reach.svg')}}"
+                alt="Card Image"
+                class="rounded-lg w-7 md:w-10"
+              />
+              </div>
+              <div class="flex items-center space-x-4 gap-2">
+                <h3 class="text-white text-sm md:text-xl font-semibold">
+                  Connected customer experience
+                </h3>
+              </div>
+              <p class="text-white  md:text-sm font-medium hidden md:block">
+                Experience the future of shopping with seamless, personalized interactions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hero Section sm -->
+      <div class="mt-2 mb-10 relative block md:hidden">
+        <div
+        class="flex items-start bg-Commerce rounded-xl bg-cover h-[480px] w-full gap-4 justify-end px-6"
+        >
+          <div class="absolute bottom-0 left-0 md:bottom-10 md:left-5 pt-60 md:w-3/4 p-5">
+            <h1 class="text-white text-xl md:text-sm font-bold leading-tight ">
+              Supercharge your E-Commerce
+              with  
+              <span class="text-blue-400">AI-Driven cloud solutions</span>
+              <!-- <p class="text-white text-sm font-medium">Migrate faster, scale globally, and save costs with our expert 
+                Shopify and BigCommerce solutions</p>             -->
+            </h1>
+            <button
+              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 md:mt-8 mt-6"
+              onclick="location.href='#contact'"
+            >
+              <span>Contact us</span>
+              <i
+                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center"
+              ></i>
+            </button>
+          </div>
+          <!-- Card 1 -->
+          <div
+            class="w-32 md:w-60 h-28 md:h-[180px] mt-5 md:mt-10 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2 md:p-3 "
+          >
+            <div class="flex justify-end">
+              <img
+                src="{{get_asset_url('../assets/driven.svg')}}"
+                alt="Card Image"
+                class="rounded-lg w-7 "
+              />
+            </div>
+            <div class="flex items-center space-x-4 gap-2">
+              <h3 class="text-white text-sm font-semibold">
+                AI-Enabled development
+              </h3>
+            </div>
+            <p class="text-white text-sm font-medium hidden md:block">
+              Our AI solutions help you Go-Live in weeks with zero downtime--faster than competitors            
+            </p>
+          </div>
+          <div class="space-y-4 mt-5 md:mt-10 md:ml-8">
+            <!-- Card 2 -->
+            <div
+              class="w-32 md:h-60 h-28 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2 md:p-3"
+            >
+              <div class="flex justify-end">
+                <img
+                  src="{{get_asset_url('../assets/Ecosystem.svg')}}"
+                  alt="Card Image"
+                  class="rounded-lg w-7 md:w-10"
+                />
+              </div>
+              <div class="flex items-center space-x-4 gap-2">
+                <h3 class="text-white text-sm md:text-xl font-semibold">
+                    Digital eco system integration
+                </h3>
+              </div>
+              <p class="text-white text-sm font-medium hidden md:block">
+                Simplify the ecosystem integrations by leveraging our time tested playbook                
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="w-32 h-28s bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2"
+            >
+              <div class="flex justify-end">
+                <img
+                  src="{{get_asset_url('../assets/reach.svg')}}"
+                  alt="Card Image"
+                  class="rounded-lg w-7 md:w-10"
+                />
+              </div>
+              <div class="flex items-center space-x-4 gap-2">
+                <h3 class="text-white text-sm md:text-xl font-semibold">
+                    Connected customer experience
+                </h3>
+              </div>
+              <p class="text-white text-sm font-medium hidden md:block">
+                Experience the future of shopping with seamless, personalized interactions.               
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Container -->
+      <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28">
+        
+        <h2
+          class="text-base md:text-3xl font-semibold text-center text-black mb-20"
+        >
+        We are an innovative e-commerce partner for both industry disruptors and established brands
+        </h2>    
+        <!-- Testimonial Cards -->
+        <div class="grid grid-rows-1 md:grid-cols-2 gap-8">
+          <!-- First Card -->
+
+          <div
+            class="bg-customgradient rounded-3xl p-4 md:p-5 border border-gray-300 h-full"
+          >
+            <div class="flex items-center md:mb-4">
+              <img
+                src="{{get_asset_url('../assets/image 55 (1).svg')}}"
+                alt="Marriott Logo"
+                class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2"
+              />
+              <div class="ml-4">
+                <h3 class="text-sm md:text-lg font-semibold text-gray-800">
+                  Transformative partner
+                </h3>
+                <p class="text-sm md:text-lg text-gray-700">
+                  We highly recommend Near<span class="text-sky-500">Tek</span>Pod to any business seeking a
+                  transformative partner on their e-commerce journey. They truly are the embodiment of innovation and reliability.
+                </p>
+                <p class="text-sm md:text-lg text-gray-500 mt-3">
+                  <span>Founder</span><br />
+                  <span class="text-sm md:text-lg font-semibold text-gray-800"
+                    >BAACAL</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Card -->
+
+          <div
+            class="bg-customgradient rounded-3xl p-6 border border-gray-300 h-full"
+          >
+            <div class="flex items-center md:mb-4">
+              <img
+                src="{{get_asset_url('../assets/Company logo.svg')}}"
+                alt="Oracle Logo"
+                class="h-16 w-16 object-containp-2"
+              />
+              <div class="ml-4">
+                <h3 class="text-sm md:text-lg font-semibold text-gray-800">
+                  Tailored solutions
+                </h3>
+                <p class="text-sm md:text-lg text-gray-700">
+                  Near<span class="text-sky-500">Tek</span>Pod demonstrated an acute understanding of our unique business needs,
+                    tailoring solutions that seamlessly aligned with our goals.
+                </p>
+
+                <p class="text-sm md:text-lg text-gray-500 mt-3">
+                  <span>Senior Director</span><br />
+                  <span class="text-sm md:text-lg font-semibold text-gray-800">
+                    LIBERTY FUND
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Marquee -->
+      <marquee class="left-0 right-0 w-full mx-0 px-0 my-10 md:my-14" scrollamount="8">
+        <img
+          class="h-8 mx-4 md:h-8 md:mx-6 inline-block"
+          src="{{get_asset_url('../assets/LF_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-4 md:h-8 md:mx-6 inline-block"
+          src="{{get_asset_url('../assets/WR_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-5 sm:h-7 mx-2 sm:mx-3 md:h-5 md:mx-4 inline-block"
+          src="{{get_asset_url('../assets/Baacal_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-5 sm:h-7 mx-2 sm:mx-3 md:h-5 md:mx-4 inline-block"
+          src="{{get_asset_url('../assets/Cemex_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-4 md:h-8 md:mx-6 inline-block"
+          src="{{get_asset_url('../assets/LF_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-4 md:h-8 md:mx-6 inline-block"
+          src="{{get_asset_url('../assets/WR_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-5 sm:h-7 mx-2 sm:mx-3 md:h-5 md:mx-4 inline-block"
+          src="{{get_asset_url('../assets/Baacal_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-5 sm:h-7 mx-2 sm:mx-3 md:h-5 md:mx-4 inline-block"
+          src="{{get_asset_url('../assets/Cemex_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-4 md:h-8 md:mx-6 inline-block"
+          src="{{get_asset_url('../assets/LF_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-8 mx-4 md:h-8 md:mx-6 inline-block"
+          src="{{get_asset_url('../assets/WR_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-5 sm:h-7 mx-2 sm:mx-3 md:h-5 md:mx-4 inline-block"
+          src="{{get_asset_url('../assets/Baacal_logo.svg')}}"
+          alt="TCH"
+        />
+        <img
+          class="h-5 sm:h-7 mx-2 sm:mx-3 md:h-5 md:mx-4 inline-block"
+          src="{{get_asset_url('../assets/Cemex_logo.svg')}}"
+          alt="TCH"
+        />
+      </marquee>
+      
+      
+      <!-- Why Choose Us Section -->
+      <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28">
+        <p class="text-start text-sky-500 font-semibold text-xs mb-2 md:mb-1">
+          WHY CHOOSE US
+        </p>
+        <h2
+          class="text-xl md:text-3xl font-semibold text-start text-black mb-20"
+        >
+          We leverage our expertise to deliver successful Opera Cloud PMS
+          solutions. Here's what we bring!
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 mb-20">
+        <!-- First Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/VR 1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden"
+          >
+          Tailored AI <br/>solutions
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+                Tailored AI solutions
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+                Our AI solutions enhance decision-making, optimize operational cost, 
+                and boost efficiency, allowing your team to focus on strategic growth 
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-10 md:mt-0"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden"
+          >
+          Complex migration<br/>services
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+                Complex migration services
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+                Pre-built data migration recipes to fast-track Cloud Commerce adoption
+            </p>
+          </div>
+        </div>
+
+        <!--Third card-->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/Expertise.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden w-2/4 mx-auto"
+          >
+          Deep platform<br/>expertise
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+                Deep platform expertise
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+                With certified shopify and BigCommerce experts we ensure smooth transition and 
+                effective implementation
+            </p>
+          </div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16"
+        >
+          <!-- Image section (always visible) -->
+          <div
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+          >
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-md">
+              <img
+                src="{{get_asset_url('../assets/last.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
+            </div>
+          </div>
+
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden w-3/4 mx-auto"
+          >
+          Client centric <br/>approach
+          </h1>
+
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+                Client centric approach
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+                Your success is our priority .We work closely with you to understand your goals,
+                ensuring our strategies
+                align with your vision 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- image -->
+      <div>
+        <img
+          src="{{get_asset_url('../assets/grops.svg')}}"
+          alt="Card Image"
+          class=""
+        />
+      </div>
+      
+      <!-- three cards -->
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <p class="text-start text-sky-500 font-semibold text-xs md-3 md:mb-1">
+          WHAT WE OFFER
+        </p>
+        <h2 class="text-xl md:text-3xl font-semibold text-start text-black">
+            Power your E-Commerce growth with our specialized offerings
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 md:pt-20">
+          <!-- First Card -->
+          <div class="text-center">
+            <div class="flex justify-center items-center">
+              <img
+                src="{{get_asset_url('../assets/what.svg')}}"
+                alt="Card Image"
+                class="p-6 md:p-0 w-52 h-52"
+              />
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold mt-4">
+                Strategy Evaluation
+            </h3>
+            <p class="mt-2 text-gray-600 text-sm md:text-base">
+                We help you choose the best 
+                E-commerce platform, ensuring it aligns with your business goals and growth plans.
+            </p>
+          </div>
+
+          <!-- Second Card -->
+          <div class="text-center">
+            <div class="flex justify-center">
+              <img
+                src="{{get_asset_url('../assets/second.svg')}}"
+                alt="Card Image"
+                class="p-6 md:p-0 w-52 h-52"
+              />
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold mt-4">
+                AI Powered Commerce
+            </h3>
+            <p class="mt-2 text-gray-600 text-sm md:text-base">
+              We are one-stop shop for accelerated development, enhanced decision making, 
+              personalized customer experiences,fraud detection and cost reduction
+            </p>
+          </div>
+
+          <!-- Third Card -->
+          <div class="text-center">
+            <div class="flex justify-center">
+              <img
+                src="{{get_asset_url('../assets/Voicecommerce.svg')}}"
+                alt="Card Image"
+                class="p-6 md:p-0 w-52 h-52"
+              />
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold mt-4">
+                Voice commerce
+            </h3>
+            <p class="mt-2 text-gray-600 text-sm md:text-base">
+              Humans are naturally inclined to use voice, 
+              making voice commerce an engaging and intuitive way to shop
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-4 md:mt-20" id="contact">
+        {% block Hospitality-contactform %} {% global_partial
+        path="./Components/hospitality_contactform.html " %} {% endblock
+        Hospitality-contactform %}
+      </div>
+  
+
+    {{ standard_footer_includes }} {% block footer %} {% global_partial
+    path="./partials/hospitalty-footer.html" %} {% endblock footer %}
+  </body>
+  {{ require_js(get_asset_url("../js/main.js")) }}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    function blockNumbers(event) {
+      const keyCode = event.keyCode ? event.keyCode : event.which;
+      if (keyCode >= 48 && keyCode <= 57) {
+        event.preventDefault();
+        return false;
+      }
+      return true;
+    }
+
+    function validateAlphabetic(input, errorId) {
+      const value = input.value;
+      if (!/^[a-zA-Z]*$/.test(value)) {
+        document.getElementById(errorId).textContent =
+          "Only alphabetic characters are allowed.";
+      } else {
+        document.getElementById(errorId).textContent = "";
+      }
+    }
+
+    function validateAlphanumeric(input, errorId) {
+      const value = input.value;
+      if (!/^[a-zA-Z0-9\s]*$/.test(value)) {
+        document.getElementById(errorId).textContent =
+          "Only alphanumeric characters are allowed.";
+      } else {
+        document.getElementById(errorId).textContent = "";
+      }
+    }
+
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (e) {
+        let isValid = true;
+
+        // Helper function to set error message
+        function setError(id, message) {
+          document.getElementById(id).textContent = message;
+          isValid = false;
+        }
+
+        // Helper function to clear error message
+        function clearError(id) {
+          document.getElementById(id).textContent = "";
+        }
+
+        // Validate Email
+        const email = document.getElementById("email").value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          setError("email-error", "Please enter a valid email address.");
+          isValid = false;
+        } else {
+          clearError("email-error");
+        }
+
+        // Validate Message
+        const message = document.getElementById("message").value;
+        if (!/^[a-zA-Z0-9\s]+$/.test(message)) {
+          setError("message-error", "Message must be alphanumeric.");
+        } else {
+          clearError("message-error");
+        }
+
+        // Prevent form submission if validation fails
+        if (!isValid) {
+          e.preventDefault();
+        }
+      });
+
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        let isValid = true;
+        const formElements = event.target.elements;
+        const validationErrors = {};
+
+        // Validate required fields
+        for (const element of formElements) {
+          if (
+            element.type !== "submit" &&
+            element.hasAttribute("required") &&
+            !element.value
+          ) {
+            isValid = false;
+            validationErrors[element.name] = "This field is required";
+          }
+        }
+
+        // Validate "I agree" checkbox
+        if (!formElements["agree"].checked) {
+          isValid = false;
+          validationErrors["agree"] =
+            "You must agree to the terms and conditions";
+        }
+
+        document
+          .querySelectorAll(".text-errorred")
+          .forEach((errorElement) => (errorElement.textContent = ""));
+        if (!isValid) {
+          for (const [fieldName, errorMessage] of Object.entries(
+            validationErrors
+          )) {
+            document.getElementById(`${fieldName}-error`).textContent =
+              errorMessage;
+          }
+          return;
+        }
+
+        const formData = {
+          fields: [
+            { name: "email", value: formElements["email"].value },
+            { name: "message", value: formElements["message"].value },
+          ],
+        };
+
+        try {
+          const response = await fetch(
+            "https://api.hsforms.com/submissions/v3/integration/submit/46156581/a6406cef-b435-4298-8003-9805c825d985",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          event.target.reset();
+        } catch (error) {
+          console.log(
+            "There was a problem submitting the form: " + error.message
+          );
+        }
+      });
+
+    // Accordion
+    let currentOpenAccordion = null;
+    let currentOpenArrow = null;
+
+    function toggleAccordion(id) {
+      const currentAccordion = document.getElementById("accordion" + id);
+      const currentArrow = document.getElementById("arrow" + id);
+
+      // If there's an open accordion and it's not the current one, close the previously opened accordion
+      if (currentOpenAccordion && currentOpenAccordion !== currentAccordion) {
+        currentOpenAccordion.classList.add("hidden");
+        if (currentOpenArrow) {
+          currentOpenArrow.classList.remove("rotate-180");
+        }
+      }
+
+      // Toggle the current accordion visibility
+      currentAccordion.classList.toggle("hidden");
+      currentArrow.classList.toggle("rotate-180");
+
+      // Update the currently open accordion and arrow
+      if (!currentAccordion.classList.contains("hidden")) {
+        currentOpenAccordion = currentAccordion;
+        currentOpenArrow = currentArrow;
+      } else {
+        currentOpenAccordion = null;
+        currentOpenArrow = null;
+      }
+    }
+
+    const cards = [
+      { card: "card-1", heading: "heading-1", paragraph: "paragraph-1" },
+      { card: "card-2", heading: "heading-2", paragraph: "paragraph-2" },
+      { card: "card-3", heading: "heading-3", paragraph: "paragraph-3" },
+      { card: "card-4", heading: "heading-4", paragraph: "paragraph-4" },
+    ];
+
+    // Add hover effect for each card
+    cards.forEach((item) => {
+      const cardElement = document.getElementById(item.card);
+      const headingElement = document.getElementById(item.heading);
+      const paragraphElement = document.getElementById(item.paragraph);
+
+      // Add hover event
+      cardElement.addEventListener("mouseenter", () => {
+        headingElement.classList.add("hidden"); // Hide heading
+        paragraphElement.classList.remove("hidden"); // Show paragraph
+      });
+
+      cardElement.addEventListener("mouseleave", () => {
+        headingElement.classList.remove("hidden"); // Show heading
+        paragraphElement.classList.add("hidden"); // Hide paragraph
+      });
+    });
+  </script>
+</html>
