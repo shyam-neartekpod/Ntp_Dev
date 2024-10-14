@@ -25,6 +25,7 @@ module.exports = {
         backblue: "#00A2FF",
         backyellow: "#DEF100",
         backpink: "#6100FF",
+        backwhite: "FFFFF",
         grassmarpisam: {
           light: "#a8e4a0",
           DEFAULT: "#76c7c0",
@@ -43,6 +44,20 @@ module.exports = {
       lineHeight: {
         leading2: "1.9rem",
         leading1: "1.5rem",
+      },
+      keyframes: {
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        slideInRight: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        slideInLeft: "slideInLeft 1s ease-out",
+        slideInRight: "slideInRight 1s ease-out",
       },
 
       backgroundImage: (theme) => ({
