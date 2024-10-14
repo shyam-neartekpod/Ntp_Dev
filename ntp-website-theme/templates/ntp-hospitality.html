@@ -45,11 +45,11 @@
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
     %}
-    <div class="absolute top-20 left-0">
+    <div class="absolute top-20 left-0 hidde md:block">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="absolute top-80 right-0">
+    <div class="absolute top-80 right-0 hidden md:block">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
@@ -632,7 +632,7 @@
         </div>
       </div>
     </section>
-    <div class="bg-customgradient py-4 md:p-10">
+    <div class="py-4 md:p-10">
       <div class="container xl:px-32 px-6 mb-10">
         <div class="">
           <h3 class="text-lg md:text-3xl font-semibold h-28 flex items-center">
@@ -640,7 +640,7 @@
           </h3>
           <div class="w-full mb-10">
             <!-- Accordion Item 1 -->
-            <div class="mb-4">
+            <div class="mb-8">
               <button
                 onclick="toggleAccordion(1)"
                 class="w-full p-4 md:p-8 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
@@ -688,7 +688,7 @@
             </div>
 
             <!-- Accordion Item 2 -->
-            <div class="mb-4">
+            <div class="mb-8">
               <button
                 onclick="toggleAccordion(2)"
                 class="w-full p-4 md:p-8 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
@@ -734,7 +734,7 @@
             </div>
 
             <!-- Accordion Item 3 -->
-            <div class="mb-4">
+            <div class="mb-8">
               <button
                 onclick="toggleAccordion(3)"
                 class="w-full p-4 md:p-8 flex flex-col justify-between text-left bg-white text-gray-700 shadow rounded-2xl"
