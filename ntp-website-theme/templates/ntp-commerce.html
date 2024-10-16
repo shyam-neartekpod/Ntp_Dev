@@ -46,39 +46,151 @@
     />
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     standard_header_includes }}
-  </head>
+    <style>
+      @keyframes moveLeft {
+        0% {
+          transform: translateX(0); /* Start at the original position */
+        }
+        50% {
+          transform: translateX(10px); /* Slight movement to the left */
+        }
+        100% {
+          transform: translateX(0); /* Return to original position */
+        }
+      }
 
-  <body class="">
+      .icon-animate {
+        transition: transform 2s ease-in-out;
+      }
+
+      /* Move icon on hover */
+      button:hover .icon-animate {
+        animation: moveLeft 1s ease-in-out; /* Animation on hover */
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateX(
+            -10%
+          ); /* Start slightly off-screen to the left */
+          opacity: 0; /* Fully transparent */
+        }
+        100% {
+          transform: translateX(0); /* End at the original position */
+          opacity: 1; /* Fully opaque */
+        }
+      }
+
+      @keyframes slideOut {
+        0% {
+          transform: translateX(
+            10%
+          ); /* Start slightly off-screen to the right */
+          opacity: 0; /* Fully transparent */
+        }
+        100% {
+          transform: translateX(0); /* End at the original position */
+          opacity: 1; /* Fully opaque */
+        }
+      }
+
+      .animate-slide-in {
+        animation: slideIn 3s ease forwards; /* Slide-in effect */
+      }
+
+      .animate-slide-out {
+        animation: slideOut 3s ease forwards; /* Slide-out effect */
+      }
+      .perspective {
+        perspective: 1000px; /* Enables 3D effect */
+      }
+
+      .transform-style {
+        transform-style: preserve-3d; /* Keeps the 3D context */
+      }
+
+      .backface-hidden {
+        backface-visibility: hidden; /* Prevents the back from being visible when the front is showing */
+      }
+
+      .rotate-y-180 {
+        transform: rotateY(
+          180deg
+        ); /* Rotates the card 180 degrees on the Y-axis */
+      }
+
+      .group:hover .group-hover\:rotate-y-180 {
+        transform: rotateY(180deg); /* Applies the rotation on hover */
+      }
+    </style>
+  </head>
+  
+  <body class="relative">
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
     %}
+    <div class="absolute top-20 left-0 hidden md:block">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-80 right-0 hidden md:block">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[60rem] right-0 hidden md:block -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[70rem] left-0 hidden md:block -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[115rem] left-0 hidden md:block">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[140rem] right-0 hidden md:block ">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/Backgroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[240rem] left-0 hidden md:block -z-40">
+      {% block Backgrund %} {% global_partial
+      path="./Components/backgrund.html " %} {% endblock Backgrund %}
+    </div>
+    <div class="absolute top-[260rem] right-0 hidden md:block -z-40">
+      {% block Backgrund %} {% global_partial
+      path="./Components/backgrund.html " %} {% endblock Backgrund %}
+    </div>
 
     <section class="container xl:px-32 px-6 pt-24">
-      <!-- Hero Section -->
+      <!-- Hero Section md-->
       <div class="mt-2 mb-28 relative hidden md:block">
         <div
           class="flex items-start bg-Commerce rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-10"
         >
-          <div class="absolute bottom-0 left-0 md:bottom-10 md:left-10 pt-60 md:w-1/2 ">
-            <h1 class="text-white text-lg md:text-3xl font-bold leading-tight ">
+          <div class="absolute bottom-0 left-0 md:bottom-10 md:left-10 pt-60 md:w-1/2 animate-slideInLeft">
+            <h1 class="text-white text-lg md:text-3xl font-bold leading-tight animate-slide-in">
               Supercharge your E-Commerce <br/>
               <span class="text-blue-400"> with AI-Driven cloud solutions</span>
               <p class="text-white text-xl font-medium mt-1">Migrate faster, scale globally, and save costs with our expert 
                 Shopify and BigCommerce solutions.</p>            
             </h1>
-            <button
-              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-2 md:mt-8"
-              onclick="location.href='#contact'"
+            <div class="animate-slide-in">
+              <button
+              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-8 transition-transform duration-1000 hover:scale-105"
+              onclick="scrollToSection('contact')"
             >
               <span>Contact us</span>
               <i
-                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center"
+                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center icon-animate"
               ></i>
             </button>
           </div>
+        </div>
 
+        <div class="animate-slide-out">
           <div
-            class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-10 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4"
+            class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-5 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4"
           >
             <div class="flex justify-end">
               <img
@@ -96,7 +208,9 @@
               Our AI solutions help you Go-Live in weeks with zero downtime faster than competitors     
             </p>
           </div>
-          <div class="space-y-4 mt-5 md:mt-10">
+          </div>
+          <div class="animate-slide-out">
+          <div class="space-y-4 mt-5 md:mt-5 mb-3">
             <div
               class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
             >
@@ -116,7 +230,8 @@
                 Simplify the ecosystem integrations by leveraging our time tested playbook              
               </p>
             </div>
-
+        </div>
+            <div class="animate-slide-out">
             <div
               class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
             >
@@ -139,14 +254,7 @@
           </div>
         </div>
       </div>
-      <div class="absolute top-20 left-0 hidde md:block">
-        {% block Backgroundcolor %} {% global_partial
-        path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-      </div>
-      <div class="absolute top-80 right-0 hidden md:block">
-        {% block Backgroundcolor %} {% global_partial
-        path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-      </div>
+    </div>
       <!-- Hero Section sm -->
       <div class="mt-10 mb-20 relative block md:hidden">
         <div
@@ -236,7 +344,7 @@
       </div>
       <!-- Container -->
       <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-15">
-        <p class="text-start text-sky-500 font-semibold text-xs mb-2 md:mb-1">
+        <p class="text-start text-sky-500 font-semibold text-sm mb-2 md:mb-1">
             SUCCESS STORIES
           </p>
         <h2
@@ -245,7 +353,9 @@
         We are an innovative E-commerce partner for both industry disruptors and established brands
         </h2>    
         <!-- Testimonial Cards -->
-        <div class="grid grid-rows-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-rows-1 md:grid-cols-2 gap-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+        id="testimonial-section"
+        >
           <!-- First Card -->
 
           <div
@@ -255,7 +365,7 @@
               <img
                 src="{{get_asset_url('../assets/image 55 (1).svg')}}"
                 alt="Marriott Logo"
-                class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2"
+                class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2 transition-transform duration-700 hover:scale-150"
               />
               <div class="ml-4">
                 <h3 class="text-sm md:text-lg font-semibold text-gray-800">
@@ -284,7 +394,7 @@
               <img
                 src="{{get_asset_url('../assets/Company logo.svg')}}"
                 alt="Oracle Logo"
-                class="h-16 w-16 object-contain"
+                class="h-16 w-16 object-contain transition-transform duration-700 hover:scale-150"
               />
               <div class="ml-4">
                 <h3 class="text-sm md:text-lg font-semibold text-gray-800">
@@ -372,8 +482,8 @@
       
       
       <!-- Why Choose Us Section -->
-      <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28">
-        <p class="text-start text-sky-500 font-semibold text-xs mt-16 md:mb-1">
+      <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
+        <p class="text-start text-sky-500 font-semibold text-sm mt-16 md:mb-1">
           WHY CHOOSE US
         </p>
         <h2
@@ -384,173 +494,267 @@
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-20 mb-20">
-        <!-- First Card -->
+      <div
+      class="grid md:grid-cols-2 gap-10 mb-20 delay-300 fade-in-section opacity-0 transition-opacity duration-1000 cursor-pointer"
+      id="fade-in-section"
+    >
+      <!-- First Card -->
+      <div
+        class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
+      >
+        <!-- Inner container for flip effect -->
         <div
-          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out bg-gray-50"
+          class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
         >
-          <!-- Image section (always visible) -->
+          <!-- Front side -->
           <div
-            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
           >
-            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-              <img
-                src="{{get_asset_url('../assets/VR 1.svg') }}"
-                alt="Icon"
-                class="h-24 w-24 md:h-28 md:w-28"
-              />
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/VR 1.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
             </div>
+
+            <h1
+              id="heading-1"
+              class="font-semibold text-2xl md:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
+            >
+            Tailored AI <br/>solutions
+            </h1>
           </div>
 
-          <!-- Initial h1 (visible initially, hidden on hover) -->
-          <h1
-            id="heading-1"
-            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-28 group-hover:hidden"
-          >
-          Tailored AI <br/>solutions
-          </h1>
-
-          <!-- Hidden content shown on hover within the same card -->
+          <!-- Back side -->
           <div
-            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
           >
-            <h1 class="text-xl md:text-2xl font-semibold mt-8">
-                Tailored AI solutions
+            <!-- Image on the back side as well -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/VR 1.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
+            </div>
+
+            <h1 class="text-xl md:text-2xl font-semibold mt-10">
+              Tailored AI solutions
             </h1>
             <p class="text-sm md:text-base mt-2">
-                Our AI solutions enhance decision-making, optimize operational cost, 
-                and boost efficiency, allowing your team to focus on strategic growth 
-            </p>
-          </div>
-        </div>
-
-        <!-- Second Card -->
-        <div
-          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-10 md:mt-0 bg-gray-50"
-        >
-          <!-- Image section (always visible) -->
-          <div
-            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-          >
-            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-              <img
-                src="{{get_asset_url('../assets/rocket-1.svg') }}"
-                alt="Icon"
-                class="h-24 w-24 md:h-28 md:w-28"
-              />
-            </div>
-          </div>
-
-          <!-- Initial h1 (visible initially, hidden on hover) -->
-          <h1
-            id="heading-1"
-            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-28 group-hover:hidden "
-          >
-          Complex migration<br/>services
-          </h1>
-
-          <!-- Hidden content shown on hover within the same card -->
-          <div
-            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
-          >
-            <h1 class="text-xl md:text-2xl font-semibold mt-8">
-                Complex migration services
-            </h1>
-            <p class="text-sm md:text-base mt-2">
-                Pre-built data migration recipes to fast-track Cloud Commerce adoption
-            </p>
-          </div>
-        </div>
-
-        <!--Third card-->
-        <div
-          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16 bg-gray-50"
-        >
-          <!-- Image section (always visible) -->
-          <div
-            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-          >
-            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-              <img
-                src="{{get_asset_url('../assets/Expertise.svg') }}"
-                alt="Icon"
-                class="h-24 w-24 md:h-28 md:w-28"
-              />
-            </div>
-          </div>
-
-          <!-- Initial h1 (visible initially, hidden on hover) -->
-          <h1
-            id="heading-1"
-            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-28 group-hover:hidden w-2/4 mx-auto"
-          >
-          Deep platform<br/>expertise
-          </h1>
-
-          <!-- Hidden content shown on hover within the same card -->
-          <div
-            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
-          >
-            <h1 class="text-xl md:text-2xl font-semibold mt-8">
-                Deep platform expertise
-            </h1>
-            <p class="text-sm md:text-base mt-2">
-                With certified Shopify and BigCommerce experts we ensure smooth transition and 
-                effective implementation
-            </p>
-          </div>
-        </div>
-
-        <!-- Fourth Card -->
-        <div
-          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16 bg-gray-50"
-        >
-          <!-- Image section (always visible) -->
-          <div
-            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
-          >
-            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-              <img
-                src="{{get_asset_url('../assets/last.svg') }}"
-                alt="Icon"
-                class="h-24 w-24 md:h-28 md:w-28"
-              />
-            </div>
-          </div>
-
-          <!-- Initial h1 (visible initially, hidden on hover) -->
-          <h1
-            id="heading-1"
-            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-28 group-hover:hidden w-3/4 mx-auto"
-          >
-          Client centric <br/>approach
-          </h1>
-
-          <!-- Hidden content shown on hover within the same card -->
-          <div
-            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
-          >
-            <h1 class="text-xl md:text-2xl font-semibold mt-8">
-                Client centric approach
-            </h1>
-            <p class="text-sm md:text-base mt-2">
-                Your success is our priority .We work closely with you to understand your goals,
-                ensuring our strategies
-                align with your vision 
+              Our AI solutions enhance decision-making, optimize operational cost, 
+                and boost efficiency, allowing your team to focus on strategic growth
             </p>
           </div>
         </div>
       </div>
 
+      <!-- Second Card -->
+      <div
+        class="group block relative w-full h-64 rounded-3xl ease-in-out perspective mt-16 md:mt-0"
+      >
+        <!-- Inner container for flip effect -->
+        <div
+          class="absolute inset-0 transition-transform duration-1000 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+        >
+          <!-- Front side -->
+          <div
+            class="absolute inset-0 rounded-3xl backface-hidden z-10 flex flex-col bg-gray-50 shadow-lg justify-center items-center"
+          >
+            <!-- Image section (always visible) -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
+            </div>
+
+            <!-- Initial h1 (visible initially, hidden on hover) -->
+            <h1
+              id="heading-1"
+              class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10"
+            >
+            Complex migration<br/>services
+            </h1>
+          </div>
+
+          <!-- Back side -->
+          <div
+            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
+          >
+            <!-- Image section on the back side -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
+            </div>
+
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Complex migration services
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Pre-built data migration recipes to fast-track Cloud Commerce adoption
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third card -->
+
+      <div
+        class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective"
+      >
+        <!-- Inner container for flip effect -->
+        <div
+          class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+        >
+          <!-- Front side -->
+          <div
+            class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
+          >
+            <!-- Image section (always visible) -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/Expertise.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
+            </div>
+
+            <!-- Initial h1 (visible initially, hidden on hover) -->
+            <h1
+              id="heading-1"
+              class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-2/4 mx-auto"
+            >
+            Deep platform<br/>expertise
+            </h1>
+          </div>
+
+          <!-- Back side -->
+          <div
+            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
+          >
+            <!-- Image section on the back side -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/Expertise.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
+            </div>
+
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Deep platform expertise
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              With certified Shopify and BigCommerce experts we ensure smooth transition and 
+              effective implementation
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Card -->
+      <div
+        class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective z-40"
+      >
+        <!-- Inner container for flip effect -->
+        <div
+          class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+        >
+          <!-- Front side -->
+          <div
+            class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
+          >
+            <!-- Image section (always visible) -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/last.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
+            </div>
+
+            <!-- Initial h1 (visible initially, hidden on hover) -->
+            <h1
+              id="heading-1"
+              class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-3/4 mx-auto"
+            >
+            Client centric <br/>approach
+            </h1>
+          </div>
+
+          <!-- Back side -->
+          <div
+            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
+          >
+            <!-- Image section on the back side -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+            >
+              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                <img
+                  src="{{get_asset_url('../assets/last.svg') }}"
+                  alt="Icon"
+                  class="h-24 w-24 md:h-28 md:w-28"
+                />
+              </div>
+            </div>
+
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Client centric approach
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Your success is our priority .We work closely with you to understand your goals,
+              ensuring our strategies
+              align with your vision 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
       <!-- image -->
-      <div class="flex justify-center items-center mb-5">
+      <div class="flex justify-center items-center mb-5 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
         <img
           src="{{get_asset_url('../assets/grops.svg')}}"
           alt="Card Image"
           class="mx-auto"
         />
       </div>    
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
         <h2
           class="text-lg md:text-3xl font-medium text-center text-black mb-3 md:mb-4 p-6"
         >
@@ -558,30 +762,32 @@
           discuss how we can help.
         </h2>
         <div class="flex items-center justify-center">
-          <button
-            class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2"
-            onclick="location.href='#contact'"
-          >
-            <span>Contact us</span>
-            <i
-              class="fa-solid fa-arrow-right bg-white rounded-full text-black w-7 h-7 flex items-center justify-center"
-            ></i>
-          </button>
+          <div class="animate-slide-in">
+            <button
+              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2  transition-transform duration-1000 hover:scale-105"
+              onclick="scrollToSection('contact')"
+            >
+              <span>Contact us</span>
+              <i
+                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center icon-animate"
+              ></i>
+            </button>
+          </div>
         </div>
       </div>
       
       <!-- three cards -->
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <p class="text-start text-sky-500 font-semibold text-xs md-3 md:mb-1 mt-5">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
+        <p class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5">
           WHAT WE OFFER
         </p>
         <h2 class="text-xl md:text-3xl font-semibold text-start text-black">
             Power your E-Commerce growth with our specialized offerings
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 md:pt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:pt-10">
           <!-- First Card -->
-          <div class="text-center">
+          <div class="fade-in-section opacity-0 transition-opacity duration-1000 text-center">
             <div class="flex justify-center items-center">
               <img
                 src="{{get_asset_url('../assets/what.svg')}}"
@@ -599,7 +805,7 @@
           </div>
 
           <!-- Second Card -->
-          <div class="text-center">
+          <div class="fade-in-section opacity-0 transition-opacity duration-1000 text-center">
             <div class="flex justify-center">
               <img
                 src="{{get_asset_url('../assets/second.svg')}}"
@@ -617,7 +823,7 @@
           </div>
 
           <!-- Third Card -->
-          <div class="text-center">
+          <div class="fade-in-section opacity-0 transition-opacity duration-1000 text-center">
             <div class="flex justify-center">
               <img
                 src="{{get_asset_url('../assets/Voicecommerce.svg')}}"
@@ -637,13 +843,12 @@
       </div>
     </section>
 
-    <div class="mt-4 md:mt-10" id="contact">
+    <div class="mt-4 md:mt-10 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000" id="contact">
         {% block Hospitality-contactform %} {% global_partial
         path="./Components/hospitality_contactform.html " %} {% endblock
         Hospitality-contactform %}
       </div>
-  
-
+      
     {{ standard_footer_includes }} {% block footer %} {% global_partial
     path="./partials/hospitalty-footer.html" %} {% endblock footer %}
   </body>
@@ -821,7 +1026,59 @@
         currentOpenArrow = null;
       }
     }
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".fade-in-section");
 
+      // Determine threshold based on screen size
+      const threshold = window.innerWidth <= 768 ? 0.2 : 0.3; // 0.2 for mobile, 0.5 for desktop
+
+      const fadeInObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100");
+              entry.target.classList.remove("opacity-0");
+            }
+          });
+        },
+        { threshold: threshold } // Set the dynamic threshold
+      );
+
+      sections.forEach((section) => {
+        fadeInObserver.observe(section);
+      });
+    });
+
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const targetPosition =
+          section.getBoundingClientRect().top + window.scrollY;
+        const startPosition = window.scrollY;
+        const distance = targetPosition - startPosition;
+        const duration = 2000; // Duration in milliseconds
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1); // Ensure progress does not exceed 1
+
+          // Easing function for smooth scroll (ease-in-out)
+          const easing = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+          // Calculate the next scroll position
+          const nextPosition = startPosition + distance * easing(progress);
+          window.scrollTo(0, nextPosition);
+
+          if (progress < 1) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        requestAnimationFrame(animation);
+      }
+    }
     const cards = [
       { card: "card-1", heading: "heading-1", paragraph: "paragraph-1" },
       { card: "card-2", heading: "heading-2", paragraph: "paragraph-2" },
