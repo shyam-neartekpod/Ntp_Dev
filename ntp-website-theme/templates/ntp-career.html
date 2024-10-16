@@ -33,18 +33,23 @@
     standard_header_includes }}
     <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
   </head>
-  <body class="">
+  <body class="relative">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
-    <div class="hidden lg:block absolute top-[50px] left-30">
+    <div class="hidden lg:block absolute top-[50px] left-30 -z-40">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="hidden lg:block absolute top-[550px] left-30">
+    <div class="hidden lg:block absolute top-[550px] left-30 -z-40">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="md:p-8 mt-24">
+    <div class=" hidden lg:block  absolute top-[450px] right-0 -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock
+      Backgroundcolor %}
+    </div>
+    <div class="relative z-10 md:px-8 mt-24">
       <div class="md:container xl:px-32 px-3">
         <!-- Dropdowns -->
         <form
@@ -88,11 +93,7 @@
           </div> -->
         </form>
 
-        <div class=" hidden lg:block absolute top-[450px] right-0">
-          {% block Backgroundcolor %} {% global_partial
-          path="./Components/backroundcolor.html " %} {% endblock
-          Backgroundcolor %}
-        </div>
+       
         <!-- Accordion Cards -->
         <div class="space-y-4 z-10 mt-20 md:mt-0" id="result">
           <!-- Card-1 -->
