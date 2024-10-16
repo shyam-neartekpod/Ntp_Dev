@@ -48,10 +48,42 @@
     standard_header_includes }}
   </head>
 
-  <body class="">
+  <body class="relative">
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
     %}
+    <div class="absolute top-20 left-0 hidden md:block">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-80 right-0 hidden md:block">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[60rem] right-0 hidden md:block -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[70rem] left-0 hidden md:block -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[115rem] left-0 hidden md:block">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[140rem] right-0 hidden md:block ">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/Backgroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="absolute top-[240rem] left-0 hidden md:block -z-40">
+      {% block Backgrund %} {% global_partial
+      path="./Components/backgrund.html " %} {% endblock Backgrund %}
+    </div>
+    <div class="absolute top-[260rem] right-0 hidden md:block -z-40">
+      {% block Backgrund %} {% global_partial
+      path="./Components/backgrund.html " %} {% endblock Backgrund %}
+    </div>
 
     <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section -->
@@ -78,7 +110,7 @@
           </div>
 
           <div
-            class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-10 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4"
+            class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-5 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4"
           >
             <div class="flex justify-end">
               <img
@@ -96,7 +128,7 @@
               Our AI solutions help you Go-Live in weeks with zero downtime faster than competitors     
             </p>
           </div>
-          <div class="space-y-4 mt-5 md:mt-10">
+          <div class="space-y-4 mt-5 md:mt-5">
             <div
               class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
             >
@@ -139,14 +171,7 @@
           </div>
         </div>
       </div>
-      <div class="absolute top-20 left-0 hidde md:block">
-        {% block Backgroundcolor %} {% global_partial
-        path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-      </div>
-      <div class="absolute top-80 right-0 hidden md:block">
-        {% block Backgroundcolor %} {% global_partial
-        path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-      </div>
+      
       <!-- Hero Section sm -->
       <div class="mt-10 mb-20 relative block md:hidden">
         <div
@@ -236,7 +261,7 @@
       </div>
       <!-- Container -->
       <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-15">
-        <p class="text-start text-sky-500 font-semibold text-xs mb-2 md:mb-1">
+        <p class="text-start text-sky-500 font-semibold text-sm mb-2 md:mb-1">
             SUCCESS STORIES
           </p>
         <h2
@@ -373,7 +398,7 @@
       
       <!-- Why Choose Us Section -->
       <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28">
-        <p class="text-start text-sky-500 font-semibold text-xs mt-16 md:mb-1">
+        <p class="text-start text-sky-500 font-semibold text-sm mt-16 md:mb-1">
           WHY CHOOSE US
         </p>
         <h2
@@ -572,14 +597,14 @@
       
       <!-- three cards -->
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <p class="text-start text-sky-500 font-semibold text-xs md-3 md:mb-1 mt-5">
+        <p class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5">
           WHAT WE OFFER
         </p>
         <h2 class="text-xl md:text-3xl font-semibold text-start text-black">
             Power your E-Commerce growth with our specialized offerings
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10 md:pt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:pt-10">
           <!-- First Card -->
           <div class="text-center">
             <div class="flex justify-center items-center">
