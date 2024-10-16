@@ -44,7 +44,7 @@
             "job_responsibility": "Collaborate with business and IT stakeholders to understand and gather data requirements.\nFacilitate discussions to define data needs, models, and sources.\nTranslate business requirements into data architecture specifications.\nDesign and implement robust, scalable, and efficient data models.\nDevelop and maintain logical and physical data models for data warehouses, data lakes, and operational databases.\nEnsure data models are aligned with business objectives and technical requirements.\nDefine and design ETL (Extract, Transform, Load) processes to integrate data from various sources.\nDevelop data integration strategies that ensure data accuracy, consistency, and timeliness.\nImplement data transformations that support business reporting and analytics.\nEstablish data governance standards and practices to ensure high-quality data management.\nOversee the lifecycle of data from ingestion to storage, processing, and archiving.\nEnsure data security, privacy, and compliance with industry regulations.\nProvide technical guidance and oversight to data engineers, ETL developers, and database administrators.\nConduct data model reviews and ETL code reviews to ensure compliance with best practices.\nFoster a culture of continuous improvement and innovation within the data team.\nOptimize data models and ETL processes for performance and scalability.\nIdentify and resolve bottlenecks in data processing and storage.\nCreate comprehensive documentation for data models, ETL processes, and data governance practices.\nConduct training sessions for business and IT stakeholders on data architecture and ETL strategies.",
             "experience": "7+ years",
             "skill_set": "Data modeling, ETL design, Azure Data Factory, SQL, Hadoop, Spark, Power BI, Azure Databricks, Power Automate, Blob Storage, Data governance, Cloud platforms (AWS, Azure, Google Cloud)",
-            "job_location": "Trichy,Chennai,Houston, Tx",
+            "job_location": "Trichy, Chennai, Houston, Tx",
             "expire_date": "2024-09-30T18:30:00.000Z"
         },
         {
@@ -55,7 +55,7 @@
             "job_responsibility": "Collaborate closely with clients, project managers, and software engineers to create, enhance, and support custom web applications.\nEffectively communicate how tech solutions meet business needs, refining requirements through JAD sessions.\nWork closely with clients and internal development teams to build web applications.\nBecome the subject matter expert and a trusted resource for your client.\nValidate feature specifications.\nParticipate in vision and strategy exercises for the team.\nIdentify pain points for the team and organization and work proactively to resolve them.",
             "experience": "5+ years",
             "skill_set": "System analysis, process analysis, JAD sessions, documentation, communication, client management, data analysis, testing, MS Excel, MS Word, MS PowerPoint, MS Visio, Jira, Confluence, TFS",
-            "job_location": "Houston,Tx",
+            "job_location": "Houston, Tx",
             "expire_date": "2024-09-30T18:30:00.000Z"
         },
         {
@@ -77,7 +77,7 @@
             "job_responsibility": "Design and develop full stack applications.\nWork with front-end and back-end technologies.\nBuild applications for web, mobile web, and native mobile platforms.\nDesign and develop APIs.\nUtilize cloud messaging APIs and push notifications.",
             "experience": "8",
             "skill_set": "Full Stack Technologies, HTML5, CSS, JavaScript, Sass, Java, .Net, PHP, Typescript, React, Angular, Vue, Node.js, MySQL, MongoDB, PostgreSQL, DynamoDB, Firestore, Git, Mercurial, Bitbucket, API Design, Cloud Messaging APIs",
-            "job_location": "Trichy,Chennai",
+            "job_location": "Trichy, Chennai",
             "expire_date": "2024-07-06T18:30:00.000Z"
         },
 
@@ -89,7 +89,7 @@
             "job_responsibility": "Collaborate with creative and user experience teams to bring unique and engaging interfaces to life.\nPush the limits with modern technology and platform architectures to expand upon the ways we can engage and capture the attention of our customers through our applications interface.\nWork across some of the largest brands and enterprise clients to deliver web and mobile applications.\nActively participate and take part in crafting our front-end community and vision, where we avidly review, refine, and promote standards and best practices across different platforms.\nLead development across large features and views, working across all aspects of the development cycle.\nAssist the Solution Architect in crafting the application architecture, estimating and assigning tasks, and implementing some of the more challenging aspects of the delivery.\nDevelop and document standards and best practices and educate the community on them.\nPrioritize requests and work intake to help the team focus their time on the most important work.\nInitiate, organize and drive development efforts for a team of engineers over a shared codebase.\nDrive solution design discussions with external teams while representing the client perspective and desires.\nParticipate in vision and strategy exercises for the team.\nIdentify pain points for the team and organization and work proactively to resolve them.",
             "experience": "10+ years",
             "skill_set": "HTML5, CSS, JavaScript, Sass, ES6, React.js, jQuery, Angular.js, Node, NPM, Webpack, Babel, Flexbox, responsive design, cross-browser optimization, front-end performance, data visualization, Git, SVN, Ant, Maven, Gulp, Grunt, Webpack",
-            "job_location": "Trichy,Chennai",
+            "job_location": "Trichy, Chennai",
             "expire_date": "2024-09-30T18:30:00.000Z"
         },
         {
@@ -122,7 +122,7 @@
             "job_responsibility": "Data mining or extracting usable data from valuable data sources.\n Using machine learning tools to select features, create and optimize classifiers.\n Carrying out the preprocessing of structured and unstructured data.\n Enhancing data collection procedures to include all relevant information for developing analytic systems.\n Processing, cleansing, and validating the integrity of data to be used for analysis.\n Analyzing large amounts of information to find patterns and solutions.\n Developing prediction systems and machine learning algorithms.\n Presenting results in a clear manner.\n Propose solutions and strategies to tackle business challenges.\n Collaborate with Business and IT teams.",         
             "experience": "Proven Experience as Data Analyst or Data Scientist",
             "skill_set": "Data Mining, Machine Learning, Feature Selection, Data Preprocessing, Data Collection, Data Cleansing, Data Validation, Data Analysis, Prediction Systems, Machine Learning Algorithms, Data Visualization, Statistical Programming, R, Python, SQL, Hive, Pig, Scala, Java, C++, Multivariable Calculus, Linear Algebra, matplotlib, ggplot, d3.js, Tableau, Communication, Software Engineering, Problem-solving, Analytical Skills",
-            "job_location": "Trichy/Chennai",          
+            "job_location": "Trichy or Chennai",          
             "expire_date": "2024-07-06  T18:30:00.000Z"
         },        
         {

@@ -2,10 +2,22 @@
   templateType: global_partial
   label: Hospitality-contactform
 -->
+<!-- <style>
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure modal is above other content */
+  }
+
+  .hidden {
+    display: none;
+  }
+</style> -->
 <div class="container xl:px-32 px-6">
   <div>
-    <p class="text-sm text-sky-500 font-bold">CONTACT US</p>
-    <h3 class="text-lg md:text-3xl font-semibold mt-3 mb-10">
+    <p class="text-sm text-sky-500 font-semibold">CONTACT US</p>
+    <h3 class="text-lg md:text-3xl font-semibold md:3 md:mt-1 mb-10">
       Lets grow your business together
     </h3>
   </div>
@@ -31,14 +43,14 @@
               <i class="fa-solid fa-phone text-base md:text-xl"></i>
               <p class="text-sm md:text-base font-medium hidden md:block">
                 + 1 847 450 3728
-                <span class="text-sm">[8 am – 4 pm eastern]</span>
+                <span class="text-sm">[8:00 AM – 4:00 PM EST]</span>
               </p>
               <a
                 href="tel:+18474503728"
                 class="text-sm md:text-base font-medium md:hidden flex flex-col"
               >
                 <span> + 1 847 450 3728</span>
-                <span class="text-sm">[8 am – 4 pm eastern]</span>
+                <span class="text-sm">[8:00 AM – 4:00 PM EST]</span>
               </a>
             </ul>
           </ul>
@@ -94,11 +106,29 @@
                 Terms and Conditions
               </a>
             </span>
+            <!-- <div
+              id="termsModal"
+              class="modal hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50"
+            >
+              <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/2 relative">
+                <button
+                  id="closeModal"
+                  class="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
+                >
+                  &times;
+                </button>
+                <h2 class="font-semibold text-lg">Terms and Conditions</h2>
+                <p class="mt-4">
+                  {% block Privacy %} {% global_partial
+                  path="/ntp-privacypolicy.html " %} {% endblock Privacy %}
+                </p>
+              </div>
+            </div> -->
           </label>
           <span class="text-errorred text-sm mt-1" id="agree-error"></span>
         </div>
 
-        <div class="flex justify-center">
+        <div class="">
           <button
             type="submit"
             class="py-3 px-10 border rounded-3xl bg-backblue text-white font-bold text-xs items-center"
@@ -256,4 +286,15 @@
         );
       }
     });
+
+  // Terms and condition
+
+  //   document.getElementById("termsLink").addEventListener("click", function(event) {
+  //   event.preventDefault(); // Prevent default link behavior
+  //   document.getElementById("termsModal").classList.remove("hidden"); // Show the modal
+  // });
+
+  // document.getElementById("closeModal").addEventListener("click", function() {
+  //   document.getElementById("termsModal").classList.add("hidden"); // Hide the modal
+  // });
 </script>

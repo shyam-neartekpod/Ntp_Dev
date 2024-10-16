@@ -39,7 +39,7 @@
       href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"
     />
   </head>
-  <body class="">
+  <body class="relative">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
     <div class="absolute top-[50px] left-30">
@@ -50,7 +50,7 @@
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="mt-32 mb-20">
+    <div class="mt-32">
       <div class="container xl:px-32 px-3">
         <div
           class="flex flex-wrap md:flex-nowrap shadow bg-customgradient gap-2 rounded-3xl p-6 justify-center"
@@ -63,10 +63,10 @@
                 <h2 class="font-medium text-2xl md:text-4xl">Contact us</h2>
                 <ul>
                   <ul class="mt-10 flex gap-2">
-                    <i class="fa-regular fa-envelope text-xl"></i>
-                    <span class="text-base font-medium"
-                      >growwith@neartekpod.com</span
-                    >
+                    <a href="mailto:%20growwith@neartekpod.com" class="text-sm md:text-base font-medium">
+                      <i class="fa-regular fa-envelope text-xl"></i>
+                      <span class="text-base font-medium">growwith@neartekpod.com</span>
+                    </a>
                   </ul>
                   <!-- <ul class="mt-10 flex gap-2">
                     <i class="fa-solid fa-phone text-xl"></i>
@@ -104,12 +104,12 @@
                   name="first-name"
                   class="contact-border border-customgradient"
                   placeholder="First Name"
-                  required
+                  
                   oninput="validateAlphabetic(this, 'first-name-error')"
                   onkeypress="return blockNumbers(event)"
                 />
                 <span
-                  class="text-red-300 text-sm mt-1"
+                  class="text-red-300 text-sm mt-2"
                   id="first-name-error"
                 ></span>
               </div>
@@ -120,12 +120,12 @@
                   name="last-name"
                   class="contact-border border-customgradient"
                   placeholder="Last Name"
-                  required
+                  
                   oninput="validateAlphabetic(this, 'last-name-error')"
                   onkeypress="return blockNumbers(event)"
                 />
                 <span
-                  class="text-errorred text-sm mt-1"
+                  class="text-errorred text-sm mt-2"
                   id="last-name-error"
                 ></span>
               </div>
@@ -135,11 +135,11 @@
                   id="email"
                   name="email"
                   class="contact-border"
-                  required
+                  
                   placeholder="Email address"
                 />
                 <span
-                  class="text-errorred text-sm mt-1"
+                  class="text-errorred text-sm mt-2"
                   id="email-error"
                 ></span>
               </div>
@@ -154,7 +154,7 @@
                   onkeypress="return blockNumbers(event)"
                 />
                 <span
-                  class="text-errorred text-sm mt-1"
+                  class="text-errorred text-sm mt-2"
                   id="company-error"
                 ></span>
               </div>
@@ -165,12 +165,12 @@
                   name="country"
                   placeholder="Country"
                   class="contact-border"
-                  required
+                  
                   oninput="validateAlphabetic(this, 'country-error')"
                   onkeypress="return blockNumbers(event)"
                 />
                 <span
-                  class="text-errorred text-sm mt-1"
+                  class="text-errorred text-sm mt-2"
                   id="country-error"
                 ></span>
               </div>
@@ -180,11 +180,11 @@
                   name="message"
                   class="mt-1 border-1 border-customgradient w-full p-2 !ring-0 bg-transparent placeholder-custom"
                   placeholder="Message"
-                  required
+                  
                   oninput="validateAlphanumeric(this, 'message-error')"
                 ></textarea>
                 <span
-                  class="text-errorred text-sm mt-1"
+                  class="text-errorred text-sm mt-2"
                   id="message-error"
                 ></span>
               </div>
@@ -195,7 +195,7 @@
                     id="agree"
                     name="agree"
                     class="form-checkbox bg-transparent"
-                    required
+                    
                   />
                   <span class="ml-2 font-medium text-xs">
                     I agree to the
@@ -209,7 +209,7 @@
                   </span>
                 </label>
                 <span
-                  class="text-errorred text-sm mt-1"
+                  class="text-errorred text-sm mt-2"
                   id="agree-error"
                 ></span>
               </div>
@@ -229,7 +229,7 @@
         path="./partials/footer.html" %} {% endblock footer %}
       </div>
     </div>
-    <div class="absolute top-[450px] right-0">
+    <div class="absolute top-[450px] right-0 -z-40">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
@@ -273,8 +273,15 @@
 
         // Helper function to set error message
         function setError(id, message) {
-          document.getElementById(id).textContent = message;
+          const errorElement = document.getElementById(id);
+          errorElement.textContent = message;
           isValid = false;
+
+          // Scroll to the input field associated with the error
+          const inputField = errorElement.previousElementSibling; // Gets the input above the error message
+          setTimeout(() => {
+            inputField.scrollIntoView({ behavior: "smooth", block: "center" });
+          }, 100); // Delay to allow error to render first
         }
 
         // Helper function to clear error message
@@ -347,7 +354,7 @@
         const formElements = event.target.elements;
         const validationErrors = {};
 
-        // Validate required fields
+        // Validate  fields
         for (const element of formElements) {
           if (
             element.type !== "submit" &&
