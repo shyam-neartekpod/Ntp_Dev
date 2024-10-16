@@ -42,15 +42,19 @@
   <body class="relative">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
-    <div class="absolute top-[50px] left-30">
+    <div class="absolute top-[50px] left-30 -z-40">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="absolute top-[550px] left-30">
+    <div class="absolute top-[550px] left-30 -z-40">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="mt-32">
+    <div class="absolute top-[450px] right-0 -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="mt-32 relative z-10">
       <div class="container xl:px-32 px-3">
         <div
           class="flex flex-wrap md:flex-nowrap shadow bg-customgradient gap-2 rounded-3xl p-6 justify-center"
@@ -228,10 +232,6 @@
         {{ standard_footer_includes }} {% block footer %} {% global_partial
         path="./partials/footer.html" %} {% endblock footer %}
       </div>
-    </div>
-    <div class="absolute top-[450px] right-0 -z-40">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
   </body>
   {{ require_js(get_asset_url("../js/main.js")) }}
