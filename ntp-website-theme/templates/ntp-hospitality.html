@@ -154,19 +154,27 @@
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
+    <div class="absolute top-[270rem] left-0 hidden md:block -z-40">
+      {% block Backgrund %} {% global_partial path="./Components/backgrund.html
+      " %} {% endblock Backgrund %}
+    </div>
+    <div class="absolute top-[290rem] right-0 hidden md:block -z-40">
+      {% block Backgrund %} {% global_partial path="./Components/backgrund.html
+      " %} {% endblock Backgrund %}
+    </div>
 
     <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section Md -->
 
       <div class="mt-2 mb-28 relative hidden md:block">
         <div
-          class="flex items-center bg-Hospitality rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-10"
+          class="flex lg:items-center bg-Hospitality rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-10"
         >
           <div
             class="absolute bottom-10 left-10 pt-60 md:w-1/2 animate-slideInLeft"
           >
             <h1
-              class="text-white text-3xl font-bold leading-tight w-3/4 animate-slide-in"
+              class="text-white text-2xl lg:text-3xl font-bold leading-tight lg:w-3/4 animate-slide-in"
             >
               Elevate Your Hospitality Experience with our <br />
               <span class="text-blue-400">Oracle OPERA Cloud Solutions</span>
@@ -184,7 +192,7 @@
             </div>
           </div>
 
-          <div class="animate-slide-out">
+          <div class="animate-slide-out mt-32 lg:mt-0">
             <div
               class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3 transition-transform duration-700 hover:scale-105"
             >
@@ -207,7 +215,7 @@
             </div>
           </div>
 
-          <div class="space-y-4 animate-slide-out">
+          <div class="space-y-4 animate-slide-out mt-10 lg:mt-0">
             <div
               class="w-60 h-auto bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-3 transition-transform duration-500 hover:scale-105"
             >
@@ -266,7 +274,7 @@
             </h1>
             <button
               class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-2"
-              onclick="location.href='#contact'"
+              onclick="scrollToSection('contact')"
             >
               <span>Contact us</span>
               <i
@@ -355,7 +363,7 @@
         >
           <!-- First Card -->
           <div
-            class="bg-customgradient rounded-3xl p-4 md:p-6 border border-gray-300 h-[200px] md:h-[230px] z-40"
+            class="bg-customgradient rounded-3xl p-4 md:p-6 border border-gray-300 h-[200px] md:h-[255px] lg:h-[230px] z-40"
           >
             <div class="flex md:mb-4">
               <img
@@ -386,7 +394,7 @@
 
           <!-- Second Card -->
           <div
-            class="bg-customgradient rounded-3xl p-4 md:p-6 border border-gray-300 h-[200px] md:h-[230px] z-40"
+            class="bg-customgradient rounded-3xl p-4 md:p-6 border border-gray-300 h-[200px] md:h-[255px] lg:h-[230px] z-40"
           >
             <div class="flex md:mb-4">
               <img
@@ -486,7 +494,7 @@
       </marquee>
       <!-- Why Choose Us Section -->
       <div
-        class="max-w-7xl mx-auto px-4 md:p-0 md:mb-32 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+        class="max-w-7xl mx-auto md:mb-32 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
       >
         <p class="text-start text-sky-500 font-semibold text-sm mb-2 md:mb-1">
           WHY CHOOSE US
@@ -529,7 +537,7 @@
 
               <h1
                 id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
+                class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
               >
                 Tailored Migrations leveraging the power of OHIP APIs
               </h1>
@@ -552,10 +560,10 @@
                 </div>
               </div>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-10">
+              <h1 class="text-xl md:text-base lg:text-2xl font-semibold mt-10">
                 Tailored Migrations leveraging the power of OHIP APIs
               </h1>
-              <p class="text-sm md:text-base mt-2">
+              <p class="text-sm lg:text-base mt-2">
                 We integrate hospitality components with OHIP for faster
                 processes and reduced risk, ensuring seamless harmony.
               </p>
@@ -591,7 +599,7 @@
               <!-- Initial h1 (visible initially, hidden on hover) -->
               <h1
                 id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10"
+                class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center mt-6 md:mt-10"
               >
                 Automated Property Onboarding
               </h1>
@@ -614,10 +622,10 @@
                 </div>
               </div>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              <h1 class="text-xl md:text-base lg:text-2xl font-semibold mt-8">
                 Automated Property Onboarding
               </h1>
-              <p class="text-sm md:text-base mt-2">
+              <p class="text-sm lg:text-base mt-2">
                 Our automated solutions ensure rapid, low-risk onboarding,
                 minimizing operational impact and getting properties up and
                 running fast.
@@ -655,7 +663,7 @@
               <!-- Initial h1 (visible initially, hidden on hover) -->
               <h1
                 id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-2/4 mx-auto"
+                class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center mt-6 md:mt-10 w-2/4 mx-auto"
               >
                 Hospitality AI Solutions
               </h1>
@@ -678,10 +686,10 @@
                 </div>
               </div>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              <h1 class="text-xl md:text-base lg:text-2xl font-semibold mt-8">
                 Hospitality AI Solutions
               </h1>
-              <p class="text-sm md:text-base mt-2">
+              <p class="text-sm lg:text-base mt-2">
                 Our advanced AI tools enhance decision-making, optimize
                 operations, and boost efficiency, allowing your team to focus on
                 strategic growth.
@@ -718,7 +726,7 @@
               <!-- Initial h1 (visible initially, hidden on hover) -->
               <h1
                 id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-3/4 mx-auto"
+                class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center mt-6 md:mt-10 w-3/4 mx-auto"
               >
                 Comprehensive Playbook
               </h1>
@@ -741,10 +749,10 @@
                 </div>
               </div>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              <h1 class="text-xl lg:text-2xl font-semibold mt-8">
                 Comprehensive Playbook
               </h1>
-              <p class="text-sm md:text-base mt-2">
+              <p class="text-sm lg:text-base mt-2">
                 We’ve developed a playbook based on real-world experience. This
                 means a smooth and quick transition for you, without any
                 disruptions to your guest experience.
@@ -791,7 +799,7 @@
       </div>
       <!-- three cards -->
       <div
-        class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+        class="max-w-7xl mx-auto py-12 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
       >
         <p class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1">
           WHAT WE OFFER
@@ -866,7 +874,7 @@
       </div>
     </section>
     <div
-      class="py-4 md:p-10 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+      class="py-4 lg:p-10 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
       id="card-section"
     >
       <div class="container xl:px-32 px-6 mb-10">
