@@ -23,6 +23,7 @@ module.exports = {
         SoftBlue: "rgba(167, 223, 255, 0.75)",
         errorred: "C00F0C",
         backblue: "#00A2FF",
+        customBlue:"#0033FF",
         backyellow: "#DEF100",
         backpink: "#6100FF",
         backwhite: "FFFFF",
