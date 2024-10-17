@@ -1,4 +1,3 @@
-
 <!--
   templateType: page
   isAvailableForNewContent: true
@@ -46,6 +45,7 @@
     />
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     standard_header_includes }}
+    <title>NearTekPod - AI Driven Commerce Solutions</title>
     <style>
       @keyframes moveLeft {
         0% {
@@ -124,7 +124,7 @@
       }
     </style>
   </head>
-  
+
   <body class="relative">
     {% block Hospitality-header %} {% global_partial
     path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
@@ -149,17 +149,18 @@
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="absolute top-[140rem] right-0 hidden md:block ">
+    <div class="absolute top-[140rem] right-0 hidden md:block">
       {% block Backgroundcolor %} {% global_partial
-      path="./Components/Backgroundcolor.html " %} {% endblock Backgroundcolor %}
+      path="./Components/Backgroundcolor.html " %} {% endblock Backgroundcolor
+      %}
     </div>
     <div class="absolute top-[240rem] left-0 hidden md:block -z-40">
-      {% block Backgrund %} {% global_partial
-      path="./Components/backgrund.html " %} {% endblock Backgrund %}
+      {% block Backgrund %} {% global_partial path="./Components/backgrund.html
+      " %} {% endblock Backgrund %}
     </div>
     <div class="absolute top-[260rem] right-0 hidden md:block -z-40">
-      {% block Backgrund %} {% global_partial
-      path="./Components/backgrund.html " %} {% endblock Backgrund %}
+      {% block Backgrund %} {% global_partial path="./Components/backgrund.html
+      " %} {% endblock Backgrund %}
     </div>
 
     <section class="container xl:px-32 px-6 pt-24">
@@ -168,105 +169,117 @@
         <div
           class="flex items-start bg-Commerce rounded-xl bg-cover h-[600px] w-full gap-4 justify-end px-10"
         >
-          <div class="absolute bottom-0 left-0 md:bottom-10 md:left-10 pt-60 md:w-1/2 animate-slideInLeft">
-            <h1 class="text-white text-lg md:text-3xl font-bold leading-tight animate-slide-in">
-              Supercharge your E-Commerce <br/>
+          <div
+            class="absolute bottom-0 left-0 md:bottom-10 md:left-10 pt-60 md:w-1/2 animate-slideInLeft"
+          >
+            <h1
+              class="text-white text-lg md:text-3xl font-bold leading-tight animate-slide-in"
+            >
+              Supercharge your E-Commerce <br />
               <span class="text-blue-400"> with AI-Driven cloud solutions</span>
-              <p class="text-white text-xl font-medium mt-1">Migrate faster, scale globally, and save costs with our expert 
-                Shopify and BigCommerce solutions.</p>            
+              <p class="text-white text-xl font-medium mt-1">
+                Migrate faster, scale globally, and save costs with our expert
+                Shopify and BigCommerce solutions.
+              </p>
             </h1>
             <div class="animate-slide-in">
               <button
-              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-8 transition-transform duration-1000 hover:scale-105"
-              onclick="scrollToSection('contact')"
-            >
-              <span>Contact us</span>
-              <i
-                class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center icon-animate"
-              ></i>
-            </button>
+                class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-8 transition-transform duration-1000 hover:scale-105"
+                onclick="scrollToSection('contact')"
+              >
+                <span>Contact us</span>
+                <i
+                  class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center icon-animate"
+                ></i>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div class="animate-slide-out">
-          <div
-            class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-5 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4"
-          >
-            <div class="flex justify-end">
-              <img
-              src="{{get_asset_url('../assets/networks.svg')}}"
-              alt="Card Image"
-              class="rounded-lg w-7 md:w-10"
-            />
-            </div>
-            <div class="flex items-center space-x-4 gap-2">
-              <h3 class="text-white text-sm md:text-xl font-semibold">
-                AI-Enabled development
-              </h3>
-            </div>
-            <p class="text-white text-sm font-medium hidden md:block">
-              Our AI solutions help you Go-Live in weeks with zero downtime faster than competitors     
-            </p>
-          </div>
-          </div>
           <div class="animate-slide-out">
-          <div class="space-y-4 mt-5 md:mt-5 mb-3">
             <div
-              class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
+              class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-5 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4"
             >
               <div class="flex justify-end">
                 <img
-                src="{{get_asset_url('../assets/Ecosystem.svg')}}"
-                alt="Card Image"
-                class="rounded-lg w-7 md:w-10"
-              />
+                  src="{{get_asset_url('../assets/networks.svg')}}"
+                  alt="Card Image"
+                  class="rounded-lg w-7 md:w-10"
+                />
               </div>
               <div class="flex items-center space-x-4 gap-2">
                 <h3 class="text-white text-sm md:text-xl font-semibold">
-                  Digital Eco System integration
+                  AI-Enabled development
                 </h3>
               </div>
               <p class="text-white text-sm font-medium hidden md:block">
-                Simplify the ecosystem integrations by leveraging our time tested playbook              
+                Our AI solutions help you Go-Live in weeks with zero downtime
+                faster than competitors
               </p>
             </div>
-        </div>
+          </div>
+          <div class="animate-slide-out">
+            <div class="space-y-4 mt-5 md:mt-5 mb-3">
+              <div
+                class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
+              >
+                <div class="flex justify-end">
+                  <img
+                    src="{{get_asset_url('../assets/Ecosystem.svg')}}"
+                    alt="Card Image"
+                    class="rounded-lg w-7 md:w-10"
+                  />
+                </div>
+                <div class="flex items-center space-x-4 gap-2">
+                  <h3 class="text-white text-sm md:text-xl font-semibold">
+                    Digital Eco System integration
+                  </h3>
+                </div>
+                <p class="text-white text-sm font-medium hidden md:block">
+                  Simplify the ecosystem integrations by leveraging our time
+                  tested playbook
+                </p>
+              </div>
+            </div>
             <div class="animate-slide-out">
-            <div
-              class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
-            >
-              <div class="flex justify-end">
-                <img
-                src="{{get_asset_url('../assets/reach.svg')}}"
-                alt="Card Image"
-                class="rounded-lg w-7 md:w-10"
-              />
-              </div>
-              <div class="flex items-center space-x-4 gap-2 mt-2">
-                <h3 class="text-white text-sm md:text-xl font-semibold">
+              <div
+                class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
+              >
+                <div class="flex justify-end">
+                  <img
+                    src="{{get_asset_url('../assets/reach.svg')}}"
+                    alt="Card Image"
+                    class="rounded-lg w-7 md:w-10"
+                  />
+                </div>
+                <div class="flex items-center space-x-4 gap-2 mt-2">
+                  <h3 class="text-white text-sm md:text-xl font-semibold">
                     Connected Customer Experiences
-                </h3>
+                  </h3>
+                </div>
+                <p class="text-white md:text-sm font-medium hidden md:block">
+                  Experience the future of shopping, where every interaction is
+                  seamless and personalized just for you
+                </p>
               </div>
-              <p class="text-white  md:text-sm font-medium hidden md:block">
-                Experience the future of shopping, where every interaction is seamless and personalized just for you
-              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
       <!-- Hero Section sm -->
       <div class="mt-10 mb-20 relative block md:hidden">
         <div
-        class="flex items-start bg-Commerce rounded-xl bg-cover h-[480px] w-full gap-4 justify-end px-6"
+          class="flex items-start bg-Commerce rounded-xl bg-cover h-[480px] w-full gap-4 justify-end px-6"
         >
-          <div class="absolute bottom-0 left-0 md:bottom-10 md:left-5 pt-60 md:w-3/4 p-5">
-            <h1 class="text-white text-xl md:text-sm font-bold leading-tight ">
-              Supercharge your E-Commerce
-              with  
+          <div
+            class="absolute bottom-0 left-0 md:bottom-10 md:left-5 pt-60 md:w-3/4 p-5"
+          >
+            <h1 class="text-white text-xl md:text-sm font-bold leading-tight">
+              Supercharge your E-Commerce with
               <span class="text-blue-400">AI-Driven cloud solutions</span>
-              <p class="text-white text-sm font-medium">Migrate faster, scale globally, and save costs with our expert 
-                Shopify and BigCommerce solutions</p>            
+              <p class="text-white text-sm font-medium">
+                Migrate faster, scale globally, and save costs with our expert
+                Shopify and BigCommerce solutions
+              </p>
             </h1>
             <button
               class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 md:mt-8 mt-6"
@@ -280,13 +293,13 @@
           </div>
           <!-- Card 1 -->
           <div
-            class="w-32 md:w-60 h-28 md:h-[180px] mt-5 md:mt-10 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2 md:p-3 "
+            class="w-32 md:w-60 h-28 md:h-[180px] mt-5 md:mt-10 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-2 md:p-3"
           >
             <div class="flex justify-end">
               <img
                 src="{{get_asset_url('../assets/networks.svg')}}"
                 alt="Card Image"
-                class="rounded-lg w-7 "
+                class="rounded-lg w-7"
               />
             </div>
             <div class="flex items-center space-x-4 gap-2">
@@ -295,7 +308,8 @@
               </h3>
             </div>
             <p class="text-white text-sm font-medium hidden md:block">
-              Our AI solutions help you Go-Live in weeks with zero downtime--faster than competitors            
+              Our AI solutions help you Go-Live in weeks with zero
+              downtime--faster than competitors
             </p>
           </div>
           <div class="space-y-4 mt-5 md:mt-10 md:ml-8">
@@ -312,11 +326,12 @@
               </div>
               <div class="flex items-center space-x-4 gap-2">
                 <h3 class="text-white text-sm md:text-xl font-semibold">
-                    Digital Eco System integration
+                  Digital Eco System integration
                 </h3>
               </div>
               <p class="text-white text-sm font-medium hidden md:block">
-                Simplify the ecosystem integrations by leveraging our time tested playbook                
+                Simplify the ecosystem integrations by leveraging our time
+                tested playbook
               </p>
             </div>
             <!-- Card 3 -->
@@ -332,11 +347,12 @@
               </div>
               <div class="flex items-center space-x-4 gap-2">
                 <h3 class="text-white text-sm md:text-xl font-semibold">
-                    Connected Customer Experiences
+                  Connected Customer Experiences
                 </h3>
               </div>
               <p class="text-white text-sm font-medium hidden md:block">
-                Experience the future of shopping, where every interaction is seamless and personalized just for you               
+                Experience the future of shopping, where every interaction is
+                seamless and personalized just for you
               </p>
             </div>
           </div>
@@ -345,16 +361,18 @@
       <!-- Container -->
       <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-15">
         <p class="text-start text-sky-500 font-semibold text-sm mb-2 md:mb-1">
-            SUCCESS STORIES
-          </p>
+          SUCCESS STORIES
+        </p>
         <h2
           class="text-base md:text-3xl font-semibold text-start text-black mb-16"
         >
-        We are an innovative E-commerce partner for both industry disruptors and established brands
-        </h2>    
+          We are an innovative E-commerce partner for both industry disruptors
+          and established brands
+        </h2>
         <!-- Testimonial Cards -->
-        <div class="grid grid-rows-1 md:grid-cols-2 gap-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
-        id="testimonial-section"
+        <div
+          class="grid grid-rows-1 md:grid-cols-2 gap-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+          id="testimonial-section"
         >
           <!-- First Card -->
 
@@ -372,8 +390,10 @@
                   Transformative partner
                 </h3>
                 <p class="text-sm md:text-lg text-gray-700">
-                  We highly recommend Near<span class="text-sky-500">Tek</span>Pod to any business seeking a
-                  transformative partner on their E-commerce journey. They truly are the embodiment of innovation and reliability.
+                  We highly recommend Near<span class="text-sky-500">Tek</span
+                  >Pod to any business seeking a transformative partner on their
+                  E-commerce journey. They truly are the embodiment of
+                  innovation and reliability.
                 </p>
                 <p class="text-sm md:text-lg text-gray-500 mt-3">
                   <span>Founder</span><br />
@@ -401,8 +421,9 @@
                   Tailored solutions
                 </h3>
                 <p class="text-sm md:text-lg text-gray-700">
-                  Near<span class="text-sky-500">Tek</span>Pod demonstrated an acute understanding of our unique business needs,
-                    tailoring solutions that seamlessly aligned with our goals.
+                  Near<span class="text-sky-500">Tek</span>Pod demonstrated an
+                  acute understanding of our unique business needs, tailoring
+                  solutions that seamlessly aligned with our goals.
                 </p>
 
                 <p class="text-sm md:text-lg text-gray-500 mt-3">
@@ -417,7 +438,10 @@
         </div>
       </div>
       <!-- Marquee -->
-      <marquee class="left-0 right-0 w-full mx-0 px-0 my-10 md:my-14" scrollamount="8">
+      <marquee
+        class="left-0 right-0 w-full mx-0 px-0 my-10 md:my-14"
+        scrollamount="8"
+      >
         <img
           class="h-8 mx-4 md:h-8 md:mx-6 inline-block"
           src="{{get_asset_url('../assets/LF_logo.svg')}}"
@@ -479,282 +503,289 @@
           alt="TCH"
         />
       </marquee>
-      
-      
+
       <!-- Why Choose Us Section -->
-      <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
+      <div
+        class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+      >
         <p class="text-start text-sky-500 font-semibold text-sm mt-16 md:mb-1">
           WHY CHOOSE US
         </p>
         <h2
           class="text-xl md:text-3xl font-semibold text-start text-black mb-32"
         >
-        We leverage our expertise to innovate and accelerate your E-commerce growth. 
-        Here's what we bring!
+          We leverage our expertise to innovate and accelerate your E-commerce
+          growth. Here's what we bring!
         </h2>
       </div>
 
       <div
-      class="grid md:grid-cols-2 gap-10 mb-20 delay-300 fade-in-section opacity-0 transition-opacity duration-1000 cursor-pointer"
-      id="fade-in-section"
-    >
-      <!-- First Card -->
-      <div
-        class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
+        class="grid md:grid-cols-2 gap-10 mb-20 delay-300 fade-in-section opacity-0 transition-opacity duration-1000 cursor-pointer"
+        id="fade-in-section"
       >
-        <!-- Inner container for flip effect -->
+        <!-- First Card -->
         <div
-          class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
         >
-          <!-- Front side -->
+          <!-- Inner container for flip effect -->
           <div
-            class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
+            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
           >
+            <!-- Front side -->
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
+              class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
             >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/VR 1.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/VR 1.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
               </div>
+
+              <h1
+                id="heading-1"
+                class="font-semibold text-2xl md:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
+              >
+                Tailored AI <br />solutions
+              </h1>
             </div>
 
-            <h1
-              id="heading-1"
-              class="font-semibold text-2xl md:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
+            <!-- Back side -->
+            <div
+              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
             >
-            Tailored AI <br/>solutions
-            </h1>
+              <!-- Image on the back side as well -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/VR 1.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
+              </div>
+
+              <h1 class="text-xl md:text-2xl font-semibold mt-10">
+                Tailored AI solutions
+              </h1>
+              <p class="text-sm md:text-base mt-2">
+                Our AI solutions enhance decision-making, optimize operational
+                cost, and boost efficiency, allowing your team to focus on
+                strategic growth
+              </p>
+            </div>
           </div>
+        </div>
 
-          <!-- Back side -->
+        <!-- Second Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective mt-16 md:mt-0"
+        >
+          <!-- Inner container for flip effect -->
           <div
-            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
+            class="absolute inset-0 transition-transform duration-1000 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
           >
-            <!-- Image on the back side as well -->
+            <!-- Front side -->
             <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
+              class="absolute inset-0 rounded-3xl backface-hidden z-10 flex flex-col bg-gray-50 shadow-lg justify-center items-center"
             >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/VR 1.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
+              <!-- Image section (always visible) -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
               </div>
+
+              <!-- Initial h1 (visible initially, hidden on hover) -->
+              <h1
+                id="heading-1"
+                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10"
+              >
+                Complex migration<br />services
+              </h1>
             </div>
 
-            <h1 class="text-xl md:text-2xl font-semibold mt-10">
-              Tailored AI solutions
-            </h1>
-            <p class="text-sm md:text-base mt-2">
-              Our AI solutions enhance decision-making, optimize operational cost, 
-                and boost efficiency, allowing your team to focus on strategic growth
-            </p>
+            <!-- Back side -->
+            <div
+              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
+            >
+              <!-- Image section on the back side -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
+              </div>
+
+              <h1 class="text-xl md:text-2xl font-semibold mt-8">
+                Complex migration services
+              </h1>
+              <p class="text-sm md:text-base mt-2">
+                Pre-built data migration recipes to fast-track Cloud Commerce
+                adoption
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third card -->
+
+        <div
+          class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective"
+        >
+          <!-- Inner container for flip effect -->
+          <div
+            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+          >
+            <!-- Front side -->
+            <div
+              class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
+            >
+              <!-- Image section (always visible) -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/Expertise.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
+              </div>
+
+              <!-- Initial h1 (visible initially, hidden on hover) -->
+              <h1
+                id="heading-1"
+                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-2/4 mx-auto"
+              >
+                Deep platform<br />expertise
+              </h1>
+            </div>
+
+            <!-- Back side -->
+            <div
+              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
+            >
+              <!-- Image section on the back side -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/Expertise.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
+              </div>
+
+              <h1 class="text-xl md:text-2xl font-semibold mt-8">
+                Deep platform expertise
+              </h1>
+              <p class="text-sm md:text-base mt-2">
+                With certified Shopify and BigCommerce experts we ensure smooth
+                transition and effective implementation
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div
+          class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective z-40"
+        >
+          <!-- Inner container for flip effect -->
+          <div
+            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+          >
+            <!-- Front side -->
+            <div
+              class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
+            >
+              <!-- Image section (always visible) -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/last.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
+              </div>
+
+              <!-- Initial h1 (visible initially, hidden on hover) -->
+              <h1
+                id="heading-1"
+                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-3/4 mx-auto"
+              >
+                Client centric <br />approach
+              </h1>
+            </div>
+
+            <!-- Back side -->
+            <div
+              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
+            >
+              <!-- Image section on the back side -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
+              >
+                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+                  <img
+                    src="{{get_asset_url('../assets/last.svg') }}"
+                    alt="Icon"
+                    class="h-24 w-24 md:h-28 md:w-28"
+                  />
+                </div>
+              </div>
+
+              <h1 class="text-xl md:text-2xl font-semibold mt-8">
+                Client centric approach
+              </h1>
+              <p class="text-sm md:text-base mt-2">
+                Your success is our priority .We work closely with you to
+                understand your goals, ensuring our strategies align with your
+                vision
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Second Card -->
-      <div
-        class="group block relative w-full h-64 rounded-3xl ease-in-out perspective mt-16 md:mt-0"
-      >
-        <!-- Inner container for flip effect -->
-        <div
-          class="absolute inset-0 transition-transform duration-1000 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
-        >
-          <!-- Front side -->
-          <div
-            class="absolute inset-0 rounded-3xl backface-hidden z-10 flex flex-col bg-gray-50 shadow-lg justify-center items-center"
-          >
-            <!-- Image section (always visible) -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-            >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/rocket-1.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
-              </div>
-            </div>
-
-            <!-- Initial h1 (visible initially, hidden on hover) -->
-            <h1
-              id="heading-1"
-              class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10"
-            >
-            Complex migration<br/>services
-            </h1>
-          </div>
-
-          <!-- Back side -->
-          <div
-            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
-          >
-            <!-- Image section on the back side -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-            >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/rocket-1.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
-              </div>
-            </div>
-
-            <h1 class="text-xl md:text-2xl font-semibold mt-8">
-              Complex migration services
-            </h1>
-            <p class="text-sm md:text-base mt-2">
-              Pre-built data migration recipes to fast-track Cloud Commerce adoption
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Third card -->
-
-      <div
-        class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective"
-      >
-        <!-- Inner container for flip effect -->
-        <div
-          class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
-        >
-          <!-- Front side -->
-          <div
-            class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
-          >
-            <!-- Image section (always visible) -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-            >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/Expertise.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
-              </div>
-            </div>
-
-            <!-- Initial h1 (visible initially, hidden on hover) -->
-            <h1
-              id="heading-1"
-              class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-2/4 mx-auto"
-            >
-            Deep platform<br/>expertise
-            </h1>
-          </div>
-
-          <!-- Back side -->
-          <div
-            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
-          >
-            <!-- Image section on the back side -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-            >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/Expertise.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
-              </div>
-            </div>
-
-            <h1 class="text-xl md:text-2xl font-semibold mt-8">
-              Deep platform expertise
-            </h1>
-            <p class="text-sm md:text-base mt-2">
-              With certified Shopify and BigCommerce experts we ensure smooth transition and 
-              effective implementation
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fourth Card -->
-      <div
-        class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective z-40"
-      >
-        <!-- Inner container for flip effect -->
-        <div
-          class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
-        >
-          <!-- Front side -->
-          <div
-            class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
-          >
-            <!-- Image section (always visible) -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-            >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/last.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
-              </div>
-            </div>
-
-            <!-- Initial h1 (visible initially, hidden on hover) -->
-            <h1
-              id="heading-1"
-              class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-3/4 mx-auto"
-            >
-            Client centric <br/>approach
-            </h1>
-          </div>
-
-          <!-- Back side -->
-          <div
-            class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
-          >
-            <!-- Image section on the back side -->
-            <div
-              class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-            >
-              <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                <img
-                  src="{{get_asset_url('../assets/last.svg') }}"
-                  alt="Icon"
-                  class="h-24 w-24 md:h-28 md:w-28"
-                />
-              </div>
-            </div>
-
-            <h1 class="text-xl md:text-2xl font-semibold mt-8">
-              Client centric approach
-            </h1>
-            <p class="text-sm md:text-base mt-2">
-              Your success is our priority .We work closely with you to understand your goals,
-              ensuring our strategies
-              align with your vision 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
 
       <!-- image -->
-      <div class="flex justify-center items-center mb-5 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
+      <div
+        class="flex justify-center items-center mb-5 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+      >
         <img
           src="{{get_asset_url('../assets/grops.svg')}}"
           alt="Card Image"
           class="mx-auto"
         />
-      </div>    
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
+      </div>
+      <div
+        class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+      >
         <h2
           class="text-lg md:text-3xl font-medium text-center text-black mb-3 md:mb-4 p-6"
         >
@@ -764,7 +795,7 @@
         <div class="flex items-center justify-center">
           <div class="animate-slide-in">
             <button
-              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2  transition-transform duration-1000 hover:scale-105"
+              class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 transition-transform duration-1000 hover:scale-105"
               onclick="scrollToSection('contact')"
             >
               <span>Contact us</span>
@@ -775,19 +806,25 @@
           </div>
         </div>
       </div>
-      
+
       <!-- three cards -->
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000">
-        <p class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5">
+      <div
+        class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+      >
+        <p
+          class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5"
+        >
           WHAT WE OFFER
         </p>
         <h2 class="text-xl md:text-3xl font-semibold text-start text-black">
-            Power your E-Commerce growth with our specialized offerings
+          Power your E-Commerce growth with our specialized offerings
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:pt-10">
           <!-- First Card -->
-          <div class="fade-in-section opacity-0 transition-opacity duration-1000 text-center">
+          <div
+            class="fade-in-section opacity-0 transition-opacity duration-1000 text-center"
+          >
             <div class="flex justify-center items-center">
               <img
                 src="{{get_asset_url('../assets/what.svg')}}"
@@ -796,16 +833,18 @@
               />
             </div>
             <h3 class="text-lg md:text-xl font-semibold mt-4">
-                Strategy Evaluation
+              Strategy Evaluation
             </h3>
             <p class="mt-2 text-gray-600 text-sm md:text-base">
-                We help you choose the best 
-                E-commerce platform, ensuring it aligns with your business goals and growth plans.
+              We help you choose the best E-commerce platform, ensuring it
+              aligns with your business goals and growth plans.
             </p>
           </div>
 
           <!-- Second Card -->
-          <div class="fade-in-section opacity-0 transition-opacity duration-1000 text-center">
+          <div
+            class="fade-in-section opacity-0 transition-opacity duration-1000 text-center"
+          >
             <div class="flex justify-center">
               <img
                 src="{{get_asset_url('../assets/second.svg')}}"
@@ -814,16 +853,19 @@
               />
             </div>
             <h3 class="text-lg md:text-xl font-semibold mt-4">
-                AI Powered Commerce
+              AI Powered Commerce
             </h3>
             <p class="mt-2 text-gray-600 text-sm md:text-base">
-              We are one-stop shop for accelerated development, enhanced decision making, 
-              personalized customer experiences, fraud detection and cost reduction
+              We are one-stop shop for accelerated development, enhanced
+              decision making, personalized customer experiences, fraud
+              detection and cost reduction
             </p>
           </div>
 
           <!-- Third Card -->
-          <div class="fade-in-section opacity-0 transition-opacity duration-1000 text-center">
+          <div
+            class="fade-in-section opacity-0 transition-opacity duration-1000 text-center"
+          >
             <div class="flex justify-center">
               <img
                 src="{{get_asset_url('../assets/Voicecommerce.svg')}}"
@@ -832,23 +874,26 @@
               />
             </div>
             <h3 class="text-lg md:text-xl font-semibold mt-4">
-                Voice commerce
+              Voice commerce
             </h3>
             <p class="mt-2 text-gray-600 text-sm md:text-base">
-              Humans are naturally inclined to use voice, 
-              making voice commerce an engaging and intuitive way to shop
+              Humans are naturally inclined to use voice, making voice commerce
+              an engaging and intuitive way to shop
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="mt-4 md:mt-10 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000" id="contact">
-        {% block Hospitality-contactform %} {% global_partial
-        path="./Components/hospitality_contactform.html " %} {% endblock
-        Hospitality-contactform %}
-      </div>
-      
+    <div
+      class="mt-4 md:mt-10 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
+      id="contact"
+    >
+      {% block Hospitality-contactform %} {% global_partial
+      path="./Components/hospitality_contactform.html " %} {% endblock
+      Hospitality-contactform %}
+    </div>
+
     {{ standard_footer_includes }} {% block footer %} {% global_partial
     path="./partials/hospitalty-footer.html" %} {% endblock footer %}
   </body>
