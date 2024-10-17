@@ -2,7 +2,7 @@
   templateType: global_partial
   label: Hospitality-contactform
 -->
-<!-- <style>
+<style>
   .modal {
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
   .hidden {
     display: none;
   }
-</style> -->
+</style>
 <div class="container xl:px-32 px-6">
   <div>
     <p class="text-sm text-sky-500 font-semibold">CONTACT US</p>
@@ -106,22 +106,121 @@
                 Terms and Conditions
               </a>
             </span>
+
+            <!-- Modal Structure -->
             <!-- <div
               id="termsModal"
               class="modal hidden fixed inset-0 items-center justify-center bg-black bg-opacity-50"
             >
-              <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/2 relative">
+              <div
+                class="bg-white rounded-lg p-6 w-[970px] h-[440px] relative overflow-scroll"
+              >
                 <button
                   id="closeModal"
-                  class="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
+                  class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-base"
                 >
                   &times;
                 </button>
-                <h2 class="font-semibold text-lg">Terms and Conditions</h2>
+                <h2 class="font-semibold text-lg">Privacy Policy</h2>
                 <p class="mt-4">
-                  {% block Privacy %} {% global_partial
-                  path="/ntp-privacypolicy.html " %} {% endblock Privacy %}
+                  This Privacy Policy outlines our policies and procedures
+                  regarding the collection, use, and disclosure of your
+                  information when you use our service. It also explains your
+                  privacy rights and how the law protects you. We use your
+                  personal data to provide and improve the service. By using the
+                  service, you agree to the collection and use of information in
+                  accordance with this Privacy Policy.
                 </p>
+                <h4 class="font-semibold text-lg">
+                  1. Interpretation and Definitions
+                </h4>
+                <p>
+                  Words with capitalized initial letters have meanings defined
+                  under the conditions below. These definitions apply whether
+                  the words appear in singular or plural.
+                </p>
+                <ul>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                  <li>
+                    Account: A unique account created for you to access our
+                    service.
+                  </li>
+                </ul>
               </div>
             </div> -->
           </label>
@@ -289,12 +388,14 @@
 
   // Terms and condition
 
-  //   document.getElementById("termsLink").addEventListener("click", function(event) {
-  //   event.preventDefault(); // Prevent default link behavior
-  //   document.getElementById("termsModal").classList.remove("hidden"); // Show the modal
-  // });
+  document
+    .getElementById("termsLink")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default link behavior
+      document.getElementById("termsModal").classList.remove("hidden"); // Show the modal
+    });
 
-  // document.getElementById("closeModal").addEventListener("click", function() {
-  //   document.getElementById("termsModal").classList.add("hidden"); // Hide the modal
-  // });
+  document.getElementById("closeModal").addEventListener("click", function () {
+    document.getElementById("termsModal").classList.add("hidden"); // Hide the modal
+  });
 </script>
