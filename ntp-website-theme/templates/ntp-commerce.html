@@ -45,7 +45,6 @@
     />
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     standard_header_includes }}
-    <title>NearTekPod - AI Driven Commerce Solutions</title>
     <style>
       @keyframes moveLeft {
         0% {
@@ -65,52 +64,29 @@
 
       /* Move icon on hover */
       button:hover .icon-animate {
-        animation: moveLeft 1s ease-in-out; /* Animation on hover */
+        animation: moveLeft 2s ease-in-out infinite; /* Animation on hover */
       }
-
-      @keyframes slideIn {
-        0% {
-          transform: translateX(
-            -10%
-          ); /* Start slightly off-screen to the left */
-          opacity: 0; /* Fully transparent */
-        }
-        100% {
-          transform: translateX(0); /* End at the original position */
-          opacity: 1; /* Fully opaque */
-        }
-      }
-
-      @keyframes slideOut {
-        0% {
-          transform: translateX(
-            10%
-          ); /* Start slightly off-screen to the right */
-          opacity: 0; /* Fully transparent */
-        }
-        100% {
-          transform: translateX(0); /* End at the original position */
-          opacity: 1; /* Fully opaque */
-        }
-      }
-
-      .animate-slide-in {
-        animation: slideIn 3s ease forwards; /* Slide-in effect */
-      }
-
-      .animate-slide-out {
-        animation: slideOut 3s ease forwards; /* Slide-out effect */
-      }
+      /* Container Perspective */
       .perspective {
-        perspective: 1000px; /* Enables 3D effect */
+        perspective: 1000px;
       }
 
-      .transform-style {
-        transform-style: preserve-3d; /* Keeps the 3D context */
+      /* 3D Container */
+      .preserve-3d {
+        -webkit-transform-style: preserve-3d; /* WebKit-specific prefix */
+        transform-style: preserve-3d;
+        will-change: transform; /* Optimize for rendering */
       }
 
+      /* Backface Visibility Fix with WebKit Prefix */
       .backface-hidden {
-        backface-visibility: hidden; /* Prevents the back from being visible when the front is showing */
+        -webkit-backface-visibility: hidden; /* WebKit-specific prefix */
+        backface-visibility: hidden; /* Standard property */
+      }
+
+      /* Flip Effect */
+      .rotate-y-180 {
+        transform: rotateY(180deg);
       }
 
       .rotate-y-180 {
@@ -197,7 +173,7 @@
 
           <div class="animate-slide-out">
             <div
-              class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-5 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4"
+              class="w-64 md:w-64 h-auto md:h-56 mt-5 md:mt-5 bg-white bg-opacity-30 overflow-hidden backdrop-blur-md shadow-lg rounded-2xl p-4 transition-transform duration-700 hover:scale-105"
             >
               <div class="flex justify-end">
                 <img
@@ -220,7 +196,7 @@
           <div class="animate-slide-out">
             <div class="space-y-4 mt-5 md:mt-5 mb-3">
               <div
-                class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
+                class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4 transition-transform duration-700 hover:scale-105"
               >
                 <div class="flex justify-end">
                   <img
@@ -242,7 +218,7 @@
             </div>
             <div class="animate-slide-out">
               <div
-                class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4"
+                class="w-64 h-56 bg-white bg-opacity-30 backdrop-blur-md shadow-lg rounded-2xl p-4 transition-transform duration-700 hover:scale-105"
               >
                 <div class="flex justify-end">
                   <img
@@ -370,10 +346,7 @@
           and established brands
         </h2>
         <!-- Testimonial Cards -->
-        <div
-          class="grid grid-rows-1 md:grid-cols-2 gap-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
-          id="testimonial-section"
-        >
+        <div class="grid grid-rows-1 md:grid-cols-2 gap-8">
           <!-- First Card -->
 
           <div
@@ -383,7 +356,7 @@
               <img
                 src="{{get_asset_url('../assets/image 55 (1).svg')}}"
                 alt="Marriott Logo"
-                class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2 transition-transform duration-700 hover:scale-150"
+                class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2"
               />
               <div class="ml-4">
                 <h3 class="text-sm md:text-lg font-semibold text-gray-800">
@@ -414,7 +387,7 @@
               <img
                 src="{{get_asset_url('../assets/Company logo.svg')}}"
                 alt="Oracle Logo"
-                class="h-16 w-16 object-contain transition-transform duration-700 hover:scale-150"
+                class="h-16 w-16 object-contain"
               />
               <div class="ml-4">
                 <h3 class="text-sm md:text-lg font-semibold text-gray-800">
@@ -505,9 +478,7 @@
       </marquee>
 
       <!-- Why Choose Us Section -->
-      <div
-        class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
-      >
+      <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-28">
         <p class="text-start text-sky-500 font-semibold text-sm mt-16 md:mb-1">
           WHY CHOOSE US
         </p>
@@ -519,273 +490,175 @@
         </h2>
       </div>
 
-      <div
-        class="grid md:grid-cols-2 gap-10 mb-20 delay-300 fade-in-section opacity-0 transition-opacity duration-1000 cursor-pointer"
-        id="fade-in-section"
-      >
+      <div class="grid md:grid-cols-2 gap-20 mb-20">
         <!-- First Card -->
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out bg-gray-50"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
           >
-            <!-- Front side -->
-            <div
-              class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
-            >
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/VR 1.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
-
-              <h1
-                id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
-              >
-                Tailored AI <br />solutions
-              </h1>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/VR 1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
-            >
-              <!-- Image on the back side as well -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/VR 1.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-28 md:mt-28 group-hover:hidden"
+          >
+            Tailored AI <br />solutions
+          </h1>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-10">
-                Tailored AI solutions
-              </h1>
-              <p class="text-sm md:text-base mt-2">
-                Our AI solutions enhance decision-making, optimize operational
-                cost, and boost efficiency, allowing your team to focus on
-                strategic growth
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Tailored AI solutions
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Our AI solutions enhance decision-making, optimize operational
+              cost, and boost efficiency, allowing your team to focus on
+              strategic growth
+            </p>
           </div>
         </div>
 
         <!-- Second Card -->
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective mt-16 md:mt-0"
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-10 md:mt-0 bg-gray-50"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-1000 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
           >
-            <!-- Front side -->
-            <div
-              class="absolute inset-0 rounded-3xl backface-hidden z-10 flex flex-col bg-gray-50 shadow-lg justify-center items-center"
-            >
-              <!-- Image section (always visible) -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/rocket-1.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
-
-              <!-- Initial h1 (visible initially, hidden on hover) -->
-              <h1
-                id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10"
-              >
-                Complex migration<br />services
-              </h1>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
-            >
-              <!-- Image section on the back side -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/rocket-1.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-28 md:mt-28 group-hover:hidden"
+          >
+            Complex migration<br />services
+          </h1>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-8">
-                Complex migration services
-              </h1>
-              <p class="text-sm md:text-base mt-2">
-                Pre-built data migration recipes to fast-track Cloud Commerce
-                adoption
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Complex migration services
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Pre-built data migration recipes to fast-track Cloud Commerce
+              adoption
+            </p>
           </div>
         </div>
 
-        <!-- Third card -->
-
+        <!--Third card-->
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective"
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16 bg-gray-50"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
           >
-            <!-- Front side -->
-            <div
-              class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
-            >
-              <!-- Image section (always visible) -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/Expertise.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
-
-              <!-- Initial h1 (visible initially, hidden on hover) -->
-              <h1
-                id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-2/4 mx-auto"
-              >
-                Deep platform<br />expertise
-              </h1>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/Expertise.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center p-10 text-center"
-            >
-              <!-- Image section on the back side -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/Expertise.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-28 md:mt-28 group-hover:hidden w-2/4 mx-auto"
+          >
+            Deep platform<br />expertise
+          </h1>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-8">
-                Deep platform expertise
-              </h1>
-              <p class="text-sm md:text-base mt-2">
-                With certified Shopify and BigCommerce experts we ensure smooth
-                transition and effective implementation
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Deep platform expertise
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              With certified Shopify and BigCommerce experts we ensure smooth
+              transition and effective implementation
+            </p>
           </div>
         </div>
 
         <!-- Fourth Card -->
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out mt-16 md:mt-24 perspective z-40"
+          class="group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-300 ease-in-out mt-16 bg-gray-50"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
           >
-            <!-- Front side -->
-            <div
-              class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-10 flex flex-col justify-center items-center"
-            >
-              <!-- Image section (always visible) -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/last.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
-
-              <!-- Initial h1 (visible initially, hidden on hover) -->
-              <h1
-                id="heading-1"
-                class="font-semibold text-2xl md:text-3xl text-center mt-6 md:mt-10 w-3/4 mx-auto"
-              >
-                Client centric <br />approach
-              </h1>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/last.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
-            >
-              <!-- Image section on the back side -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/last.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-28 md:mt-28 group-hover:hidden w-3/4 mx-auto"
+          >
+            Client centric <br />approach
+          </h1>
 
-              <h1 class="text-xl md:text-2xl font-semibold mt-8">
-                Client centric approach
-              </h1>
-              <p class="text-sm md:text-base mt-2">
-                Your success is our priority .We work closely with you to
-                understand your goals, ensuring our strategies align with your
-                vision
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Client centric approach
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Your success is our priority .We work closely with you to
+              understand your goals, ensuring our strategies align with your
+              vision
+            </p>
           </div>
         </div>
       </div>
 
       <!-- image -->
-      <div
-        class="flex justify-center items-center mb-5 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
-      >
+      <div class="flex justify-center items-center mb-5">
         <img
           src="{{get_asset_url('../assets/grops.svg')}}"
           alt="Card Image"
           class="mx-auto"
         />
       </div>
-      <div
-        class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
-      >
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
         <h2
           class="text-lg md:text-3xl font-medium text-center text-black mb-3 md:mb-4 p-6"
         >
@@ -808,9 +681,7 @@
       </div>
 
       <!-- three cards -->
-      <div
-        class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
-      >
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <p
           class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5"
         >
@@ -822,9 +693,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:pt-10">
           <!-- First Card -->
-          <div
-            class="fade-in-section opacity-0 transition-opacity duration-1000 text-center"
-          >
+          <div class="text-center">
             <div class="flex justify-center items-center">
               <img
                 src="{{get_asset_url('../assets/what.svg')}}"
@@ -842,9 +711,7 @@
           </div>
 
           <!-- Second Card -->
-          <div
-            class="fade-in-section opacity-0 transition-opacity duration-1000 text-center"
-          >
+          <div class="text-center">
             <div class="flex justify-center">
               <img
                 src="{{get_asset_url('../assets/second.svg')}}"
@@ -863,9 +730,7 @@
           </div>
 
           <!-- Third Card -->
-          <div
-            class="fade-in-section opacity-0 transition-opacity duration-1000 text-center"
-          >
+          <div class="text-center">
             <div class="flex justify-center">
               <img
                 src="{{get_asset_url('../assets/Voicecommerce.svg')}}"
@@ -885,10 +750,7 @@
       </div>
     </section>
 
-    <div
-      class="mt-4 md:mt-10 ease-in-out fade-in-section opacity-0 transition-opacity duration-1000"
-      id="contact"
-    >
+    <div class="mt-4 md:mt-10" id="contact">
       {% block Hospitality-contactform %} {% global_partial
       path="./Components/hospitality_contactform.html " %} {% endblock
       Hospitality-contactform %}

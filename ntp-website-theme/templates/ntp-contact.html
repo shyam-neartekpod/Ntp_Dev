@@ -39,18 +39,22 @@
       href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}"
     />
   </head>
-  <body class="">
+  <body class="relative">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
-    <div class="absolute top-[50px] left-30">
+    <div class="absolute top-[50px] left-30 -z-40">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="absolute top-[550px] left-30">
+    <div class="absolute top-[550px] left-30 -z-40">
       {% block Backgroundcolor %} {% global_partial
       path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
     </div>
-    <div class="mt-32 mb-20">
+    <div class="absolute top-[450px] right-0 -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    <div class="mt-32 relative z-10">
       <div class="container xl:px-32 px-3">
         <div
           class="flex flex-wrap md:flex-nowrap shadow bg-customgradient gap-2 rounded-3xl p-6 justify-center"
@@ -63,10 +67,10 @@
                 <h2 class="font-medium text-2xl md:text-4xl">Contact us</h2>
                 <ul>
                   <ul class="mt-10 flex gap-2">
-                    <i class="fa-regular fa-envelope text-xl"></i>
-                    <span class="text-base font-medium"
-                      >growwith@neartekpod.com</span
-                    >
+                    <a href="mailto:%20growwith@neartekpod.com" class="text-sm md:text-base font-medium">
+                      <i class="fa-regular fa-envelope text-xl"></i>
+                      <span class="text-base font-medium">growwith@neartekpod.com</span>
+                    </a>
                   </ul>
                   <!-- <ul class="mt-10 flex gap-2">
                     <i class="fa-solid fa-phone text-xl"></i>
@@ -229,10 +233,7 @@
         path="./partials/footer.html" %} {% endblock footer %}
       </div>
     </div>
-    <div class="absolute top-[450px] right-0">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
+    
   </body>
   {{ require_js(get_asset_url("../js/main.js")) }}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
