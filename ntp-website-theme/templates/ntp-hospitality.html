@@ -92,6 +92,27 @@
       .group:hover .group-hover\:rotate-y-180 {
         transform: rotateY(180deg); /* Applies the rotation on hover */
       }
+      /* Class to hide on mobile and show on desktop */
+      .hidden-mobile {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .hidden-mobile {
+          display: block;
+        }
+      }
+
+      /* Class to hide on desktop and show on mobile */
+      .hidden-desktop {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        .hidden-desktop {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -142,7 +163,7 @@
 
     <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section Md -->
-      <div class="mt-2 mb-28 relative md:block">
+      <div class="mt-2 mb-28 relative hidden-mobile">
         <div
           class="flex items-center bg-Hospitality rounded-xl bg-cover h-[700px] lg:h-[600px] w-full gap-4 justify-end px-10"
         >
@@ -176,7 +197,7 @@
                 <img
                   src="{{get_asset_url('../assets/card1.svg')}}"
                   alt="Card Image"
-                  class="rounded-lg w-10 transition-transform duration-500 hover:rotate-180"
+                  class="rounded-lg w-10"
                 />
               </div>
               <div class="flex items-center space-x-4 gap-2">
@@ -199,7 +220,7 @@
                 <img
                   src="{{get_asset_url('../assets/Card2.svg')}}"
                   alt="Card Image"
-                  class="rounded-lg w-10 transition-transform duration-700 hover:rotate-180"
+                  class="rounded-lg w-10"
                 />
               </div>
               <div class="flex items-center space-x-4 gap-2">
@@ -220,7 +241,7 @@
                   <img
                     src="{{get_asset_url('../assets/Card3.svg')}}"
                     alt="Card Image"
-                    class="rounded-lg w-10 transition-transform duration-700 hover:rotate-[360deg]"
+                    class="rounded-lg w-10"
                   />
                 </div>
                 <div class="flex items-center space-x-4 gap-2">
@@ -238,7 +259,7 @@
         </div>
       </div>
       <!-- Hero Section sm -->
-      <div class="block md:hidden mt-2 mb-10 relative md:mx-10">
+      <div class="mt-2 mb-10 relative md:mx-10 hidden-desktop">
         <div
           class="flex flex-col gap-y-4 justify-start items-center bg-Hospitality rounded-xl bg-cover h-[400px] w-full gap-4 px-6"
         >
@@ -477,293 +498,163 @@
         </h2>
       </div>
 
-      <div
-        class="grid md:grid-cols-2 gap-10 mb-20 delay-300 cursor-pointer"
-        id="fade-in-section"
-      >
+      <div class="grid md:grid-cols-2 gap-10 mb-20" id="card-section">
         <!-- First Card -->
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
+          class="card animate-left group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-700 ease-in-out bg-gray-50 mt-10"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
           >
-            <!-- Front side -->
-            <div
-              class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
-            >
-              <!-- Inner container for flip effect -->
-              <div
-                class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
-              >
-                <!-- Front side -->
-                <div
-                  class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-20 flex flex-col justify-center items-center"
-                >
-                  <div
-                    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 top-0"
-                  >
-                    <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                      <img
-                        src="{{get_asset_url('../assets/Wrap-1.svg') }}"
-                        alt="Icon"
-                        class="h-24 w-24 md:h-28 md:w-28"
-                      />
-                    </div>
-                  </div>
-                  <h1
-                    id="heading-1"
-                    class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
-                  >
-                    Tailored Migrations leveraging the power of OHIP APIs
-                  </h1>
-                </div>
-              </div>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/Wrap-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
-            >
-              <!-- Image on the back side as well -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/Wrap-1.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-14 group-hover:hidden p-8 md:p-10"
+          >
+            Tailored Migrations leveraging the power of OHIP APIs
+          </h1>
 
-              <h1 class="text-xl md:text-base lg:text-2xl font-semibold mt-10">
-                Tailored Migrations leveraging the power of OHIP APIs
-              </h1>
-              <p class="text-sm lg:text-base mt-2">
-                We integrate hospitality components with OHIP for faster
-                processes and reduced risk, ensuring seamless harmony.
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center z-10"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-10">
+              Tailored Migrations leveraging the power of OHIP APIs
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              We integrate hospitality components with OHIP for faster processes
+              and reduced risk, ensuring seamless harmony.
+            </p>
           </div>
         </div>
 
         <!-- Second Card -->
-
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective mt-20 md:mt-0"
+          class="card animate-right group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-700 ease-in-out mt-10 bg-gray-50"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
           >
-            <!-- Front side -->
-            <div
-              class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
-            >
-              <!-- Inner container for flip effect -->
-              <div
-                class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
-              >
-                <!-- Front side -->
-                <div
-                  class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-20 flex flex-col justify-center items-center"
-                >
-                  <div
-                    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 top-0"
-                  >
-                    <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                      <img
-                        src="{{get_asset_url('../assets/Arrow-1.svg') }}"
-                        alt="Icon"
-                        class="h-24 w-24 md:h-28 md:w-28"
-                      />
-                    </div>
-                  </div>
-                  <h1
-                    id="heading-1"
-                    class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center mt-8 md:mt-14 p-8 md:p-10"
-                  >
-                    Automated Property Onboarding
-                  </h1>
-                </div>
-              </div>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/Arrow-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
-            >
-              <!-- Image on the back side as well -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/Arrow-1.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden"
+          >
+            Automated Property Onboarding
+          </h1>
 
-              <h1 class="text-xl md:text-base lg:text-2xl font-semibold mt-10">
-                Automated Property Onboarding
-              </h1>
-              <p class="text-sm lg:text-base mt-2">
-                Our automated solutions ensure rapid, low-risk onboarding,
-                minimizing operational impact and getting properties up and
-                running fast.
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Automated Property Onboarding
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Our automated solutions ensure rapid, low-risk onboarding,
+              minimizing operational impact and getting properties up and
+              running fast.
+            </p>
           </div>
         </div>
 
-        <!-- Third card -->
-
+        <!--Third card-->
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective mt-20"
+          class="card animate-left group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-700 ease-in-out mt-16 md:mt-24 bg-gray-50"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
           >
-            <!-- Front side -->
-            <div
-              class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
-            >
-              <!-- Inner container for flip effect -->
-              <div
-                class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
-              >
-                <!-- Front side -->
-                <div
-                  class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-20 flex flex-col justify-center items-center"
-                >
-                  <div
-                    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 top-0"
-                  >
-                    <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                      <img
-                        src="{{get_asset_url('../assets/rocket-1.svg') }}"
-                        alt="Icon"
-                        class="h-24 w-24 md:h-28 md:w-28"
-                      />
-                    </div>
-                  </div>
-                  <h1
-                    id="heading-1"
-                    class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center p-8 md:p-10"
-                  >
-                    Hospitality AI Solutions
-                  </h1>
-                </div>
-
-                <!-- Back side -->
-              </div>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/rocket-1.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
-            >
-              <!-- Image on the back side as well -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/rocket-1.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden w-2/4 mx-auto"
+          >
+            Hospitality AI Solutions
+          </h1>
 
-              <h1 class="text-xl md:text-base lg:text-2xl font-semibold mt-10">
-                Hospitality AI Solutions
-              </h1>
-              <p class="text-sm lg:text-base mt-2">
-                Our advanced AI tools enhance decision-making, optimize
-                operations, and boost efficiency, allowing your team to focus on
-                strategic growth.
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center p-10 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Hospitality AI Solutions
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              Our advanced AI tools enhance decision-making, optimize
+              operations, and boost efficiency, allowing your team to focus on
+              strategic growth.
+            </p>
           </div>
         </div>
 
         <!-- Fourth Card -->
-
         <div
-          class="group block relative w-full h-64 rounded-3xl ease-in-out perspective mt-20"
+          class="card animate-right group block relative w-full h-64 rounded-3xl shadow-lg transition-all duration-700 ease-in-out mt-16 md:mt-24 bg-gray-50"
         >
-          <!-- Inner container for flip effect -->
+          <!-- Image section (always visible) -->
           <div
-            class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
           >
-            <!-- Front side -->
-            <div
-              class="group block relative w-full h-64 rounded-3xl ease-in-out perspective"
-            >
-              <!-- Inner container for flip effect -->
-              <div
-                class="absolute inset-0 transition-transform duration-700 ease-in-out transform-style preserve-3d group-hover:rotate-y-180"
-              >
-                <!-- Front side -->
-                <div
-                  class="absolute inset-0 bg-gray-50 shadow-lg rounded-3xl backface-hidden z-20 flex flex-col justify-center items-center"
-                >
-                  <div
-                    class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 top-0"
-                  >
-                    <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                      <img
-                        src="{{get_asset_url('../assets/playbook-2.svg') }}"
-                        alt="Icon"
-                        class="h-24 w-24 md:h-28 md:w-28"
-                      />
-                    </div>
-                  </div>
-                  <h1
-                    id="heading-1"
-                    class="font-semibold text-2xl md:text-2xl lg:text-3xl text-center p-8 md:p-10"
-                  >
-                    Comprehensive Playbook
-                  </h1>
-                </div>
-
-                <!-- Back side -->
-              </div>
+            <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
+              <img
+                src="{{get_asset_url('../assets/playbook-2.svg') }}"
+                alt="Icon"
+                class="h-24 w-24 md:h-28 md:w-28"
+              />
             </div>
+          </div>
 
-            <!-- Back side -->
-            <div
-              class="absolute inset-0 bg-backblue text-white rounded-3xl backface-hidden rotate-y-180 flex flex-col justify-center items-center px-4 text-center"
-            >
-              <!-- Image on the back side as well -->
-              <div
-                class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 top-0"
-              >
-                <div class="bg-white p-4 md:p-6 rounded-full shadow-2xl">
-                  <img
-                    src="{{get_asset_url('../assets/playbook-2.svg') }}"
-                    alt="Icon"
-                    class="h-24 w-24 md:h-28 md:w-28"
-                  />
-                </div>
-              </div>
+          <!-- Initial h1 (visible initially, hidden on hover) -->
+          <h1
+            id="heading-1"
+            class="font-semibold text-2xl md:text-3xl text-center mt-20 md:mt-24 group-hover:hidden w-3/4 mx-auto"
+          >
+            Comprehensive Playbook
+          </h1>
 
-              <h1 class="text-xl md:text-base lg:text-2xl font-semibold mt-10">
-                Comprehensive Playbook
-              </h1>
-              <p class="text-sm lg:text-base mt-2">
-                We’ve developed a playbook based on real-world experience. This
-                means a smooth and quick transition for you, without any
-                disruptions to your guest experience.
-              </p>
-            </div>
+          <!-- Hidden content shown on hover within the same card -->
+          <div
+            class="hidden group-hover:flex transition-all duration-700 ease-in-out text-white bg-backblue rounded-3xl absolute inset-0 flex-col justify-center items-center px-4 text-center"
+          >
+            <h1 class="text-xl md:text-2xl font-semibold mt-8">
+              Comprehensive Playbook
+            </h1>
+            <p class="text-sm md:text-base mt-2">
+              We’ve developed a playbook based on real-world experience. This
+              means a smooth and quick transition for you, without any
+              disruptions to your guest experience.
+            </p>
           </div>
         </div>
       </div>

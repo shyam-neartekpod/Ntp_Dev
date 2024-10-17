@@ -2,6 +2,28 @@
   templateType: global_partial
   label: hospitalty-footer
 -->
+<style>
+  .hidden-mobile {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .hidden-mobile {
+      display: block;
+    }
+  }
+
+  /* Class to hide on desktop and show on mobile */
+  .hidden-desktop {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .hidden-desktop {
+      display: none;
+    }
+  }
+</style>
 <div class="bg-gray-50">
   <div class="container xl:px-32 px-6 mt-20">
     <div class="flex flex-wrap md:flex-nowrap justify-between">
@@ -35,14 +57,13 @@
       </div>
 
       <div class="mt-4 mb-6 md:mt-14 flex justify-end flex-col">
-
         <div>
           <h1 class="font-bold mt-3 text-sky-500">Call Us</h1>
-          <p class="mt-1 hidden md:block">
+          <p class="mt-1 hidden-mobile">
             + 1 847 450 3728
             <span class="text-sm">[8:00 AM – 4:00 PM EST]</span>
           </p>
-          <a href="tel:+18474503728" class="mt-1 md:hidden">
+          <a href="tel:+18474503728" class="mt-1 hidden-desktop">
             + 1 847 450 3728
             <span class="text-sm">[8:00 AM – 4:00 PM EST]</span>
           </a>
