@@ -10,8 +10,25 @@
     z-index: 1000; /* Ensure modal is above other content */
   }
 
-  .hidden {
+  .hidden-mobile {
     display: none;
+  }
+
+  @media (min-width: 768px) {
+    .hidden-mobile {
+      display: block;
+    }
+  }
+
+  /* Class to hide on desktop and show on mobile */
+  .hidden-desktop {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .hidden-desktop {
+      display: none;
+    }
   }
 </style>
 <div class="container xl:px-32 px-6">
@@ -41,13 +58,13 @@
             </ul>
             <ul class="mt-2 md:mt-10 flex flex-row gap-2">
               <i class="fa-solid fa-phone text-base md:text-xl"></i>
-              <p class="text-sm md:text-base font-medium hidden md:block">
+              <p class="text-sm md:text-base font-medium hidden-mobile">
                 + 1 847 450 3728
                 <span class="text-sm">[8:00 AM – 4:00 PM EST]</span>
               </p>
               <a
                 href="tel:+18474503728"
-                class="text-sm md:text-base font-medium md:hidden flex flex-col"
+                class="text-sm md:text-base font-medium hidden-desktop flex flex-col"
               >
                 <span> + 1 847 450 3728</span>
                 <span class="text-sm">[8:00 AM – 4:00 PM EST]</span>
