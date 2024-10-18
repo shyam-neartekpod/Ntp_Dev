@@ -71,8 +71,8 @@ module.exports = {
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/arch.svg")}}")',
         Building:
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/bulid.png")}}")',
-        Hand: 'url("{{get_asset_url("../../assets/Card-image-hand-shake.svg")}}") ',
-        Tech: 'url("{{get_asset_url("../../assets/VR-image.svg")}}") ',
+        Hand: 'url("{{get_asset_url("../../assets/Handshake.svg")}}") ',
+        Tech: 'url("{{get_asset_url("../../assets/VRAR.svg")}}") ',
         Hospitality:
           'url("{{get_asset_url("../../assets/Hero_Section.svg")}}")',
         customgradient:
