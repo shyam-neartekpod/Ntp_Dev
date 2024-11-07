@@ -36,6 +36,11 @@
   <body>
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
     endblock Navbar %}
+    <div class="absolute top-20 left-0 hidde md:block -z-40">
+      {% block Backgroundcolor %} {% global_partial
+      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+    </div>
+    
     <section class="container xl:px-32 px-3">
       <!-- about us  -->
       <div class="flex content-center justify-center mt-32 mb-10">
@@ -92,7 +97,7 @@
       </div>
       <!-- Heading -->
       <div class="flex content-start mt-32 mb-10">
-        <h1 class="text-lg lg:text-4xl font-medium">Know our founder</h1>
+        <h1 class="text-3xl lg:text-4xl font-medium">Know our Team</h1>
       </div>
       <!-- Single - Card -->
       <!-- <div class="service-contant mt-24 mb-20">
@@ -131,23 +136,23 @@
         </div>
       </div> -->
 
-
-      <div class="flex flex-wrap md:flex-nowrap mt-10">
-        <div class="md:w-1/2 mt-6">
+      <!-- Gopal "Kris" Santhana -->
+      <div class="flex flex-wrap md:flex-nowrap mt-10 gap-10">
+        <div class="md:w-1/4 mt-6">
           <img
-            src="{{get_asset_url('../assets/Gopalv3.jpeg')}}"
+            src="{{get_asset_url('../assets/Krish.svg')}}"
             alt="Business Consulting"
             class="object-cover rounded-2xl  w-[400px]"
           />
         </div>
-        <div class="md:w-1/2">
+        <div class="md:w-3/4">
           <div
-            class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
+            class="flex flex-col justify-center w-full text-center mt-8 md:text-left md:px-8"
           >
-          <h3 class="service-title md:text-3xl text-xl">Gopal "Kris" Santhana</h3>
-          <h6 class="service-title md:text-xl text-xl"> Founder, Managing Partner</h6>
+          <h3 class="service-title md:text-3xl text-xl text-left md:text-left">Gopal "Kris" Santhana</h3>
+          <h6 class="service-title md:text-xl text-sm text-left md:text-left mt-2"> Founder, Managing Partner</h6>
             <p
-              class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+              class="service-para md:text-base text-sm leading-[22px] md:leading-[24px] tracking-[-0.5px] text-left"
             >
             Gopal "Kris" Santhana is the founder and managing partner of a
             high growth company providing digital experiences and technology
@@ -159,6 +164,81 @@
             Allstate, KPMG and JPMorgan Chase. Gopal "Kris" Santhana is an
             alumnus of Oklahoma State University and has a Bachelor of
             Engineering from Guindy Engineering College, Anna University.
+            </p>
+            <!-- <a
+              href="/comingsoon-dev"
+              class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            > -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Rodolfo (Rudy) Loo -->
+      <div class="flex flex-wrap md:flex-nowrap mt-10 gap-10">
+        <div class="md:w-1/4 mt-6">
+          <img
+            src="{{get_asset_url('../assets/Rudy loo.svg')}}"
+            alt="Business Consulting"
+            class="object-cover rounded-2xl  w-[400px]"
+          />
+        </div>
+        <div class="md:w-3/4">
+          <div
+            class="flex flex-col justify-center w-full text-center mt-8 md:text-left md:px-8"
+          >
+          <h3 class="service-title md:text-3xl text-xl text-left md:text-left">Rodolfo (Rudy) Loo</h3>
+          <h6 class="service-title md:text-xl text-sm text-left md:text-left mt-2"> Executive Director</h6>
+            <p
+              class="service-para md:text-base text-sm leading-[22px] md:leading-[24px] tracking-[-0.5px] text-left"
+            >
+            Executive Director Rodolfo (Rudy) Loo is an accomplished leader in digital 
+            product development, specializing in transformative user experiences and 
+            organizational growth. Rudy brings over two decades of expertise across 
+            digital strategy, e-commerce, and client engagement. His career includes 
+            a Vice President role at Merkle and over 14 years at Isobar, where he 
+            managed large-scale digital transformation projects across sectors like 
+            healthcare, finance, and travel. Rudy is adept in Agile methodologies and 
+            has a track record of fostering impactful, cross-functional teams. 
+            He is a certified SCRUM Master with significant experience in React and mobile applications.
+            </p>
+            <!-- <a
+              href="/comingsoon-dev"
+              class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+              >EXPLORE MORE</a
+            > -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Jayakumar Palanivel (JK) -->
+      <div class="flex flex-wrap md:flex-nowrap mt-10 gap-10">
+        <div class="md:w-1/4 mt-6">
+          <img
+            src="{{get_asset_url('../assets/JK.svg')}}"
+            alt="Business Consulting"
+            class="object-cover rounded-2xl  w-[400px]"
+          />
+        </div>
+        <div class="md:w-3/4">
+          <div
+            class="flex flex-col justify-center w-full text-center mt-8 md:text-left md:px-8"
+          >
+          <h3 class="service-title md:text-3xl text-xl text-left md:text-left">Jayakumar Palanivel (JK)</h3>
+          <h6 class="service-title md:text-xl text-sm text-left md:text-left mt-2"> Director of Technology & Delivery</h6>
+            <p
+              class="service-para md:text-base text-sm leading-[22px] md:leading-[24px] tracking-[-0.5px] text-left"
+            >
+            Jayakumar Palanivel leads NearTekPod’s digital and AI initiatives, 
+            delivering impactful technology solutions tailored to meet evolving 
+            client needs. With over 24 years of industry experience, he brings 
+            deep expertise in AI applications, digital product lifecycle management, 
+            and cloud adoption across diverse sectors, including automotive, medical, 
+            high-tech, and industrial. Jayakumar has held key roles at organizations 
+            like Wipro and Tata Consultancy Services and founded a successful tech startup. 
+            An Executive MBA graduate from IIT Madras and a Mechanical Engineering graduate 
+            from CEG, he is known for his strategic insights, technical acumen, 
+            and unwavering dedication to excellence and client success.
             </p>
             <!-- <a
               href="/comingsoon-dev"
