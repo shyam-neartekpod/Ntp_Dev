@@ -167,7 +167,7 @@
       </div>
       <button data-collapse-toggle="navbar-search" type="button"
         class="inline-flex items-center ml-10 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-search" aria-expanded="false">
+        aria-controls="navbar-search" aria-expanded="false" id="hamburger-btn">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -178,7 +178,7 @@
 
     <div class="w-full items-center justify-between hidden lg:flex lg:w-auto lg:order-1" id="navbar-search">
       <div class="relative lg:hidden h-screen">
-        <ul class="w-full flex-col text-center bg-coralblue *:mt-10 p-4 text-xl font-bold h-screen">
+        <ul class="w-full flex-col text-center bg-blue-100 *:mt-10 p-4 text-xl font-bold ">
           <li>
             <a href="/" id="home-link-mobile">Home</a>
           </li>
@@ -203,11 +203,14 @@
   </div>
 </nav>
 
-<!-- JavaScript to handle active class -->
+<!-- JavaScript to handle active class and background scroll lock -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
     const currentPath = window.location.pathname;
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navbarMenu = document.getElementById('navbar-search');
+    const body = document.body;
 
     // Function to extract path from URL
     function getPath(url) {
@@ -217,7 +220,6 @@
 
     function setActiveLink() {
       navLinks.forEach((link) => {
-       
         link.parentElement.classList.remove("active");
 
         if (link.id !== "logo-link" && getPath(link.href) === window.location.pathname) {
@@ -249,12 +251,24 @@
 
     // Update active link on load
     window.addEventListener("load", setActiveLink);
+
+    // Toggle scroll lock and menu visibility
+    hamburgerBtn.addEventListener("click", function () {
+      navbarMenu.classList.toggle("hidden");
+      body.classList.toggle("overflow-hidden"); // Prevent scrolling when menu is open
+    });
   });
 </script>
 
 <!-- Style for active class -->
 <style>
   .active {
-    background-color: #A7DFFF;
+    color:skyblue;
+  
+  }
+
+  /* Prevent background scrolling when menu is open */
+  .overflow-hidden {
+    overflow: hidden;
   }
 </style>
