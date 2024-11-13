@@ -2,72 +2,44 @@
   templateType: global_partial
   label: Website header
 -->
-
 <!-- Navbar Code -->
 <nav class="shadow-lg fixed h-20 top-0 left-0 w-full z-50 bg-white">
-  <div
-    class="container xl:px-32 px-3  flex flex-wrap items-center justify-between mx-auto h-full"
-  >
+  <div class="container xl:px-32 px-3  flex flex-wrap items-center justify-between mx-auto h-full">
     <div class="flex-1 flex p-10 lg:p-0 h-full items-center">
       <a href="/" id="logo-link">
-        <img
-          src="{{ get_asset_url('../../assets/logo.png') }}"
-          alt="Logo"
-          class="h-14 object-cover"
-        />
+        <img src="{{ get_asset_url('../../assets/logo.png') }}" alt="Logo" class="h-14" />
       </a>
     </div>
     <div class="relative hidden lg:block h-full">
       <ul class="flex flex-row gap-5 h-full items-center">
         <li class="nav-style cursor-pointer duration-500" id="home-link">
           <a class="flex" href="/">
-            <img
-              src="{{get_asset_url('../../assets/house.svg')}}"
-              alt=""
-              class="w-4 mr-2"
-            />Home
+            <img src="{{get_asset_url('../../assets/house.svg')}}" alt="" class="w-4 mr-2" />Home
           </a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="service-link">
           <a href="/service" class="flex">
-            <img
-              src="{{get_asset_url('../../assets/gear.svg')}}"
-              alt=""
-              class="w-4 mr-2"
-            />Service
+            <img src="{{get_asset_url('../../assets/gear.svg')}}" alt="" class="w-4 mr-2" />Service
           </a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="about-link">
           <a href="/about-us" class="flex">
-            <img
-              src="{{get_asset_url('../../assets/people.svg')}}"
-              alt=""
-              class="w-4 mr-2"
-            />About Us
+            <img src="{{get_asset_url('../../assets/people.svg')}}" alt="" class="w-4 mr-2" />About Us
           </a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="career-link">
           <a href="/career" class="flex">
-            <img
-              src="{{get_asset_url('../../assets/briefcase.svg')}}"
-              alt=""
-              class="w-4 mr-2"
-            />Career
+            <img src="{{get_asset_url('../../assets/briefcase.svg')}}" alt="" class="w-4 mr-2" />Career
           </a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="blog-link">
           <a href="/blog" class="flex">
-            <img
-              src="{{get_asset_url('../../assets/newspaper.svg')}}"
-              alt=""
-              class="w-4 mr-2"
-            />Blog
+            <img src="{{get_asset_url('../../assets/newspaper.svg')}}" alt="" class="w-4 mr-2" />Blog
           </a>
         </li>
         <li
           class="h-9 leading-9 rounded-2xl px-3 border border-royalblue hover:bg-coralblue text-sm font-Montserrat font-bold cursor-pointer hover:text-blue-400 duration-500"
-          id="contact-link"
-        >
+          id="contact-link">
           <a href="/contact-us">Contact Us</a>
         </li>
       </ul>
@@ -76,44 +48,24 @@
       <div class="relative hidden lg:block">
         <ul class="flex flex-row gap-8"></ul>
       </div>
-      <button
-        data-collapse-toggle="navbar-search"
-        type="button"
+      <button data-collapse-toggle="navbar-search" type="button"
         class="inline-flex items-center ml-10 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-search"
-        aria-expanded="false"
-      >
+        aria-controls="navbar-search" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
-        <svg
-          class="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15"
-          />
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
         </svg>
       </button>
     </div>
 
-    <div
-      class="w-full items-center justify-between hidden lg:flex lg:w-auto lg:order-1"
-      id="navbar-search"
-    >
+    <div class="w-full items-center justify-between hidden lg:flex lg:w-auto lg:order-1" id="navbar-search">
       <div class="relative lg:hidden h-screen">
-        <ul
-          class="w-full flex-col text-center bg-coralblue *:mt-10 p-4 text-xl font-bold h-screen"
-        >
-          <li>
+        <ul class="w-full flex-col text-center bg-bluechalk  *:mt-10 p-4 text-xl font-bold ">
+          <li class="nav-style-sm">
             <a href="/" id="home-link-mobile">Home</a>
           </li>
-          <li>
+          <li class="nav-style-sm">
             <a href="/service" id="service-link-mobile">Service</a>
           </li>
           <li>
@@ -128,20 +80,18 @@
           <li>
             <a href="/contact-us" id="contact-link-mobile">Contact Us</a>
           </li>
-          <!-- <li>
-            <a href="/terms & conditions" id="terms & conditions-link-mobile">Terms & Conditions</a>
-          </li> -->
         </ul>
       </div>
     </div>
   </div>
 </nav>
 
-<!-- JavaScript to handle active class -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
     const currentPath = window.location.pathname;
+    const toggleButton = document.querySelector("[data-collapse-toggle='navbar-search']");
+    const navbarMenu = document.getElementById("navbar-search");
 
     // Function to extract path from URL
     function getPath(url) {
@@ -149,45 +99,85 @@
       return path;
     }
 
+    // Function to set active link with different classes for desktop and mobile
     function setActiveLink() {
       navLinks.forEach((link) => {
-        link.parentElement.classList.remove("active");
-        
-        if (link.id !== "logo-link" && getPath(link.href) === window.location.pathname) {
-          link.parentElement.classList.add("active");
+        link.parentElement.classList.remove("active-desktop", "active-mobile");
+
+        // For debugging: log the paths to console
+        console.log("Link path:", getPath(link.href));
+        console.log("Current path:", currentPath);
+
+        // Check if the current link matches the current path
+        if (link.id !== "logo-link" && getPath(link.href) === currentPath) {
+          if (window.innerWidth >= 1024) {
+            link.parentElement.classList.add("active-desktop");
+          } else {
+            link.parentElement.classList.add("active-mobile");
+          }
         }
 
-        // Handle the "blog" special case
-        if (currentPath.includes("blog") && getPath(link.href).includes("blog")) {
-          link.parentElement.classList.add("active");
-        }
       });
+
+      // Ensure Home link is active when the root URL ("/") is opened
+      if (currentPath === "/") {
+        const homeLink = document.getElementById("home-link");
+        if (window.innerWidth >= 1024) {
+          homeLink.classList.add("active-desktop");
+        } else {
+          homeLink.classList.add("active-mobile");
+        }
+      }
     }
 
-    // Set active class based on current URL
+    // Set the initial active link
     setActiveLink();
 
-    // Add click event to update active class
+    // Add click event listener to update active class
     navLinks.forEach((link) => {
       link.addEventListener("click", function (event) {
         if (this.id !== "logo-link") {
-          navLinks.forEach((navLink) =>
-            navLink.parentElement.classList.remove("active")
-          );
-          this.parentElement.classList.add("active");
+          navLinks.forEach((navLink) => navLink.parentElement.classList.remove("active-desktop", "active-mobile"));
+          if (window.innerWidth >= 1024) {
+            this.parentElement.classList.add("active-desktop");
+          } else {
+            this.parentElement.classList.add("active-mobile");
+          }
         }
       });
     });
 
+    // Toggle the mobile menu and prevent scrolling when open
+    toggleButton.addEventListener("click", function () {
+      const isExpanded = navbarMenu.classList.toggle("hidden");
+      document.body.classList.toggle("overflow-y-hidden", !isExpanded);
+    });
+
     // Handle back/forward navigation
     window.addEventListener("popstate", setActiveLink);
-  });
 
+    // Re-apply active link class on resize to adjust for different screen sizes
+    window.addEventListener("resize", setActiveLink);
+
+    // Update active link on load
+    window.addEventListener("load", setActiveLink);
+  });
 </script>
 
-<!-- Style for active class -->
+<!-- Styles for active classes -->
 <style>
-  .active {
-    background-color: #a7dfff;
+  /* Desktop active class */
+  .active-desktop {
+    background-color: #A7DFFF;
+  }
+
+  /* Mobile active class */
+  .active-mobile {
+    color: #A7DFFF;
+  }
+
+  /* Prevent body scrolling when the menu is open on mobile */
+  .overflow-y-hidden {
+    overflow-y: hidden;
   }
 </style>
