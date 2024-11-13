@@ -167,7 +167,7 @@
       </div>
       <button data-collapse-toggle="navbar-search" type="button"
         class="inline-flex items-center ml-10 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-search" aria-expanded="false" id="hamburger-btn">
+        aria-controls="navbar-search" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -178,11 +178,11 @@
 
     <div class="w-full items-center justify-between hidden lg:flex lg:w-auto lg:order-1" id="navbar-search">
       <div class="relative lg:hidden h-screen">
-        <ul class="w-full flex-col text-center bg-blue-100 *:mt-10 p-4 text-xl font-bold ">
-          <li>
+        <ul class="w-full flex-col text-center bg-bluechalk  *:mt-10 p-4 text-xl font-bold ">
+          <li class="nav-style-sm">
             <a href="/" id="home-link-mobile">Home</a>
           </li>
-          <li>
+          <li class="nav-style-sm">
             <a href="/service" id="service-link-mobile">Service</a>
           </li>
           <li>
@@ -202,15 +202,12 @@
     </div>
   </div>
 </nav>
-
-<!-- JavaScript to handle active class and background scroll lock -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
     const currentPath = window.location.pathname;
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const navbarMenu = document.getElementById('navbar-search');
-    const body = document.body;
+    const toggleButton = document.querySelector("[data-collapse-toggle='navbar-search']");
+    const navbarMenu = document.getElementById("navbar-search");
 
     // Function to extract path from URL
     function getPath(url) {
@@ -218,57 +215,92 @@
       return path;
     }
 
+    // Function to set active link with different classes for desktop and mobile
     function setActiveLink() {
       navLinks.forEach((link) => {
-        link.parentElement.classList.remove("active");
+        link.parentElement.classList.remove("active-desktop", "active-mobile");
 
-        if (link.id !== "logo-link" && getPath(link.href) === window.location.pathname) {
-          link.parentElement.classList.add("active");
+        // For debugging: log the paths to console
+        console.log("Link path:", getPath(link.href));
+        console.log("Current path:", currentPath);
+
+        // Check if the current link matches the current path
+        if (link.id !== "logo-link" && getPath(link.href) === currentPath) {
+          if (window.innerWidth >= 1024) {
+            link.parentElement.classList.add("active-desktop");
+          } else {
+            link.parentElement.classList.add("active-mobile");
+          }
         }
 
-        // Handle the "blog" special case
+        // Special case for the "blog" link
         if (currentPath.includes("blog") && getPath(link.href).includes("blog")) {
-          link.parentElement.classList.add("active");
+          if (window.innerWidth >= 1024) {
+            link.parentElement.classList.add("active-desktop");
+          } else {
+            link.parentElement.classList.add("active-mobile");
+          }
         }
       });
+
+      // Ensure Home link is active when the root URL ("/") is opened
+      if (currentPath === "/") {
+        const homeLink = document.getElementById("home-link");
+        if (window.innerWidth >= 1024) {
+          homeLink.classList.add("active-desktop");
+        } else {
+          homeLink.classList.add("active-mobile");
+        }
+      }
     }
 
-    // Set active class based on current URL
+    // Set the initial active link
     setActiveLink();
 
-    // Add click event to update active class
+    // Add click event listener to update active class
     navLinks.forEach((link) => {
       link.addEventListener("click", function (event) {
         if (this.id !== "logo-link") {
-          navLinks.forEach((navLink) => navLink.parentElement.classList.remove("active"));
-          this.parentElement.classList.add("active");
+          navLinks.forEach((navLink) => navLink.parentElement.classList.remove("active-desktop", "active-mobile"));
+          if (window.innerWidth >= 1024) {
+            this.parentElement.classList.add("active-desktop");
+          } else {
+            this.parentElement.classList.add("active-mobile");
+          }
         }
       });
+    });
+
+    // Toggle the mobile menu and prevent scrolling when open
+    toggleButton.addEventListener("click", function () {
+      const isExpanded = navbarMenu.classList.toggle("hidden");
+      document.body.classList.toggle("overflow-y-hidden", !isExpanded);
     });
 
     // Handle back/forward navigation
     window.addEventListener("popstate", setActiveLink);
 
+    // Re-apply active link class on resize to adjust for different screen sizes
+    window.addEventListener("resize", setActiveLink);
+
     // Update active link on load
     window.addEventListener("load", setActiveLink);
-
-    // Toggle scroll lock and menu visibility
-    hamburgerBtn.addEventListener("click", function () {
-      navbarMenu.classList.toggle("hidden");
-      body.classList.toggle("overflow-hidden"); // Prevent scrolling when menu is open
-    });
   });
 </script>
-
-<!-- Style for active class -->
+<!-- Styles for active classes -->
 <style>
-  .active {
-    color:skyblue;
-  
+  /* Desktop active class */
+  .active-desktop {
+    background-color: #A7DFFF;
   }
 
-  /* Prevent background scrolling when menu is open */
-  .overflow-hidden {
-    overflow: hidden;
+  /* Mobile active class */
+  .active-mobile {
+    color: #A7DFFF;
+  }
+
+  /* Prevent body scrolling when the menu is open on mobile */
+  .overflow-y-hidden {
+    overflow-y: hidden;
   }
 </style>
