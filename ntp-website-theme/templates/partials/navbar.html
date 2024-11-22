@@ -220,10 +220,6 @@
       navLinks.forEach((link) => {
         link.parentElement.classList.remove("active-desktop", "active-mobile");
 
-        // For debugging: log the paths to console
-        console.log("Link path:", getPath(link.href));
-        console.log("Current path:", currentPath);
-
         // Check if the current link matches the current path
         if (link.id !== "logo-link" && getPath(link.href) === currentPath) {
           if (window.innerWidth >= 1024) {
