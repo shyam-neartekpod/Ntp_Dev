@@ -171,45 +171,63 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadAllJobs = async () => {
     try {
       const response = await fetch(
-        // "https://testing-jmrx.onrender.com/api/getcurrentopenings"
-        '{{ get_asset_url("../../assets/data/career-data.json") }}'
+        "https://v2c0n1zyig.execute-api.us-east-1.amazonaws.com/active-jobs"
       );
-
+  
       if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);
       }
-
+  
+      console.log("Fetching job response data...", response);
       const data = await response.json();
-
+      console.log("Fetching data...", data);
+  
       // Clear existing cards
       resultDiv.innerHTML = "";
-
-      data?.opening_data.forEach((item) => {
+  
+      data?.data.forEach((item) => {
         // Clone the card template
         const card = cardTemplate.cloneNode(true);
-
+        console.log("Fetching job Array data...", item);
+  
         // Update card title and location
-        card.querySelector(".card-title").textContent = item.job_title;
-        card.querySelector(".card-location").textContent = item.job_location;
-
+        card.querySelector(".card-title").textContent = item.jobtitle;
+        card.querySelector(".card-location").textContent = item.location;
+  
         // Populate responsibilities
         const responsibilitiesList = card.querySelector(".responsibilities");
-        const responsibilities = item.job_responsibility.split("\n");
+        const rawResponsibilities = item.responsibilities || "";
+  
+        // Parse HTML to extract text
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = rawResponsibilities;
+  
+        // Split responsibilities into individual items
+        const responsibilities = tempDiv.textContent.split(".");
         responsibilities.forEach((responsibility) => {
-          const li = document.createElement("li");
-          li.textContent = responsibility;
-          responsibilitiesList.appendChild(li);
+          if (responsibility.trim()) {
+            const li = document.createElement("li");
+            li.textContent = responsibility.trim() + "."; // Add period back
+            responsibilitiesList.appendChild(li);
+          }
         });
-
+  
         // Populate requirements
         const requirementsList = card.querySelector(".requirements");
-        const requirements = item.job_requirements.split("\n");
+        const rawRequirements = item.requirement || "";
+  
+        const tempDivReq = document.createElement("div");
+        tempDivReq.innerHTML = rawRequirements;
+  
+        const requirements = tempDivReq.textContent.split(".");
         requirements.forEach((requirement) => {
-          const li = document.createElement("li");
-          li.textContent = requirement;
-          requirementsList.appendChild(li);
+          if (requirement.trim()) {
+            const li = document.createElement("li");
+            li.textContent = requirement.trim() + "."; // Add period back
+            requirementsList.appendChild(li);
+          }
         });
-
+  
         // Add event listener for accordion toggle on header click
         const header = card.querySelector(".accordion-header");
         const content = card.querySelector(".accordion-content");
@@ -227,17 +245,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ? null
             : content;
         });
-
-        // Add event listener for accordion toggle on button click
-        // const button = card.querySelector(".apply-button");
-        // button.addEventListener("click", (event) => {
-        //   window.location.href = "/contact-dev";
-
-        //   // Handle button click action here
-        //   console.log("Apply Now clicked for job:", item.job_title);
-        //   event.stopPropagation(); // Prevent the click event from bubbling to the card header
-        // });
-
+  
         // Append the updated card to the resultDiv
         resultDiv.appendChild(card);
       });
@@ -245,6 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("There was a problem with the fetch operation:", error);
     }
   };
+  
 
   // Load all jobs initially
   loadAllJobs();
