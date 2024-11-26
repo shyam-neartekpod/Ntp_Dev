@@ -96,9 +96,20 @@
 
        
         <!-- Accordion Cards -->
-        <div class="space-y-4 z-10 mt-20 md:mt-0" id="result">
+        <div class="space-y-4 z-10 mt-20 md:mt-0" >
           <!-- Card-1 -->
-          <div id="result"></div>
+           <h1>Current Openings</h1>
+          <div class="mt-8 space-y-4" id="result"></div>
+          
+          <div class="bg-gradient-to-r from-blue-200 to-blue-50 p-4 border border-gray-300 rounded-xl shadow-sm flex justify-between items-center">
+            <button id="explore-archive" class=" text-center text-gray-700 font-medium ">
+              Explore Archive
+            </button>
+          </div>
+          
+          <div id="archive-result" class="mt-8 space-y-4">
+            <!-- Archived jobs will be loaded here -->
+          </div>
 
           <template id="card-template">
             <div
@@ -132,6 +143,7 @@
               </div>
             </div>
           </template>
+         
 
           <!-- <div
             id="card-template"

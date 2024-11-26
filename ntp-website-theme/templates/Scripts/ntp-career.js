@@ -56,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("dataForm");
   const resultDiv = document.getElementById("result");
   const cardTemplate = document.getElementById("card-template").content;
+  const archiveResultDiv = document.getElementById("archive-result");
+  const exploreArchiveButton = document.getElementById("explore-archive");
 
   let currentlyOpenCard = null;
   // Function to fetch and display jobs based on search criteria
@@ -253,9 +255,97 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("There was a problem with the fetch operation:", error);
     }
   };
+  const loadArchiveJobs = async () => {
+    try {
+      const response = await fetch(
+        "https://v2c0n1zyig.execute-api.us-east-1.amazonaws.com/archive-jobs"
+      );
   
+      if (!response.ok) {
+        throw new Error("Network response was not ok " + response.statusText);
+      }
+  
+      console.log("Fetching job response data...", response);
+      const data = await response.json();
+      console.log("Fetching data...", data);
+  
+      // Clear existing cards
+      archiveResultDiv.innerHTML = "";
+  
+      data?.data.forEach((item) => {
+        // Clone the card template
+        const card = cardTemplate.cloneNode(true);
+        console.log("Fetching job Array data...", item);
+  
+        // Update card title and location
+        card.querySelector(".card-title").textContent = item.jobtitle;
+        card.querySelector(".card-location").textContent = item.location;
+  
+        // Populate responsibilities
+        const responsibilitiesList = card.querySelector(".responsibilities");
+        const rawResponsibilities = item.responsibilities || "";
+  
+        // Parse HTML to extract text
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = rawResponsibilities;
+  
+        // Split responsibilities into individual items
+        const responsibilities = tempDiv.textContent.split(".");
+        responsibilities.forEach((responsibility) => {
+          if (responsibility.trim()) {
+            const li = document.createElement("li");
+            li.textContent = responsibility.trim() + "."; // Add period back
+            responsibilitiesList.appendChild(li);
+          }
+        });
+  
+        // Populate requirements
+        const requirementsList = card.querySelector(".requirements");
+        const rawRequirements = item.requirement || "";
+  
+        const tempDivReq = document.createElement("div");
+        tempDivReq.innerHTML = rawRequirements;
+  
+        const requirements = tempDivReq.textContent.split(".");
+        requirements.forEach((requirement) => {
+          if (requirement.trim()) {
+            const li = document.createElement("li");
+            li.textContent = requirement.trim() + "."; // Add period back
+            requirementsList.appendChild(li);
+          }
+        });
+  
+        // Add event listener for accordion toggle on header click
+        const header = card.querySelector(".accordion-header");
+        const content = card.querySelector(".accordion-content");
+        header.addEventListener("click", () => {
+          if (currentlyOpenCard && currentlyOpenCard !== content) {
+            currentlyOpenCard.classList.add("hidden");
+            currentlyOpenCard.previousElementSibling.querySelector(
+              ".accordion-icon"
+            ).textContent = "+";
+          }
+          content.classList.toggle("hidden");
+          header.querySelector(".accordion-icon").textContent =
+            content.classList.contains("hidden") ? "+" : "-";
+          currentlyOpenCard = content.classList.contains("hidden")
+            ? null
+            : content;
+        });
+  
+        // Append the updated card to the archiveResultDiv
+        archiveResultDiv.appendChild(card);
+      });
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
+  };
 
   // Load all jobs initially
   loadAllJobs();
+
+  exploreArchiveButton.addEventListener("click", () => {
+    loadArchiveJobs();
+  });
 });
 
