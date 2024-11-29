@@ -226,35 +226,40 @@
       });
     });
   </script> -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  // Get references to the button and link
-  const applyButton = document.querySelector('#apply-button');
-  const applyLink = document.querySelector('#apply-link');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get references to the button and link
+    const applyButton = document.querySelector('#apply-button');
+    const applyLink = document.querySelector('#apply-link');
 
-  // Define the job title you want to pass
-  const jobTitle = 'Senior Developer'; // Replace with your dynamic job title
+    // Define the job title you want to pass
+    const jobTitle = 'Senior Developer'; // Replace with your dynamic job title
 
-  // Add a click event listener to the button
-  applyButton.addEventListener('click', () => {
-    // Create a new URLSearchParams object to handle query parameters
-    const url = new URL(applyLink.href);
-    const params = new URLSearchParams(url.search);
+    // Add a click event listener to the button
+    applyButton.addEventListener('click', () => {
+      console.log('Apply Now button clicked'); // Log to check if the button is clicked
 
-    // Append the job title to the URL parameters
-    params.set('job_title', jobTitle);
+      // Create a new URLSearchParams object to handle query parameters
+      const url = new URL(applyLink.href);
+      const params = new URLSearchParams(url.search);
 
-    // Update the href attribute of the link
-    applyLink.href = `${url.pathname}?${params.toString()}`;
+      // Append the job title to the URL parameters
+      params.set('job_title', jobTitle);
+      console.log('Job title parameter set:', jobTitle); // Log the job title being set
 
-    // Store a variable in localStorage
-    const myVariable = 'HelloWorld';
-    localStorage.setItem('myVariable', myVariable);
+      // Update the href attribute of the link
+      applyLink.href = `${url.pathname}?${params.toString()}`;
+      console.log('Updated Apply Link:', applyLink.href); // Log the updated link
 
-    // Redirect to the apply page
-    window.location.href = 'applynow.html';
+      // Store a variable in localStorage
+      const myVariable = 'HelloWorld';
+      localStorage.setItem('myVariable', myVariable);
+      console.log('Stored myVariable in localStorage:', myVariable); // Log the stored variable
+
+      // Redirect to the apply page
+      console.log('Redirecting to applynow.html'); // Log before redirection
+      window.location.href = 'applynow.html';
+    });
   });
-});
-
-  </script>
+</script>
 </html>
