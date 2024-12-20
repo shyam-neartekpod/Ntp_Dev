@@ -96,9 +96,27 @@
 
        
         <!-- Accordion Cards -->
-        <div class="space-y-4 z-10 mt-20 md:mt-0" id="result">
+        <div class="space-y-4 z-10 mt-20 md:mt-0" >
           <!-- Card-1 -->
-          <div id="result"></div>
+           <h1 class="text-2xl font-semibold">Current Openings</h1>
+          <div class="mt-8 space-y-4" id="result"></div>
+          
+          <div class="flex items-center border-gray-600 space-x-2 cursor-pointer">
+            
+            <button  class="text-center text-2xl font-semibold text-gray-700 ">
+                Explore Archive
+            </button>
+            <span  id="explore-archive" class="arrow-icon text-gray-700 border border-gray-400 transform rotate-180 cursor-pointer p-1" onclick="handleClick()">
+              ↑
+          </span>
+          
+        </div>
+        
+        
+          
+          <div id="archive-result" class="mt-8 space-y-4">
+            <!-- Archived jobs will be loaded here -->
+          </div>
 
           <template id="card-template">
             <div
@@ -124,7 +142,7 @@
                     <ul class="list-disc ml-4 requirements"></ul>
                   </div>
                 </div>
-                <!-- <button
+                 <!-- <button
                     class="apply-button mt-4 bg-white border border-black text-black py-2 px-4 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-200"
                   >
                     Apply Now
@@ -132,6 +150,7 @@
               </div>
             </div>
           </template>
+         
 
           <!-- <div
             id="card-template"
@@ -214,35 +233,41 @@
       });
     });
   </script> -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  // Get references to the button and link
-  const applyButton = document.querySelector('#apply-button');
-  const applyLink = document.querySelector('#apply-link');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get references to the button and link
+    const applyButton = document.querySelector('#apply-button');
+    const applyLink = document.querySelector('#apply-link');
 
-  // Define the job title you want to pass
-  const jobTitle = 'Senior Developer'; // Replace with your dynamic job title
+    // Define the job title you want to pass
+    const jobTitle = 'Senior Developer'; // Replace with your dynamic job title
 
-  // Add a click event listener to the button
-  applyButton.addEventListener('click', () => {
-    // Create a new URLSearchParams object to handle query parameters
-    const url = new URL(applyLink.href);
-    const params = new URLSearchParams(url.search);
+    // Add a click event listener to the button
+    applyButton.addEventListener('click', () => {
+      console.log('Apply Now button clicked'); // Log to check if the button is clicked
 
-    // Append the job title to the URL parameters
-    params.set('job_title', jobTitle);
+      // Create a new URLSearchParams object to handle query parameters
+      const url = new URL(applyLink.href);
+      const params = new URLSearchParams(url.search);
 
-    // Update the href attribute of the link
-    applyLink.href = `${url.pathname}?${params.toString()}`;
+      // Append the job title to the URL parameters
+      params.set('jobtitle', jobTitle);
+      console.log('Job title parameter set:', jobTitle); // Log the job title being set
 
-    // Store a variable in localStorage
-    const myVariable = 'HelloWorld';
-    localStorage.setItem('myVariable', myVariable);
+      // Update the href attribute of the link
+      applyLink.href = `${url.pathname}?${params.toString()}`;
+      console.log('Updated Apply Link:', applyLink.href); // Log the updated link
 
-    // Redirect to the apply page
-    window.location.href = 'applynow.html';
+      // Store a variable in localStorage
+      const myVariable = 'HelloWorld';
+      localStorage.setItem('myVariable', myVariable);
+      console.log('Stored myVariable in localStorage:', myVariable); // Log the stored variable
+
+      // Redirect to the apply page
+      console.log('Redirecting to applynow.html'); // Log before redirection
+      window.location.href = 'applynow.html';
+    });
   });
-});
-
-  </script>
+  
+</script>
 </html>
