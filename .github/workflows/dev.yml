@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - dev
+    - Dev-2.0
 jobs:
   deploy:
     runs-on: ubuntu-latest
