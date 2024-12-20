@@ -178,11 +178,11 @@
 
     <div class="w-full items-center justify-between hidden lg:flex lg:w-auto lg:order-1" id="navbar-search">
       <div class="relative lg:hidden h-screen">
-        <ul class="w-full flex-col text-center bg-bluechalk  *:mt-10 p-4 text-xl font-bold ">
-          <li class="nav-style-sm">
+        <ul class="w-full flex-col text-center bg-coralblue  *:mt-10 p-4 text-xl font-bold h-screen">
+          <li>
             <a href="/" id="home-link-mobile">Home</a>
           </li>
-          <li class="nav-style-sm">
+          <li>
             <a href="/service" id="service-link-mobile">Service</a>
           </li>
           <li>
@@ -206,9 +206,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
     const currentPath = window.location.pathname;
-    const toggleButton = document.querySelector("[data-collapse-toggle='navbar-search']");
-    const navbarMenu = document.getElementById("navbar-search");
-
     // Function to extract path from URL
     function getPath(url) {
       const path = new URL(url, window.location.origin).pathname;
@@ -218,36 +215,14 @@
     // Function to set active link with different classes for desktop and mobile
     function setActiveLink() {
       navLinks.forEach((link) => {
-        link.parentElement.classList.remove("active-desktop", "active-mobile");
+        link.parentElement.classList.remove("active");
 
-        // Check if the current link matches the current path
-        if (link.id !== "logo-link" && getPath(link.href) === currentPath) {
-          if (window.innerWidth >= 1024) {
-            link.parentElement.classList.add("active-desktop");
-          } else {
-            link.parentElement.classList.add("active-mobile");
-          }
-        }
-
+        
         // Special case for the "blog" link
         if (currentPath.includes("blog") && getPath(link.href).includes("blog")) {
-          if (window.innerWidth >= 1024) {
-            link.parentElement.classList.add("active-desktop");
-          } else {
-            link.parentElement.classList.add("active-mobile");
-          }
+          link.parentElement.classList.add("active")
         }
       });
-
-      // Ensure Home link is active when the root URL ("/") is opened
-      if (currentPath === "/") {
-        const homeLink = document.getElementById("home-link");
-        if (window.innerWidth >= 1024) {
-          homeLink.classList.add("active-desktop");
-        } else {
-          homeLink.classList.add("active-mobile");
-        }
-      }
     }
 
     // Set the initial active link
@@ -257,12 +232,8 @@
     navLinks.forEach((link) => {
       link.addEventListener("click", function (event) {
         if (this.id !== "logo-link") {
-          navLinks.forEach((navLink) => navLink.parentElement.classList.remove("active-desktop", "active-mobile"));
-          if (window.innerWidth >= 1024) {
-            this.parentElement.classList.add("active-desktop");
-          } else {
-            this.parentElement.classList.add("active-mobile");
-          }
+          navLinks.forEach((navLink) => navLink.parentElement.classList.remove("active"));
+            this.parentElement.classList.add("active");
         }
       });
     });
@@ -286,17 +257,8 @@
 <!-- Styles for active classes -->
 <style>
   /* Desktop active class */
-  .active-desktop {
+  .active {
     background-color: #A7DFFF;
   }
 
-  /* Mobile active class */
-  .active-mobile {
-    color: #A7DFFF;
-  }
-
-  /* Prevent body scrolling when the menu is open on mobile */
-  .overflow-y-hidden {
-    overflow-y: hidden;
-  }
 </style>
