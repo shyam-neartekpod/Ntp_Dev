@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadAllJobs = async () => {
     try {
       const response = await fetch(
-        "https://v2c0n1zyig.execute-api.us-east-1.amazonaws.com/active-jobs"
+        "https://yakuea9rwc.execute-api.us-east-2.amazonaws.com/simplifai-activejobs  "
       );
   
       if (!response.ok) {
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadArchiveJobs = async () => {
     try {
       const response = await fetch(
-        "https://v2c0n1zyig.execute-api.us-east-1.amazonaws.com/archive-jobs"
+        "https://yakuea9rwc.execute-api.us-east-2.amazonaws.com/simplifai-archivejobs  "
       );
   
       if (!response.ok) {
