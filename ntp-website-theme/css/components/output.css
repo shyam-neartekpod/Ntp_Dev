@@ -1730,6 +1730,10 @@ body{
   background-image: url("{{get_asset_url("../../assets/Heroimage.svg")}}");
 }
 
+.bg-AI{
+  background-image: url("{{get_asset_url("../../assets/Hero_AI.svg")}}");
+}
+
 .bg-customgradient{
   background-image: linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%);
 }

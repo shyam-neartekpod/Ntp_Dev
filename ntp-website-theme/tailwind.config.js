@@ -63,6 +63,7 @@ module.exports = {
 
       backgroundImage: (theme) => ({
         WorldMap: 'url("{{get_asset_url("../../assets/Globe.svg")}}")',
+        LCPbackground: 'url("{{get_asset_url("../../assets/Hero_AI.svg")}}")',
         Easy: 'url("{{get_asset_url("../../assets/Subtract.png")}}")',
         accordbg: 'url("{{get_asset_url("../../assets/BG_rectangle.svg")}}")',
         Family:
@@ -84,3 +85,4 @@ module.exports = {
   },
   plugins: [],
 };
+
