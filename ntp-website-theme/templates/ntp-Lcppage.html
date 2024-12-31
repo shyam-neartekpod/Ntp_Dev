@@ -104,46 +104,56 @@
 
   <body class="relative">
     {% block Hospitality-header %} {% global_partial
-    path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
-    %}
-    <div class="absolute top-20 left-0 hidden md:block">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-    <div class="absolute top-80 right-0 hidden md:block">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-    <div class="absolute top-[60rem] right-0 hidden md:block -z-40">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-    <div class="absolute top-[70rem] left-0 hidden md:block -z-40">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-    <div class="absolute top-[115rem] left-0 hidden md:block">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-    <div class="absolute top-[140rem] right-0 hidden md:block">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/Backgroundcolor.html " %} {% endblock Backgroundcolor
-      %}
-    </div>
-    <div class="absolute top-[240rem] left-0 hidden md:block -z-40">
-      {% block Backgrund %} {% global_partial path="./Components/backgrund.html
-      " %} {% endblock Backgrund %}
-    </div>
-    <div class="absolute top-[260rem] right-0 hidden md:block -z-40">
-      {% block Backgrund %} {% global_partial path="./Components/backgrund.html
-      " %} {% endblock Backgrund %}
+        path="./partials/hospitalty-header.html" %} {% endblock Hospitality-header
+        %}
+        <div class="absolute top-20 left-0 hidde md:block">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div> <div class="absolute top-[550px] right-30">
+            {% block Backgroundcolor %} {% global_partial
+            path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+          </div>
+        <div class="absolute top-90 right-0 hidden md:block">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[60rem] right-0 hidden md:block">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[70rem] left-0 hidden md:block">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[115rem] left-0 hidden md:block">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[140rem] right-0 hidden md:block">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[240rem] left-0 hidden md:block -z-40">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[248rem] right-0 hidden md:block -z-40">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[270rem] left-0 hidden md:block -z-40">
+          {% block Backgrund %} {% global_partial path="./Components/backgrund.html
+          " %} {% endblock Backgrund %}
+        </div>
+        <div class="absolute top-[290rem] right-0 hidden md:block -z-40">
+          {% block Backgrund %} {% global_partial path="./Components/backgrund.html
+          " %} {% endblock Backgrund %}
     </div>
 
     <section class="container xl:px-32 px-6 pt-24">
 
-      <div class="mt-2 mb-28 relative md:block">
-        <div class="flex items-center justify-center bg-AI rounded-3xl bg-cover h-[700px] w-full px-10 relative">
+      <div class="mt-2 relative md:block">
+        <div class="flex items-center justify-center bg-AI  bg-contain bg-no-repeat rounded-3xl  h-[700px] w-full px-10 relative">
             <div class="text-center animate-slideInLeft">
               <h1 class="text-white text-lg md:text-5xl font-bold leading-tight animate-slide-in">
                 GenAI Success with LCP4AI <br />
@@ -156,7 +166,7 @@
                   #GO BEYOUND CHATBOTS!
                 </p>
                 <button
-                  class="bg-backblue text-white px-3 py-2 rounded-full font-semibold flex gap-3 items-center mt-8 transition-transform duration-1000 hover:scale-105"
+                  class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center mt-8 ml-10 transition-transform duration-1000 hover:scale-105"
                   onclick="scrollToSection('contact')"
                 >
                   <span>Request Demo</span>
@@ -172,7 +182,7 @@
     </div>
     <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-15">
         <div class="text-center md:text-left">
-            <p class="text-blue-500 font-semibold text-sm">WHY CHOOSE US</p>
+            <p class="text-sky-500 font-semibold text-sm">WHY CHOOSE US</p>
             <h2 class="text-3xl font-bold mt-2 mb-6">What LCP4AI Brings to Customers:</h2>
         </div>
         <div class="grid md:grid-cols-2 gap-28 items-center">
@@ -181,51 +191,51 @@
                   <!-- Feature 1 -->
                   <div class="flex items-start space-x-4">
                     <div class="text-blue-500 text-2xl">
-                      <i class="fa-light fa-microphone"></i>
+                        <img  src="{{get_asset_url('../assets/phone.svg')}}" alt="AI App" class=" mt-2 w-6 h-6">
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">Apps that listen and speak</h3>
-                      <p class="text-gray-600">Bring your apps closer to your users with natural voice and vision capabilities.</p>
+                      <p class="text-gray-600 text-sm">Bring your apps closer to your users with natural voice and vision capabilities.</p>
                     </div>
                   </div>
         
                   <!-- Feature 2 -->
                   <div class="flex items-start space-x-4">
                     <div class="text-blue-500 text-2xl">
-                        <i class="fa-regular fa-clock"></i> <!-- Replace with an appropriate icon -->
+                        <img  src="{{get_asset_url('../assets/clock.svg')}}" alt="AI App" class=" mt-2 w-6 h-6">
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">Compose apps in minutes</h3>
-                      <p class="text-gray-600">Stitch complex tech-bricks with visual programming.</p>
+                      <p class="text-gray-600 text-sm">Stitch complex tech-bricks with visual programming.</p>
                     </div>
                   </div>
         
                   <!-- Feature 3 -->
                   <div class="flex items-start space-x-4">
                     <div class="text-blue-500 text-2xl">
-                      <i class="fas fa-code"></i> <!-- Replace with an appropriate icon -->
+                        <img  src="{{get_asset_url('../assets/Flexible.svg')}}" alt="AI App" class="mb-3 w-14 h-14">
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">Flexible deployment recipes</h3>
-                      <p class="text-gray-600">Run AI applications on any hyperscale platform and integrate them into your IT landscape seamlessly using API services.</p>
+                      <p class="text-gray-600 text-sm">Run AI applications on any hyperscale platform and integrate them into your IT landscape seamlessly using API services.</p>
                     </div>
                   </div>
         
                   <!-- Feature 4 -->
                   <div class="flex items-start space-x-4">
                     <div class="text-blue-500 text-2xl">
-                      <i class="fas fa-code"></i>
+                        <img  src="{{get_asset_url('../assets/Security.svg')}}" alt="AI App" class=" mt-2 sw-6 h-6">
                     </div>
                     <div>
                       <h3 class="font-semibold text-lg">A team you can trust</h3>
-                      <p class="text-gray-600">Our multidisciplinary team is ready to go.</p>
+                      <p class="text-gray-600 text-sm">Our multidisciplinary team is ready to go.</p>
                     </div>
                   </div>
                 </div>
             </div>
             <div class="flex justify-center">
                 <div class="relative">
-                  <img  src="{{get_asset_url('../assets/Mobile.svg')}}" alt="AI App">
+                  <img  src="{{get_asset_url('../assets/Mobile.svg')}}" alt="AI App" class="h-auto">
                 </div>
             </div>
         </div>        
@@ -241,15 +251,16 @@
             </h2>
         <!-- five cards -->
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8"></div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 w-11/12 max-w-5xl ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 w-11/12 max-w-5xl  ">
             <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6 ">
                 <!-- Image --> 
-                <img
+                <!-- <img
                     src="{{get_asset_url('../assets/Border.svg')}}"
                     alt="Card Image"
                     class="w-full h-60 object-cover rounded-lg "
-                />
+                /> -->
                 <!-- Text -->
+                 
                 <h3 class="text-lg font-semibold text-sky-500 mt-4 text-left">Voice Commerce</h3>
                 <p class="text-gray-600 text-sm mt-2 text-left">Enabling customers to quickly and efficiently shop with voice interactions.</p>
             </div>
@@ -282,7 +293,7 @@
             <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6   text-left">
                 <!-- Image -->
                 <img
-                    src="{{get_asset_url('../assets/ai.svg')}}"
+                    src="{{get_asset_url('../assets/Link.svg')}}"
                     alt="Card Image"
                     class="w-full h-60 object-cover rounded-lg"
                 />
@@ -294,17 +305,17 @@
         <!-- fifth image -->
         <div class="mt-20 w-full flex justify-center">
             <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6 max-w-sm text-left">
-                <!-- Image -->
-                <img
-                    src="{{get_asset_url('../assets/ai.svg')}}"
-                    alt="Card Image"
-                    class="w-full h-60 object-cover rounded-lg"
-                />
-                <!-- Text -->
-                <h3 class="text-lg font-semibold text-sky-500 mt-4">Simplif AI-Project</h3>
-                <p class="text-gray-600 text-sm mt-2">AI-powered sprint board that makes workflows seamless.</p>
+              <!-- Embedded Video -->
+              <iframe
+                src="https://www.youtube.com/embed/SOZCAxR8cq0"
+                allowfullscreen
+                class="w-full h-60 object-cover rounded-lg"
+              ></iframe>
+              <!-- Text -->
+              <h3 class="text-lg font-semibold text-sky-500 mt-4">Simplif AI-Project</h3>
+              <p class="text-gray-600 text-sm mt-2">AI-powered sprint board that makes workflows seamless.</p>
             </div>
-        </div>
+          </div>          
         
       <!-- three cards -->
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -328,10 +339,10 @@ AI-powered realities
                 class="p-6 md:p-0 w-52 h-52"
               />
             </div>
-            <h3 class="text-lg md:text-xl font-semibold mt-4">
+            <h3 class="text-lg md:text-lg font-semibold mt-4">
                 Build Apps That Work for You
             </h3>
-            <p class="mt-2 text-gray-600 text-sm md:text-base">
+            <p class="mt-2 text-gray-600 text-sm md:text-sm">
                 Our platform gives you everything you need to create scalable 
                 and easy-to-use AI solutions.
             </p>
@@ -346,10 +357,10 @@ AI-powered realities
                 class="p-6 md:p-0 w-52 h-52"
               />
             </div>
-            <h3 class="text-lg md:text-xl font-semibold mt-4">
+            <h3 class="text-lg md:text-lg font-semibold mt-4">
                 Plug Right In
             </h3>
-            <p class="mt-2 text-gray-600 text-sm md:text-base">
+            <p class="mt-2 text-gray-600 text-sm md:text-sm">
                 Our platform gives you everything you need to 
                 create scalable and easy-to-use AI solutions.
             </p>
@@ -364,10 +375,10 @@ AI-powered realities
                 class="p-6 md:p-0 w-52 h-52"
               />
             </div>
-            <h3 class="text-lg md:text-xl font-semibold mt-4">
+            <h3 class="text-lg md:text-lg font-semibold mt-4">
                 Automate Like a Pro
             </h3>
-            <p class="mt-2 text-gray-600 text-sm md:text-base">
+            <p class="mt-2 text-gray-600 text-sm md:text-sm">
                 From organizing your data to deploying your solutions, our 
                 automation tools do the heavy lifting so you can focus on the bigger picture.
             </p>
@@ -395,11 +406,11 @@ AI-powered realities
           <div
             class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
           >
-            <h3 class="md:text-lg text-xl">
+            <h3 class="md:text-sm text-lg">
                 “At NearTekPod, we’ve built and perfected applications using our AI Low Code Platform. It’s how we innovate, adapt, and succeed. ”
             </h3>
             <p
-              class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2 text-blue-400"
+              class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2 text-sky-500"
             >
             Let’s re-define what’s possible together.
             </p>
