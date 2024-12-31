@@ -153,20 +153,20 @@
     <section class="container xl:px-32 px-6 pt-24">
 
       <div class="mt-2 relative md:block">
-        <div class="flex items-center justify-center bg-AI  bg-contain bg-no-repeat rounded-3xl  h-[700px] w-full px-10 relative">
-            <div class="text-center animate-slideInLeft">
-              <h1 class="text-white text-lg md:text-5xl font-bold leading-tight animate-slide-in">
+        <div class="flex items-center justify-center bg-AI bg-auto md:bg-contain bg-no-repeat rounded-3xl h-[400px] md:h-[700px] w-full px-10 md:relative">
+            <div class="text-center animate-slideInLeft ">
+              <h1 class="text-white text-xl md:text-5xl font-bold leading-tight animate-slide-in">
                 GenAI Success with LCP4AI <br />
               </h1>
-              <p class="text-white text-xl font-medium mt-4">
+              <p class="text-white text-lg md:text-xl font-medium  mt-2 md:mt-4">
                 Develop, Deploy, Secure and Scale your AI apps in weeks
               </p>
               <div class="animate-slide-in flex flex-col items-center justify-center text-center">
-                <p class="text-white text-xl font-medium mt-10">
+                <p class="text-white text-lg md:text-xl font-medium mt-6 md:mt-10">
                   #GO BEYOUND CHATBOTS!
                 </p>
                 <button
-                  class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center mt-8 ml-10 transition-transform duration-1000 hover:scale-105"
+                  class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center mt-6 ml-4 md:mt-8 md:ml-10 transition-transform duration-1000 hover:scale-105"
                   onclick="scrollToSection('contact')"
                 >
                   <span>Request Demo</span>
@@ -180,12 +180,12 @@
           </div>
           
     </div>
-    <div class="max-w-7xl mx-auto px-4 md:p-0 md:mb-15">
-        <div class="text-center md:text-left">
+    <div class="max-w-7xl mx-auto px-4 md:p-0 mt-5 md:mb-20">
+        <div class="text-left ">
             <p class="text-sky-500 font-semibold text-sm">WHY CHOOSE US</p>
-            <h2 class="text-3xl font-bold mt-2 mb-6">What LCP4AI Brings to Customers:</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-6">What LCP4AI Brings to Customers:</h2>
         </div>
-        <div class="grid md:grid-cols-2 gap-28 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-60 items-center">
             <div>
                 <div class="space-y-6">
                   <!-- Feature 1 -->
@@ -242,89 +242,97 @@
     </div>
         <div class="mx-auto ">
             <p
-              class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5"
+              class="text-start text-sky-500 font-semibold text-sm md-3 mt-10 md:mb-15"
             >
-            See AI in Action
+           SEE AI IN ACTION
             </p>
-            <h2 class="text-xl md:text-3xl font-semibold text-start text-black">
+            <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-6 text-black">
                 Sample arts that LCP4AI has made possible 
             </h2>
         <!-- five cards -->
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8"></div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 w-11/12 max-w-5xl  ">
-            <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 w-full mt-10">
+          <!-- First image -->
+            <div class="bg-gray-200 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6 ">
                 <!-- Image --> 
-                <!-- <img
-                    src="{{get_asset_url('../assets/Border.svg')}}"
-                    alt="Card Image"
-                    class="w-full h-60 object-cover rounded-lg "
-                /> -->
+                <iframe
+                src="https://www.youtube.com/embed/tZGBg0dN8HY"
+                allowfullscreen
+                class="w-full h-60 object-cover rounded-lg"
+              ></iframe>
+
                 <!-- Text -->
                  
                 <h3 class="text-lg font-semibold text-sky-500 mt-4 text-left">Voice Commerce</h3>
                 <p class="text-gray-600 text-sm mt-2 text-left">Enabling customers to quickly and efficiently shop with voice interactions.</p>
             </div>
            <!-- second image -->
-            <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6">
+            <div class="bg-gray-200 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6">
                 <!-- Image -->
-                <img
-                    src="{{get_asset_url('../assets/ai.svg')}}"
-                    alt="Card Image"
-                    class="w-full h-60 object-cover rounded-lg"
-                />
+                <iframe
+              src="https://www.youtube.com/embed/vyy2tOoybI8?feature=share"
+              allowfullscreen
+              class="w-full h-60 object-cover rounded-lg"
+            ></iframe>
                 <!-- Text -->
                 <h3 class="text-lg font-semibold text-sky-500 mt-4 text-left">Frictionless Hospitality</h3>
                 <p class="text-gray-600 text-sm mt-2 text-left">Elevating the experience of guests with an always available voice assistant that can suggest travel destinations, book rooms and plan your schedule during the stay and many more. </p>
             </div>
             <!-- third image -->
-            <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6  text-left">
+            <div class="bg-gray-200 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6  text-left">
                 <!-- Image -->
-                <img
-                    src="{{get_asset_url('../assets/bo.svg')}}"
-                    alt="Card Image"
-                    class="w-full h-60 object-cover rounded-lg"
-                />
+                <iframe
+              src="https://www.youtube.com/embed/kdGq9iPDTGM"
+              allowfullscreen
+              class="w-full h-60 object-cover rounded-lg"
+            ></iframe>
+
                 <!-- Text -->
                 <h3 class="text-lg font-semibold text-sky-500 mt-4">Simplif AI-Hiring</h3>
                 <p class="text-gray-600 text-sm mt-2">Using AI to improve the hiring process from profile screening to interviews.</p>
             </div>
 
-            <!-- fouth image             -->
-            <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6   text-left">
+            <!-- fouth image-->
+            <div class="bg-gray-200 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6   text-left">
                 <!-- Image -->
-                <img
+                <!-- <img
                     src="{{get_asset_url('../assets/Link.svg')}}"
                     alt="Card Image"
                     class="w-full h-60 object-cover rounded-lg"
-                />
+                /> -->
+                <iframe
+              src="https://www.youtube.com/embed/SOZCAxR8cq0"
+              allowfullscreen
+              class="w-full h-60 object-cover rounded-lg"
+            ></iframe>
                 <!-- Text -->
                 <h3 class="text-lg font-semibold text-sky-500 mt-4">Simplif AI-Expense</h3>
                 <p class="text-gray-600 text-sm mt-2">Expense claims made as simple as clicking a picture.</p>
             </div>            
         </div>
         <!-- fifth image -->
-        <div class="mt-20 w-full flex justify-center">
-            <div class="bg-gray-200 border border-gray-300 rounded-lg w-[400px] h-[450px] shadow-lg p-6 max-w-sm text-left">
-              <!-- Embedded Video -->
-              <iframe
-                src="https://www.youtube.com/embed/SOZCAxR8cq0"
-                allowfullscreen
-                class="w-full h-60 object-cover rounded-lg"
-              ></iframe>
-              <!-- Text -->
-              <h3 class="text-lg font-semibold text-sky-500 mt-4">Simplif AI-Project</h3>
-              <p class="text-gray-600 text-sm mt-2">AI-powered sprint board that makes workflows seamless.</p>
-            </div>
-          </div>          
+        <div class="md:mt-20 md:mb-10 w-full flex justify-center">
+          <div class="bg-gray-200 border border-gray-300 rounded-lg md:w-[450px] h-[450px] shadow-lg p-6 text-left">
+            <!-- Embedded Video -->
+            <iframe
+            src="https://www.youtube.com/embed/cc1eaVH1mMk"
+            allowfullscreen
+            class="w-full h-60 object-cover rounded-lg"
+          ></iframe>          
+            <!-- Text -->
+            <h3 class="text-lg font-semibold text-sky-500 mt-4">Simplif AI-Project</h3>
+            <p class="text-gray-600 text-sm mt-2">AI-powered sprint board that makes workflows seamless.</p>
+          </div>
+        </div>
+             
         
       <!-- three cards -->
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <p
-          class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5"
+          class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 md:mt-10"
         >
           WHAT WE OFFER
         </p>
-        <h2 class="text-xl md:text-3xl font-semibold text-start text-black">
+        <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-6 text-black">
           Here’s how we take your ideas and turn them into 
 AI-powered realities
         </h2>
@@ -389,9 +397,9 @@ AI-powered realities
         <p
           class="text-start text-sky-500 font-semibold text-sm md-3 md:mb-1 mt-5"
         >
-        Success stories
+         SUCCESS STORIES
         </p>
-        <h2 class="text-xl md:text-3xl font-semibold text-start text-black">
+        <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-6 text-black">
             We use what we build and it works!
         </h2>
       <div class="flex flex-wrap md:flex-nowrap">
@@ -404,9 +412,9 @@ AI-powered realities
         </div>
         <div class="md:w-1/2">
           <div
-            class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
+            class="flex flex-col justify-center w-full md:text-center mt-10 text-left md:px-8"
           >
-            <h3 class="md:text-sm text-lg">
+            <h3 class="text-sm md:text-lg">
                 “At NearTekPod, we’ve built and perfected applications using our AI Low Code Platform. It’s how we innovate, adapt, and succeed. ”
             </h3>
             <p
@@ -414,9 +422,9 @@ AI-powered realities
             >
             Let’s re-define what’s possible together.
             </p>
-            <div class="animate-slide-in">
+            <div class="animate-slide-in flex items-center justify-start md:ml-5">
                 <button
-                  class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-3 md:mt-8 transition-transform duration-1000 hover:scale-105"
+                  class="bg-backblue text-white px-4  py-2 rounded-full font-semibold flex gap-3 items-center space-x-2 mt-3 md:mt-8 transition-transform duration-1000 hover:scale-105"
                   onclick="scrollToSection('contact')"
                 >
                   <span>Request Demo</span>
@@ -447,6 +455,19 @@ AI-powered realities
   {{ require_js(get_asset_url("../js/main.js")) }}
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!-- <script>
+    const previewImage = document.getElementById('previewImage');
+    const playButton = document.getElementById('playButton');
+    const videoContainer = document.getElementById('videoContainer');
+    const videoFrame = document.getElementById('videoFrame');
+
+    // Handle click on the preview image or play button
+    videoContainer.addEventListener('click', function() {
+        previewImage.style.display = 'none';
+        playButton.style.display = 'none';
+        videoFrame.classList.remove('hidden');
+    });
+  </script> -->
   <script>
     function blockNumbers(event) {
       const keyCode = event.keyCode ? event.keyCode : event.which;
