@@ -78,6 +78,7 @@ module.exports = {
           'url("{{get_asset_url("../../assets/Hero_Section.svg")}}")',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
+        gradientText:"linear-gradient(92.43deg, rgba(255, 255, 255, 0.88) 69.88%, #00A2FF 84.53%, rgba(255, 255, 255, 0.87) 96.82%)",
         servicefradient:
           " linear-gradient(90deg, rgba(220,234,253,1) 11%, rgba(253,254,255,1) 64%)",
       }),
