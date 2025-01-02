@@ -98,14 +98,21 @@
         <!-- Accordion Cards -->
         <div class="space-y-4 z-10 mt-20 md:mt-0" >
           <!-- Card-1 -->
-           <h1>Current Openings</h1>
+           <h1 class="text-2xl font-semibold">Current Openings</h1>
           <div class="mt-8 space-y-4" id="result"></div>
           
-          <div class="bg-gradient-to-r from-blue-200 to-blue-50 p-4 border border-gray-300 rounded-xl shadow-sm flex justify-between items-center">
-            <button id="explore-archive" class=" text-center text-gray-700 font-medium ">
-              Explore Archive
+          <div class="flex items-center border-gray-600 space-x-2 cursor-pointer">
+            
+            <button  class="text-center text-2xl font-semibold text-gray-700 ">
+                Explore Archive
             </button>
-          </div>
+            <span  id="explore-archive" class="arrow-icon text-gray-700 border border-gray-400 transform rotate-180 cursor-pointer p-1" onclick="handleClick()">
+              ↑
+          </span>
+          
+        </div>
+        
+        
           
           <div id="archive-result" class="mt-8 space-y-4">
             <!-- Archived jobs will be loaded here -->
@@ -135,11 +142,11 @@
                     <ul class="list-disc ml-4 requirements"></ul>
                   </div>
                 </div>
-                 <button
+                 <!-- <button
                     class="apply-button mt-4 bg-white border border-black text-black py-2 px-4 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50 transition duration-200"
                   >
                     Apply Now
-                  </button>
+                  </button> -->
               </div>
             </div>
           </template>
@@ -261,5 +268,6 @@
       window.location.href = 'applynow.html';
     });
   });
+  
 </script>
 </html>
