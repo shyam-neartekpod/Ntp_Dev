@@ -74,10 +74,12 @@ module.exports = {
           'linear-gradient(to right bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("{{get_asset_url("../../assets/bulid.png")}}")',
         Hand: 'url("{{get_asset_url("../../assets/Handshake.svg")}}") ',
         Tech: 'url("{{get_asset_url("../../assets/VRAR.svg")}}") ',
+        AI:'url("{{get_asset_url("../../assets/Hero_AI.svg")}}")',
         Hospitality:
           'url("{{get_asset_url("../../assets/Hero_Section.svg")}}")',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
+        gradientText:"linear-gradient(91.44deg, rgba(255, 255, 255, 0.88) -18.04%, #00A2FF 37.69%, rgba(255, 255, 255, 0.87) 84.44%)",
         servicefradient:
           " linear-gradient(90deg, rgba(220,234,253,1) 11%, rgba(253,254,255,1) 64%)",
       }),
