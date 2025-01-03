@@ -1941,6 +1941,12 @@ body{
   background-image: url("{{get_asset_url("../../assets/Hero_Section.svg")}}");
 }
 
+.bg-AI{
+  background-image: url("{{get_asset_url("../../assets/Hero_AI.svg")}}");
+}
+.bg-gradientText{
+  background-image:"linear-gradient(91.44deg, rgba(255, 255, 255, 0.88) -18.04%, #00A2FF 37.69%, rgba(255, 255, 255, 0.87) 84.44%)";
+}
 .bg-Tech{
   background-image: url("{{get_asset_url("../../assets/VRAR.svg")}}") ;
 }
