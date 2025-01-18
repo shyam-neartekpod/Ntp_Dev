@@ -135,29 +135,33 @@
           </a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="service-link">
+          <!-- <a href="/service-dev" class="flex"> -->
           <a href="/service" class="flex">
-            <img src="{{get_asset_url('../../assets/gear.svg')}}" alt="" class="w-4 mr-2" />Service
-          </a>
+            <img src="{{get_asset_url('../../assets/gear.svg')}}" alt="" class="w-4 mr-2" />Services</a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="about-link">
+          <!-- <a href="/about-dev" class="flex"> -->
           <a href="/about-us" class="flex">
             <img src="{{get_asset_url('../../assets/people.svg')}}" alt="" class="w-4 mr-2" />About Us
           </a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="career-link">
           <a href="/career" class="flex">
-            <img src="{{get_asset_url('../../assets/briefcase.svg')}}" alt="" class="w-4 mr-2" />Career
+          <!-- <a href="/career-dev" class="flex"> -->
+            <img src="{{get_asset_url('../../assets/briefcase.svg')}}" alt="" class="w-4 mr-2" />Careers
           </a>
         </li>
         <li class="nav-style cursor-pointer duration-500" id="blog-link">
           <a href="/blog" class="flex">
-            <img src="{{get_asset_url('../../assets/newspaper.svg')}}" alt="" class="w-4 mr-2" />Blog
+          <!-- <a href="/blog-dev" class="flex"> -->
+            <img src="{{get_asset_url('../../assets/newspaper.svg')}}" alt="" class="w-4 mr-2" />Blogs
           </a>
         </li>
         <li
           class="h-9 leading-9 rounded-2xl px-3 border border-royalblue hover:bg-coralblue text-sm font-Montserrat font-bold cursor-pointer hover:text-blue-400 duration-500"
           id="contact-link">
           <a href="/contact-us">Contact Us</a>
+          <!-- <a href="/contact-dev">Contact Us</a> -->
         </li>
       </ul>
     </div>
@@ -178,83 +182,92 @@
 
     <div class="w-full items-center justify-between hidden lg:flex lg:w-auto lg:order-1" id="navbar-search">
       <div class="relative lg:hidden h-screen">
-        <ul class="w-full flex-col text-center bg-coralblue *:mt-10 p-4 text-xl font-bold h-screen">
+        <ul class="w-full flex-col text-center bg-coralblue  *:mt-10 p-4 text-xl font-bold h-screen">
           <li>
             <a href="/" id="home-link-mobile">Home</a>
           </li>
           <li>
-            <a href="/service" id="service-link-mobile">Service</a>
+            <!-- <a href="/service-dev" id="service-link-mobile">Services</a> -->
+            <a href="/service" id="service-link-mobile">Services</a>
           </li>
           <li>
+            <!-- <a href="/about-dev" id="about-link-mobile">About Us</a> -->
             <a href="/about-us" id="about-link-mobile">About Us</a>
           </li>
           <li>
-            <a href="/career" id="career-link-mobile">Career</a>
+            <!-- <a href="/career-dev" id="career-link-mobile">Careers</a> -->
+            <a href="/career" id="career-link-mobile">Careers</a>
           </li>
           <li>
-            <a href="/blog" id="blog-link-mobile">Blog</a>
+            <!-- <a href="/blog-dev" id="blog-link-mobile">Blogs</a> -->
+            <a href="/blog" id="blog-link-mobile">Blogs</a>
           </li>
           <li>
-            <a href="/contact-us" id="contact-link-mobile">Contact Us</a>
+            <!-- <a href="/contact-dev" id="contact-link-mobile">Contact Us</a> -->
+            <a href="/contact-us" id="contact-link-mobile">Contact Us</a>            
           </li>
         </ul>
       </div>
     </div>
   </div>
 </nav>
-
-<!-- JavaScript to handle active class -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
     const currentPath = window.location.pathname;
-
     // Function to extract path from URL
     function getPath(url) {
       const path = new URL(url, window.location.origin).pathname;
       return path;
     }
 
+    // Function to set active link with different classes for desktop and mobile
     function setActiveLink() {
       navLinks.forEach((link) => {
-       
         link.parentElement.classList.remove("active");
 
-        if (link.id !== "logo-link" && getPath(link.href) === window.location.pathname) {
-          link.parentElement.classList.add("active");
-        }
-
-        // Handle the "blog" special case
+        
+        // Special case for the "blog" link
         if (currentPath.includes("blog") && getPath(link.href).includes("blog")) {
-          link.parentElement.classList.add("active");
+          link.parentElement.classList.add("active")
         }
       });
     }
 
-    // Set active class based on current URL
+    // Set the initial active link
     setActiveLink();
 
-    // Add click event to update active class
+    // Add click event listener to update active class
     navLinks.forEach((link) => {
       link.addEventListener("click", function (event) {
         if (this.id !== "logo-link") {
           navLinks.forEach((navLink) => navLink.parentElement.classList.remove("active"));
-          this.parentElement.classList.add("active");
+            this.parentElement.classList.add("active");
         }
       });
+    });
+
+    // Toggle the mobile menu and prevent scrolling when open
+    toggleButton.addEventListener("click", function () {
+      const isExpanded = navbarMenu.classList.toggle("hidden");
+      document.body.classList.toggle("overflow-y-hidden", !isExpanded);
     });
 
     // Handle back/forward navigation
     window.addEventListener("popstate", setActiveLink);
 
+    // Re-apply active link class on resize to adjust for different screen sizes
+    window.addEventListener("resize", setActiveLink);
+
     // Update active link on load
     window.addEventListener("load", setActiveLink);
   });
 </script>
-
-<!-- Style for active class -->
+<!-- Styles for active classes -->
 <style>
+  /* Desktop active class */
   .active {
     background-color: #A7DFFF;
   }
+
 </style>
