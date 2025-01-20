@@ -5,304 +5,316 @@
     screenshotPath: ../images/template-previews/home.png
     -->
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailored Business Solutions & Services : Neartekpod Offerings</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    {{ require_css(get_asset_url("../css/components/output.css")) }} {{
-    standard_header_includes }}
-    <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
-  </head>
-
-  <body>
-    {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
-    endblock Navbar %}
-    <div class="absolute top-[50px] left-30">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-    <div class="absolute top-[550px] left-30">
-      {% block Backgroundcolor %} {% global_partial
-      path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
-    </div>
-    <div class="mt-24">
-      <div class="container  xl:px-32 px-3">
-        <div>
-          <div class="bg-service">
-            <div class="relative">
-              <img
-                src="{{get_asset_url('../assets/Service-hero-image.svg')}}"
-                alt="Card Image"
-                class="h-auto rounded-lg w-full"
-              />
-  
-              <div class="absolute inset-0 flex flex-col justify-end  p-6 rounded-lg w-full">
-                <h2 class="text-white md:text-4xl font-medium mb-1">Your tech partner in driving efficiency and accelerating growth</h2>
-                <h1 class="text-white md:text-2xl font-medium mb-1">Boosting your performance with expert technological guidance</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailored Business Solutions & Services : Neartekpod Offerings</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+    
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+    
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+          rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        {{ require_css(get_asset_url("../css/components/output.css")) }} {{
+        standard_header_includes }}
+        <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
+      </head>
+    
+      <body>
+        {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
+        endblock Navbar %}
+        <div class="absolute top-[50px] left-30">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="absolute top-[550px] left-30">
+          {% block Backgroundcolor %} {% global_partial
+          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor %}
+        </div>
+        <div class="mt-24">
+          <div class="container  xl:px-32 px-3">
+            <div>
+              <div class="bg-service">
+                <div class="relative">
+                  <img
+                    src="{{get_asset_url('../assets/Service-hero-image.svg')}}"
+                    alt="Card Image"
+                    class="h-auto rounded-lg w-full"
+                  />
+      
+                  <div class="absolute inset-0 flex flex-col justify-end  p-6 rounded-lg w-full">
+                    <h2 class="text-white md:text-4xl font-medium mb-1">Your tech partner in driving efficiency and accelerating growth</h2>
+                    <h1 class="text-white md:text-2xl font-medium mb-1">Boosting your performance with expert technological guidance</h1>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="absolute top-[450px] right-0">
-          {% block Backgroundcolor %} {% global_partial
-          path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor
-          %}
-        </div>
-        <div class="items-start">
-          <h2 class="font-medium text-3xl md:text-4xl mt-20 mb-20">
-            Our Services
-          </h2>
-        </div>
-        <div class="flex flex-wrap md:flex-nowrap">
-          <div class="md:w-1/2 mt-6">
-            <img
-              src="{{get_asset_url('../assets/Hospitality.svg')}}"
-              alt=" Hospitality in Oracle Cloud"
-              class="object-cover rounded-2xl h-[19rem] w-[31rem]"
-            />
-          </div>
-          <div class="md:w-1/2">
-            <div
-              class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:px-8"
-            >
-              <h3 class="service-title md:text-3xl text-xl">
-                Hospitality in Oracle Cloud
-              </h3>
-              <p
-                class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
-              >
-              We empower hotels and resorts with smooth transitions to Opera Cloud PMS, enhancing your hospitality operations. Elevate your hospitality experience with our Oracle Opera Cloud solutions we help you deliver personalized guest experiences while optimizing daily functions.
-              </p>
-              <button
-                    class="w-1/2 btn rounded-full border-[1px] md:text-base text-xs font-medium p-1 border-primaryblack hover:bg-bluechalk hover:border-bluechalk transition ease-in-out"
-          >
-          <a href="https://www.neartekpod.com/hospitality">Read More</a>
-          <i class="fa-solid fa-arrow-right ml-3"></i>
-          </button>
-              <!-- <a
-                href="/comingsoon-dev"
-                class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
-                >EXPLORE MORE</a
-              > -->
+            <div class="absolute top-[450px] right-0">
+              {% block Backgroundcolor %} {% global_partial
+              path="./Components/backroundcolor.html " %} {% endblock Backgroundcolor
+              %}
             </div>
-          </div>
-        </div>
-        <div class="service-contant mt-24 mb-20">
-          <div class="md:w-1/2 order-2 md:order-1">
-            <div
-              class="flex flex-col justify-center md:justify-start w-full text-center mt-6 md:text-start md:t ext-left md:py-8 md:pr-8"
-            >
-              <h3 class="service-title md:text-3xl text-xl">AI-Enhanced Commerce Solutions</h3>
-              <p
-                class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
-              >
-              At NearTekPod, we simplify your migration to leading Cloud Commerce platforms such as Shopify and BigCommerce. Our tailored solutions combine cutting-edge Artificial Intelligence (AI) and cloud-native implementations to fast-track your commerce development and drive operational efficiency.
-              </p>
-              <button
-              class="w-1/2 btn rounded-full border-[1px] md:text-base text-xs font-medium p-1 border-primaryblack hover:bg-bluechalk hover:border-bluechalk transition ease-in-out"
-              >
-              <a href="https://www.neartekpod.com/commerce">Read More</a>
-              <i class="fa-solid fa-arrow-right ml-3"></i>
-              </button>
-              <!-- <a
-                href="/comingsoon-dev"
-                class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
-                >EXPLORE MORE</a
-              > -->
+            <div class="items-start mt-20 mb-20">
+              <h2 class="font-medium text-3xl md:text-4xl mb-10">
+                Our Services
+              </h2>
+              <div class="flex flex-wrap md:flex-nowrap">
+                <div class="md:w-1/2 mt-6">
+                  <img
+                    src="{{get_asset_url('../assets/Hospitality.svg')}}"
+                    alt=" Hospitality in Oracle Cloud"
+                    class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+                  />
+                </div>
+                <div class="md:w-1/2">
+                  <div
+                    class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:px-8"
+                  >
+                    <h3 class="service-title md:text-3xl text-xl">
+                      Hospitality in Oracle Cloud
+                    </h3>
+                    <p
+                      class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+                    >
+                    We empower hotels and resorts with smooth transitions to Opera Cloud PMS, enhancing your hospitality operations. Elevate your hospitality experience with our Oracle Opera Cloud solutions we help you deliver personalized guest experiences while optimizing daily functions.
+                    </p>
+                    <div class="flex justify-center md:justify-start">
+                      <button
+                        class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-0 md:gap-3 items-center space-x-2 mt-2"
+                      >
+                      <a href="/services/hospitality">Read More</a>
+                      <i
+                          class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center icon-animate"
+                        ></i>
+                      </button>
+                    </div>
+                    <!-- <a
+                      href="/comingsoon-dev"
+                      class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+                      >EXPLORE MORE</a
+                    > -->
+                  </div>
+                </div>
+              </div>
+              <div class="service-contant mt-24 mb-20">
+                <div class="md:w-1/2 order-2 md:order-1">
+                  <div
+                    class="flex flex-col justify-center md:justify-start w-full text-center mt-4 md:text-start md:text-left md:py-4 md:pr-8"
+                  >
+                    <h3 class="service-title md:text-3xl text-xl">AI-Enhanced Commerce Solutions</h3>
+                    <p
+                      class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+                    >
+                    At NearTekPod, we simplify your migration to leading Cloud Commerce platforms such as Shopify and BigCommerce. Our tailored solutions combine cutting-edge Artificial Intelligence (AI) and cloud-native implementations to fast-track your commerce development and drive operational efficiency.
+                    </p>
+                    <div class="flex justify-center md:justify-start">
+                      <button
+                        class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-0 md:gap-3 items-center space-x-2 mt-2 "
+                      >
+                      <a href="/services/commerce">Read More</a>
+                        <i
+                          class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center icon-animate"
+                        ></i>
+                      </button>
+                    </div>
+                    <!-- <a
+                      href="/comingsoon-dev"
+                      class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+                      >EXPLORE MORE</a
+                    > -->
+                  </div>
+                </div>
+                <div class="md:w-1/2 md:order-2 order-1 mt-6">
+                  <img
+                    src="{{get_asset_url('../assets/Ai-power.svg')}}"
+                    alt="AI-Enhanced Commerce Solutions"
+                    class="object-cover rounded-3xl h-[20rem] w-[31rem]"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-wrap md:flex-nowrap mt-10">
+                <div class="md:w-1/2 mt-6">
+                  <img
+                    src="{{get_asset_url('../assets/Genai.svg')}}"
+                    alt="AI / GEN AI Solutions"
+                    class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+                  />
+                </div>
+                <div class="md:w-1/2">
+                  <div
+                    class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:px-8"
+                  >
+                    <h3 class="service-title md:text-3xl text-xl">
+                      AI / GEN AI Solutions
+                    </h3>
+                    <p
+                      class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+                    >
+                    At NearTekPod, we help enterprises rapidly adopt AI technologies with our innovative Low Code Platform (LCP) for AI. Designed to simplify the development, integration, and deployment of AI-powered applications, our LCP reduces complexity while ensuring scalability and performance.
+                    </p>
+                    <div class="flex justify-center md:justify-start">
+                      <button
+                        class="bg-backblue text-white px-4 py-2 rounded-full font-semibold flex gap-0 md:gap-3 items-center space-x-2 mt-2"
+                      >
+                      <a href="/services/lcp4ai">Read More</a>
+                        <i
+                          class="fa-solid fa-arrow-right ml-4 bg-white rounded-full text-black w-7 h-7 flex items-center justify-center icon-animate"
+                        ></i>
+                      </button>
+                    </div>
+                    <!-- <a
+                      href="/comingsoon-dev"
+                      class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+                      >EXPLORE MORE</a
+                    > -->
+                  </div>
+                </div>
+              </div>
+              <div class="service-contant mt-24 mb-20">
+                <div class="md:w-1/2 order-2 md:order-1">
+                  <div
+                    class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:py-8 md:pr-8"
+                  >
+                    <h3 class="service-title md:text-3xl text-xl">
+                      Digital Information
+                    </h3>
+                    <p
+                      class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+                    >
+                      Transform your organization for greater efficiency and
+                      flexibility, enabling rapid response to market opportunities. We
+                      design, build, and launch custom enterprise applications and
+                      implement SaaS platforms, covering everything from content to
+                      commerce.
+                    </p>
+                    <!-- <a
+                      href="/comingsoon-dev"
+                      class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+                      >EXPLORE MORE</a
+                    > -->
+                  </div>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 mt-6">
+                  <img
+                    src="{{get_asset_url('../assets/Digital-Information.svg')}}"
+                    alt="Managed Services"
+                    class="object-cover rounded-2xl h-[20rem] w-[31rem]"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-wrap md:flex-nowrap mt-10">
+                <div class="md:w-1/2 mt-6">
+                  <img
+                    src="{{get_asset_url('../assets/Data-orchestration.svg')}}"
+                    alt="Business Consulting"
+                    class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+                  />
+                </div>
+                <div class="md:w-1/2">
+                  <div
+                    class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
+                  >
+                    <h3 class="service-title md:text-3xl text-xl">
+                      Data Orchestration
+                    </h3>
+                    <p
+                      class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+                    >
+                      In today's data-driven world, effectively managing and utilizing
+                      data is crucial for informed decision-making and driving business
+                      success. Our Data Orchestration services streamline and harmonize
+                      your data, transforming it into a powerful asset that fuels
+                      innovation and growth.
+                    </p>
+                    <!-- <a
+                      href="/comingsoon-dev"
+                      class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+                      >EXPLORE MORE</a
+                    > -->
+                  </div>
+                </div>
+              </div>
+              <div class="service-contant mt-24 mb-20">
+                <div class="md:w-1/2 order-2 md:order-1">
+                  <div
+                    class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:py-8 md:pr-8"
+                  >
+                    <h3 class="service-title md:text-3xl text-xl">Staff Services</h3>
+                    <p
+                      class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+                    >
+                      In the rapidly evolving world of technology, having the right
+                      talent is crucial for maintaining a competitive edge. Our Staff
+                      Services provide expert IT professionals who seamlessly integrate
+                      into your team, driving innovation and achieving your business
+                      objectives.
+                    </p>
+                    <!-- <a
+                      href="/comingsoon-dev"
+                      class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+                      >EXPLORE MORE</a
+                    > -->
+                  </div>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 mt-6">
+                  <img
+                    src="{{get_asset_url('../assets/Staff-services.svg')}}"
+                    alt="Managed Services"
+                    class="object-cover rounded-2xl h-[20rem] w-[31rem]"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-wrap md:flex-nowrap mt-10">
+                <div class="md:w-1/2 mt-6">
+                  <img
+                    src="{{get_asset_url('../assets/Design.svg')}}"
+                    alt="Business Consulting"
+                    class="object-cover rounded-2xl h-[19rem] w-[31rem]"
+                  />
+                </div>
+                <div class="md:w-1/2">
+                  <div
+                    class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
+                  >
+                    <h3 class="service-title md:text-3xl text-xl">User Experience</h3>
+                    <p
+                      class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
+                    >
+                      We help brands create seamless and enjoyable user experiences,
+                      driving customer loyalty and satisfaction. Our human-centered
+                      approach enhances engagement, improves efficiency, and ensures a
+                      rapid return on investment.
+                    </p>
+                    <!-- <a
+                      href="/comingsoon-dev"
+                      class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
+                      >EXPLORE MORE</a
+                    > -->
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="md:w-1/2 md:order-2 order-1 mt-6">
-            <img
-              src="{{get_asset_url('../assets/Ai-power.svg')}}"
-              alt="AI-Enhanced Commerce Solutions"
-              class="object-cover rounded-3xl h-[19rem] w-[31rem]"
-            />
+            {{ standard_footer_includes }} {% block footer %} {% global_partial
+              path="./partials/footer.html" %}{% endblock footer %}
           </div>
         </div>
-        <div class="flex flex-wrap md:flex-nowrap mt-10">
-          <div class="md:w-1/2 mt-6">
-            <img
-              src="{{get_asset_url('../assets/Genai.svg')}}"
-              alt="AI / GEN AI Solutions"
-              class="object-cover rounded-2xl h-[19rem] w-[31rem]"
-            />
-          </div>
-          <div class="md:w-1/2">
-            <div
-              class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:px-8"
-            >
-              <h3 class="service-title md:text-3xl text-xl">
-                AI / GEN AI Solutions
-              </h3>
-              <p
-                class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
-              >
-              At NearTekPod, we help enterprises rapidly adopt AI technologies with our innovative Low Code Platform (LCP) for AI. Designed to simplify the development, integration, and deployment of AI-powered applications, our LCP reduces complexity while ensuring scalability and performance.
-              </p>
-              <button
-              class="w-1/2 btn rounded-full border-[1px] md:text-base text-xs font-medium  p-1 border-primaryblack hover:bg-bluechalk hover:border-bluechalk transition ease-in-out"
-              >
-              <a href="https://www.neartekpod.com/lcp4ai">Read More</a>
-              <i class="fa-solid fa-arrow-right ml-3"></i>
-              </button>
-              <!-- <a
-                href="/comingsoon-dev"
-                class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
-                >EXPLORE MORE</a
-              > -->
-            </div>
-          </div>
-        </div>
-        <div class="service-contant mt-24 mb-20">
-          <div class="md:w-1/2 order-2 md:order-1">
-            <div
-              class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:py-8 md:pr-8"
-            >
-              <h3 class="service-title md:text-3xl text-xl">
-                Digital Information
-              </h3>
-              <p
-                class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
-              >
-                Transform your organization for greater efficiency and
-                flexibility, enabling rapid response to market opportunities. We
-                design, build, and launch custom enterprise applications and
-                implement SaaS platforms, covering everything from content to
-                commerce.
-              </p>
-              <!-- <a
-                href="/comingsoon-dev"
-                class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
-                >EXPLORE MORE</a
-              > -->
-            </div>
-          </div>
-          <div class="md:w-1/2 order-1 md:order-2 mt-6">
-            <img
-              src="{{get_asset_url('../assets/Digital-Information.svg')}}"
-              alt="Managed Services"
-              class="object-cover rounded-2xl h-[20rem] w-[31rem]"
-            />
-          </div>
-        </div>
-        <div class="flex flex-wrap md:flex-nowrap mt-10">
-          <div class="md:w-1/2 mt-6">
-            <img
-              src="{{get_asset_url('../assets/Data-orchestration.svg')}}"
-              alt="Business Consulting"
-              class="object-cover rounded-2xl h-[19rem] w-[31rem]"
-            />
-          </div>
-          <div class="md:w-1/2">
-            <div
-              class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
-            >
-              <h3 class="service-title md:text-3xl text-xl">
-                Data Orchestration
-              </h3>
-              <p
-                class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
-              >
-                In today's data-driven world, effectively managing and utilizing
-                data is crucial for informed decision-making and driving business
-                success. Our Data Orchestration services streamline and harmonize
-                your data, transforming it into a powerful asset that fuels
-                innovation and growth.
-              </p>
-              <!-- <a
-                href="/comingsoon-dev"
-                class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
-                >EXPLORE MORE</a
-              > -->
-            </div>
-          </div>
-        </div>
-        <div class="service-contant mt-24 mb-20">
-          <div class="md:w-1/2 order-2 md:order-1">
-            <div
-              class="flex flex-col justify-center w-full text-center mt-6 md:text-left md:py-8 md:pr-8"
-            >
-              <h3 class="service-title md:text-3xl text-xl">Staff Services</h3>
-              <p
-                class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
-              >
-                In the rapidly evolving world of technology, having the right
-                talent is crucial for maintaining a competitive edge. Our Staff
-                Services provide expert IT professionals who seamlessly integrate
-                into your team, driving innovation and achieving your business
-                objectives.
-              </p>
-              <!-- <a
-                href="/comingsoon-dev"
-                class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
-                >EXPLORE MORE</a
-              > -->
-            </div>
-          </div>
-          <div class="md:w-1/2 order-1 md:order-2 mt-6">
-            <img
-              src="{{get_asset_url('../assets/Staff-services.svg')}}"
-              alt="Managed Services"
-              class="object-cover rounded-2xl h-[20rem] w-[31rem]"
-            />
-          </div>
-        </div>
-        <div class="flex flex-wrap md:flex-nowrap mt-10">
-          <div class="md:w-1/2 mt-6">
-            <img
-              src="{{get_asset_url('../assets/Design.svg')}}"
-              alt="Business Consulting"
-              class="object-cover rounded-2xl h-[19rem] w-[31rem]"
-            />
-          </div>
-          <div class="md:w-1/2">
-            <div
-              class="flex flex-col justify-center w-full text-center mt-10 md:text-left md:px-8"
-            >
-              <h3 class="service-title md:text-3xl text-xl">User Experience</h3>
-              <p
-                class="service-para md:text-lg text-sm leading-leading1 md:leading-leading2"
-              >
-                We help brands create seamless and enjoyable user experiences,
-                driving customer loyalty and satisfaction. Our human-centered
-                approach enhances engagement, improves efficiency, and ensures a
-                rapid return on investment.
-              </p>
-              <!-- <a
-                href="/comingsoon-dev"
-                class="md:w-40 md:h-10 w-32 h-8 flex text-center items-center justify-center border border-black font-bold md:text-sm text-xs rounded-full mx-auto md:mx-0"
-                >EXPLORE MORE</a
-              > -->
-            </div>
-          </div>
-        </div>
-        {{ standard_footer_includes }} {% block footer %} {% global_partial
-          path="./partials/footer.html" %}{% endblock footer %}
-      </div>
-    </div>
+        
     
-
-      {{
-    require_js(get_asset_url("../js/main.js")) }}
-  </body>
-</html>
+          {{
+        require_js(get_asset_url("../js/main.js")) }}
+      </body>
+    </html>

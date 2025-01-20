@@ -1804,6 +1804,9 @@ body{
 .bg-Commerce{
   background-image: url("{{get_asset_url("../../assets/Hero card.svg")}}");
 }
+.bg-AI{
+  background-image: url("{{get_asset_url("../../assets/Hero_AI.svg")}}");
+}
 .bg-Tech{
   background-image: url("{{get_asset_url("../../assets/VR-image.svg")}}") ;
 }
@@ -2142,7 +2145,7 @@ body{
 }
 
 .leading-leading1{
-  line-height: 1.5rem;
+  line-height: 1.25rem;
 }
 
 .leading-relaxed{
@@ -2999,7 +3002,7 @@ body{
   }
 
   .md\:leading-leading2{
-    line-height: 1.9rem;
+    line-height: 1.5rem;
   }
 }
 
