@@ -27,7 +27,7 @@
     @apply text-3xl font-semibold text-gray-800 mb-2 mt-6 md:mt-0;
   }
   .service-para {
-    @apply text-gray-600 my-8 leading-7 text-base;
+    @apply text-gray-600 my-4 leading-7 text-base;
   }
 
   .swiper-pagination-bullet-active {
