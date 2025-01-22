@@ -675,8 +675,8 @@ body{
 }
 
 .service-para{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -1940,7 +1940,9 @@ body{
 .bg-Hospitality{
   background-image: url("{{get_asset_url("../../assets/Hero_Section.svg")}}");
 }
-
+.bg-Commerce{
+  background-image: url("{{get_asset_url("../../assets/Hero card.svg")}}");
+}
 .bg-AI{
   background-image: url("{{get_asset_url("../../assets/Hero_AI.svg")}}");
 }
@@ -2285,7 +2287,7 @@ body{
 }
 
 .leading-leading1{
-  line-height: 1.5rem;
+  line-height: 1.25rem;
 }
 
 .leading-relaxed{
@@ -3311,7 +3313,7 @@ body{
   }
 
   .md\:leading-leading2{
-    line-height: 1.9rem;
+    line-height: 1.5rem;
   }
 
   .md\:leading-6{

@@ -77,9 +77,11 @@ module.exports = {
         AI:'url("{{get_asset_url("../../assets/Hero_AI.svg")}}")',
         Hospitality:
           'url("{{get_asset_url("../../assets/Hero_Section.svg")}}")',
+        Commerce:
+        'url("{{get_asset_url("../../assets/Hero card.svg")}}")',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
-        gradientText:"linear-gradient(91.44deg, rgba(255, 255, 255, 0.88) -18.04%, #00A2FF 37.69%, rgba(255, 255, 255, 0.87) 84.44%)",
+        gradienttext: "linear-gradient(91.44deg, rgba(255, 255, 255, 0.88) -18.04%, #00A2FF 37.69%, rgba(255, 255, 255, 0.87) 84.44%)",
         servicefradient:
           " linear-gradient(90deg, rgba(220,234,253,1) 11%, rgba(253,254,255,1) 64%)",
       }),

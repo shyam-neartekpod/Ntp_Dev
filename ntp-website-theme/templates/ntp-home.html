@@ -31,7 +31,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     {{ require_css(get_asset_url("../css/components/output.css")) }} {{
     standard_header_includes }}
-    <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/Brandmark-logo.svg') }}"><link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/neartekpod_logo.jpg') }}">
+    <link rel="icon" type="image/jpg" href="{{get_asset_url('../assets/Brandmark-logo.svg') }}">
   </head>
   <body class="">
     {% block Navbar %} {% global_partial path="./partials/navbar.html" %} {%
@@ -41,9 +41,9 @@
       <div class="grid sm:grid-cols-2  gap-10" >
         <div class="col-span-1 bg-coralblue rounded-3xl h-full" >
           <div class="text-center mt-7">
-            <h5 class="md:text-4xl font-medium p-2 text-2xl ">
+            <h1 class="md:text-4xl font-medium p-2 text-2xl ">
               Navigate Technology Complexity & Grow your Business Together
-            </h5>
+            </h1>
           </div>
           <!-- mail -->
           <div class="flex items-center  justify-center mt-7">
@@ -89,7 +89,7 @@
               <a href="https://www.linkedin.com/company/neartekpod/mycompany/" target="_blank">
                 <i class="fa-brands fa-linkedin border border-blue-300 rounded-3xl p-1 text-blue-300"></i>
               </a>
-              <p class="font-light text-blue-300">Find us on social networks</p>
+              <p class="font-light text-blue-300">Find us on social</p>
             </div>
           </div>
         </div>
@@ -177,13 +177,12 @@
         <p
           class="text-2xl md:text-4xl max-w-4xl mx-auto font-medium md:leading-[3rem]"
         >
-          Modern business require experienced technologists and robust
-          technology solutions to achieve their goals.
+        Modern businesses need skilled professionals and advanced technology solutions to drive innovation and achieve their strategic objectives. 
         </p>
         <button
           class="btn rounded-full border-[1px] md:text-base text-xs font-medium md:p-3 p-2 mt-6 border-primaryblack hover:bg-bluechalk hover:border-bluechalk transition ease-in-out"
         >
-          <a href="/service-dev"> View Our service</a>
+          <a href="/services"> View our services</a>
           <i class="fa-solid fa-arrow-right ml-3"></i>
         </button>
       </div>
@@ -196,7 +195,7 @@
       <div class="mt-28 mb-20 hidden lg:flex flex-col">
         <div class="items-start">
           <h2 class="font-medium md:text-4xl text-3xl mb-10">
-            Some of our Recent Works
+            Our latest projects
           </h2>
         </div>
         {% block RecentWork %} {% global_partial path="./Components/work.html "
@@ -205,8 +204,8 @@
       <!-- recent works-sm -->
       <div class="swiper mySwiper lg:hidden">
         <div class="items-start">
-          <h2 class="font-medium text-2xl mb-10 md:mt-10 mt-20">
-            Some of our Recent Works
+          <h2 class="md:text-4xl text-3xl font-medium mb-10 md:mt-10 mt-20">
+            Our latest projects  
           </h2>
         </div>
         <div class="swiper-wrapper">
