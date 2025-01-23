@@ -1941,7 +1941,7 @@ body{
   background-image: url("{{get_asset_url("../../assets/Hero_Section.svg")}}");
 }
 .bg-Commerce{
-  background-image: url("{{get_asset_url("../../assets/Hero card.svg")}}");
+  background-image: url("{{get_asset_url("../../assets/Hero_card.svg")}}");
 }
 .bg-AI{
   background-image: url("{{get_asset_url("../../assets/Hero_AI.svg")}}");
