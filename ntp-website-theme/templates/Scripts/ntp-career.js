@@ -266,12 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);
-      }
-  
-      console.log("Fetching job response data...", response);
-      const data = await response.json();
-      console.log("Fetching data...", data);
-  
+      } 
       // Clear existing cards
       archiveResultDiv.innerHTML = "";
   

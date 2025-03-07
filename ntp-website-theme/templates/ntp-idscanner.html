@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: NTP-LCP Landing page
+  label: NTP-IDScanner
   screenshotPath: ../images/template-previews/home.png
 -->
 <!DOCTYPE html>
@@ -49,13 +49,18 @@
     <style>
       @keyframes moveLeft {
         0% {
-          transform: translateX(0); /* Start at the original position */
+          transform: translateX(0);
+          /* Start at the original position */
         }
+
         50% {
-          transform: translateX(10px); /* Slight movement to the left */
+          transform: translateX(10px);
+          /* Slight movement to the left */
         }
+
         100% {
-          transform: translateX(0); /* Return to original position */
+          transform: translateX(0);
+          /* Return to original position */
         }
       }
 
@@ -65,8 +70,10 @@
 
       /* Move icon on hover */
       button:hover .icon-animate {
-        animation: moveLeft 2s ease-in-out infinite; /* Animation on hover */
+        animation: moveLeft 2s ease-in-out infinite;
+        /* Animation on hover */
       }
+
       /* Container Perspective */
       .perspective {
         perspective: 1000px;
@@ -74,15 +81,19 @@
 
       /* 3D Container */
       .preserve-3d {
-        -webkit-transform-style: preserve-3d; /* WebKit-specific prefix */
+        -webkit-transform-style: preserve-3d;
+        /* WebKit-specific prefix */
         transform-style: preserve-3d;
-        will-change: transform; /* Optimize for rendering */
+        will-change: transform;
+        /* Optimize for rendering */
       }
 
       /* Backface Visibility Fix with WebKit Prefix */
       .backface-hidden {
-        -webkit-backface-visibility: hidden; /* WebKit-specific prefix */
-        backface-visibility: hidden; /* Standard property */
+        -webkit-backface-visibility: hidden;
+        /* WebKit-specific prefix */
+        backface-visibility: hidden;
+        /* Standard property */
       }
 
       /* Flip Effect */
@@ -91,13 +102,13 @@
       }
 
       .rotate-y-180 {
-        transform: rotateY(
-          180deg
-        ); /* Rotates the card 180 degrees on the Y-axis */
+        transform: rotateY(180deg);
+        /* Rotates the card 180 degrees on the Y-axis */
       }
 
       .group:hover .group-hover\:rotate-y-180 {
-        transform: rotateY(180deg); /* Applies the rotation on hover */
+        transform: rotateY(180deg);
+        /* Applies the rotation on hover */
       }
     </style>
   </head>
@@ -154,15 +165,21 @@
     <section class="container xl:px-32 px-6 pt-24">
       <div class="mt-2 relative md:block">
         <div
-          class="flex items-center justify-center bg-AI bg-auto md:bg-contain bg-no-repeat rounded-3xl h-[400px] md:h-[700px] w-full px-10 md:relative"
+          class="flex items-center justify-center bg-Idscanner md:bg-contain bg-no-repeat rounded-3xl w-full px-10 md:relative !bg-cover h-[400px] md:h-[600px]"
         >
           <div class="text-center">
             <h1 class="text-white text-xl md:text-5xl font-bold leading-tight">
-              GenAI Success with <span class="text-gradientText">LCP4AI</span>
+              AI-Powered ID Scanning for Faster Guest
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-500 to-indigo-500 md:text-4xl font-bold"
+              >
+                Check-Ins
+              </span>
               <br />
             </h1>
             <p class="text-white text-lg md:text-2xl font-normal mt-2 md:mt-4">
-              Develop, Deploy, Secure and Scale your AI apps in weeks
+              Seamlessly scan IDs with AI-powered verification, ensuring
+              accuracy, security, and compliance in seconds.
             </p>
             <div class="flex flex-col items-center justify-center text-center">
               <p
@@ -185,11 +202,11 @@
         </div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-4 md:p-0 mt-5 md:mb-20">
+      <div class="max-w-7xl mx-auto px-4 md:p-0 mt-7 md:mb-20">
         <div class="text-left">
-          <p class="text-sky-500 font-bold text-sm">Low Code Platform for AI</p>
+          <!-- <p class="text-sky-500 font-bold text-sm">Low Code Platform for AI</p> -->
           <h2 class="text-2xl md:text-3xl font-semibold mt-2 mb-6">
-            What LCP4AI Brings to Customers:
+            Why Choose Us?
           </h2>
         </div>
         <div
@@ -200,16 +217,19 @@
             <div class="flex items-start">
               <div class="text-blue-500 text-2xl flex items-center">
                 <img
-                  src="{{get_asset_url('../assets/phone.svg')}}"
+                  src="{{get_asset_url('../assets/rocket-takeoff 1.svg')}}"
                   alt="AI App"
-                  class="w-8 h-11 ml-2"
+                  class="w-20 h-11 ml-2"
                 />
               </div>
               <div class="ml-6">
-                <h3 class="font-bold text-lg">Apps that listen and speak</h3>
+                <h3 class="font-bold text-lg">
+                  Speed Up Check-Ins & Reduce Wait Times
+                </h3>
                 <p class="text-sm font-normal md:text-lg">
-                  Bring your apps closer to your users with a human connection
-                  by enabling natural voice and vision capabilities.
+                  Manually entering guest details is outdated. Our AI-powered
+                  scanner extracts information instantly, reducing check-in time
+                  by up to 80%.
                 </p>
               </div>
             </div>
@@ -218,34 +238,38 @@
             <div class="flex items-start space-x-4">
               <div class="text-blue-500 text-2xl flex items-center">
                 <img
-                  src="{{get_asset_url('../assets/clock.svg')}}"
+                  src="{{get_asset_url('../assets/Accurate.svg')}}"
                   alt="AI App"
-                  class="mt-2 w-6 h-6"
+                  class="mt-2 w-20 h-6"
                 />
               </div>
               <div>
-                <h3 class="font-bold text-lg">Compose apps in minutes</h3>
+                <h3 class="font-bold text-lg">
+                  Accurate & Error-Free Data Extraction
+                </h3>
                 <p class="text-sm font-normal md:text-lg">
-                  Stitch complex tech-bricks with visual editor.
+                  Say goodbye to typos and incorrect guest details. AI ensures
+                  every piece of information is accurately captured and stored.
                 </p>
               </div>
             </div>
 
             <!-- Feature 3 -->
             <div class="flex items-start space-x-4">
-              <div class="text-blue-500 text-2xl">
+              <div class="text-blue-500 text-xl">
                 <img
-                  src="{{get_asset_url('../assets/Flexible.svg')}}"
+                  src="{{get_asset_url('../assets/Vector.svg')}}"
                   alt="AI App"
                   class="w-16 h-10"
                 />
               </div>
               <div>
-                <h3 class="font-bold text-lg">Flexible deployment recipes</h3>
+                <h3 class="font-bold text-lg">
+                  Seamless PMS & Hotel Software Integration
+                </h3>
                 <p class="text-sm font-normal md:text-lg">
-                  Run AI applications on any hyperscale platform and integrate
-                  them into your existing IT landscape seamlessly using API
-                  services.
+                  Our system integrates effortlessly with your Property
+                  Management System (PMS), ensuring a smooth workflow.
                 </p>
               </div>
             </div>
@@ -254,15 +278,19 @@
             <div class="flex items-start space-x-4">
               <div class="text-blue-500 text-2xl">
                 <img
-                  src="{{get_asset_url('../assets/Security.svg')}}"
+                  src="{{get_asset_url('../assets/Group.svg')}}"
                   alt="AI App"
-                  class="mt-2 w-6 h-6"
+                  class="mt-2 w-20 h-6"
                 />
               </div>
               <div>
-                <h3 class="font-bold text-lg">A team you can trust</h3>
+                <h3 class="font-bold text-lg">
+                  Multi-ID Support for Global Guests
+                </h3>
                 <p class="text-sm font-normal md:text-lg">
-                  Our multidisciplinary team is ready to go.
+                  Whether it’s a passport, Aadhaar card, driver’s license, or
+                  national ID—our scanner supports multiple formats from various
+                  countries.
                 </p>
               </div>
             </div>
@@ -270,14 +298,10 @@
           <div class="flex justify-center">
             <div class="relative">
               <img
-                src="{{get_asset_url('../assets/Mobile.svg')}}"
+                src="{{get_asset_url('../assets/AISCAN.svg')}}"
                 alt="AI App"
                 class="h-auto"
               />
-              <!-- <img 
-              src="{{get_asset_url('../assets/PersonalAI.gif')}}" 
-              alt="Overlay GIF" 
-              class="absolute w-20 md:w-32 h-20 md:h-32 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[90%] pointer-events-none"> -->
             </div>
           </div>
         </div>
@@ -290,101 +314,89 @@
           SEE AI IN ACTION
         </p>
         <h2 class="text-2xl md:text-3xl font-semibold mt-2 mb-6 text-black">
-          Sample arts that LCP4AI has made possible
+          Key Features of Our ID Scanner
         </h2>
-        <!-- Five cards -->
+        <!-- Six cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-20 w-full mt-16">
           <div
-            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6"
+            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-auto shadow-lg p-6"
           >
-            <iframe
-              src="https://www.youtube.com/embed/tZGBg0dN8HY?enablejsapi=1"
-              allowfullscreen
-              class="youtube-video w-full h-60 object-cover rounded-lg"
-            ></iframe>
             <h3
               class="text-lg font-medium md:text-2xl text-sky-500 mt-4 text-left"
             >
-              Voice Commerce
+              AI-Driven Optical Character Recognition (OCR)
             </h3>
             <p class="text-sm mt-2 md:text-base font-normal text-left">
-              Enabling customers to quickly and efficiently shop with voice
-              interactions.
+              Advanced OCR technology extracts and digitizes guest details with
+              near-perfect accuracy.
             </p>
           </div>
 
           <div
-            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6"
+            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-auto shadow-lg p-6"
           >
-            <iframe
-              src="https://www.youtube.com/embed/vyy2tOoybI8?enablejsapi=1"
-              allowfullscreen
-              class="youtube-video w-full h-60 object-cover rounded-lg"
-            ></iframe>
             <h3
               class="text-lg font-medium md:text-2xl text-sky-500 mt-4 text-left"
             >
-              Frictionless Hospitality
+              Instant Multi-Document Scanning
             </h3>
             <p class="text-sm mt-2 md:text-base font-normal text-left">
-              Elevating the experience of guests with an always-available voice
-              assistant...
+              Scan various ID types, including passports, driver’s licenses,
+              Aadhaar cards, and national IDs—no need for multiple devices.
             </p>
           </div>
 
           <div
-            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6"
+            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-auto shadow-lg p-6"
           >
-            <iframe
-              src="https://www.youtube.com/embed/kdGq9iPDTGM?enablejsapi=1"
-              allowfullscreen
-              class="youtube-video w-full h-60 object-cover rounded-lg"
-            ></iframe>
             <h3
               class="text-lg font-medium md:text-2xl text-sky-500 mt-4 text-left"
             >
-              Simplif AI-Hiring
+              Auto-Generated Guest Profiles
             </h3>
             <p class="text-sm mt-2 md:text-base font-normal text-left">
-              AI powered virtual interview process...
+              AI organizes extracted data into structured guest profiles for
+              future visits and loyalty programs.
             </p>
           </div>
 
           <div
-            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-[450px] shadow-lg p-6"
+            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-auto shadow-lg p-6"
           >
-            <iframe
-              src="https://www.youtube.com/embed/SOZCAxR8cq0?enablejsapi=1"
-              allowfullscreen
-              class="youtube-video w-full h-60 object-cover rounded-lg"
-            ></iframe>
             <h3
               class="text-lg font-medium md:text-2xl text-sky-500 mt-4 text-left"
             >
-              Simplif AI-Expense
+              Cloud & On-Premise Data Storage
             </h3>
             <p class="text-sm mt-2 md:text-base font-normal text-left">
-              Expensing claims made simple...
+              Choose between secure cloud storage or on-premise deployment based
+              on your data security preferences.
             </p>
           </div>
-        </div>
-
-        <div class="md:mt-20 md:mb-10 w-full flex justify-center">
           <div
-            class="bg-gray-100 border border-gray-300 rounded-lg md:w-[450px] h-[450px] shadow-lg p-6"
+            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-auto shadow-lg p-6"
           >
-            <iframe
-              src="https://www.youtube.com/embed/cc1eaVH1mMk?enablejsapi=1"
-              allowfullscreen
-              class="youtube-video w-full h-60 object-cover rounded-lg"
-            ></iframe>
             <h3
               class="text-lg font-medium md:text-2xl text-sky-500 mt-4 text-left"
             >
-              Simplif AI-Project
+              Multilingual Data Extraction
             </h3>
             <p class="text-sm mt-2 md:text-base font-normal text-left">
-              AI powered Project backlogs...
+              Supports various languages, ensuring smooth processing of
+              international guest IDs.
+            </p>
+          </div>
+          <div
+            class="bg-gray-100 border border-gray-300 rounded-lg w-full h-auto shadow-lg p-6"
+          >
+            <h3
+              class="text-lg font-medium md:text-2xl text-sky-500 mt-4 text-left"
+            >
+              Mobile & Tablet Friendly
+            </h3>
+            <p class="text-sm mt-2 md:text-base font-normal text-left">
+              Use our scanner on multiple devices, including tablets and mobile
+              phones, for greater flexibility.
             </p>
           </div>
         </div>
@@ -395,11 +407,10 @@
           <p
             class="text-start text-sky-500 font-semibold text-sm md:mb-1 md:mt-10"
           >
-            WHAT WE OFFER
+            <!-- WHAT WE OFFER -->
           </p>
           <h2 class="text-2xl md:text-3xl font-bold mt-2 mb-6 text-black">
-            Here’s how we take your ideas and turn them into AI-powered
-            realities
+            How It Works
           </h2>
 
           <!-- Cards Grid -->
@@ -408,17 +419,17 @@
             <div class="text-center">
               <div class="flex justify-center items-center">
                 <img
-                  src="{{get_asset_url('../assets/Build apps 1.svg')}}"
+                  src="{{get_asset_url('../assets/Scanid 1.svg')}}"
                   alt="Card Image"
                   class="p-6 md:p-0 w-44 h-44"
                 />
               </div>
               <h3 class="text-lg md:text-lg font-semibold mt-4">
-                Build Apps That Work for You
+                Scan Guest’s ID
               </h3>
               <p class="mt-2 text-gray-600 text-sm md:text-sm">
-                Our platform gives you everything you need to create scalable
-                and easy-to-use AI solutions.
+                Capture the guest’s passport, Aadhaar, or national ID using our
+                scanner.
               </p>
             </div>
 
@@ -426,17 +437,16 @@
             <div class="text-center">
               <div class="flex justify-center">
                 <img
-                  src="{{get_asset_url('../assets/plug right in 1.svg')}}"
+                  src="{{get_asset_url('../assets/Autoprofile 1.svg')}}"
                   alt="Card Image"
                   class="p-6 md:p-0 w-44 h-44"
                 />
               </div>
               <h3 class="text-lg md:text-lg font-semibold mt-4">
-                Plug Right In
+                AI Extracts Data
               </h3>
               <p class="mt-2 text-gray-600 text-sm md:text-sm">
-                Our platform gives you everything you need to create scalable
-                and easy-to-use AI solutions.
+                Our AI instantly extracts and verifies key information.
               </p>
             </div>
 
@@ -444,108 +454,17 @@
             <div class="text-center">
               <div class="flex justify-center">
                 <img
-                  src="{{get_asset_url('../assets/Automate 2.svg')}}"
+                  src="{{get_asset_url('../assets/AIv.svg')}}"
                   alt="Card Image"
                   class="p-6 md:p-0 w-44 h-44"
                 />
               </div>
               <h3 class="text-lg md:text-lg font-semibold mt-4">
-                Smart Automation
+                Auto-Profile Creation
               </h3>
               <p class="mt-2 text-gray-600 text-sm md:text-sm">
-                From organizing your data to deploying your solutions, our
-                automation tools do the heavy lifting so you can focus on the
-                bigger picture.
+                A guest profile will be created in Opera using AI
               </p>
-            </div>
-          </div>
-        </div>
-        <!-- Section for Two Cards -->
-        <div class="mx-auto">
-          <!-- Header -->
-          <div class="my-8 md:mb-16 mb-8">
-            <p
-              class="text-start text-sky-500 font-semibold text-sm mb-2 md:mb-1 animate-slide-down"
-            >
-              SUCCESS STORIES
-            </p>
-            <h2
-              class="text-xl md:text-3xl font-semibold text-black animate-slide-down"
-            >
-              We are the trusted Oracle hospitality partner for leading global
-              brands.
-            </h2>
-          </div>
-
-          <!-- Testimonial Cards -->
-          <div
-            class="grid grid-rows-1 md:grid-cols-2 gap-8 mb-8 ease-in-out"
-            id="testimonial-section"
-          >
-            <!-- First Card -->
-            <div
-              class="bg-customgradient rounded-3xl p-4 md:p-6 border border-gray-300 h-[200px] md:h-[255px] lg:h-[230px] z-40"
-            >
-              <div class="flex md:mb-4">
-                <img
-                  src="{{get_asset_url('../assets/Jacana 1.svg')}}"
-                  alt="Jacana Logo"
-                  class="h-16 w-16 object-contain rounded-full bg-black p-2"
-                />
-                <div class="ml-4">
-                  <h3 class="text-sm md:text-base font-semibold text-gray-800">
-                    Impactful!
-                  </h3>
-                  <p
-                    class="text-xs md:text-base text-gray-700 mt-1 md:mt-3"
-                    style="line-height: 23px"
-                  >
-                    “NearTekPod’s GenAI-powered warranty claim application has
-                    reduced manual effort significantly while enhancing our
-                    customer experience.”
-                  </p>
-                  <p class="text-xs md:text-base text-gray-500 mt-1 md:mt-3">
-                    <span>— Sr. Director of Operations, </span><br />
-                    <span
-                      class="text-xs md:text-base font-semibold text-gray-800"
-                      >Jacana Warranty</span
-                    >
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Second Card -->
-            <div
-              class="bg-customgradient rounded-3xl p-4 md:p-6 border border-gray-300 h-[200px] md:h-[255px] lg:h-[230px] z-40"
-            >
-              <div class="flex md:mb-4">
-                <img
-                  src="{{get_asset_url('../assets/Chartis.svg')}}"
-                  alt="Chartis  Logo"
-                  class="h-16 w-16 object-contain rounded-full bg-gray-100 p-2"
-                />
-                <div class="ml-4">
-                  <h3 class="text-sm md:text-base font-semibold text-gray-800">
-                    A Competent Partner
-                  </h3>
-                  <p
-                    class="text-xs md:text-base text-gray-700 mt-1 md:mt-3"
-                    style="line-height: 23px"
-                  >
-                    “NearTekPod was able to understand our requirement and
-                    iterate faster so we could zero-in on the right AI solution.
-                    Competent team. ”
-                  </p>
-                  <p class="text-xs md:text-base text-gray-500 mt-1 md:mt-3">
-                    <span> — Managing Partner,</span><br />
-                    <span
-                      class="text-xs md:text-base font-semibold text-gray-800"
-                      >Chartis</span
-                    >
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -700,7 +619,7 @@
         const formElements = event.target.elements;
         const validationErrors = {};
 
-        // Validate required fields
+        // Validate required fieldsss
         for (const element of formElements) {
           if (
             element.type !== "submit" &&
