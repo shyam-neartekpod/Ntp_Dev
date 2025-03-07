@@ -188,6 +188,9 @@ document.addEventListener("DOMContentLoaded", () => {
       resultDiv.innerHTML = "";
   
       data?.data.forEach((item) => {
+        if (item.publishToExternalChannels === false) {
+          return;
+        }
         // Clone the card template
         const card = cardTemplate.cloneNode(true);
         console.log("Fetching job Array data...", item);
@@ -268,6 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
       archiveResultDiv.innerHTML = "";
   
       data?.data.forEach((item) => {
+        if (item.publishToExternalChannels === false) {
+          return;
+        }
         // Clone the card template
         const card = cardTemplate.cloneNode(true);
         console.log("Fetching job Array data...", item);

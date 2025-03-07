@@ -99,6 +99,27 @@
       .group:hover .group-hover\:rotate-y-180 {
         transform: rotateY(180deg); /* Applies the rotation on hover */
       }
+      /* Class to hide on mobile and show on desktop */
+      .hidden-mobile {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .hidden-mobile {
+          display: block;
+        }
+      }
+
+      /* Class to hide on desktop and show on mobile */
+      .hidden-desktop {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        .hidden-desktop {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -142,15 +163,15 @@
 
     <section class="container xl:px-32 px-6 pt-24">
       <!-- Hero Section md-->
-      <div class="mt-2 mb-28 relative hidden md:block">
+      <div class="mt-2 mb-28 relative hidden-mobile">
         <div
           class="flex items-start bg-Commerce rounded-3xl bg-cover h-[600px] w-full gap-4 justify-end px-10"
         >
           <div
-            class="absolute bottom-0 left-0 md:bottom-10 md:left-10 pt-60 md:w-1/2 animate-slideInLeft"
+            class="absolute bottom-0 left-0 md:bottom-10 md:left-10 pt-60 md:w-1/2 "
           >
             <h1
-              class="text-white text-lg md:text-3xl font-bold leading-tight animate-slide-in"
+              class="text-white text-lg md:text-3xl font-bold leading-tight "
             >
               Supercharge your E-Commerce <br />
               <span class="text-blue-400"> with AI-Driven cloud solutions</span>
@@ -188,7 +209,7 @@
                   AI-Enabled development
                 </h3>
               </div>
-              <p class="text-white text-sm font-medium hidden md:block">
+              <p class="text-white text-sm font-medium hidden-mobile">
                 Our AI solutions help you Go-Live in weeks with zero downtime
                 faster than competitors
               </p>
@@ -211,7 +232,7 @@
                     Digital Eco System integration
                   </h3>
                 </div>
-                <p class="text-white text-sm font-medium hidden md:block">
+                <p class="text-white text-sm font-medium hidden-mobile">
                   Simplify the ecosystem integrations by leveraging our time
                   tested playbook
                 </p>
@@ -233,7 +254,7 @@
                     Connected Customer Experiences
                   </h3>
                 </div>
-                <p class="text-white md:text-sm font-medium hidden md:block">
+                <p class="text-white md:text-sm font-medium hidden-mobile">
                   Experience the future of shopping, where every interaction is
                   seamless and personalized just for you
                 </p>
@@ -243,7 +264,7 @@
         </div>
       </div>
       <!-- Hero Section sm -->
-      <div class="mt-10 mb-20 relative block md:hidden">
+      <div class="mt-10 mb-20 relative hidden-desktop">
         <div
           class="flex items-start bg-Commerce rounded-xl bg-cover h-[480px] w-full gap-4 justify-end px-6"
         >

@@ -77,7 +77,7 @@ module.exports = {
         AI: 'url("{{get_asset_url("../../assets/Hero_AI.svg")}}")',
         Hospitality:
           'url("{{get_asset_url("../../assets/Hero_Section.svg")}}")',
-        Commerce: 'url("{{get_asset_url("../../assets/Hero card.svg")}}")',
+        Commerce: 'url("{{get_asset_url("../../assets/Hero_card.svg")}}")',
         customgradient:
           "linear-gradient(254deg, #FDFEFF 3.46%,  #DCEAFD 99.94%)",
         gradientText:

@@ -1824,7 +1824,7 @@ body {
 }
 
 .bg-Commerce {
-  background-image: url("{{get_asset_url("../../assets/Herocard.svg")}}");
+  background-image: url("{{get_asset_url("../../assets/Hero_card.svg")}}");
 }
 .bg-AI {
   background-image: url("{{get_asset_url("../../assets/Hero_AI.svg")}}");
@@ -3180,5 +3180,4 @@ body {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
   }
-  
 }
