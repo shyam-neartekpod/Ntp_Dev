@@ -1962,14 +1962,9 @@ body {
 .bg-Hospitality {
   background-image: url("{{get_asset_url("../../assets/Hero_Section.svg")}}");
 }
-.bg-Commerce {
-  background-image: url("{{get_asset_url("../../assets/Herocard.svg")}}");
-}
+
 .bg-AI {
   background-image: url("{{get_asset_url("../../assets/Hero_AI.svg")}}");
-}
-.bg-Idscanner {
-  background-image: url("{{get_asset_url("../../assets/idhero.svg")}}");
 }
 .bg-gradientText {
   background-image: "linear-gradient(91.44deg, rgba(255, 255, 255, 0.88) -18.04%, #00A2FF 37.69%, rgba(255, 255, 255, 0.87) 84.44%)";
@@ -1977,9 +1972,8 @@ body {
 .bg-Tech {
   background-image: url("{{get_asset_url("../../assets/VRAR.svg")}}");
 }
-
-.bg-WorldMap {
-  background-image: url("{{get_asset_url("../../assets/Globe.svg")}}");
+.bg-Idscanner {
+  background-image: url("{{get_asset_url("../../assets/idhero.svg")}}");
 }
 
 .bg-customgradient {
@@ -2316,7 +2310,7 @@ body {
 }
 
 .leading-leading1 {
-  line-height: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .leading-relaxed {
@@ -3386,7 +3380,7 @@ body {
   }
 
   .md\:leading-leading2 {
-    line-height: 1.5rem;
+    line-height: 1.9rem;
   }
 
   .md\:leading-6 {
