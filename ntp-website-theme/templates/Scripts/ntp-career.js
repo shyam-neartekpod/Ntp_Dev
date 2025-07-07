@@ -188,6 +188,9 @@ document.addEventListener("DOMContentLoaded", () => {
       resultDiv.innerHTML = "";
   
       data?.data.forEach((item) => {
+        if (item.publishToExternalChannels === false) {
+          return;
+        }
         // Clone the card template
         const card = cardTemplate.cloneNode(true);
         console.log("Fetching job Array data...", item);
@@ -263,16 +266,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
       if (!response.ok) {
         throw new Error("Network response was not ok " + response.statusText);
-      }
-  
-      console.log("Fetching job response data...", response);
-      const data = await response.json();
-      console.log("Fetching data...", data);
-  
+      } 
       // Clear existing cards
       archiveResultDiv.innerHTML = "";
   
       data?.data.forEach((item) => {
+        if (item.publishToExternalChannels === false) {
+          return;
+        }
         // Clone the card template
         const card = cardTemplate.cloneNode(true);
         console.log("Fetching job Array data...", item);
