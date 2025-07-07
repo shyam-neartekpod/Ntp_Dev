@@ -13,5 +13,5 @@ jobs:
         with:
           src_dir: ntp-website-theme
           dest_dir: /ntp-2.0-dev
-          account_id: ${{  vars.HUBSPOT_ACCOUNT_ID }}
+          portal_id: ${{  vars.HUBSPOT_ACCOUNT_ID }}
           personal_access_key: ${{ secrets.hubspot_personal_access_key }}
